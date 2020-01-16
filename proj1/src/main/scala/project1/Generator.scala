@@ -242,7 +242,17 @@ abstract class RegASMGenerator extends Codegen {
  * the function can use it to store the value of 'exp'
  */
   def emitCode(exp: Exp, sp: Int): Unit = exp match {
-    case Lit(x) => emitln(s"""movq $$$x, ${regs(sp)}""")
+    case Lit(x) =>
+      try {
+        emitln(s"""movq $$$x, ${regs(sp)}""")
+      }catch {
+        case e: IndexOutOfBoundsException =>
+          println("\u001b[31mYou are using too many registers!! Crashing!!\u001b[37m")
+          println("\u001b[31mBoom\u001b[37m")
+          println("\u001b[31mBeep\u001b[37m")
+          println("\u001b[31mGoodbye World\u001b[37m")
+          System.exit(0)
+      }
     case Plus(x,y) =>
       // above:
       emitCode(x, sp)     // result of x stored in regs(sp)

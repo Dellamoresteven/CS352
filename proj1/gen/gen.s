@@ -12,15 +12,16 @@ entry_point:
 	mov %rsp, %rbp
 
 	# beginning generated code
-	movq $4, %rbx
-	movq $0, %rcx
-	movq %rcx, %rax
+	movq $4, %rax
+	pushq %rax
+	movq $9, %rax
+	pushq %rax
+	movq $0, %rax
+	popq %rbx
+	subq %rbx, %rax
 	cqto
-	movq $4, %rcx
-	idivq %rcx
-	movq %rax, %rcx
-	subq %rcx, %rbx
-	movq %rbx, %rax
+	popq %rbx
+	idivq %rbx
 	# end generated code
 	# %rax contains the result
 
