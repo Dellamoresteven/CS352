@@ -12,7 +12,9 @@ entry_point:
 	mov %rsp, %rbp
 
 	# beginning generated code
-	movq $2, %rbx
+	movq $3, %rbx
+	movq $2, %rcx
+	imulq %rcx, %rbx
 	movq %rbx, %rax
 	# end generated code
 	# %rax contains the result

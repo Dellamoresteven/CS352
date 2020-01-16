@@ -1,12 +1,12 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(project1.StackGeneratorTest, org.scalatest.tools.Framework$$anon$1@6afe53bc, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(project1.RegGeneratorTest, org.scalatest.tools.Framework$$anon$1@6afe53bc, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(project1.ParserTest, org.scalatest.tools.Framework$$anon$1@6afe53bc, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 288 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 15[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(project1.ParserTest, org.scalatest.tools.Framework$$anon$1@5462c0ec, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(project1.StackGeneratorTest, org.scalatest.tools.Framework$$anon$1@5462c0ec, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(project1.RegGeneratorTest, org.scalatest.tools.Framework$$anon$1@5462c0ec, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 654 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 16[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 3, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 15, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 16, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	project1.ParserTest[0m
 [0m[[0m[0mdebug[0m] [0m[0m	project1.RegGeneratorTest[0m
 [0m[[0m[0mdebug[0m] [0m[0m	project1.StackGeneratorTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	project1.ParserTest[0m

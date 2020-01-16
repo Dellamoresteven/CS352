@@ -57,5 +57,9 @@ class RegGeneratorTest extends FunSuite {
     testRegASMGenerator(Lit(2), 2)
   }
 
+  test("Mult") {
+    testRegASMGenerator(Times(Lit(3),Lit(2)), 6)
+  }
+
   // TODO more tests
 }
