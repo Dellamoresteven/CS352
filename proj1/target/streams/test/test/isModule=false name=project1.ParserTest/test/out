@@ -1,0 +1,9 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mParserTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- SingleDigit[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- SingleAddopAdd[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- SingleAddopSub1-1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- SingleAddopSub1-5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- SingleAddopSub5-1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- MultipleAddopAdd[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- MultipleAddopSub[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- MultipleAddopBoth[0m[0m

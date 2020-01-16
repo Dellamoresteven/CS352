@@ -1,0 +1,10 @@
+[info] Running project1.Runner 1 + 2
+[debug] Waiting for threads to exit or System.exit to be called.
+[debug]   Classpath:
+[debug] 	/home/kraks/study/purdue/my-cc-internal/projects/proj1/target/scala-2.12/classes
+[debug] 	/home/kraks/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.3.jar
+[debug] Waiting for thread run-main-0 to terminate.
+[debug] 	Thread run-main-0 exited.
+[debug] Interrupting remaining threads (should be all daemons).
+[debug] Sandboxed run complete..
+[debug] Exited with code 0

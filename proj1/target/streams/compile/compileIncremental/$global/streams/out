@@ -1,0 +1,111 @@
+[debug] [naha] 
+[debug] [naha] Initial source changes: 
+[debug] [naha] 	removed:Set()
+[debug] [naha] 	added: Set(/home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Util.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Parser.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala)
+[debug] [naha] 	modified: Set()
+[debug] [naha] Invalidated products: Set()
+[debug] [naha] External API changes: API Changes: Set()
+[debug] [naha] Modified binary dependencies: Set()
+[debug] [naha] Initial directly invalidated sources: Set(/home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Util.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Parser.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala)
+[debug] [naha] 
+[debug] [naha] Sources indirectly invalidated by:
+[debug] [naha] 	product: Set()
+[debug] [naha] 	binary dep: Set()
+[debug] [naha] 	external source: Set()
+[debug] All initially invalidated sources: Set(/home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Util.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Parser.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala)
+[debug] [naha] Initial set of included nodes: Set(/home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Util.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Parser.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala)
+[debug] [naha] Recompiling all 4 sources: invalidated sources (4) exceeded 50.0% of all sources
+[info] Compiling 4 Scala sources to /home/kraks/study/purdue/my-cc-internal/projects/proj1/target/scala-2.12/classes...
+[debug] Getting org.scala-sbt:compiler-interface:0.13.15:component from component compiler for Scala 2.12.3
+[info] 'compiler-interface' not yet compiled for Scala 2.12.3. Compiling...
+[debug] Plain interface to Scala compiler 2.12.3  with arguments: 
+[debug] 	-nowarn
+[debug] 	-d
+[debug] 	/tmp/sbt_9053e3f5
+[debug] 	-bootclasspath
+[debug] 	/opt/java/jdk1.8.0_191/jre/lib/resources.jar:/opt/java/jdk1.8.0_191/jre/lib/rt.jar:/opt/java/jdk1.8.0_191/jre/lib/sunrsasign.jar:/opt/java/jdk1.8.0_191/jre/lib/jsse.jar:/opt/java/jdk1.8.0_191/jre/lib/jce.jar:/opt/java/jdk1.8.0_191/jre/lib/charsets.jar:/opt/java/jdk1.8.0_191/jre/lib/jfr.jar:/opt/java/jdk1.8.0_191/jre/classes:/home/kraks/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.3.jar
+[debug] 	-classpath
+[debug] 	/home/kraks/.sbt/boot/scala-2.10.6/org.scala-sbt/sbt/0.13.15/xsbti/interface-0.13.15.jar:/tmp/sbt_c389d415/srcs/org.scala-sbt/compiler-interface/compiler-interface-0.13.15-sources.jar:/home/kraks/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.12.3.jar:/home/kraks/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.3.jar:/home/kraks/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.6.jar:/home/kraks/.ivy2/cache/jline/jline/jars/jline-2.14.4.jar
+[debug] 	/tmp/sbt_71894e55/xsbt/API.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/Analyzer.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/Command.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/Compat.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/CompilerInterface.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/ConsoleInterface.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/DelegatingReporter.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/Dependency.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/ExtractAPI.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/ExtractUsedNames.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/GlobalHelpers.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/LocateClassFile.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/Log.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/Message.scala
+[debug] 	/tmp/sbt_71894e55/xsbt/ScaladocInterface.scala
+[info]   Compilation completed in 8.084 s
+[debug] Getting org.scala-sbt:compiler-interface:0.13.15:component from component compiler for Scala 2.12.3
+[debug] Running cached compiler 3ac60720, interfacing (CompilerInterface) with Scala compiler version 2.12.3
+[debug] Calling Scala compiler with arguments  (CompilerInterface):
+[debug] 	-unchecked
+[debug] 	-deprecation
+[debug] 	-feature
+[debug] 	-bootclasspath
+[debug] 	/opt/java/jdk1.8.0_191/jre/lib/resources.jar:/opt/java/jdk1.8.0_191/jre/lib/rt.jar:/opt/java/jdk1.8.0_191/jre/lib/sunrsasign.jar:/opt/java/jdk1.8.0_191/jre/lib/jsse.jar:/opt/java/jdk1.8.0_191/jre/lib/jce.jar:/opt/java/jdk1.8.0_191/jre/lib/charsets.jar:/opt/java/jdk1.8.0_191/jre/lib/jfr.jar:/opt/java/jdk1.8.0_191/jre/classes:/home/kraks/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.3.jar
+[debug] 	-classpath
+[debug] 	/home/kraks/study/purdue/my-cc-internal/projects/proj1/target/scala-2.12/classes
+[warn] /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala:37: reflective access of structural type member method code should be enabled
+[warn] by making the implicit value scala.language.reflectiveCalls visible.
+[warn] This can be achieved by adding the import clause 'import scala.language.reflectiveCalls'
+[warn] or by setting the compiler option -language:reflectiveCalls.
+[warn] See the Scaladoc for value scala.language.reflectiveCalls for a discussion
+[warn] why the feature should be explicitly enabled.
+[warn]     val code = generator.code(ast)
+[warn]                          ^
+[warn] one warning found
+[debug] Scala compilation took 9.558653101 s
+[debug] [naha] Invalidating /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Util.scala...
+[debug] [naha] Invalidating (transitively) by inheritance from /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Util.scala...
+[debug] [naha] Initial set of included nodes: Set(/home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Util.scala)
+[debug] [naha] Including /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Parser.scala by /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Util.scala
+[debug] [naha] Including /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala by /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Util.scala
+[debug] [naha] Including /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala by /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala
+[debug] [naha] Invalidated by transitive inheritance dependency: Set(/home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Util.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Parser.scala)
+[debug] [naha] The /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Util.scala source file has the following regular definitions changed:
+[debug] [naha] 	notify, wait, $asInstanceOf, Codegen, ASMRunner, equals, expected, asInstanceOf, run, data, synchronized, $isInstanceOf, Reporter, emitln, peek, emit, notifyAll, code, isInstanceOf, <init>, error, BaseReader, ==, clone, stream, assemble, $init$, next, template, toString, !=, getClass, ne, hasNext, eq, ##, finalize, hashCode, abort, Reader.
+[debug] [naha] All member reference dependencies will be considered within this context.
+[debug] [naha] The following modified names cause invalidation of /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Parser.scala: Set(expected, asInstanceOf, Reporter, peek, isInstanceOf, <init>, ==, next, toString, hasNext, eq, abort, Reader)
+[debug] [naha] The following modified names cause invalidation of /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala: Set(Codegen, asInstanceOf, emitln, isInstanceOf, <init>)
+[debug] [naha] The following modified names cause invalidation of /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala: Set(ASMRunner, run, data, code, <init>, BaseReader, assemble, toString, !=, Reader)
+[debug] [naha] The following modified names cause invalidation of /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala: Set(ASMRunner, run, data, code, <init>, BaseReader, assemble, toString, !=, Reader)
+[debug] [naha] The following modified names cause invalidation of /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala: Set(Codegen, asInstanceOf, emitln, isInstanceOf, <init>)
+[debug] [naha] The following modified names cause invalidation of /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala: Set(ASMRunner, run, data, code, <init>, BaseReader, assemble, toString, !=, Reader)
+[debug] [naha] Invalidating /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala...
+[debug] [naha] Invalidating (transitively) by inheritance from /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala...
+[debug] [naha] Initial set of included nodes: Set(/home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala)
+[debug] [naha] Invalidated by transitive inheritance dependency: Set(/home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala)
+[debug] [naha] The /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala source file has the following regular definitions changed:
+[debug] [naha] 	notify, wait, $asInstanceOf, equals, asInstanceOf, synchronized, $isInstanceOf, main, notifyAll, isInstanceOf, ==, clone, Runner, toString, !=, getClass, ne, eq, ##, finalize, hashCode.
+[debug] [naha] All member reference dependencies will be considered within this context.
+[debug] [naha] Invalidating /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Parser.scala...
+[debug] [naha] Invalidating (transitively) by inheritance from /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Parser.scala...
+[debug] [naha] Initial set of included nodes: Set(/home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Parser.scala)
+[debug] [naha] Invalidated by transitive inheritance dependency: Set(/home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Parser.scala)
+[debug] [naha] The /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Parser.scala source file has the following regular definitions changed:
+[debug] [naha] 	notify, ArithParOpParser, parseDiv, parseAdd, parseExpression, x, wait, accept, SimpleParser, copy$default$2, $asInstanceOf, SingleAddOpParser, productArity, equals, y, expected, asInstanceOf, getNum, isDigit, synchronized, $isInstanceOf, canEqual, productPrefix, notifyAll, getName, isAlpha, Plus, isInstanceOf, Minus, SingleDigitParser, parseFactor, <init>, MultipleAddOpParser, Exp, error, parseSub, ==, clone, parseCode, $init$, copy, toString, parseMul, !=, Times, getClass, copy$default$1, Lit, ne, eq, Div, productIterator, ##, finalize, parseTerm, ArithOpParser, productElement, hashCode, abort.
+[debug] [naha] All member reference dependencies will be considered within this context.
+[debug] [naha] The following modified names cause invalidation of /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala: Set(x, y, asInstanceOf, Plus, isInstanceOf, <init>, Exp, Lit)
+[debug] [naha] The following modified names cause invalidation of /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala: Set(SingleDigitParser, <init>, Exp, parseCode, toString, !=)
+[debug] [naha] Invalidating /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala...
+[debug] [naha] Invalidating (transitively) by inheritance from /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala...
+[debug] [naha] Initial set of included nodes: Set(/home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala)
+[debug] [naha] Including /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala by /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala
+[debug] [naha] Invalidated by transitive inheritance dependency: Set(/home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala, /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala)
+[debug] [naha] The /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Generator.scala source file has the following regular definitions changed:
+[debug] [naha] 	notify, regs, wait, $asInstanceOf, equals, asInstanceOf, synchronized, $isInstanceOf, emitln, emit, notifyAll, isInstanceOf, emitCode, <init>, ==, clone, stream, $init$, toString, StackASMGenerator, !=, getClass, RegASMGenerator, ne, eq, ##, finalize, hashCode.
+[debug] [naha] All member reference dependencies will be considered within this context.
+[debug] [naha] The following modified names cause invalidation of /home/kraks/study/purdue/my-cc-internal/projects/proj1/src/main/scala/project1/Main.scala: Set(emitCode, <init>, toString, StackASMGenerator, !=)
+[debug] [naha] New invalidations:
+[debug] [naha] 	Set()
+[debug] [naha] Initial set of included nodes: Set()
+[debug] [naha] Previously invalidated, but (transitively) depend on new invalidations:
+[debug] [naha] 	Set()
+[debug] [naha] All newly invalidated sources after taking into account (previously) recompiled sources:Set()

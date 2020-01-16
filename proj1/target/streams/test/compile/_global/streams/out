@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/proj1/src/test/scala/project1/ParserTest.scala:61:36: not found: value Mins[0m
+[0m[[0m[31merror[0m] [0m[0m    testMultipleAdd("1-1-1-1-1-1", Mins(Minus(Minus(Minus(Minus(Lit(1), Lit(1)),Lit(1)), Lit(1)), Lit(1)), Lit(1)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
