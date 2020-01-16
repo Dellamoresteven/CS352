@@ -1,9 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Main.scala:38:26: reflective access of structural type member method code should be enabled[0m
-[0m[[0m[33mwarn[0m] [0m[0mby making the implicit value scala.language.reflectiveCalls visible.[0m
-[0m[[0m[33mwarn[0m] [0m[0mThis can be achieved by adding the import clause 'import scala.language.reflectiveCalls'[0m
-[0m[[0m[33mwarn[0m] [0m[0mor by setting the compiler option -language:reflectiveCalls.[0m
-[0m[[0m[33mwarn[0m] [0m[0mSee the Scaladoc for value scala.language.reflectiveCalls for a discussion[0m
-[0m[[0m[33mwarn[0m] [0m[0mwhy the feature should be explicitly enabled.[0m
-[0m[[0m[33mwarn[0m] [0m[0m    val code = generator.code(ast)[0m
-[0m[[0m[33mwarn[0m] [0m[0m                         ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Parser.scala:213:5: method parseCode has return statement; needs result type[0m
+[0m[[0m[31merror[0m] [0m[0m    return ast[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

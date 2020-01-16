@@ -2438,3 +2438,289 @@ WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala
 WARN  no build target: 
 WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
 WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Parser.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Parser.scala
+WARN  no build target: 
+Jan 15, 2020 8:04:08 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.meta.internal.pc.HoverProvider.seenFromType(HoverProvider.scala:106)
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:42)
+
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Parser.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Parser.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Parser.scala
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Parser.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Parser.scala' because it doesn't belong to a build target.
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Parser.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Parser.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Parser.scala
+WARN  no build target: 
+Jan 15, 2020 8:06:51 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:37)
+
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+Jan 15, 2020 8:21:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2199
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala' because it doesn't belong to a build target.
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: 
+INFO  shutting down Metals
