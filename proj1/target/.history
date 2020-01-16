@@ -210,3 +210,16 @@ run 8/3
 test
 run 5/5
 test
+run 0/1*-2
+run 0/1*2
+run -5*5
+run 2*-5
+run 3*-5
+run -5*5
+run 3+-5
+run 5*-5
+run "5*-5"
+run 5*-5
+run 5/-5
+run 5*-5
+test

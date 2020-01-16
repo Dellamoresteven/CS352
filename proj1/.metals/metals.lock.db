@@ -1,6 +1,6 @@
 #FileLock
-#Tue Jan 14 09:53:58 EST 2020
-server=10.186.59.115\:65012
-hostName=pal-nat186-59-115.itap.purdue.edu
+#Wed Jan 15 19:08:16 EST 2020
+server=10.192.110.96\:49859
+hostName=10.192.110.96
 method=file
-id=16fa48c088c8ccc1d6d779549968eb65f3e2904505a
+id=16fabade073869f58da6a476848c1b96b0d7567638b

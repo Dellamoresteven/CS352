@@ -135,7 +135,7 @@ abstract class StackASMGenerator extends Codegen {
       emitCode(y)
       emitln("pushq %rax")
       emitCode(x)
-      // Sign extends 
+      // Sign extends
       emitln("cqto")
       emitln("popq %rbx")
       emitln("idivq %rbx")
@@ -263,7 +263,7 @@ abstract class RegASMGenerator extends Codegen {
       // Move regs(sp) into register rax
       emitln(s"movq ${regs(sp)}, %rax")
       // sign extend's rax to rdx:rax
-      emitln("cqo")
+      emitln("cqto")
       emitCode(y, sp)
       // rdx/rax , saves in rax
       emitln(s"idivq ${regs(sp)}")

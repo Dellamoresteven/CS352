@@ -295,14 +295,15 @@ class ArithOpParser(in: Reader[Char]) extends MultipleAddOpParser(in) {
   def parseMul(lop: Exp): Exp = {
     println("\u001b[36mparseMul\u001b[37m")
     accept('*')
-    val rop = super.parseTerm
+    val rop = parseFactor
+
     Times(lop, rop)
   }
 
   def parseDiv(lop: Exp): Exp = {
     println("\u001b[36mparseDiv\u001b[37m")
     accept('/')
-    val rop = super.parseTerm
+    val rop = parseFactor
     Div(lop, rop)
   }
 }

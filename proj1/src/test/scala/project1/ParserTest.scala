@@ -79,11 +79,58 @@ class ParserTest extends FunSuite {
     assert(ast == res, "Invalid result")
   }
 
+  // Make sure i didnt break anyhting
+  test("ArithOpParseropOld") {
+    testArith("1-1+1", Plus(Minus(Lit(1),Lit(1)), Lit(1)))
+    testArith("1+1", Plus(Lit(1),Lit(1)))
+    testArith("1-1", Minus(Lit(1),Lit(1)))
+  }
+
+  // Times
+  test("ArithOpParseropTimes") {
+    testArith("0*1", Times(Lit(0), Lit(1)))
+    testArith("1*1", Times(Lit(1), Lit(1)))
+    testArith("5*3", Times(Lit(5), Lit(3)))
+    testArith("5*3*2*9", Times(Times(Times(Lit(5), Lit(3)), Lit(2)), Lit(9)))
+  }
+
+  // Div
+  test("ArithOpParseropDiv") {
+    testArith("0/1", Div(Lit(0), Lit(1)))
+    testArith("1/1", Div(Lit(1), Lit(1)))
+    testArith("5/3", Div(Lit(5), Lit(3)))
+    testArith("5/3/2/9", Div(Div(Div(Lit(5), Lit(3)), Lit(2)), Lit(9)))
+  }
+
+  // Both
+  test("ArithOpParseropBoth") {
+    testArith("0/1*2", Times(Div(Lit(0), Lit(1)), Lit(2)))
+    testArith("5*1/3", Div(Times(Lit(5), Lit(1)), Lit(3)))
+    testArith("5/3*4/9", Div(Times(Div(Lit(5), Lit(3)), Lit(4)), Lit(9)))
+    testArith("5/3/2/9*3*4*5*6*7/5", Div(Times(Times(Times(Times(Times(Div(Div(Div(Lit(5), Lit(3)), Lit(2)), Lit(9)), Lit(3)), Lit(4)), Lit(5)), Lit(6)), Lit(7)), Lit(5)))
+    testArith("3/1*2+4", Plus(Times(Div(Lit(3), Lit(1)), Lit(2)), Lit(4)))
+    testArith("4+3*3", Plus(Lit(4), Times(Lit(3), Lit(3))))
+    testArith("4-3*3", Minus(Lit(4), Times(Lit(3), Lit(3))))
+    testArith("4-3*3+8", Plus(Minus(Lit(4), Times(Lit(3), Lit(3))), Lit(8)))
+    testArith("4-3*3+8/4", Plus(Minus(Lit(4), Times(Lit(3), Lit(3))), Div(Lit(8), Lit(4))))
+  }
   // Function Helper for ArithParOpParser
   def testArithPar(op: String, res: Exp) = {
     val gen = new ArithParOpParser(reader(op))
     val ast = gen.parseCode
 
     assert(ast == res, "Invalid result")
+  }
+
+  test("testArithParNegative"){
+    testArithPar("0/1*-2", Times(Div(Lit(0),Lit(1)),Minus(Lit(0),Lit(2))))
+    testArithPar("5*-1/3", Div(Times(Lit(5), Minus(Lit(0),Lit(1))), Lit(3)))
+    testArithPar("-5/3*-4/9", Div(Times(Div(Minus(Lit(0), Lit(5)), Lit(3)), Minus( Lit(0), Lit(4))), Lit(9)))
+    testArithPar("5/3/2/9*3*-4*-5*6*7/5", Div(Times(Times(Times(Times(Times(Div(Div(Div(Lit(5), Lit(3)), Lit(2)), Lit(9)), Lit(3)), Minus(Lit(0), Lit(4))), Minus(Lit(0), Lit(5))), Lit(6)), Lit(7)), Lit(5)))
+    testArithPar("3/1*2+4", Plus(Times(Div(Lit(3), Lit(1)), Lit(2)), Lit(4)))
+    testArithPar("-4+-3*-3", Plus(Minus(Lit(0), Lit(4)), Times(Minus(Lit(0), Lit(3)), Minus(Lit(0), Lit(3)))))
+    testArithPar("4-3*3", Minus(Lit(4), Times(Lit(3), Lit(3))))
+    testArithPar("4-3*3+8", Plus(Minus(Lit(4), Times(Lit(3), Lit(3))), Lit(8)))
+    testArithPar("4-3*3+8/4", Plus(Minus(Lit(4), Times(Lit(3), Lit(3))), Div(Lit(8), Lit(4))))
   }
 }
