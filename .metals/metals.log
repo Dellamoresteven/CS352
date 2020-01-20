@@ -125,3 +125,210 @@ WARN  no build target:
 WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Generator.scala
 WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+INFO  shutting down Metals
+INFO  time: initialize in 0.25s
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/build.sbt
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/ParserTest.scala
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/test/scala/project1/GeneratorTest.scala
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Parser.scala
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Generator.scala
+INFO  no build target: using presentation compiler with only scala-library
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala
+Jan 16, 2020 12:48:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "workspace/didChangeWatchedFiles",
+  "params": {
+    "changes": [
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/project/build.properties",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/invalid_syntax_arithm.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/invalid_syntax_imm_variables.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/invalid_semantic_arithm.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/invalid_syntax_mut_variables.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/invalid_syntax_branch.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/unexpected_character.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/invalid_semantic_imm_variables.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/valid_imm_variable.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/valid_arithm.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/valid_branch.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/invalid_syntax_loop.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/valid_mut_variable.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/invalid_semantic_mut_variables.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/valid_loop.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/build.sbt",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/src/test/scala/project2/CompilerTest.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/src/test/scala/project2/InterpreterTest.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/src/test/scala/project2/SemanticAnalyzerTest.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/src/test/scala/project2/ParserTest.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/SemanticAnalyzer.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Compiler.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Util.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Main.scala",
+        "type": 3
+      }
+    ]
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:192)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: /Users/stevendellamore/Desktop/CS352/proj2/project/build.properties
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:374)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:425)
+	at java.base/java.nio.file.Files.readAllBytes(Files.java:3271)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$onChange$1(MetalsLanguageServer.scala:725)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$onChange$1$adapted(MetalsLanguageServer.scala:724)
+	at scala.collection.immutable.Stream.foreach(Stream.scala:533)
+	at scala.meta.internal.metals.MetalsLanguageServer.onChange(MetalsLanguageServer.scala:724)
+	at scala.meta.internal.metals.MetalsLanguageServer.didChangeWatchedFiles(MetalsLanguageServer.scala:689)
+	... 16 more
+
+INFO  shutting down Metals
+INFO  time: initialize in 0.31s
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Generator.scala
+INFO  no build target: using presentation compiler with only scala-library
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Generator.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Generator.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Generator.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+INFO  shutting down Metals
+INFO  time: initialize in 0.28s
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Generator.scala
+INFO  no build target: using presentation compiler with only scala-library
+INFO  shutting down Metals
+INFO  time: initialize in 0.28s
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Generator.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+INFO  no build target: using presentation compiler with only scala-library
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+INFO  shutting down Metals
+INFO  time: initialize in 0.29s
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Generator.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+INFO  no build target: using presentation compiler with only scala-library
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+INFO  shutting down Metals
+INFO  time: initialize in 0.31s
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj1/src/main/scala/project1/Generator.scala

@@ -1,6 +1,6 @@
 #FileLock
-#Wed Jan 15 20:24:49 EST 2020
-server=10.192.110.96\:64371
-hostName=10.192.110.96
+#Sun Jan 19 19:54:22 EST 2020
+server=10.0.0.170\:54165
+hostName=10.0.0.170
 method=file
-id=16fabf3f31cf9e6cccfb2605f754ea84ed671ca6781
+id=16fc07184588c81a96de2ac8a38bfbd900e690c4d7c

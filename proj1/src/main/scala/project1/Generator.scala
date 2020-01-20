@@ -251,7 +251,8 @@ abstract class RegASMGenerator extends Codegen {
           println("\u001b[31mBoom\u001b[37m")
           println("\u001b[31mBeep\u001b[37m")
           println("\u001b[31mGoodbye World\u001b[37m")
-          System.exit(0)
+          throw new IllegalStateException("Too many registers used!!");
+          // System.exit(0)
       }
     case Plus(x,y) =>
       // above:
