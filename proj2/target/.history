@@ -1,0 +1,7 @@
+run
+run examples/valid_arithm.scala 
+run "val x = 5; x"
+run 1+1
+run 1+2
+run 1+1
+test

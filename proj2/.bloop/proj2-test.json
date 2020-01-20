@@ -1,0 +1,207 @@
+{
+    "version" : "1.1.2",
+    "project" : {
+        "name" : "proj2-test",
+        "directory" : "/Users/stevendellamore/Desktop/proj2",
+        "sources" : [
+            "/Users/stevendellamore/Desktop/proj2/src/test/scala-2.12",
+            "/Users/stevendellamore/Desktop/proj2/src/test/scala",
+            "/Users/stevendellamore/Desktop/proj2/src/test/java",
+            "/Users/stevendellamore/Desktop/proj2/target/scala-2.12/src_managed/test"
+        ],
+        "dependencies" : [
+            "proj2"
+        ],
+        "classpath" : [
+            "/Users/stevendellamore/Desktop/proj2/.bloop/proj2/scala-2.12/classes",
+            "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.3.jar",
+            "/Users/stevendellamore/.ivy2/cache/org.scalatest/scalatest_2.12/bundles/scalatest_2.12-3.0.1.jar",
+            "/Users/stevendellamore/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.1.jar",
+            "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.3.jar",
+            "/Users/stevendellamore/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.5.jar",
+            "/Users/stevendellamore/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/bundles/scala-parser-combinators_2.12-1.0.4.jar"
+        ],
+        "out" : "/Users/stevendellamore/Desktop/proj2/.bloop/proj2",
+        "classesDir" : "/Users/stevendellamore/Desktop/proj2/.bloop/proj2/scala-2.12/test-classes",
+        "resources" : [
+            "/Users/stevendellamore/Desktop/proj2/src/test/resources",
+            "/Users/stevendellamore/Desktop/proj2/target/scala-2.12/resource_managed/test"
+        ],
+        "scala" : {
+            "organization" : "org.scala-lang",
+            "name" : "scala-compiler",
+            "version" : "2.12.3",
+            "options" : [
+                "-unchecked",
+                "-deprecation",
+                "-feature"
+            ],
+            "jars" : [
+                "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.12.3.jar",
+                "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.3.jar",
+                "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.3.jar",
+                "/Users/stevendellamore/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.6.jar",
+                "/Users/stevendellamore/.ivy2/cache/jline/jline/jars/jline-2.14.4.jar"
+            ],
+            "setup" : {
+                "order" : "mixed",
+                "addLibraryToBootClasspath" : true,
+                "addCompilerToClasspath" : false,
+                "addExtraJarsToClasspath" : false,
+                "manageBootClasspath" : true,
+                "filterLibraryFromClasspath" : true
+            }
+        },
+        "java" : {
+            "options" : [
+            ]
+        },
+        "test" : {
+            "frameworks" : [
+                {
+                    "names" : [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                }
+            ],
+            "options" : {
+                "excludes" : [
+                ],
+                "arguments" : [
+                ]
+            }
+        },
+        "platform" : {
+            "name" : "jvm",
+            "config" : {
+                "home" : "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre",
+                "options" : [
+                ]
+            },
+            "mainClass" : [
+            ]
+        },
+        "resolution" : {
+            "modules" : [
+                {
+                    "organization" : "org.scala-lang",
+                    "name" : "scala-library",
+                    "version" : "2.12.3",
+                    "artifacts" : [
+                        {
+                            "name" : "scala-library",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.3.jar"
+                        },
+                        {
+                            "name" : "scala-library",
+                            "classifier" : "sources",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization" : "org.scalatest",
+                    "name" : "scalatest_2.12",
+                    "version" : "3.0.1",
+                    "artifacts" : [
+                        {
+                            "name" : "scalatest_2.12",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scalatest/scalatest_2.12/bundles/scalatest_2.12-3.0.1.jar"
+                        },
+                        {
+                            "name" : "scalatest_2.12",
+                            "classifier" : "sources",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scalatest/scalatest_2.12/srcs/scalatest_2.12-3.0.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization" : "org.scalactic",
+                    "name" : "scalactic_2.12",
+                    "version" : "3.0.1",
+                    "artifacts" : [
+                        {
+                            "name" : "scalactic_2.12",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.1.jar"
+                        },
+                        {
+                            "name" : "scalactic_2.12",
+                            "classifier" : "sources",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scalactic/scalactic_2.12/srcs/scalactic_2.12-3.0.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization" : "org.scala-lang",
+                    "name" : "scala-reflect",
+                    "version" : "2.12.3",
+                    "artifacts" : [
+                        {
+                            "name" : "scala-reflect",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.3.jar"
+                        },
+                        {
+                            "name" : "scala-reflect",
+                            "classifier" : "sources",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.12.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization" : "org.scala-lang.modules",
+                    "name" : "scala-xml_2.12",
+                    "version" : "1.0.5",
+                    "artifacts" : [
+                        {
+                            "name" : "scala-xml_2.12",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.5.jar"
+                        },
+                        {
+                            "name" : "scala-xml_2.12",
+                            "classifier" : "sources",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/srcs/scala-xml_2.12-1.0.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization" : "org.scala-lang.modules",
+                    "name" : "scala-parser-combinators_2.12",
+                    "version" : "1.0.4",
+                    "artifacts" : [
+                        {
+                            "name" : "scala-parser-combinators_2.12",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/bundles/scala-parser-combinators_2.12-1.0.4.jar"
+                        },
+                        {
+                            "name" : "scala-parser-combinators_2.12",
+                            "classifier" : "sources",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/srcs/scala-parser-combinators_2.12-1.0.4-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

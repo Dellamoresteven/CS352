@@ -1,0 +1,213 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mParserTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 2[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 3[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 4 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  java.lang.Exception:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.abort(Util.scala:16)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.abort$(Util.scala:16)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Parser.abort(Parser.scala:219)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.expected(Util.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.expected$(Util.scala:19)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Parser.expected(Parser.scala:219)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Parser.expected(Parser.scala:228)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:414)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testGenericPrecedence(ParserTest.scala:14)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$5(ParserTest.scala:76)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 5 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  java.lang.Exception:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.abort(Util.scala:16)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.abort$(Util.scala:16)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Parser.abort(Parser.scala:219)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.expected(Util.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.expected$(Util.scala:19)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Parser.expected(Parser.scala:219)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Parser.expected(Parser.scala:228)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:414)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testGenericPrecedence(ParserTest.scala:14)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$6(ParserTest.scala:79)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 6 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  java.lang.Exception:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.abort(Util.scala:16)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.abort$(Util.scala:16)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Parser.abort(Parser.scala:219)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.expected(Util.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.expected$(Util.scala:19)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Parser.expected(Parser.scala:219)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Parser.expected(Parser.scala:228)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:414)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testGenericPrecedence(ParserTest.scala:14)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$7(ParserTest.scala:82)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 7 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  java.lang.Exception:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.abort(Util.scala:16)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.abort$(Util.scala:16)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Parser.abort(Parser.scala:219)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.expected(Util.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Reporter.expected$(Util.scala:19)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Parser.expected(Parser.scala:219)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.Parser.expected(Parser.scala:228)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:414)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testGenericPrecedence(ParserTest.scala:14)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$8(ParserTest.scala:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 8[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 9[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 10[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 11[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 12[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 13[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 14 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LetParser.parseAtom(Parser.scala:484)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseUAtom(Parser.scala:435)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseExpression(Parser.scala:441)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseExpression(Parser.scala:439)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LetParser.parseSimpleExpression(Parser.scala:488)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LetParser.parseExpression(Parser.scala:499)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:412)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testLetParser(ParserTest.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$15(ParserTest.scala:114)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 15 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LetParser.parseAtom(Parser.scala:484)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseUAtom(Parser.scala:435)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseExpression(Parser.scala:441)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseExpression(Parser.scala:439)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LetParser.parseSimpleExpression(Parser.scala:488)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LetParser.parseExpression(Parser.scala:499)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:412)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testLetParser(ParserTest.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$16(ParserTest.scala:117)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 16 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.BranchParser.parseSimpleExpression(Parser.scala:547)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.BranchParser.parseSimpleExpression(Parser.scala:522)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LetParser.parseExpression(Parser.scala:499)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:412)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testBranchParser(ParserTest.scala:28)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$17(ParserTest.scala:126)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 17 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.BranchParser.parseSimpleExpression(Parser.scala:547)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.BranchParser.parseSimpleExpression(Parser.scala:522)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LetParser.parseExpression(Parser.scala:499)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:412)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testBranchParser(ParserTest.scala:28)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$18(ParserTest.scala:131)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 18 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but scala.NotImplementedError was thrown (ParserTest.scala:134)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 19 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but scala.NotImplementedError was thrown (ParserTest.scala:139)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 20 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.VariableParser.parseExpression(Parser.scala:577)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:412)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testVariableParser(ParserTest.scala:34)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$23(ParserTest.scala:148)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 21 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.VariableParser.parseExpression(Parser.scala:577)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:412)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testVariableParser(ParserTest.scala:34)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$24(ParserTest.scala:151)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 22 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.VariableParser.parseExpression(Parser.scala:577)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:412)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testVariableParser(ParserTest.scala:34)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$25(ParserTest.scala:156)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 23 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but scala.NotImplementedError was thrown (ParserTest.scala:159)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 24 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LoopParser.parseExpression(Parser.scala:612)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LoopParser.parseExpression(Parser.scala:607)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:412)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testLoopParser(ParserTest.scala:40)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$28(ParserTest.scala:166)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 25 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LoopParser.parseExpression(Parser.scala:612)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LoopParser.parseExpression(Parser.scala:607)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:412)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testLoopParser(ParserTest.scala:40)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$29(ParserTest.scala:170)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 26 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but scala.NotImplementedError was thrown (ParserTest.scala:173)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 27 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LoopParser.parseExpression(Parser.scala:612)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LoopParser.parseExpression(Parser.scala:607)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:412)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testLoopParser(ParserTest.scala:40)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$32(ParserTest.scala:179)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- 28 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LoopParser.parseExpression(Parser.scala:612)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.LoopParser.parseExpression(Parser.scala:607)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ArithParser.parseCode(Parser.scala:412)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.testLoopParser(ParserTest.scala:40)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.ParserTest.$anonfun$new$33(ParserTest.scala:185)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m

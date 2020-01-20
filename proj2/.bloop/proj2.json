@@ -1,0 +1,120 @@
+{
+    "version" : "1.1.2",
+    "project" : {
+        "name" : "proj2",
+        "directory" : "/Users/stevendellamore/Desktop/proj2",
+        "sources" : [
+            "/Users/stevendellamore/Desktop/proj2/src/main/scala-2.12",
+            "/Users/stevendellamore/Desktop/proj2/src/main/scala",
+            "/Users/stevendellamore/Desktop/proj2/src/main/java",
+            "/Users/stevendellamore/Desktop/proj2/target/scala-2.12/src_managed/main"
+        ],
+        "dependencies" : [
+        ],
+        "classpath" : [
+            "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.3.jar"
+        ],
+        "out" : "/Users/stevendellamore/Desktop/proj2/.bloop/proj2",
+        "classesDir" : "/Users/stevendellamore/Desktop/proj2/.bloop/proj2/scala-2.12/classes",
+        "resources" : [
+            "/Users/stevendellamore/Desktop/proj2/src/main/resources",
+            "/Users/stevendellamore/Desktop/proj2/target/scala-2.12/resource_managed/main"
+        ],
+        "scala" : {
+            "organization" : "org.scala-lang",
+            "name" : "scala-compiler",
+            "version" : "2.12.3",
+            "options" : [
+                "-unchecked",
+                "-deprecation",
+                "-feature"
+            ],
+            "jars" : [
+                "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.12.3.jar",
+                "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.3.jar",
+                "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.3.jar",
+                "/Users/stevendellamore/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.6.jar",
+                "/Users/stevendellamore/.ivy2/cache/jline/jline/jars/jline-2.14.4.jar"
+            ],
+            "setup" : {
+                "order" : "mixed",
+                "addLibraryToBootClasspath" : true,
+                "addCompilerToClasspath" : false,
+                "addExtraJarsToClasspath" : false,
+                "manageBootClasspath" : true,
+                "filterLibraryFromClasspath" : true
+            }
+        },
+        "java" : {
+            "options" : [
+            ]
+        },
+        "test" : {
+            "frameworks" : [
+                {
+                    "names" : [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                }
+            ],
+            "options" : {
+                "excludes" : [
+                ],
+                "arguments" : [
+                ]
+            }
+        },
+        "platform" : {
+            "name" : "jvm",
+            "config" : {
+                "home" : "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre",
+                "options" : [
+                ]
+            },
+            "mainClass" : [
+            ]
+        },
+        "resolution" : {
+            "modules" : [
+                {
+                    "organization" : "org.scala-lang",
+                    "name" : "scala-library",
+                    "version" : "2.12.3",
+                    "artifacts" : [
+                        {
+                            "name" : "scala-library",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.3.jar"
+                        },
+                        {
+                            "name" : "scala-library",
+                            "classifier" : "sources",
+                            "path" : "/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.3-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

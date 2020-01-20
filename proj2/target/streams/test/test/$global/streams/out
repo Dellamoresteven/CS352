@@ -1,0 +1,15 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(project2.InterpretTest, org.scalatest.tools.Framework$$anon$1@422d5b39, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(project2.SemanticAnalyzerTest, org.scalatest.tools.Framework$$anon$1@422d5b39, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(project2.CompilerTest, org.scalatest.tools.Framework$$anon$1@422d5b39, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(project2.ParserTest, org.scalatest.tools.Framework$$anon$1@422d5b39, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 408 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 34[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 4, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 11, failed 23, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 23 TESTS FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	project2.ParserTest[0m
+[0m[[0m[31merror[0m] [0m[0m	project2.CompilerTest[0m
+[0m[[0m[31merror[0m] [0m[0m	project2.SemanticAnalyzerTest[0m
+[0m[[0m[31merror[0m] [0m[0m	project2.InterpretTest[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
