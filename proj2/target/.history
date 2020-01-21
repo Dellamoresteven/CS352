@@ -95,3 +95,19 @@ run "while(2>1) 3+1;2"
 test
 run "while(1>2) 3+1;2"
 test
+ + 3 4
+run 1 + 3 4
+run "1 + 3 4"
+run "if (0 == 0) 2"
+val x == 4; x
+run "val x == 4; x"
+run examples/invalid_syntax_loop.scala
+run examples/invalid_syntax_mut_variables.scala
+test
+run examples/invalid_syntax_mut_variables.scala
+run examples/stevescratch.scala
+test
+run examples/stevescratch.scala
+test
+run examples/stevescratch.scala
+test

@@ -67,7 +67,7 @@ class ValueInterpreter extends Interpreter with BugReporter {
       }
   }
 
-  /*
+  /**
    * Compute and return the result of the unary
    * operation 'op' on the value 'v'
    */
@@ -76,7 +76,7 @@ class ValueInterpreter extends Interpreter with BugReporter {
     case "+" => v
   }
 
-  /*
+  /**
    * Compute and return the result of the binary
    * operation 'op' on the value 'v' and 'w'
    * Note: v op w
@@ -88,7 +88,7 @@ class ValueInterpreter extends Interpreter with BugReporter {
     case "/" => v/w
   }
 
-  /*
+  /**
    * Compute and return the result of the condition
    * operation 'op' on the value 'v' and 'w'
    * Note: v op w
@@ -102,7 +102,7 @@ class ValueInterpreter extends Interpreter with BugReporter {
     case ">"  => v > w
   }
 
-  /*
+  /**
    * Evaluate the AST starting with an empty Env
    */
   def run(exp: Exp) = eval(exp)(ValueEnv())
@@ -166,7 +166,7 @@ class StackInterpreter extends Interpreter with BugReporter {
     vars: Map[String, Loc] = Map.empty,
     outer: Env = new Env) extends Env {
 
-      /*
+      /**
        * Return a copy of the current state plus a
        * variable 'name' at the location 'loc'
        */
@@ -174,7 +174,7 @@ class StackInterpreter extends Interpreter with BugReporter {
         copy(vars = vars + (name -> loc))
       }
 
-      /*
+      /**
        * Return the location of the variable 'name'
        */
       override def apply(name: String) = vars.get(name) match {
@@ -183,7 +183,7 @@ class StackInterpreter extends Interpreter with BugReporter {
       }
   }
 
-  /*
+  /**
    * Compute the result of the operator 'op' on the
    * value stored at 'sp' and store it at 'sp'
    *
@@ -193,7 +193,7 @@ class StackInterpreter extends Interpreter with BugReporter {
     case _ => BUG(s"Unary operator $op undefined")
   }
 
-  /*
+  /**
    * Compute the result of the operator 'op' on the
    * value stored at 'sp' and 'sp1', and store it at 'sp'
    *
@@ -206,7 +206,7 @@ class StackInterpreter extends Interpreter with BugReporter {
     case "/" => memory(sp) /= memory(sp1)
   }
 
-  /*
+  /**
    * Compute the result of the operator 'op' on the
    * value stored at 'sp' and 'sp1', and store it in the
    * variable 'flag'.
@@ -226,7 +226,7 @@ class StackInterpreter extends Interpreter with BugReporter {
   val memory = new Array[Val](1000)
   var flag: Boolean = true
 
-  /*
+  /**
    * Evaluate the value of the AST 'exp' within
    * an empty environment and return the value.
    */
@@ -235,7 +235,7 @@ class StackInterpreter extends Interpreter with BugReporter {
     memory(0)
   }
 
-  /*
+  /**
    * Evaluate the value of the AST 'exp' within
    * the environment 'env 'and store the result
    * at 'sp'.

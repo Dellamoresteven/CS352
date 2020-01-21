@@ -21,9 +21,12 @@ class SemanticAnalyzer(parser: Parser) extends Reporter {
    * The map stores true if the variable is mutable,
    * false otherwise.
    */
-  case class VarEnv(
+  case class VarEnv
+  (
     vars: Map[String,Boolean] = Map.empty,
-    outer: Env = new Env) extends Env {
+    outer: Env = new Env
+  ) extends Env
+    {
 
     /**
      * Return true if the variable is already defined
@@ -125,23 +128,38 @@ class SemanticAnalyzer(parser: Parser) extends Reporter {
         error("undefined unary operator", exp.pos)
       analyze(rop)(env)
     case Let(x, a, b) =>
-      // TODO: check variable reuse
+      if(env.isDefined(x)){
+        error("Varible already declared in scope", exp.pos)
+      }
       analyze(a)(env)
       analyze(b)(env.withVal(x))
     case Ref(x) =>
-      () // TODO
+      if(!env.isDefined(x)){
+        warn("Varible is not defined in scope", exp.pos)
+      }
     case Cond(op, l, r) =>
-      () // TODO
+      analyze(l)(env)
+      if (!isBOperator(op))
+        error("Undefined BOoperator", exp.pos)
+      analyze(r)(env)
     case If(cond, tBranch, eBranch) =>
       analyze(cond)(env)
       analyze(tBranch)(env)
       analyze(eBranch)(env)
     case VarDec(x, rhs, body) =>
-      () // TODO
+      if(env.isDefined(x)){
+        warn("Varible already declared in scope", exp.pos)
+      }
+      analyze(rhs)(env)
+      analyze(body)(env.withVal(x))
     case VarAssign(x, rhs) =>
-      () // TODO
-    case While(cond, lBody, body) =>
-      () // TODO
+      if(!env.isDefined(x)){
+        error("Not defined varible", exp.pos)
+      }
+    case While(cond, body, exp) =>
+      analyze(cond)(env)
+      analyze(body)(env)
+      analyze(exp)(env)
     case _ => abort(s"unknown AST node $exp")
   }
 
