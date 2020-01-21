@@ -41,7 +41,7 @@ object Runner {
 
     // Parser to test!
     // TODO: Change this as you finish parsers
-    val parser = new ArithParser(scanner)
+    val parser = new LoopParser(scanner)
     val ast = parser.parseCode
 
     println("============= AST ================")

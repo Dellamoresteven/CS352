@@ -3,7 +3,7 @@ package project2
 class SemanticAnalyzer(parser: Parser) extends Reporter {
   import Language._
 
-  /*
+  /**
    * Define an empty state for the Semantic Analyser.
    *
    * NOTE:
@@ -16,7 +16,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter {
     def isVar(name: String) = false
   }
 
-  /*
+  /**
    * Env that keeps track of variables defined.
    * The map stores true if the variable is mutable,
    * false otherwise.
@@ -25,28 +25,28 @@ class SemanticAnalyzer(parser: Parser) extends Reporter {
     vars: Map[String,Boolean] = Map.empty,
     outer: Env = new Env) extends Env {
 
-    /*
+    /**
      * Return true if the variable is already defined
      * in this scope
      */
     def isDefined(name: String) = vars.contains(name)
 
 
-    /*
+    /**
      * Make a copy of this object and add a mutable variable 'name'
      */
     def withVar(name: String): VarEnv = {
       copy(vars = vars + (name -> true))
     }
 
-    /*
+    /**
      * Make a copy of this object and add an immutable variable 'name'
      */
     def withVal(name: String): VarEnv = {
       copy(vars = vars + (name -> false))
     }
 
-    /*
+    /**
      * Return true if 'name' is a mutable variable defined in this scope
      * or in the outer scope.
      */
@@ -55,7 +55,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter {
       case Some(mut) => mut
     }
 
-    /*
+    /**
      * Return true if 'name' is a variable defined in this scope
      * or in the outer scope.
      */
@@ -105,7 +105,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter {
   // List of valid boolean operators
   val isBOperator = Set("==", "!=", "<=", ">=", "<", ">")
 
-  /*
+  /**
    * Analyze 'exp' with the environment 'env'
    *
    * TODO: Remove the () and add the correct implementation.
@@ -120,7 +120,10 @@ class SemanticAnalyzer(parser: Parser) extends Reporter {
         error("undefined unary operator", exp.pos)
       analyze(v)(env)
     case Prim(op, lop, rop) =>
-      () // TODO
+      analyze(lop)(env)
+      if (!isOperator(op))
+        error("undefined unary operator", exp.pos)
+      analyze(rop)(env)
     case Let(x, a, b) =>
       // TODO: check variable reuse
       analyze(a)(env)

@@ -171,7 +171,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
     vars: Map[String, Loc] = Map.empty,
     outer: Env = new Env) extends Env {
 
-      /*
+      /**
        * Return a copy of the current state plus a
        * variable 'name' at the location 'loc'
        */
@@ -179,7 +179,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
         copy(vars = vars + (name -> loc))
       }
 
-      /*
+      /**
        * Return the location of the variable 'name'
        */
       override def apply(name: String): Loc = vars.get(name) match {
@@ -191,7 +191,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
   // List of available register.
   val regs = Seq("%rbx", "%rcx", "%rdi", "%rsi", "%r8", "%r9", "%r10", "%r11", "%r12", "%r13", "%r14", "%r15")
 
-  /*
+  /**
    * Generate code that computes the unary operator
    * 'op' on the value at memory location 'sp' and that
    * stores the result at 'sp'.
@@ -202,7 +202,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
     case _ => BUG(s"Unary operator $op undefined")
   }
 
-  /*
+  /**
    * Generate code that computes the binary operator
    * 'op' on the values at memory location 'sp' and
    * 'sp1' and that stores the result at 'sp'.
@@ -224,7 +224,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
   var nLabel = 0
   def freshLabel(pref: String) = { nLabel += 1; s"$pref$nLabel" }
 
-  /*
+  /**
    * Generate code that jumps to the label 'label'
    * if the CPU flags are verifying the operator
    * 'op'
@@ -241,7 +241,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
     }
   }
 
-  /*
+  /**
    * Generate code that compute the result of the
    * computation represented by the AST 'exp'.
    */
@@ -250,7 +250,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
     emitln(s"movq ${regs(0)}, %rax")
   }
 
-  /*
+  /**
    * Generate code that compute the result og the
    * computation represented by the AST 'exp'. The
    * value will be placed at memory location 'sp'

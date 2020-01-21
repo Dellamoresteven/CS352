@@ -87,11 +87,11 @@ class Scanner(in: Reader[Char]) extends Reader[Tokens.Token] with Reporter {
 
   // List of delimiters
   // TODO: Update this as delimiters are added to our language
-  val isDelim      = Set('(',')')
+  val isDelim      = Set('(',')',';', '{', '}')
 
   // List of keywords
   // TODO: Update this as keywords are added to our language
-  val isKeyword    = Set[String]()
+  val isKeyword    = Set[String]("val", "var", "while", "if", "else")
 
   /**
    * Extract a name from the stream
@@ -125,26 +125,23 @@ class Scanner(in: Reader[Char]) extends Reader[Tokens.Token] with Reporter {
    * Raise an error if there is overflow.
    *
    * NOTE: An integer can be between 0 and (2 to the power 31) minus 1
-   * TODO: implement the method
+   * TODO: implement the method AHH
    */
   def getNum() = {
     var result = 0
-    var temp = 0
     // Need to make sure the next char is a number, then I know its a number
     while(in.hasNext(isDigit)){
       // Given in lectures
       result = result * 10
       result += (in.next - '0')
-      temp += 1
-      println("Result: " + result);
-      println("Temp: " + temp)
+      // println("Result: " + result);
     }
     // make sure we are a postive number and no more then 10 digits
-    if(result >= 0 && temp <= 10)
+    if(result >= 0) {
       Number(result)
-    else
-      println("Int overflow")
-      // Do something else? throw an error maybe?
+    } else {
+      throw new IllegalStateException("Int overflow");
+    }
   }
 
   /**
@@ -425,7 +422,7 @@ class ArithParser(in: Scanner) extends Parser(in) {
       accept(')')
       res
     case Number(x) =>
-      println("Number: " + x)
+      // println("Number: " + x)
       val (lit, pos) = getNum
       Lit(lit).withPos(pos)
     case _ => expected(s"Atom")
@@ -438,13 +435,14 @@ class ArithParser(in: Scanner) extends Parser(in) {
     parseAtom
   }
 
-
+  // AHH
   def parseExpression: Exp = parseExpression(0)
   def parseExpression(min: Int): Exp = {
     var res = parseUAtom
-    while (in.hasNext(...)) {
-      val op = getOperator
-        ...
+    var isOP = in.hasNext(isOperator);
+    while (isOP && isInfixOp(min)(in.peek)) {
+      val (op, pos) = getOperator
+      res = Prim(op, res, parseExpression(prec(op) + assoc(op)))
     }
     res
   }
@@ -486,8 +484,8 @@ class LetParser(in: Scanner) extends ArithParser(in) {
       val (_, pos) = getNum
       Lit(x).withPos(pos)
     case Ident(x) =>
-      // TODO: remove ??? and add the implementation for that case
-      ???
+      val (name, pos) = getName
+      Ref(x).withPos(pos)
     case _ => abort(s"Illegal start of simple expression")
   }
 
@@ -550,7 +548,24 @@ class BranchParser(in: Scanner) extends LetParser(in) {
   }
 
   // TODO: remove ??? and complete the implementation.
-  override def parseSimpleExpression = ???
+  override def parseSimpleExpression = in.peek match {
+    case Keyword("if") =>
+      // println("START")
+      val pos = in.next.pos
+      accept('(')
+      var conditional = parseCondition;
+      accept(')')
+      var ifStatment = parseSimpleExpression
+      accept("else")
+      var elseStatment = parseSimpleExpression
+      // println("conditional statemnt: " + conditional)
+      // println("ifStatment statemnt: " + ifStatment)
+      // println("elseStatment statemnt: " + elseStatment)
+      If(conditional, ifStatment, elseStatment).withPos(pos)
+    case _ =>
+      // println("NO IF HERE!")
+      super.parseSimpleExpression
+  }
 }
 
 /*
@@ -580,12 +595,34 @@ class VariableParser(in: Scanner) extends BranchParser(in) {
 
   // TODO: remove ??? and complete the implementation.
   override def parseExpression = in.peek match {
-    case _ => ???
+    case Keyword("val") =>
+      super.parseExpression;
+    case Keyword("var") =>
+      in.next()
+      val (name, pos) = getName
+      accept('=')
+      val rhs = parseSimpleExpression
+      accept(';')
+      val body = parseExpression
+      VarDec(name, rhs, body).withPos(pos)
+    case _ =>
+      parseSimpleExpression
   }
 
   // TODO: remove ??? and complete the implementation.
   override def parseSimpleExpression = (in.peek, in.peek1) match {
-    case _ => ???
+    case (Ident(x), Delim('=')) =>
+      val (name, pos) = getName
+
+      accept('=')
+
+      var rhs = parseSimpleExpression
+
+      // println("rhs: " + rhs)
+      // Lit(5);
+      VarAssign(name, rhs).withPos(pos)
+    case _ =>
+      super.parseSimpleExpression
   }
 }
 
@@ -615,5 +652,17 @@ class LoopParser(in: Scanner) extends VariableParser(in) {
   import Tokens._
 
   // TODO: remove ??? and complete the implementation.
-  override def parseExpression = ???
+  override def parseExpression = in.peek match {
+    case Keyword("while") =>
+      val pos = in.next.pos
+      accept('(')
+      var conditional = super.parseCondition
+      accept(')')
+      var whileStatment = super.parseSimpleExpression
+      accept(';')
+      var whileExp = parseExpression
+      While(conditional, whileStatment, whileExp)
+    case _ =>
+      super.parseExpression
+  }
 }
