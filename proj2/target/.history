@@ -111,3 +111,5 @@ run examples/stevescratch.scala
 test
 run examples/stevescratch.scala
 test
+run examples/stevescratch.scala
+git status

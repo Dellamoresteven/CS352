@@ -35,7 +35,7 @@ class ValueInterpreter extends Interpreter with BugReporter {
     vars: Map[String, BoxedVal] = Map.empty,
     outer: Env = new Env) extends Env {
 
-      /*
+      /**
        * Return a copy of the current state plus an immutable
        * variable 'name' of value 'v'
        */
@@ -43,7 +43,7 @@ class ValueInterpreter extends Interpreter with BugReporter {
         copy(vars = vars + (name -> BoxedVal(v)))
       }
 
-      /*
+      /**
        * Update the variable 'name' in this scope or in the
        * outer scope.
        * Return the new value of the variable
@@ -56,7 +56,7 @@ class ValueInterpreter extends Interpreter with BugReporter {
         v
       }
 
-      /*
+      /**
        * Return the value of the variable 'name'
        */
       override def apply(name: String): Val = {

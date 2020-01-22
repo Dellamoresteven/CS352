@@ -29,7 +29,7 @@ abstract class StackCompiler extends BugReporter with Codegen {
     vars: Map[String, Loc] = Map.empty,
     outer: Env = new Env) extends Env {
 
-      /*
+      /**
        * Return a copy of the current state plus a
        * variable 'name' at the location 'loc'
        */
@@ -37,7 +37,7 @@ abstract class StackCompiler extends BugReporter with Codegen {
         copy(vars = vars + (name -> loc))
       }
 
-      /*
+      /**
        * Return the location of the variable 'name'
        */
       override def apply(name: String): Loc = vars.get(name) match {
@@ -46,7 +46,7 @@ abstract class StackCompiler extends BugReporter with Codegen {
       }
   }
 
-  /*
+  /**
    * Generate code that computes the unary operator
    * 'op' on the value at memory location 'sp' and that
    * stores the result at 'sp'.
@@ -56,7 +56,7 @@ abstract class StackCompiler extends BugReporter with Codegen {
     case "+" => ()
   }
 
-  /*
+  /**
    * Generate code that computes the binary operator
    * 'op' on the values at memory location 'sp' and
    * 'sp1' and that stores the result at 'sp'.
@@ -69,7 +69,7 @@ abstract class StackCompiler extends BugReporter with Codegen {
     case "%" => emitln(s"memory($sp) %= memory($sp1)")
   }
 
-  /*
+  /**
    * Generate code that computes the binary operator
    * 'op' on the values at memory location 'sp' and
    * 'sp1' and that stores the result in 'flag'.
@@ -83,7 +83,7 @@ abstract class StackCompiler extends BugReporter with Codegen {
     case ">"  => emitln(s"flag = (memory($sp) >  memory($sp1))")
   }
 
-  /*
+  /**
    * Generate code that computesS the result of the
    * computation represented by the AST 'exp'.
    */
@@ -95,7 +95,7 @@ abstract class StackCompiler extends BugReporter with Codegen {
     emitln(s"memory(0)")
   }
 
-  /*
+  /**
    * Generate code that computes the result of the
    * computation represented by the AST 'exp'. The
    * value will be placed at memory location 'sp'
