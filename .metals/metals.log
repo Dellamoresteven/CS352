@@ -2153,3 +2153,1064 @@ WARN  no build target:
 WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/examples/stevescratch.scala
 WARN  no build target: 
 WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala
+INFO  shutting down Metals
+INFO  time: initialize in 0.29s
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Compiler.scala
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/examples/stevescratch.scala
+INFO  no build target: using presentation compiler with only scala-library
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/examples/stevescratch.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/examples/stevescratch.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/examples/stevescratch.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+Jan 22, 2020 2:46:31 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:37)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Jan 22, 2020 2:49:40 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:37)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Jan 22, 2020 3:05:24 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.meta.internal.pc.HoverProvider.seenFromType(HoverProvider.scala:106)
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:42)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Jan 22, 2020 3:07:24 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.meta.internal.pc.HoverProvider.seenFromType(HoverProvider.scala:106)
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:42)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: 
+Jan 22, 2020 3:07:35 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.meta.internal.pc.HoverProvider.seenFromType(HoverProvider.scala:106)
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:42)
+
+Jan 22, 2020 3:07:37 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.meta.internal.pc.HoverProvider.seenFromType(HoverProvider.scala:106)
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:42)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+Jan 22, 2020 3:08:53 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: offset 7067, count -1, length 7533
+java.lang.StringIndexOutOfBoundsException: offset 7067, count -1, length 7533
+	at java.base/java.lang.String.checkBoundsOffCount(String.java:3705)
+	at java.base/java.lang.String.rangeCheck(String.java:296)
+	at java.base/java.lang.String.<init>(String.java:292)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:359)
+	at scala.Option.map(Option.scala:163)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:358)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Main.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Jan 22, 2020 3:25:22 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.meta.internal.pc.HoverProvider.seenFromType(HoverProvider.scala:106)
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:42)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Jan 22, 2020 3:30:36 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: offset 7257, count -1, length 7702
+java.lang.StringIndexOutOfBoundsException: offset 7257, count -1, length 7702
+	at java.base/java.lang.String.checkBoundsOffCount(String.java:3705)
+	at java.base/java.lang.String.rangeCheck(String.java:296)
+	at java.base/java.lang.String.<init>(String.java:292)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:359)
+	at scala.Option.map(Option.scala:163)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:358)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+Jan 22, 2020 3:30:42 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: offset 7257, count -1, length 7709
+java.lang.StringIndexOutOfBoundsException: offset 7257, count -1, length 7709
+	at java.base/java.lang.String.checkBoundsOffCount(String.java:3705)
+	at java.base/java.lang.String.rangeCheck(String.java:296)
+	at java.base/java.lang.String.<init>(String.java:292)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:359)
+	at scala.Option.map(Option.scala:163)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:358)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Jan 22, 2020 3:30:50 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: offset 7257, count -1, length 7702
+java.lang.StringIndexOutOfBoundsException: offset 7257, count -1, length 7702
+	at java.base/java.lang.String.checkBoundsOffCount(String.java:3705)
+	at java.base/java.lang.String.rangeCheck(String.java:296)
+	at java.base/java.lang.String.<init>(String.java:292)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:359)
+	at scala.Option.map(Option.scala:163)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:358)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+Jan 22, 2020 3:30:58 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: offset 7257, count -1, length 7713
+java.lang.StringIndexOutOfBoundsException: offset 7257, count -1, length 7713
+	at java.base/java.lang.String.checkBoundsOffCount(String.java:3705)
+	at java.base/java.lang.String.rangeCheck(String.java:296)
+	at java.base/java.lang.String.<init>(String.java:292)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:359)
+	at scala.Option.map(Option.scala:163)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:358)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+Jan 22, 2020 3:31:03 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: offset 7234, count -1, length 7724
+java.lang.StringIndexOutOfBoundsException: offset 7234, count -1, length 7724
+	at java.base/java.lang.String.checkBoundsOffCount(String.java:3705)
+	at java.base/java.lang.String.rangeCheck(String.java:296)
+	at java.base/java.lang.String.<init>(String.java:292)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:359)
+	at scala.Option.map(Option.scala:163)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:358)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+Jan 22, 2020 3:40:10 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: offset 7234, count -1, length 7765
+java.lang.StringIndexOutOfBoundsException: offset 7234, count -1, length 7765
+	at java.base/java.lang.String.checkBoundsOffCount(String.java:3705)
+	at java.base/java.lang.String.rangeCheck(String.java:296)
+	at java.base/java.lang.String.<init>(String.java:292)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:359)
+	at scala.Option.map(Option.scala:163)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:358)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+Jan 22, 2020 3:54:36 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: offset 7293, count -1, length 7798
+java.lang.StringIndexOutOfBoundsException: offset 7293, count -1, length 7798
+	at java.base/java.lang.String.checkBoundsOffCount(String.java:3705)
+	at java.base/java.lang.String.rangeCheck(String.java:296)
+	at java.base/java.lang.String.<init>(String.java:292)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:359)
+	at scala.Option.map(Option.scala:163)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:358)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+Jan 22, 2020 4:26:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "workspace/didChangeWatchedFiles",
+  "params": {
+    "changes": [
+      {
+        "uri": "file:///Users/stevendellamore/Desktop/CS352/proj2/examples/stevescratch.scala",
+        "type": 3
+      }
+    ]
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:192)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: /Users/stevendellamore/Desktop/CS352/proj2/examples/stevescratch.scala
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:374)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:425)
+	at java.base/java.nio.file.Files.readAllBytes(Files.java:3271)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$onChange$1(MetalsLanguageServer.scala:725)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$onChange$1$adapted(MetalsLanguageServer.scala:724)
+	at scala.collection.immutable.Stream.foreach(Stream.scala:533)
+	at scala.meta.internal.metals.MetalsLanguageServer.onChange(MetalsLanguageServer.scala:724)
+	at scala.meta.internal.metals.MetalsLanguageServer.didChangeWatchedFiles(MetalsLanguageServer.scala:689)
+	... 15 more
+
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+Jan 22, 2020 4:36:15 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: offset 8398, count -1, length 8627
+java.lang.StringIndexOutOfBoundsException: offset 8398, count -1, length 8627
+	at java.base/java.lang.String.checkBoundsOffCount(String.java:3705)
+	at java.base/java.lang.String.rangeCheck(String.java:296)
+	at java.base/java.lang.String.<init>(String.java:292)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:359)
+	at scala.Option.map(Option.scala:163)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:358)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+Jan 22, 2020 4:36:24 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: offset 8398, count -1, length 8635
+java.lang.StringIndexOutOfBoundsException: offset 8398, count -1, length 8635
+	at java.base/java.lang.String.checkBoundsOffCount(String.java:3705)
+	at java.base/java.lang.String.rangeCheck(String.java:296)
+	at java.base/java.lang.String.<init>(String.java:292)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:359)
+	at scala.Option.map(Option.scala:163)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:358)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/examples/valid_mut_variable.scala
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Jan 22, 2020 5:12:18 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: offset 8759, count -1, length 8994
+java.lang.StringIndexOutOfBoundsException: offset 8759, count -1, length 8994
+	at java.base/java.lang.String.checkBoundsOffCount(String.java:3705)
+	at java.base/java.lang.String.rangeCheck(String.java:296)
+	at java.base/java.lang.String.<init>(String.java:292)
+	at scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1230)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1253)
+	at scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:359)
+	at scala.Option.map(Option.scala:163)
+	at scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:358)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:197)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:305)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:300)
+	at scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:269)
+	at scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:26)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+Jan 22, 2020 5:13:52 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.meta.internal.pc.HoverProvider.seenFromType(HoverProvider.scala:106)
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:42)
+
+Jan 22, 2020 5:13:54 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.meta.internal.pc.HoverProvider.seenFromType(HoverProvider.scala:106)
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:42)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+Jan 22, 2020 5:28:03 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:37)
+
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala
+WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 

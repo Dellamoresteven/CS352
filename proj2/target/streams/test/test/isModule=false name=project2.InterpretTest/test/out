@@ -1,14 +1,2 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mInterpretTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- arithm *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.StackInterpreter.eval(Interpreter.scala:253)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.StackInterpreter.run(Interpreter.scala:234)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.InterpretTest.testInterpreter(InterpreterTest.scala:11)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at project2.InterpretTest.$anonfun$new$1(InterpreterTest.scala:16)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- arithm[0m[0m

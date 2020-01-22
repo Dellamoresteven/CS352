@@ -190,6 +190,8 @@ class StackInterpreter extends Interpreter with BugReporter {
    * TODO: Implement the appropriate code as defined in the handout.
    */
   def evalUn(op: String)(sp: Loc) = op match {
+    case "-" => memory(sp) = -memory(sp)
+    case "+" => memory(sp) = memory(sp)
     case _ => BUG(s"Unary operator $op undefined")
   }
 
@@ -215,9 +217,22 @@ class StackInterpreter extends Interpreter with BugReporter {
    *
    * TODO: Implement the appropriate code as defined in the handout.
    */
+   // def evalCond(op: String)(v: Val, w: Val) = op match {
+   //   case "==" => v == w
+   //   case "!=" => v != w
+   //   case "<=" => v <= w
+   //   case ">=" => v >= w
+   //   case "<"  => v < w
+   //   case ">"  => v > w
+   // }
   def evalCond(op: String)(sp: Loc, sp1: Loc) = {
     flag = op match {
       case "==" => memory(sp) == memory(sp1)
+      case "!=" => memory(sp) != memory(sp1)
+      case "<=" => memory(sp) <= memory(sp1)
+      case ">=" => memory(sp) >= memory(sp1)
+      case "<"  => memory(sp) < memory(sp1)
+      case ">"  => memory(sp) > memory(sp1)
       case _ => BUG(s"Binary operator $op undefined")
     }
   }
@@ -232,6 +247,7 @@ class StackInterpreter extends Interpreter with BugReporter {
    */
   def run(exp: Exp): Val = {
     eval(exp, 0)(LocationEnv())
+    println(memory.mkString(" "))
     memory(0)
   }
 
@@ -246,17 +262,59 @@ class StackInterpreter extends Interpreter with BugReporter {
    * TODO: Remove all ???s and implement the
    * appropriate code as defined in the handout.
    */
+
   def eval(exp: Exp, sp: Loc)(env: LocationEnv): Unit = exp match {
     case Lit(x) =>
       memory(sp) = x
-    case Unary(op, v) => ???
-    case Prim(op, lop, rop) => ???
-    case Let(x, a, b) => ???
-    case Ref(x) => ???
-    case Cond(op, l, r) => ???
-    case If(cond, tBranch, eBranch) => ???
-    case VarDec(x, rhs, body) => ???
-    case VarAssign(x, rhs) => ???
+    case Unary(op, v) =>
+    // evalUn(op)(eval(v)(env))
+      eval(v, sp)(env)
+      evalUn(op)(sp)
+    case Prim(op, lop, rop) =>
+      println("Prim op: " + op + " lop: " + lop + " rop: " + rop)
+      eval(lop, sp)(env)
+      eval(rop, sp + 1)(env)
+      evalBin(op)(sp, sp + 1);
+    case Let(x, a, b) =>
+      // eval(b)(env.withVal(x, eval(a)(env)))
+      eval(a, sp)(env)
+      // println("SP: " + sp)
+      // println(memory.mkString(" "))
+      // println();
+      eval(b, sp + 1)(env.withVal(x,sp))
+      // println(memory.mkString(" "))
+      // println();
+      // println("AHH " + a)
+      // println("BHH " + b)
+      memory(sp) = memory(sp + 1)
+      // println(memory.mkString(" "))
+
+      // for ((k,v) <- env.withVal(x,sp).vars) println("k: " + k + " v: " + memory(v))
+      // ???
+      // println("indhu is the best: " + memory(env.withVal(x,sp).apply(x)))
+    case Ref(x) =>
+      // println("F: " + memory(env.apply(x)));
+      println("Ref: " + memory(env.apply(x)))
+      memory(sp) = memory(env.apply(x))
+    case Cond(op, l, r) =>
+      eval(l, sp)(env)
+      eval(r, sp + 1)(env)
+      evalCond(op)(sp, sp + 1)
+    case If(cond, tBranch, eBranch) =>
+      eval(cond, sp)(env)
+      if (flag)
+        eval(tBranch, sp)(env)
+      else
+        eval(eBranch, sp)(env)
+    case VarDec(x, rhs, body) =>
+      eval(rhs, sp)(env)
+      eval(body, sp + 1)(env.withVal(x,sp))
+      memory(sp) = memory(sp + 1)
+    case VarAssign(x, rhs) =>
+      println("VarAssign: " + memory(env.apply(x)))
+      eval(rhs, sp)(env)
+      // memory(sp) = memory(env.apply(x))
+      env.withVal(x,sp)
     case While(cond, lbody, body) =>
       eval(cond, sp)(env)
       while (flag) {

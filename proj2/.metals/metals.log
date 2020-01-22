@@ -1353,3 +1353,14 @@ WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop
 WARN  no build target: /Users/stevendellamore/Desktop/proj2/src/main/scala/project2/Parser.scala
 WARN  no build target: 
 INFO  shutting down Metals
+INFO  time: initialize in 0.24s
+INFO  skipping build import with status 'Installed'
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/SemanticAnalyzer.scala
+INFO  no build target: using presentation compiler with only scala-library
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/SemanticAnalyzer.scala' because it doesn't belong to a build target.
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/SemanticAnalyzer.scala' because it doesn't belong to a build target.
+INFO  shutting down Metals
+INFO  time: initialize in 0.27s
+INFO  skipping build import with status 'Installed'
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala
+INFO  shutting down Metals

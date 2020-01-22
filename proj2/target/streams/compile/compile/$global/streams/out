@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Main.scala:44:22: not found: type parseSimpleExpression[0m
-[0m[[0m[31merror[0m] [0m[0m    val parser = new parseSimpleExpression(scanner)[0m
-[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Interpreter.scala:326:12: not found: value body[0m
+[0m[[0m[31merror[0m] [0m[0m      eval(body, sp + 1)(env.withVal(x,sp))[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
