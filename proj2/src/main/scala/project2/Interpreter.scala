@@ -294,7 +294,7 @@ class StackInterpreter extends Interpreter with BugReporter {
       // println("indhu is the best: " + memory(env.withVal(x,sp).apply(x)))
     case Ref(x) =>
       // println("F: " + memory(env.apply(x)));
-      println("Ref: " + memory(env.apply(x)))
+      // println("Ref: " + memory(env.apply(x)))
       memory(sp) = memory(env.apply(x))
     case Cond(op, l, r) =>
       eval(l, sp)(env)
@@ -311,10 +311,13 @@ class StackInterpreter extends Interpreter with BugReporter {
       eval(body, sp + 1)(env.withVal(x,sp))
       memory(sp) = memory(sp + 1)
     case VarAssign(x, rhs) =>
-      println("VarAssign: " + memory(env.apply(x)))
+      println("VarAssignApply: " + memory(env.apply(x)))
+      println("VarAssignSP: " + memory(sp))
       eval(rhs, sp)(env)
-      // memory(sp) = memory(env.apply(x))
-      env.withVal(x,sp)
+      println("AFTERVarAssignApply: " + memory(env.apply(x)))
+      println("AFTERVarAssignSP: " + memory(sp))
+      memory(env.apply(x)) = memory(sp)
+      // env.withVal(x,sp)
     case While(cond, lbody, body) =>
       eval(cond, sp)(env)
       while (flag) {

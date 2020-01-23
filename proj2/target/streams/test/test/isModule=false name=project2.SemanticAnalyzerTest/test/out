@@ -2,5 +2,4 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- 29[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- 30[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- 31[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- 32 *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  0 did not equal 1 Incorrect number of Warnings (SemanticAnalyzerTest.scala:17)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 32[0m[0m

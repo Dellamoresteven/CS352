@@ -12,6 +12,9 @@ entry_point:
 	mov %rsp, %rbp
 
 	# beginning generated code
+	movq $10, %rbx
+	movq $2, %rcx
+	subq %rcx, %rbx
 	movq %rbx, %rax
 	# end generated code
 	# %rax contains the result

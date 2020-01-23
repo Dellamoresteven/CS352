@@ -123,13 +123,15 @@ class SemanticAnalyzer(parser: Parser) extends Reporter {
         error("undefined unary operator", exp.pos)
       analyze(v)(env)
     case Prim(op, lop, rop) =>
+      if (!isOperator(op)) {
+        // println("STAYING ALIVE STAYING ALIVE: " + exp + " " + exp.pos)
+        error("undefined binary operator", exp.pos)
+      }
       analyze(lop)(env)
-      if (!isOperator(op))
-        error("undefined unary operator", exp.pos)
       analyze(rop)(env)
     case Let(x, a, b) =>
       if(env.isDefined(x)){
-        error("Varible already declared in scope", exp.pos)
+        warn("Varible already declared in scope", exp.pos)
       }
       analyze(a)(env)
       analyze(b)(env.withVal(x))
@@ -138,9 +140,9 @@ class SemanticAnalyzer(parser: Parser) extends Reporter {
         warn("Varible is not defined in scope", exp.pos)
       }
     case Cond(op, l, r) =>
-      analyze(l)(env)
       if (!isBOperator(op))
         error("Undefined BOoperator", exp.pos)
+      analyze(l)(env)
       analyze(r)(env)
     case If(cond, tBranch, eBranch) =>
       analyze(cond)(env)
@@ -151,11 +153,14 @@ class SemanticAnalyzer(parser: Parser) extends Reporter {
         warn("Varible already declared in scope", exp.pos)
       }
       analyze(rhs)(env)
-      analyze(body)(env.withVal(x))
+      analyze(body)(env.withVar(x))
     case VarAssign(x, rhs) =>
       if(!env.isDefined(x)){
         error("Not defined varible", exp.pos)
+      }else if(!env.isVar(x)){
+        error("Reassigment to val not allowed", exp.pos)
       }
+      analyze(rhs)(env.withVar(x))
     case While(cond, body, exp) =>
       analyze(cond)(env)
       analyze(body)(env)

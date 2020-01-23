@@ -1,3 +1,2 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mCompilerTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- arithm *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  0 did not equal 8 Invalid result (CompilerTest.scala:33)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- arithm[0m[0m

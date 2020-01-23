@@ -442,7 +442,7 @@ class ArithParser(in: Scanner) extends Parser(in) {
     var isOP = in.hasNext(isOperator);
     while (isOP && isInfixOp(min)(in.peek)) {
       val (op, pos) = getOperator
-      res = Prim(op, res, parseExpression(prec(op) + assoc(op)))
+      res = Prim(op, res, parseExpression(prec(op) + assoc(op))).withPos(pos)
     }
     res
   }

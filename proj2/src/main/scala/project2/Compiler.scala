@@ -199,6 +199,11 @@ abstract class X86Compiler extends BugReporter with Codegen {
    * TODO: Fill in transUn with the appropriate code.
    */
   def transUn(op: String)(sp: Loc) = op match {
+    case "+" => emitln("nop")
+    case "-" =>
+      emitln(s"movq ${regs(sp)}, ${regs(sp+1)}")
+      emitln(s"movq $$0, ${regs(sp)}")
+      emitln(s"subq ${regs(sp+1)}, ${regs(sp)}")
     case _ => BUG(s"Unary operator $op undefined")
   }
 
@@ -257,21 +262,95 @@ abstract class X86Compiler extends BugReporter with Codegen {
    *
    * TODO: Fill in each () with the appropriate code.
    */
+
   def trans(exp: Exp, sp: Loc)(env: LocationEnv): Unit = exp match {
     case Lit(x) =>
       emitln(s"movq $$$x, ${regs(sp)}")
-    case Unary(op, v) => ()
-    case Prim(op, lop, rop) => ()
-    case Let(x, a, b) => ()
-    case Ref(x) => ()
-    case Cond(op, l, r) => ()
-    case If(cond, tBranch, eBranch) => ()
-    case VarDec(x, rhs, body) => ()
-    case VarAssign(x, rhs) => ()
+    case Unary(op, v) =>
+      trans(v, sp)(env)
+      transUn(op)(sp)
+    case Prim(op, lop, rop) =>
+      trans(lop, sp)(env)
+      trans(rop, sp + 1)(env)
+      transBin(op)(sp, sp + 1);
+    case Let(x, a, b) =>
+      // eval(b)(env.withVal(x, eval(a)(env)))
+      trans(a, sp)(env)
+      // println("SP: " + sp)
+      // println(memory.mkString(" "))
+      // println();
+      trans(b, sp + 1)(env.withVal(x,sp))
+      // println(memory.mkString(" "))
+      // println();
+      // println("AHH " + a)
+      // println("BHH " + b)
+      // memory(sp) = memory(sp + 1)
+      emitln(s"movq ${regs(sp+1)}, ${regs(sp)}")
+
+      // println(memory.mkString(" "))
+
+      // for ((k,v) <- env.withVal(x,sp).vars) println("k: " + k + " v: " + memory(v))
+      // ???
+      // println("indhu is the best: " + memory(env.withVal(x,sp).apply(x)))
+    case Ref(x) =>
+      val value = env.apply(x)
+      emitln(s"movq ${regs(value)}, ${regs(sp)}")
+    case Cond(op, l, r) =>
+      trans(l, sp)(env)
+      trans(r, sp + 1)(env)
+      emitln(s"cmpq ${regs(sp+1)}, ${regs(sp)}")
+    case If(cond, tBranch, eBranch) =>
+      trans(cond, sp)(env)
+      println("COND " + cond.op)
+      println("tBranch " + tBranch)
+      println("eBranch " + eBranch)
+      var lab = freshLabel("if")
+      transJumpIf(cond.op)(s"${lab}_body")
+      trans(eBranch, sp)(env)
+      emitln(s"jmp ${lab}_after")
+      emitln(s"${lab}_body :", 0)
+      trans(tBranch, sp)(env)
+      emitln(s"${lab}_after :", 0)
+
+      // transJumpIf(cond.op)(s"ahhhh_then")
+
+      // trans(tBranch, sp + 2)(env)
+      // // emitln(s"movq ${regs(sp+1)}, ${regs(sp)}")
+      // // emitln(s"movq ${regs(sp+1)}, ${regs(sp+1)}")
+      // emitln(s"cmpq ${regs(sp+2)}, ${regs(sp+1)}")
+    case VarDec(x, rhs, body) =>
+      trans(rhs, sp)(env)
+      trans(body, sp + 1)(env.withVal(x,sp))
+      emitln(s"movq ${regs(sp+1)}, ${regs(sp)}")
+    case VarAssign(x, rhs) =>
+      trans(rhs, sp)(env)
+      // env.withVal(x,sp)
+      // memory(env.apply(x)) = memory(sp)
+      emitln(s"movq ${regs(sp)}, ${regs(env.apply(x))}")
     case While(cond, lBody, body) =>
       val lab = freshLabel("loop")
       emitln(s"jmp ${lab}_cond")
       emitln(s"${lab}_body:", 0)
-      () // TODO: continue ...
+
+      trans(lBody, sp)(env)
+      emitln(s"${lab}_cond:", 0) 
+      // emitln(s"movq ${regs(sp)}, ${regs(sp-1)}") // fancy way to mess up ur code :)
+      trans(cond, sp)(env)
+      transJumpIf(cond.op)(s"${lab}_body")
+      trans(body, sp)(env)
   }
 }
+
+// # begin code generated
+//   movq $1, %rbx # generate code that compute l, stored in %rbx
+//   movq $0, %rcx # generate code that compute r, stored in %rcx
+//   cmpq %rcx, %rbx
+//   je if1_then
+//   movq $3, %rbx # generate code for eBranch, store result in %rbx
+//   jmp if1_end
+// if1_then:
+//   movq $2, %rbx # generate code for tBranch, store result in %rbx
+// if1_end:
+// # end code generated
+//   movq %rbx, %rax
+//   ret
