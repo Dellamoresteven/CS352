@@ -137,7 +137,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter {
       analyze(b)(env.withVal(x))
     case Ref(x) =>
       if(!env.isDefined(x)){
-        warn("Varible is not defined in scope", exp.pos)
+        error("Varible is not defined in scope", exp.pos)
       }
     case Cond(op, l, r) =>
       if (!isBOperator(op))
