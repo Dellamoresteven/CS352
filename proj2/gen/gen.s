@@ -12,9 +12,19 @@ entry_point:
 	mov %rsp, %rbp
 
 	# beginning generated code
-	movq $10, %rbx
-	movq $2, %rcx
-	subq %rcx, %rbx
+	movq $5, %rbx
+	movq $5, %rcx
+	movq %rbx, %rdi
+	movq %rcx, %rsi
+	cmpq %rsi, %rdi
+	je if1_body
+	movq $10, %rdi
+	jmp if1_after
+if1_body :
+	movq $5, %rdi
+if1_after :
+	movq %rdi, %rcx
+	movq %rcx, %rbx
 	movq %rbx, %rax
 	# end generated code
 	# %rax contains the result

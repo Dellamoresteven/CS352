@@ -666,3 +666,32 @@ class LoopParser(in: Scanner) extends VariableParser(in) {
       super.parseExpression
   }
 }
+
+
+/*
+ * Finally, we must parse while loops. These function
+ * similar to if-else statements: they consist of a
+ * condition and a loop body.
+ *
+ * <op>    ::= ['*' | '/' | '+' | '-' ]+
+ * // <type> ::= <ident>
+ * // <bool> ::= 'true' | 'false'
+ * <bop>   ::= ('<' | '>' | '=' | '!')[<op>]
+ * <atom>  ::= <number>
+ *           | '('<simp>')'
+ *           | <ident>
+ *           | '{'<exp>'}'
+ * <uatom> ::= [<op>]<atom>
+ * <cond>  ::= <exp> <bop> <exp>
+ * <simp>  ::= <uatom>[<op><uatom>]*
+ *           | 'if' '('<cond>')' <simp> 'else' <simp>
+ *           |  <ident> '=' <simp>
+ * <exp>   ::= <simp>
+ *           | 'val' <ident> '=' <simp>';' <exp>
+ *           | 'var' <ident> '=' <simp>';' <exp>
+ *           | 'while' '('<cond>')'<simp>';' <exp>
+ */
+ // class TypeParser(in: Scanner) extends LoopParser(in) {
+ //   import Language._
+ //   import Tokens._
+ // }

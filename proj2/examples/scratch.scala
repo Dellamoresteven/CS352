@@ -1,9 +1,7 @@
 var x = 2;
-
-while (x>1){
-
-    x = x +1
-
-}
-
+var y = 0;
+while (y < 5) {
+  val dummy = x = x * x;
+  y = y + 1
+};
 x

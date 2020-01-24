@@ -31,11 +31,34 @@ class SemanticAnalyzerTest extends FunSuite {
   test("32"){
     testSemanticAnalyzer(VarDec("x",Lit(1),Let("x",Lit(5),Lit(4))), 1 ,0)
   }
-  /*test("3"){
+  test("3"){
     testSemanticAnalyzer(Prim("%",Lit(1),Lit(5)),0,1)
   }
-  test("3134"){
+  test("steve110001"){
+    testSemanticAnalyzer(Let("x",Lit(5),VarAssign("x",Lit(6))),0,1)
+  }
+  test("steve110002"){
+    testSemanticAnalyzer(Let("x",Lit(5),Let("x",Lit(6),Ref("x"))), 1, 0)
+  }
+  test("steve110003"){
+    testSemanticAnalyzer(Let("x",Lit(5),Let("x",Lit(6),VarAssign("x",Lit(5)))), 1, 1)
+  }
+  test("steve110004"){
+    testSemanticAnalyzer(Prim("+",Unary("/",Lit(5)),Lit(5)), 0, 1)
+  }
+  test("steve110005"){
+    testSemanticAnalyzer(Prim("++",Lit(5),Lit(5)), 0, 1)
+  }
+  test("steve110006"){
+    testSemanticAnalyzer(If(Cond("====",Lit(3),Lit(3)),Lit(5),Lit(4)), 0, 1)
+  }
+  test("steve110007"){
+    testSemanticAnalyzer(VarDec("x",Lit(5),VarDec("x",Lit(6),Ref("x"))), 1, 0)
+  }
+  test("steve110008"){
+    testSemanticAnalyzer(If(Cond("==",Ref("x"),Lit(5)),Lit(5),Lit(3)), 0, 1)
+  }
+  /**test("3134"){
     testSemanticAnalyzer(Prim("%",Lit(1),Lit(5)),0,1)
   }*/
-
 }

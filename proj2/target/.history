@@ -321,3 +321,104 @@ test examples/scratch.scala
 run examples/scratch.scala
 run "var x = 0; while(x < 7) x = x + 1; x" 
 run examples/scratch.scala
+test
+c
+test
+run "if(1+2) 3 else 5'
+run "if(1+2) 3 else 5"
+run "if(1+2)3 else 5"
+if(1==2)3 else 5
+run "if(1==2)3 else 5"
+test
+run "if(1==2)3 else 5"
+test
+run "val x = 5; if(x==5) x else 5"
+tet
+test
+run "val x = 5; if((x!=5)) x else 5"
+var x=10;var b=1;while(x<=0){if(b==5)b else b=b+7};x
+run "var x=10;var b=1;while(x<=0){if(b==5)b else b=b+7};x"
+test
+run "val x = 5; x = 6"
+test
+run "val x = 5; val x = 6;"
+run "val x = 5; val x = 6; x"
+test
+run "val x = 5; val x = 6; x = 5;"
+run "val x = 5; val x = 6; x = 5;"x
+run "val x = 5; val x = 6; x = 5;x"
+run "val x = 5; val x = 6; x = 5"
+test
+run "_5+5"
+run "/5+5"
+run "_5+5"
+run "/5+5"
+test
+run "5_5"
+run "5>5"
+run "if(3==3)5 else 4
+run "if(3==3)5 else 4"
+run "if(3+3)5 else 4"
+run "5>5"
+run "5++5"
+run "if(3====3)5 else 4"
+test
+run "if(3====3)5 else 4"
+test
+run "var x = 5; var x = 6; x
+run "var x = 5; var x = 6; x"
+test
+run "if(x==5) 5 else 3"
+test
+ls
+run "5+5" intstack
+run "5+5-5+5-5+5-5" intstack
+test
+run "5*5:
+run "5*5"
+test
+run "5* -5"
+run "5* -5" intstack
+test
+run "val x = 5; x"
+test
+run "val x = -5; x"
+test
+run "var x = -5; x"
+run "var x = 5; x"
+test
+run "var x = 5; x" intstack
+run "var x = -5; x"
+run "var x = 5; x = 3; x" intstack
+run "var x = 5; x = 3;" intstack
+run "var x = 5; x = 3" intstack
+run "var x = 5; x = 3"
+run "var x = 5; x = 3; x"
+run "var x = 5; x = 3" intstack
+test
+run "var x = 5; x = 3" intstack
+test
+run "var x = 5; if(x ==5) 7 else 6" intstack
+run "var x = 5; if(x !=5) 7 else 6" intstack
+test
+run "5+-5"
+run "if(3==-5)5 else 6"
+test
+run "var x = 5; if(x ==5) 7 else 6" intstack
+test
+run "while(5!=5) 3; 5
+run "while(5!=5) 3; 5"
+run "while(5!=5) 3; 5" intstack
+test
+run "val x = 5; while(x != 5) x=x+1; else 4
+run "val x = 5; while(x != 5) x=x+1; else 4"
+run "val x = 5; while(x != 5) x=x+1; x"
+run "var x = 5; while(x != 5) x=x+1; x"
+run "var x = 0; while(x != 5) x=x+1; x"
+test
+run "var x = 5; val x = 5; x"
+run "val x = 5; val x = 5; x"
+run "val x = 5; val y = 5; if(x==y) 5 else  10"
+run "val x = 5; val y = 5; if(x==y) 5 else  10" intstack
+run "val x = 5; val y = 5; if(x==y) 5 else  10" intstackte
+test

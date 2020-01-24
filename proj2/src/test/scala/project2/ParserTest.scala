@@ -228,4 +228,34 @@ class ParserTest extends FunSuite {
   test("steve9") { // 42
     testGenericPrecedence("12+ -12", Prim("+",Lit(12),Unary("-",Lit(12))))
   }
+
+  test("steve10"){
+    testLoopParser("var x=10;var b=1;while(x<0){if(b==5)b else b=b+7};b",VarDec("x",Lit(10),
+    VarDec("b",Lit(1),
+    While(Cond("<",Ref("x"),Lit(0)),
+    If(Cond("==",Ref("b"),Lit(5)),Ref("b"),VarAssign("b",Prim("+",Ref("b"),Lit(7)))),Ref("b")))))
+
+
+    testLoopParser("var x=10;var b=1;while(x<0){if(b==5)b else b=b+7};b",VarDec("x",Lit(10),
+    VarDec("b",Lit(1),
+    While(Cond("<",Ref("x"),Lit(0)),
+    If(Cond("==",Ref("b"),Lit(5)),Ref("b"),VarAssign("b",Prim("+",Ref("b"),Lit(7)))),Ref("b")))))
+
+    testLoopParser("var x=10;var b=1;while(x<=0){if(b==5)b else b=b+7};b",VarDec("x",Lit(10),
+    VarDec("b",Lit(1),
+    While(Cond("<=",Ref("x"),Lit(0)),
+    If(Cond("==",Ref("b"),Lit(5)),Ref("b"),VarAssign("b",Prim("+",Ref("b"),Lit(7)))),Ref("b")))))
+
+    testLoopParser("var x=10;var b=1;while(x<=0){if(b==5)b else b=b+7};x",VarDec("x",Lit(10),
+    VarDec("b",Lit(1),
+    While(Cond("<=",Ref("x"),Lit(0)),
+    If(Cond("==",Ref("b"),Lit(5)),Ref("b"),VarAssign("b",Prim("+",Ref("b"),Lit(7)))),Ref("x")))))
+  }
+
+  test("steve11") {
+      testBranchParser("if(1==2)3 else 5", If(Cond("==",Lit(1),Lit(2)),Lit(3),Lit(5)))
+      testBranchParser("val x = 5; if(x==5) x else 5", Let("x",Lit(5),If(Cond("==",Ref("x"),Lit(5)),Ref("x"),Lit(5))))
+      testBranchParser("val x = 5; if(x!=5) x else 5", Let("x",Lit(5),If(Cond("!=",Ref("x"),Lit(5)),Ref("x"),Lit(5))))
+      testBranchParser("val x = 5; if(x!=5) x else 5", Let("x",Lit(5),If(Cond("!=",Ref("x"),Lit(5)),Ref("x"),Lit(5))))
+  }
 }

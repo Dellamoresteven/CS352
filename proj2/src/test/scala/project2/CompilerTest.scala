@@ -36,6 +36,22 @@ class CompilerTest extends FunSuite {
   test("arithm") {
     testCompiler(Lit(-21), -21)
     testCompiler(Prim("-", Lit(10), Lit(2)), 8)
+    testCompiler(Prim("+", Lit(10), Lit(15)), 25)
+    testCompiler(Prim("-",Prim("+",Prim("-",Prim("+",Prim("-",Prim("+",Lit(5),Lit(5)),Lit(5)),Lit(5)),Lit(5)),Lit(5)),Lit(5)), 5)
+    testCompiler(Unary("-", Lit(10)), -10)
+    testCompiler(Unary("+", Lit(10)), 10)
+    testCompiler(Prim("*",Lit(5),Lit(5)), 25)
+    testCompiler(Prim("*",Lit(5),Unary("-",Lit(5))), -25)
+    testCompiler(Let("x",Lit(5),Ref("x")), 5)
+    testCompiler(Let("x",Unary("-",Lit(5)),Ref("x")), -5)
+    testCompiler(VarDec("x",Lit(5),Ref("x")), 5)
+    testCompiler(VarDec("x",Unary("-",Lit(5)),Ref("x")), -5)
+    testCompiler(VarDec("x",Lit(5),VarAssign("x",Lit(3))), 3)
+    testCompiler(VarDec("x",Lit(5),If(Cond("==",Ref("x"),Lit(5)),Lit(7),Lit(6))), 7)
+    testCompiler(VarDec("x",Lit(5),If(Cond("!=",Ref("x"),Lit(5)),Lit(7),Lit(6))), 6)
+    testCompiler(While(Cond("!=",Lit(5),Lit(5)),Lit(3),Lit(5)), 5)
+    testCompiler(VarDec("x",Lit(0),While(Cond("!=",Ref("x"),Lit(5)),VarAssign("x",Prim("+",Ref("x"),Lit(1))),Ref("x"))), 5)
+    testCompiler(Let("x",Lit(5),Let("y",Lit(5),If(Cond("==",Ref("x"),Ref("y")),Lit(5),Lit(10)))), 5)
   }
 
 }
