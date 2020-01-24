@@ -42,7 +42,7 @@ class ParserTest extends FunSuite {
     assert(ast == res, "Invalid result")
   }
 
-  /*test("SingleDigit") {
+  /**test("SingleDigit") {
     testGenericPrecedence("1", Lit(1))
   }
 
@@ -183,5 +183,49 @@ class ParserTest extends FunSuite {
       VarDec("b",Lit(1),
         While(Cond(">",Ref("x"),Lit(0)),
           If(Cond("==",Ref("b"),Lit(5)),Ref("b"),VarAssign("b",Prim("+",Ref("b"),Lit(7)))),Ref("b")))))
+  }
+
+  /**************** STEVES TEST **********************/
+  test("steve1") {
+    testGenericPrecedence(s"${(1 << 31) - 1}", Lit({
+      (1 << 31) - 1
+    }))
+  }
+
+  test("steve2") { // 42
+    testGenericPrecedence("12+5*30/5", Prim("+",Lit(12),Prim("/",Prim("*",Lit(5),Lit(30)),Lit(5))))
+  }
+
+  test("steve3") { // 37
+    testGenericPrecedence("12+5*30/6", Prim("+",Lit(12),Prim("/",Prim("*",Lit(5),Lit(30)),Lit(6))))
+  }
+
+  test("steve4") { // -18
+    testGenericPrecedence("12-5*30/6-5", Prim("-",Prim("-",Lit(12),Prim("/",Prim("*",Lit(5),Lit(30)),Lit(6))),Lit(5)))
+  }
+
+  test("steve5") { // -18
+    testGenericPrecedence("12-5*30/6-5", Prim("-",Prim("-",Lit(12),Prim("/",Prim("*",Lit(5),Lit(30)),Lit(6))),Lit(5)))
+  }
+
+  test("steve6") { // -18
+    try{
+      testGenericPrecedence("12/0", Prim("-",Prim("-",Lit(12),Prim("/",Prim("*",Lit(5),Lit(30)),Lit(6))),Lit(5)))
+    } catch {
+      case e: Throwable =>
+        assert(1==1, "WUT")
+    }
+  }
+
+  test("steve7") { // -18
+    testGenericPrecedence("(12-5*30/6-5)*0", Prim("*",Prim("-",Prim("-",Lit(12),Prim("/",Prim("*",Lit(5),Lit(30)),Lit(6))),Lit(5)),Lit(0)))
+  }
+
+  test("steve8") { // 42
+    testGenericPrecedence("12+(-12)", Prim("+",Lit(12),Unary("-",Lit(12))))
+  }
+
+  test("steve9") { // 42
+    testGenericPrecedence("12+ -12", Prim("+",Lit(12),Unary("-",Lit(12))))
   }
 }

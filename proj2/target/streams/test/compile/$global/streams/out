@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj2/src/test/scala/project2/ParserTest.scala:215:15: not found: type TestFailedException[0m
+[0m[[0m[31merror[0m] [0m[0m      case e: TestFailedException =>[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

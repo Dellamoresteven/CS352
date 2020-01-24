@@ -299,3 +299,25 @@ run "1*(-4)"
 run "1*-4"
 test
 run "1*-4"
+test
+run "12+5*30/5"
+run "12+5*30/6"
+run "12-5*30/6-5"
+testa
+test
+run "12-5*30/6-5"
+run "5/0"
+test
+run "5/0"
+test
+run "(12-5*30/6-5)*0"
+test
+run "12+(-12)"
+test
+kill --help
+kill -h
+man help
+test examples/scratch.scala
+run examples/scratch.scala
+run "var x = 0; while(x < 7) x = x + 1; x" 
+run examples/scratch.scala
