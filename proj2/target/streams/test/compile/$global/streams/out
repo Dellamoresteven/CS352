@@ -1,18 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj2/src/test/scala/project2/InterpreterTest.scala:33:25: not found: value x[0m
-[0m[[0m[31merror[0m] [0m[0m    testInterpreter(Let(x,Lit(5),Let(y,Lit(5),If(Cond(==,Ref(x),Ref(y)),Lit(5),Lit(10)))), 5)[0m
-[0m[[0m[31merror[0m] [0m[0m                        ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj2/src/test/scala/project2/InterpreterTest.scala:33:38: not found: value y[0m
-[0m[[0m[31merror[0m] [0m[0m    testInterpreter(Let(x,Lit(5),Let(y,Lit(5),If(Cond(==,Ref(x),Ref(y)),Lit(5),Lit(10)))), 5)[0m
-[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj2/src/test/scala/project2/InterpreterTest.scala:33:55: missing argument list for method == in class Object[0m
-[0m[[0m[31merror[0m] [0m[0mUnapplied methods are only converted to functions when a function type is expected.[0m
-[0m[[0m[31merror[0m] [0m[0mYou can make this conversion explicit by writing `== _` or `==(_)` instead of `==`.[0m
-[0m[[0m[31merror[0m] [0m[0m    testInterpreter(Let(x,Lit(5),Let(y,Lit(5),If(Cond(==,Ref(x),Ref(y)),Lit(5),Lit(10)))), 5)[0m
-[0m[[0m[31merror[0m] [0m[0m                                                      ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj2/src/test/scala/project2/InterpreterTest.scala:33:62: not found: value x[0m
-[0m[[0m[31merror[0m] [0m[0m    testInterpreter(Let(x,Lit(5),Let(y,Lit(5),If(Cond(==,Ref(x),Ref(y)),Lit(5),Lit(10)))), 5)[0m
-[0m[[0m[31merror[0m] [0m[0m                                                             ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj2/src/test/scala/project2/InterpreterTest.scala:33:69: not found: value y[0m
-[0m[[0m[31merror[0m] [0m[0m    testInterpreter(Let(x,Lit(5),Let(y,Lit(5),If(Cond(==,Ref(x),Ref(y)),Lit(5),Lit(10)))), 5)[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                    ^[0m
-[0m[[0m[31merror[0m] [0m[0m5 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj2/src/test/scala/project2/InterpreterTest.scala:12:3: Missing closing brace `}' assumed here[0m
+[0m[[0m[31merror[0m] [0m[0m  test("InterpreterTest") {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -128,19 +128,16 @@ class Scanner(in: Reader[Char]) extends Reader[Tokens.Token] with Reporter {
    * TODO: implement the method AHH
    */
   def getNum() = {
-    var result = 0
-    // Need to make sure the next char is a number, then I know its a number
-    while(in.hasNext(isDigit)){
-      // Given in lectures
-      result = result * 10
-      result += (in.next - '0')
-      // println("Result: " + result);
+    var buf = ""
+    while (in.hasNext(isDigit)) {
+      buf = buf + in.next()
     }
-    // make sure we are a postive number and no more then 10 digits
-    if(result >= 0) {
-      Number(result)
-    } else {
-      throw new IllegalStateException("Int overflow");
+    try {
+      val num = buf.toInt
+      Number(num)
+    }
+    catch {
+      case _: Throwable => abort(s"int overflow")
     }
   }
 

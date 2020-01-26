@@ -422,3 +422,12 @@ run "val x = 5; val y = 5; if(x==y) 5 else  10"
 run "val x = 5; val y = 5; if(x==y) 5 else  10" intstack
 run "val x = 5; val y = 5; if(x==y) 5 else  10" intstackte
 test
+tests
+test
+run "12849219479127412 + 5"
+run "1284921947912741989899899992 + 5"
+test
+run "1284921947912741989899899992 + 5"
+run "if(if(5<6){3}else{4} < 4){2}else{9}"
+run "1284921947912741989899899992 + 5"
+test
