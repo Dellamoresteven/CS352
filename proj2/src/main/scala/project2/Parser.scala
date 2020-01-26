@@ -137,7 +137,8 @@ class Scanner(in: Reader[Char]) extends Reader[Tokens.Token] with Reporter {
       Number(num)
     }
     catch {
-      case _: Throwable => abort(s"int overflow")
+      case e: NumberFormatException =>
+        throw new NumberFormatException("Integer overflow")
     }
   }
 

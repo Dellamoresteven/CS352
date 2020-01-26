@@ -5555,3 +5555,16 @@ WARN  no build target:
 WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala
 WARN  no build target: 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala
+WARN  no build target: 
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala
+WARN  no build target: 
