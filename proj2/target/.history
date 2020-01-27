@@ -433,3 +433,41 @@ run "1284921947912741989899899992 + 5"
 test
 run "1284921947912741989899899992 + 5"
 test
+run "if(5==5) var x = 5; else x
+run "if(5==5) var x = 5; else x"
+run "if(5==5) {var x = 5} else x"
+run "if(5==5) {var x = 5;} else x"
+run "if(5==5) {var x = 5;}; else x"
+run examples/scratch
+run examples/scratch.scala
+run examples/scratch.scala intStack
+run examples/scratch.scala compX86
+run examples/scratch.scala 
+run examples/scratch.scala intStack
+run examples/scratch.scala
+run examples/scratch.scala intstack
+run examples/scratch.scala intStack
+run examples/scratch.scala
+run examples/scratch.scala intStack
+run examples/scratch.scala
+run examples/scratch.scala intStack
+run "5%5"
+run "2184812*3925898"
+run "2184812*39258982"
+run "65665*65665"
+run "2184812*39258982"
+run "65665*65665"
+run "65536 * 65536 * 65536 * 65536"
+run "65536 * 65536 * 65536 * 65537"
+run "65536 * 65536 * 65536 * 6"
+run "65536 * 65536 * 65536 * 12939"
+run "65536 * 21941298"
+run "65536 * 219412"
+run "12371*123812"
+run "12371*1238122"
+run "12371*123812"
+run "12371*1238122"
+run "12371*12381222"
+run "12371*123812222"
+run "var x = 24; x * (x = 10)"
+run "var x = 24; x * (x = 10)" intStack

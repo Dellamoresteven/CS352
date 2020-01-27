@@ -1,4 +1,6 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala:133:11: reassignment to val[0m
-[0m[[0m[31merror[0m] [0m[0m      buf = buf + in.next()[0m
-[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/SemanticAnalyzer.scala:163:20: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : String[0m
+[0m[[0m[31merror[0m] [0m[0m required: SemanticAnalyzer.this.VarEnv[0m
+[0m[[0m[31merror[0m] [0m[0m      analyze(rhs)(x)[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

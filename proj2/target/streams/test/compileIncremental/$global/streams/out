@@ -1,36 +1,36 @@
-[0m[[0m[0mdebug[0m] [0m[0mThe project2.BranchParser has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(getClass,[Default]), UsedName(notifyAll,[Default]), UsedName(finalize,[Default]), UsedName(clone,[Default]), UsedName(notify,[Default]), UsedName(hashCode,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project2.BranchParser: Set(); now invalidating by inheritance (internally).[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project2.BranchParser.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project2.ParserTest. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mThe project2.VariableParser has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(getClass,[Default]), UsedName(notifyAll,[Default]), UsedName(finalize,[Default]), UsedName(clone,[Default]), UsedName(notify,[Default]), UsedName(hashCode,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project2.VariableParser: Set(); now invalidating by inheritance (internally).[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project2.VariableParser.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project2.ParserTest. This dependency is not being considered for invalidation.[0m
 [0m[[0m[0mdebug[0m] [0m[0mThe project2.ArithParser has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(getClass,[Default]), UsedName(notifyAll,[Default]), UsedName(finalize,[Default]), UsedName(clone,[Default]), UsedName(notify,[Default]), UsedName(hashCode,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(finalize,[Default]), UsedName(notifyAll,[Default]), UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(getClass,[Default]), UsedName(notify,[Default]).[0m
 [0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
 [0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project2.ArithParser: Set(); now invalidating by inheritance (internally).[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project2.ArithParser.[0m
 [0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project2.ParserTest. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe project2.VariableParser has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(finalize,[Default]), UsedName(notifyAll,[Default]), UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(getClass,[Default]), UsedName(notify,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project2.VariableParser: Set(); now invalidating by inheritance (internally).[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project2.VariableParser.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project2.ParserTest. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe project2.LetParser has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(finalize,[Default]), UsedName(notifyAll,[Default]), UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(getClass,[Default]), UsedName(notify,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project2.LetParser: Set(); now invalidating by inheritance (internally).[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project2.LetParser.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project2.ParserTest. This dependency is not being considered for invalidation.[0m
 [0m[[0m[0mdebug[0m] [0m[0mThe project2.LoopParser has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(getClass,[Default]), UsedName(notifyAll,[Default]), UsedName(finalize,[Default]), UsedName(clone,[Default]), UsedName(notify,[Default]), UsedName(hashCode,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(finalize,[Default]), UsedName(notifyAll,[Default]), UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(getClass,[Default]), UsedName(notify,[Default]).[0m
 [0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
 [0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project2.LoopParser: Set(); now invalidating by inheritance (internally).[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project2.LoopParser.[0m
 [0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project2.ParserTest. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mThe project2.LetParser has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(getClass,[Default]), UsedName(notifyAll,[Default]), UsedName(finalize,[Default]), UsedName(clone,[Default]), UsedName(notify,[Default]), UsedName(hashCode,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe project2.BranchParser has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(finalize,[Default]), UsedName(notifyAll,[Default]), UsedName(hashCode,[Default]), UsedName(clone,[Default]), UsedName(getClass,[Default]), UsedName(notify,[Default]).[0m
 [0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project2.LetParser: Set(); now invalidating by inheritance (internally).[0m
+[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project2.BranchParser: Set(); now invalidating by inheritance (internally).[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project2.LetParser.[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project2.BranchParser.[0m
 [0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project2.ParserTest. This dependency is not being considered for invalidation.[0m
 [0m[[0m[0mdebug[0m] [0m[0mNo changes[0m

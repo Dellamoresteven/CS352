@@ -12,17 +12,25 @@ entry_point:
 	mov %rsp, %rbp
 
 	# beginning generated code
-	movq $5, %rbx
-	movq $5, %rcx
+	movq $2, %rbx
+	movq $0, %rcx
+	jmp loop1_cond
+loop1_body:
 	movq %rbx, %rdi
+	movq %rbx, %rsi
+	imulq %rsi, %rdi
+	movq %rdi, %rbx
 	movq %rcx, %rsi
+	movq $1, %r8
+	addq %r8, %rsi
+	movq %rsi, %rcx
+	movq %rsi, %rdi
+loop1_cond:
+	movq %rcx, %rdi
+	movq $5, %rsi
 	cmpq %rsi, %rdi
-	je if1_body
-	movq $10, %rdi
-	jmp if1_after
-if1_body :
-	movq $5, %rdi
-if1_after :
+	jl loop1_body
+	movq %rbx, %rdi
 	movq %rdi, %rcx
 	movq %rcx, %rbx
 	movq %rbx, %rax

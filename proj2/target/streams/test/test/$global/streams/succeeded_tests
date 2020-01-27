@@ -1,6 +1,6 @@
 #Successful Tests
-#Sun Jan 26 17:10:08 EST 2020
-project2.CompilerTest=1580076608300
-project2.InterpretTest=1580076605718
-project2.ParserTest=1580076608577
-project2.SemanticAnalyzerTest=1580076605763
+#Sun Jan 26 17:43:40 EST 2020
+project2.CompilerTest=1580078620748
+project2.InterpretTest=1580078618776
+project2.ParserTest=1580078620940
+project2.SemanticAnalyzerTest=1580078618812

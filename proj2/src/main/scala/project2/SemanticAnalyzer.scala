@@ -160,7 +160,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter {
       }else if(!env.isVar(x)){
         error("Reassigment to val not allowed", exp.pos)
       }
-      analyze(rhs)(env.withVar(x))
+      analyze(rhs)(env)
     case While(cond, body, exp) =>
       analyze(cond)(env)
       analyze(body)(env)
