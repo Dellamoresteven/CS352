@@ -3,7 +3,7 @@ package project3
 class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
   import Language._
 
-  /*
+  /**
    * Primitive functions that do not need to be defined or declared.
    */
   val primitives = Map[String,(Boolean,Type)](
@@ -24,7 +24,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
     def isVar(name: String) = false
   }
 
-  /*
+  /**
    * Env that keeps track of variables defined.
    * The map stores true if the variable is mutable,
    * false otherwise and its type.
@@ -33,13 +33,13 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
     vars: Map[String,(Boolean, Type)] = primitives,
     outer: Env = new Env) extends Env {
 
-    /*
+    /**
      * Return true if the variable is already defined
      * in this scope
      */
     def isDefined(name: String) = vars.contains(name)
 
-    /*
+    /**
      * Make a copy of this object and add a mutable variable 'name'
      */
     def withVar(name: String, tp: Type): TypeEnv = {
@@ -158,7 +158,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
   val isBOperator   = Set("==","!=","<=",">=","<",">")
   val isIntOperator   = Set("+","-","*","/")
 
-  /*
+  /**
    * Returns the type of the binary operator 'op'. See case "+" for an example
    * TODO: implement the remaining binary operators for typeBinOperator
    */
@@ -172,7 +172,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
   // List of valid unary operators
   val isIntUnOperator   = Set("+","-")
 
-  /*
+  /**
    * Returns the type of the unary operator 'op'
    * TODO: implement typeUnOperator
    */
@@ -182,7 +182,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       UnknownType
   }
 
-  /*
+  /**
    * Returns the type of the ternary operator 'op'
    * TODO: implement typeTerOperator
    * operators: block-set
@@ -204,7 +204,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       UnknownType
   }
 
-  /*
+  /**
    * Check if 'tp' conforms to 'pt' and return the more precise type.
    * The result needs to be well formed.
    *
@@ -214,7 +214,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
     case (_, _) if tp == pt => typeWellFormed(tp)(env, pos)
     case (_, UnknownType) => typeWellFormed(tp)(env, pos)  // tp <: Any
     case (UnknownType, _) => typeWellFormed(pt)(env, pos)  // for function arguments
-    case (FunType(args1, rtp1), FunType(args2, rtp2)) if args1.length == args2.length => 
+    case (FunType(args1, rtp1), FunType(args2, rtp2)) if args1.length == args2.length =>
       ??? // TODO: Function type conformity
     case (ArrayType(tp), ArrayType(pt)) => ArrayType(typeConforms(tp, pt)(env, pos))
     case _ => error(s"type mismatch;\nfound   : $tp\nexpected: $pt", pos); pt
@@ -231,7 +231,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
     if (tp.length != pt.length) BUG("length of list does not match")
 
     (tp zip pt) map { case ((arg1, tp1), (arg2, tp2)) =>
-      (if (tp1 != UnknownType) arg1 
+      (if (tp1 != UnknownType) arg1
        else arg2, typeConforms(tp1, tp2)(env, pos))
     }
   }
@@ -242,19 +242,19 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
    */
   def typeWellFormed(tp: Type)(env: TypeEnv, pos: Position)(implicit forFunction: Boolean=false): Type = tp match {
     case FunType(args, rte) =>
-      FunType(args map { case (n, tp) => 
-        (n, typeWellFormed(tp)(env, pos)) 
+      FunType(args map { case (n, tp) =>
+        (n, typeWellFormed(tp)(env, pos))
       }, typeWellFormed(rte)(env, pos)(true))
     case ArrayType(tp) => ArrayType(typeWellFormed(tp)(env, pos))
     case UnknownType =>
-        if (forFunction) error("malformed type: function return types must be explicit if function is used recursively or in other functions' bodies", pos) 
+        if (forFunction) error("malformed type: function return types must be explicit if function is used recursively or in other functions' bodies", pos)
         else error("malformed type", pos)
         UnknownType
     case _ => tp
   }
 
 
-  /*
+  /**
    * typeCheck takes an expression and an expected type (which may be UnknownType).
    * This is done via calling the typeInfer and typeConforms
    * functions (details below), and finally returning the original
@@ -322,7 +322,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
 
       ???
 
-      /* Because of syntactic sugar, a variable assignment 
+      /* Because of syntactic sugar, a variable assignment
        * statement can be accepted as an expression
        * of type Unit. In this case, we will modify
        * the AST and store the assignment value into
@@ -377,7 +377,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
           Prim("block-get", List(nFun, nargs.head)).withType(tp)
         case _ => App(nFun, nargs).withType(ftp.rtp)
       }
-    case ArrayDec(size: Exp, etp: Type) => 
+    case ArrayDec(size: Exp, etp: Type) =>
       // TODO: Check array declaration
       // Note that etp is the type of elements
       ???

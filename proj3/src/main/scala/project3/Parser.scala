@@ -107,10 +107,10 @@ class Scanner(in: Reader[Char]) extends Reader[Tokens.Token] with Reporter {
 
   val isBoolean = Set("true", "false")
 
-  /*
+  /**
    * Extract a name from the stream
    *
-   * TODO: Handle Boolean literals
+   * TODONE: Handle Boolean literals
    */
   def getName() = {
     val buf = new StringBuilder
@@ -118,8 +118,11 @@ class Scanner(in: Reader[Char]) extends Reader[Tokens.Token] with Reporter {
       buf += in.next()
     }
     val s = buf.toString
-    if (isKeyword(s)) Keyword(s)
-    else Ident(s)
+    if (isKeyword(s)) {
+      Keyword(s)
+    } else if(isBoolean(s)){
+      Literal(s)
+    } else Ident(s)
   }
 
   /*
@@ -342,7 +345,7 @@ class Parser(in: Scanner) extends Reporter {
  * The different nodes of the AST also keep Position information
  * for error handling during the semantic analysis.
  *
- * TODO: Every time you add an AST node, you must also track the position
+ * TODONE: Every time you add an AST node, you must also track the position
  */
 object Language {
   abstract class Exp {
@@ -444,9 +447,12 @@ class BaseParser(in: Scanner) extends Parser(in) {
    *  This function will only be used to read in a type
    * (i.e. you should not read in a delimiter)
    *
-   * TODO: Implement this function
+   * TODONE: Implement this function
    */
   def parseType: Type = in.peek match {
+    case Ident(x) =>
+      in.next();
+      BaseType(x);
     case _ => expected("type")
   }
 
@@ -458,7 +464,15 @@ class BaseParser(in: Scanner) extends Parser(in) {
    *
    * TODO: Implement this function
    */
+  /* Our types! */
+  // val IntType = BaseType("Int")
+  // val UnitType = BaseType("Unit")
+  // val BooleanType = BaseType("Boolean")
   def parseOptionalType: Type = in.peek match {
+    case Delim(':') => 
+      accept(':')
+      // println"Got here")
+      parseType
     case _ => UnknownType
   }
 
@@ -626,12 +640,32 @@ class SyntacticSugarParser(in: Scanner) extends BaseParser(in) {
   }
 
   override def parseSimpleExpression = in.peek match {
+    case Keyword("if") =>
+      val pos = in.next().pos;
+      accept('(')
+      val cond = parseSimpleExpression;
+      accept(')')
+      val ifbody = parseSimpleExpression;
+      if(in.peek == Keyword("else")){
+        accept("else")
+        // in.next();
+        println("WHAWT")
+        // val elsebody = parseSimpleExpression;
+        If(cond, ifbody, parseSimpleExpression).withPos(pos);
+      } else {
+        println("WHAWT2")
+        // If(cond, ifbody, Lit()).withpos(pos);
+        If(cond, ifbody, Lit(Unit)).withPos(pos);
+      }
     case _ => super.parseSimpleExpression
   }
 
-  override def parseExpression = {
+  override def parseExpression = in.peek match {
+    case Keyword("val") | Keyword("var") =>
+
     // NOTE: parse expression terminates when it parse a simples expression.
     // syntax sugar allows to have an other expression after it.
+
     val res = super.parseExpression
     res
   }

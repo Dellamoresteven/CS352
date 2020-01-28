@@ -1,0 +1,32 @@
+run "true
+run "true"
+ls
+Int
+val x: Int = 
+run "val x: Int:
+run "val x: Int"
+run "val x: Int = 5;
+run "val x: Int = 5"
+run "val x: Int = 5;"
+run "val x: Int = 5;x"
+run "val x: Unit = 5;x"
+run "val x: Boolean = true;x"
+run "val x: Int = 5;x"
+run "val x: Boolean = true;x"
+run "val x: Unit = ();x"
+ls
+run "if(1==1)5 else 4
+run "if(1==1)5 else 4"
+run "if(1==1)5
+run "if(1==1)5"
+run "if(1==1)5 else 4"
+run "if(1==1)5"
+run "if(1==1)5;"
+run "if(1==1)5"
+run "if(1==1)5 else 4"
+run "if(1==1)5"
+run "if(1==1)5else 4"
+run "if(1==1)5"
+run "if(1==1)5 else 4"
+run "if(1==1)5 else 4;"
+run "if(1==1)5 else 4"

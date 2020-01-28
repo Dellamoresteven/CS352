@@ -51,7 +51,7 @@ OPTION: intStack""")
 
     // Parser to test!
     // TODO: Change this as you finish parsers
-    val parser = new BaseParser(scanner)
+    val parser = new SyntacticSugarParser(scanner)
     val ast = try {
       parser.parseCode
     } catch {
