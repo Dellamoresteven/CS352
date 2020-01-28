@@ -1,11 +1,16 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mParserTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- SingleDigit[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- GenericPrecedence[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- 1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- 2[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- 33213[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- 3[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- 4[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- 5[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- 6[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- 7[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- rt[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- go[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- 8[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- 9[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- 10[0m[0m
@@ -37,3 +42,4 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- steve8[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- steve9[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- steve10[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- steve11[0m[0m

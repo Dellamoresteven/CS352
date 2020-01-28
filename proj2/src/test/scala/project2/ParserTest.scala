@@ -42,13 +42,13 @@ class ParserTest extends FunSuite {
     assert(ast == res, "Invalid result")
   }
 
-  /**test("SingleDigit") {
+  test("SingleDigit") {
     testGenericPrecedence("1", Lit(1))
   }
 
   test("GenericPrecedence") {
     testGenericPrecedence("2-4*3", Prim("-", Lit(2), Prim("*", Lit(4), Lit(3))))
-  }*/
+  }
   test("1") {
     testGenericPrecedence(s"${(1 << 31) - 1}", Lit({
       (1 << 31) - 1
@@ -59,12 +59,12 @@ class ParserTest extends FunSuite {
       (1 << 31) - 2
     }))
   }
-  /*test("3") {
+  test("33213") {
     val thrown = intercept[Exception] {
       testGenericPrecedence(s"${(1 << 31)}", Lit({(1 << 31) - 1}))
     }
     assert(thrown != null)
-  }*/
+  }
   test("3") {
     assertThrows[Exception] { // Result type: Assertion
       testGenericPrecedence(s"${(1 << 31)}", Lit({
@@ -86,12 +86,12 @@ class ParserTest extends FunSuite {
       Prim("*", Prim("*", Prim("*", Lit(2), Lit(9)), Lit(5)), Lit(3)),
       Prim("/", Prim("/", Lit(18), Lit(6)), Lit(3))))
   }
-  /*test("rt") {
+  test("rt") {
     testGenericPrecedence("18/6/3",Prim("/",Prim("/",Lit(18),Lit(6)),Lit(3)))
   }
   test("go"){
     testGenericPrecedence("2*9*5*3",Prim("*",Prim("*",Prim("*",Lit(2),Lit(9)),Lit(5)), Lit(3)))
-  }*/
+  }
   test("8") {
     0
   }
