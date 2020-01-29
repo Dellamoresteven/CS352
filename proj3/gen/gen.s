@@ -10,9 +10,7 @@ _entry_point:
 	pushq %rbp	# save stack frame for calling convention
 	movq %rsp, %rbp
 	movq %rdi, heap(%rip)
-	movq $10, %rdi
-	movq $2, %rsi
-	subq %rsi, %rdi
+	movq $4, %rdi
 	movq %rdi, %rax
 	movq %rbp, %rsp	# reset frame
 	popq %rbp

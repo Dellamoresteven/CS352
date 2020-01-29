@@ -103,7 +103,7 @@ class Scanner(in: Reader[Char]) extends Reader[Tokens.Token] with Reporter {
 
   // List of keywords
   // TODO: Update this as keywords are added to our language
-  val isKeyword    = Set("if", "else", "val", "var", "while", "def")
+  val isKeyword    = Set("if", "else", "val", "var", "while", "def", "=>")
 
   val isBoolean = Set("true", "false")
 
@@ -649,11 +649,11 @@ class SyntacticSugarParser(in: Scanner) extends BaseParser(in) {
       if(in.peek == Keyword("else")){
         accept("else")
         // in.next();
-        println("WHAWT")
+        // println("WHAWT")
         // val elsebody = parseSimpleExpression;
         If(cond, ifbody, parseSimpleExpression).withPos(pos);
       } else {
-        println("WHAWT2")
+        // println("WHAWT2")
         // If(cond, ifbody, Lit()).withpos(pos);
         If(cond, ifbody, Lit(Unit)).withPos(pos);
       }
@@ -673,8 +673,9 @@ class SyntacticSugarParser(in: Scanner) extends BaseParser(in) {
       super.parseExpression; // parse expression normally
     case _ =>
       /* Need to be able to parse 'if' '('<simp>')' <simp> ['else' <simp>] */
-      var simp = parseSimpleExpression
-      // var simp = super.parseExpression
+      // var simp = parseSimpleExpression
+      println("Not set var")
+      var simp = super.parseExpression
       if(isNewLine(in.peek)) {
         println("set var")
         accept(';')
@@ -767,30 +768,36 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
    *
    * TODO
    */
+   /*
+    * <type>   ::= <ident>
+    *            | <type> '=>' <type>
+    *            | '('[<type>[','<type>]*]')' '=>' <type>
+    */
   override def parseType = in.peek match {
-    case Delim('(') =>
+    case Delim('(') => //'('[<type>[','<type>]*]')' '=>' <type>
       println("fEAWG")
-      ???
-      // accept('(')
-        // val list = parseList[Type](parseType, ',', tok => tok match {
-        //   case Delim(')') => false;
-        //   case _ => true
-        // })
-        // val argList = list map { tp => ("", tp)}
-        // accept("=>")
-        // val rtp = parseType
-        // FunType(argList, rtp)
-    case _ => 
-      println("Base case parse Type")
+      accept('(')
+      val list = parseList[Type](parseType, ',', tok => tok match {
+        case Delim(')') => false;
+        case _ => true
+      })
+      val argList = list map { tp => ("", tp)}
+      // in.next();
+      accept(')')
+      accept("=>")
+      val rtp = parseType
+      // in.next();
+      FunType(argList, rtp)
+    case _ =>  // <ident> && <type> '=>' <type>
       val typee = super.parseType
-      println("Base case parse Type2: " + in.peek + " : " + in.peek1)
-      if(in.peek == Delim('=') && in.peek1 == Ident(">")) {
-        println("I MADE IT")
+      println("Base case parse Type2: " + in.peek + " : " + in.peek1 + " type: " + typee)
+      if(in.peek == Keyword("=>")) { // <type> '=>' <type>
+        println("Thanks for the memories")
         accept("=>")
-        val rtp = super.parseType
-        val typList: List[(String, Type)] = List(("", typee))
-        FunType(typList, rtp)
-      } else {
+        val rtp = parseType
+        val typeList: List[(String, Type)] = List(("", typee))
+        FunType(typeList, rtp)
+      } else { // <ident> 
         typee
       }
   }
@@ -833,8 +840,14 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
       case _ => false
     })
     accept(')')
-    val dataType = parseOptionalType
-    ???
+    // ???
+    val rtp = parseOptionalType
+    accept('=')
+    val body = parseSimpleExpression
+
+    val typList = listOfArgs.map { case Arg(name, tp, _) => (name, tp) }
+    var funType = FunType(typList, rtp)
+    FunDef(name, listOfArgs, funType, body).withPos(pos)
   }
 
   /*
@@ -856,7 +869,7 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
         case _ => false
       })
       // val list = parseList[Exp](parseFunction, ';', true)
-      // accept(';') // After the function def has been parsed
+      accept(';') // After the function def has been parsed
       
       /* Might not need the `.withPos(pos).asInstanceOf[LetRec]` since it should 
         be stored here. */

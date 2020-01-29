@@ -34,3 +34,6 @@ run examples/scratch
 run examples/scratch.scala
 test
 run examples/scratch.scala
+test
+run examples/scratch.scala
+git status
