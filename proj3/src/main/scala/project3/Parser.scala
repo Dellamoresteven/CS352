@@ -99,7 +99,7 @@ class Scanner(in: Reader[Char]) extends Reader[Tokens.Token] with Reporter {
 
   // List of delimiters
   // TODO: Update this as delimiters are added to our language
-  val isDelim      = Set('(',')','=',';','{','}',':')
+  val isDelim      = Set('(',')','=',';','{','}',':', ',')
 
   // List of keywords
   // TODO: Update this as keywords are added to our language
@@ -769,10 +769,30 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
    */
   override def parseType = in.peek match {
     case Delim('(') =>
-      println("GOT HERE FAM")
-      super.parseType
-
-    case _ => super.parseType
+      println("fEAWG")
+      ???
+      // accept('(')
+        // val list = parseList[Type](parseType, ',', tok => tok match {
+        //   case Delim(')') => false;
+        //   case _ => true
+        // })
+        // val argList = list map { tp => ("", tp)}
+        // accept("=>")
+        // val rtp = parseType
+        // FunType(argList, rtp)
+    case _ => 
+      println("Base case parse Type")
+      val typee = super.parseType
+      println("Base case parse Type2: " + in.peek + " : " + in.peek1)
+      if(in.peek == Delim('=') && in.peek1 == Ident(">")) {
+        println("I MADE IT")
+        accept("=>")
+        val rtp = super.parseType
+        val typList: List[(String, Type)] = List(("", typee))
+        FunType(typList, rtp)
+      } else {
+        typee
+      }
   }
 
   /*
@@ -792,12 +812,10 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
    * TODO: complete the function
    */
   def parseArg: Arg = {
-    println("Parse ARG")
     val (name, pos) = getName
     accept(':')
     println("Name of varible: " + name)
     Arg(name, parseType, pos)
-    ???
   }
 
   /*
@@ -807,7 +825,6 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
    * TODO: complete the function
    */
   def parseFunction: Exp = {
-    println("AHH: ")
     accept("def")
     val (name, pos) = getName
     accept('(')
