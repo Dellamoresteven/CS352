@@ -1,0 +1,1 @@
+def f(x: Int, k: Int => Int): Int = 3;

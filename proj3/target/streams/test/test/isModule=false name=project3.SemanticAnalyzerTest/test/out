@@ -1,0 +1,14 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mSemanticAnalyzerTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- NoErrorNoWarning *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:288)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project3.SemanticAnalyzer.typeInfer(SemanticAnalyzer.scala:289)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project3.SemanticAnalyzer.typeCheck(SemanticAnalyzer.scala:277)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project3.SemanticAnalyzer.run(SemanticAnalyzer.scala:148)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project3.SemanticAnalyzerTest.testSemanticAnalyzer(SemanticAnalyzerTest.scala:40)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at project3.SemanticAnalyzerTest.$anonfun$new$1(SemanticAnalyzerTest.scala:48)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m

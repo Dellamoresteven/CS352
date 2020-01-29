@@ -1,12 +1,12 @@
 .text
-.global putchar, getchar, entry_point
+.global _putchar, _getchar, _entry_point
 
 ################# FUNCTIONS #####################
 #################################################
 
 
 ###################### MAIN #####################
-entry_point:
+_entry_point:
 	pushq %rbp	# save stack frame for calling convention
 	movq %rsp, %rbp
 	movq %rdi, heap(%rip)

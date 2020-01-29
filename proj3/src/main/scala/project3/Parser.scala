@@ -103,7 +103,7 @@ class Scanner(in: Reader[Char]) extends Reader[Tokens.Token] with Reporter {
 
   // List of keywords
   // TODO: Update this as keywords are added to our language
-  val isKeyword    = Set("if", "else", "val", "var", "while")
+  val isKeyword    = Set("if", "else", "val", "var", "while", "def")
 
   val isBoolean = Set("true", "false")
 
@@ -659,17 +659,29 @@ class SyntacticSugarParser(in: Scanner) extends BaseParser(in) {
       }
     case _ => super.parseSimpleExpression
   }
-
+ /*
+  * var x = 0;
+  * var y = 3;
+  * x = x + 1;
+  * y = y + 1
+  */
+// LetRec(List(),VarDec(x,UnknownType,Lit(5),Let(x$1,UnknownType,VarAssign(x,Prim(+,List(Ref(x), Lit(2)))),VarDec(y,UnknownType,Lit(6),VarAssign(y,Prim(+,List(Ref(y), Lit(3))))))))
+// VarDec(x,Lit(5),VarDec(dummy,VarAssign(x,Prim(+,Ref(x),Lit(2))),VarDec(y,Lit(6),VarAssign(y,Prim(+,Ref(y),Lit(3))))))
   override def parseExpression = in.peek match {
-    case Keyword("val") | Keyword("var") =>
-
-    // NOTE: parse expression terminates when it parse a simples expression.
-    // syntax sugar allows to have an other expression after it.
-
-    val res = super.parseExpression
-    res
+    case Keyword("val") | Keyword("var") | Keyword("while") =>
+      println("make var")
+      super.parseExpression; // parse expression normally
+    case _ =>
+      /* Need to be able to parse 'if' '('<simp>')' <simp> ['else' <simp>] */
+      var simp = parseSimpleExpression
+      // var simp = super.parseExpression
+      if(isNewLine(in.peek)) {
+        println("set var")
+        accept(';')
+        simp = Let(freshName(), UnknownType, simp, parseExpression).withPos(simp.pos)
+      }
+      simp
   }
-
 }
 
 /*
@@ -737,6 +749,7 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
    *
    *  You don't have to use this function but it may be useful.
    */
+
   def parseList[T](parseElem: => T, sep: Char, cond: Token => Boolean, first: Boolean = true): List[T] = {
     if (first && cond(in.peek) || (!first && in.peek == Delim(sep) && cond(in.peek1))) {
       if (!first) {
@@ -755,6 +768,10 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
    * TODO
    */
   override def parseType = in.peek match {
+    case Delim('(') =>
+      println("GOT HERE FAM")
+      super.parseType
+
     case _ => super.parseType
   }
 
@@ -775,6 +792,11 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
    * TODO: complete the function
    */
   def parseArg: Arg = {
+    println("Parse ARG")
+    val (name, pos) = getName
+    accept(':')
+    println("Name of varible: " + name)
+    Arg(name, parseType, pos)
     ???
   }
 
@@ -785,6 +807,16 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
    * TODO: complete the function
    */
   def parseFunction: Exp = {
+    println("AHH: ")
+    accept("def")
+    val (name, pos) = getName
+    accept('(')
+    val listOfArgs = parseList[Arg](parseArg, ',', tok => tok match {
+      case Ident(tok) => true;
+      case _ => false
+    })
+    accept(')')
+    val dataType = parseOptionalType
     ???
   }
 
@@ -798,6 +830,20 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
    * TODO: complete the function
    */
   def parseProgram = in.peek match {
+    case Keyword("def") =>
+      println("parseProgram")
+      val pos = in.peek.pos;
+      val listOfFunctions = parseList[Exp](parseFunction, ';', 
+      tok => tok match {
+        case Keyword("def") => true;
+        case _ => false
+      })
+      // val list = parseList[Exp](parseFunction, ';', true)
+      // accept(';') // After the function def has been parsed
+      
+      /* Might not need the `.withPos(pos).asInstanceOf[LetRec]` since it should 
+        be stored here. */
+      LetRec(listOfFunctions, parseExpression).withPos(pos).asInstanceOf[LetRec]
     case _ => LetRec(Nil, parseExpression)
   }
 
@@ -834,7 +880,6 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
       // TODO: complete
       res
   }
-
 }
 
 /*

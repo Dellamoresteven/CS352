@@ -1,4 +1,3 @@
-run 2*2
 run 2+2*4
 run val x=3
 run" val x=3"
@@ -498,3 +497,4 @@ run examples/valid_mut_variable.scala compX86
 run examples/valid_mut_variable.scala intStack
 run examples/valid_mut_variable.scala
 test
+run examples/scratch.scala
