@@ -1,5 +1,5 @@
-val steven = new Array[Int](4);
+val arr = new Array[Int](4);
 
-steven(0) = 5;
+arr(0) = 1;
 
 5

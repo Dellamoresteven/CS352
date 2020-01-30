@@ -1002,18 +1002,20 @@ class ArrayParser(in: Scanner) extends FunctionParser(in) {
     //   super.parseTight
     case _ => 
        var res = super.parseTight
-       println("got here!!! " + in.peek)
+      //  println("got here!!! " + in.peek)
       if(in.peek == Delim('=')) {
-        println("I'M HERE")
+        // println("I'M HERE")
         accept('=')
         val simp = parseSimpleExpression
         var (arrName, list) = res match {
-          case App(ref, list) => // This is a jank way to cast stuff....
+          case App(ref, list) => // This is a jank way to cast stuff.... BUT, it does the trick
             (ref, list)
         }
-        println("arrName: " + arrName)
-        ???
-
+        // println("arrName: " + arrName)
+        list = arrName :: list
+        list = list :+ simp
+        // // println("List: " + list)
+        Prim("block-set", list).withPos(res.pos)
       } else {
         res
       }
