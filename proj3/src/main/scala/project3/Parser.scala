@@ -99,11 +99,11 @@ class Scanner(in: Reader[Char]) extends Reader[Tokens.Token] with Reporter {
 
   // List of delimiters
   // TODO: Update this as delimiters are added to our language
-  val isDelim      = Set('(',')','=',';','{','}',':', ',')
+  val isDelim      = Set('(',')','=',';','{','}',':', ',', '[', ']')
 
   // List of keywords
   // TODO: Update this as keywords are added to our language
-  val isKeyword    = Set("if", "else", "val", "var", "while", "def", "=>")
+  val isKeyword    = Set("if", "else", "val", "var", "while", "def", "=>", "new")
 
   val isBoolean = Set("true", "false")
 
@@ -669,15 +669,15 @@ class SyntacticSugarParser(in: Scanner) extends BaseParser(in) {
 // VarDec(x,Lit(5),VarDec(dummy,VarAssign(x,Prim(+,Ref(x),Lit(2))),VarDec(y,Lit(6),VarAssign(y,Prim(+,Ref(y),Lit(3))))))
   override def parseExpression = in.peek match {
     case Keyword("val") | Keyword("var") | Keyword("while") =>
-      println("make var")
+      // println("make var")
       super.parseExpression; // parse expression normally
     case _ =>
       /* Need to be able to parse 'if' '('<simp>')' <simp> ['else' <simp>] */
       // var simp = parseSimpleExpression
-      println("Not set var")
+      // println("Not set var")
       var simp = super.parseExpression
       if(isNewLine(in.peek)) {
-        println("set var")
+        // println("set var")
         accept(';')
         simp = Let(freshName(), UnknownType, simp, parseExpression).withPos(simp.pos)
       }
@@ -906,9 +906,18 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
       accept('}')
       res
     case  _ =>
-      var res = parseAtom
-      // TODO: complete
-      res
+      var parseA = parseAtom
+      // if(in.peek == Delim('(')){
+      while(in.peek == Delim('(')){
+        val pos = in.next().pos
+        val listOfparams = parseList[Exp](parseSimpleExpression, ',', tok => tok match {
+          case Delim(')') => false;
+          case _ => true
+        })
+        accept(')')
+        parseA = App(parseA, listOfparams).withPos(pos)
+      }
+      parseA
   }
 }
 
@@ -973,7 +982,12 @@ class ArrayParser(in: Scanner) extends FunctionParser(in) {
   import Tokens._
 
   override def parseType = in.peek match {
-    case Ident("Array") => ???
+    case Ident("Array") => 
+      in.next();
+      accept('[');
+      val typee = parseType
+      accept(']')
+      ArrayType(typee)
     case _ => super.parseType
   }
 
@@ -981,13 +995,50 @@ class ArrayParser(in: Scanner) extends FunctionParser(in) {
    * Parse array update
    *
    * TODO
+   * val x = arr(0); //example
    */
-  override def parseTight = ???
+  override def parseTight = in.peek match {
+    // case Delim('{') =>
+    //   super.parseTight
+    case _ => 
+       var res = super.parseTight
+       println("got here!!! " + in.peek)
+      if(in.peek == Delim('=')) {
+        println("I'M HERE")
+        accept('=')
+        val simp = parseSimpleExpression
+        var (arrName, list) = res match {
+          case App(ref, list) => // This is a jank way to cast stuff....
+            (ref, list)
+        }
+        println("arrName: " + arrName)
+        ???
 
-  /*
+      } else {
+        res
+      }
+  }
+
+  /**
    * Parse array declaration
    *
    * TODO
+   * 'new' 'Array' '['<type> ']' '('<simpl>')' // type not optional '[' is the delimiter.
    */
-  override def parseSimpleExpression = ???
+  override def parseSimpleExpression = in.peek match {
+    case Keyword("new") =>
+      println("AHH");
+      val pos = in.next.pos
+      // println("AHH: " + pos);
+      // ???
+      val typee = parseType
+      accept('(')
+      val simpleExp = parseSimpleExpression
+      accept(')')
+      // println("simpleExp: " + simpleExp)
+      // println("typee: " + typee)
+      ArrayDec(simpleExp, typee).withPos(pos)
+    case _ =>
+      super.parseSimpleExpression
+  }
 }

@@ -51,7 +51,7 @@ OPTION: intStack""")
 
     // Parser to test!
     // TODO: Change this as you finish parsers
-    val parser = new FunctionParser(scanner)
+    val parser = new ArrayParser(scanner)
     val ast = try {
       parser.parseCode
     } catch {
