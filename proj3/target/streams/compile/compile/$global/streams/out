@@ -1,6 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj3/src/main/scala/project3/Parser.scala:1007:16: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : Unit[0m
-[0m[[0m[31merror[0m] [0m[0m required: project3.Language.Exp[0m
-[0m[[0m[31merror[0m] [0m[0m        println("WHY AM I NOT HERE")[0m
-[0m[[0m[31merror[0m] [0m[0m               ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj3/src/main/scala/project3/SemanticAnalyzer.scala:173:14: unreachable code[0m
+[0m[[0m[33mwarn[0m] [0m[0m      FunType(List(("", IntType), ("", IntType)), BooleanType)[0m
+[0m[[0m[33mwarn[0m] [0m[0m             ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

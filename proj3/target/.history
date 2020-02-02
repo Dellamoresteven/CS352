@@ -1,0 +1,8 @@
+run "5+5"
+run "5-5"
+run "-5+5"
+run "5-(-5)"
+run "5*5"
+run 10/5
+run "if(5==5) 4 else 3
+run "if(5==5) 4 else 3"

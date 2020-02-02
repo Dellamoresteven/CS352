@@ -11,8 +11,14 @@ _entry_point:
 	movq %rsp, %rbp
 	movq %rdi, heap(%rip)
 	movq $10, %rdi
-	movq $2, %rsi
-	subq %rsi, %rdi
+	movq $5, %rsi
+	movq %rdi, %rax
+	pushq %rdx
+	movq %rsi, %rbx
+	cqto
+	idiv %rbx
+	popq %rdx
+	movq %rax, %rdi
 	movq %rdi, %rax
 	movq %rbp, %rsp	# reset frame
 	popq %rbp

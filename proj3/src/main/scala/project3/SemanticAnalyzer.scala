@@ -164,6 +164,17 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
    */
   def typeBinOperator(op: String)(pos: Position) = op match {
     case "+" => FunType(List(("", IntType), ("", IntType)), IntType)
+    case "-" => FunType(List(("", IntType), ("", IntType)), IntType)
+    case "*" => FunType(List(("", IntType), ("", IntType)), IntType)
+    case "/" => FunType(List(("", IntType), ("", IntType)), IntType)
+    case "==" | "!=" | "<=" | ">=" | "<" | ">" => 
+      FunType(List(("", IntType), ("", IntType)), BooleanType)
+    case "==" | "!=" | "<=" | ">=" | "<" | ">" => 
+      FunType(List(("", IntType), ("", IntType)), BooleanType)
+    case "==" | "!=" | "<=" | ">=" | "<" | ">" => 
+      FunType(List(("", IntType), ("", IntType)), BooleanType)
+    case "==" | "!=" | "<=" | ">=" | "<" | ">" => 
+      FunType(List(("", IntType), ("", IntType)), BooleanType)
     case _ =>
       error("undefined binary operator", pos)
       UnknownType
@@ -177,6 +188,10 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
    * TODO: implement typeUnOperator
    */
   def typeUnOperator(op: String)(pos: Position) = op match {
+    case "+"  => // only ints can be postive / negative i think
+      IntType
+    case "-" =>
+      IntType
     case _ =>
       error(s"undefined unary operator", pos)
       UnknownType
@@ -188,6 +203,8 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
    * operators: block-set
    */
   def typeTerOperator(op: String)(pos: Position) = op match {
+    case "block-set" => 
+      FunType(List(("", ArrayType(IntType)), ("", IntType)), IntType)
     case _ =>
       error(s"undefined ternary operator", pos)
       UnknownType
@@ -281,12 +298,12 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
 
   def typeInfer(exp: Exp, pt: Type)(env: TypeEnv): Exp = exp match {
     case Lit(_: Int) => exp.withType(IntType)
-    case Lit(_: Boolean) => ???
-    case Lit(_: Unit) => ???
+    case Lit(_: Boolean) => exp.withType(BooleanType)
+    case Lit(_: Unit) => exp.withType(UnitType)
     case Prim("block-set", args) => ???
     case Prim(op, args) =>
       typeOperator(op, args.length)(exp.pos) match {
-        case FunType(atps, rtp) => ???
+        case FunType(atps, rtp) => exp.withType(rtp)
         case UnknownType => exp.withType(UnknownType)
         case _ => BUG("operator's type needs to be FunType")
       }
@@ -301,11 +318,14 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
         case Some(tp) => ??? // Remember to check that the type taken from the environment is welformed
         case _ =>
           error("undefined identifier", exp.pos)
-          ???
+          exp.withType(UnknownType)
       }
     case If(cond, tBranch, eBranch) =>
       // Hint: type check the else branch before the then branch.
-      ???
+      val ccond = typeCheck(cond, BooleanType)(env)
+      val eeBranch = typeCheck(eBranch, pt)(env)
+      val ttBranch = typeCheck(tBranch, eBranch.tp)(env)
+      If(ccond, ttBranch, eeBranch).withType(eBranch.tp)
     case VarDec(x, tp, rhs, body) =>
       if (env.isDefined(x))
         warn("reuse of variable name", exp.pos)
