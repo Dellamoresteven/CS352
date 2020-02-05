@@ -1,5 +1,3 @@
-val arr = new Array[Int](4);
-
-arr(0) = 1;
-
+def f(x: Int): Int = 2;
+def g(x: Int): Int = 5+2;
 5

@@ -6,3 +6,63 @@ run "5*5"
 run 10/5
 run "if(5==5) 4 else 3
 run "if(5==5) 4 else 3"
+run "if(5!=5) 4 else 3"
+run "var x = 5; if(4==5){x=2};x"
+run "var x = true; 5"
+run "true + 5
+run "true + 5"
+run "()"
+run "() + 5"
+run "if(5==5)4 else 3
+run "if(5==5)4 else 3"
+run examples/scratch.scala
+test
+run examples/scratch.scala
+run 5+5
+run "()+5"
+run true
+run "var x = 5"
+run "var x = 5; x"
+run "var x = true; x"
+run "val x = true; if(x)5 else 3
+run "val x = true; if(x)5 else 3"
+run "if(true)45
+run "if(true)45"
+run examples/scratch.scala
+run "var x = true; x"
+run "var x = true; if(x) 5 else 3"
+run "var x = false; if(x) 5 else 3"
+run examples/scratch.scala
+run "var x = true; x;
+run "var x = true; x;"
+run "var x = true; 5"
+run "var x = true; if(x) 5 else 3"
+run "true; 5"
+test
+run examples/scratch.scala
+run examples/scratch.scala intStack
+run examples/scratch.scala
+run examples/scratch.scala intStack
+run examples/scratch.scala 
+run examples/scratch.scala intStack
+ll
+run examples/scratch.scala intStack
+run "putchar(72);"
+run "putchar(72); 5"
+run "putchar(72, 72); 5"
+run "putchar(72); 5"
+run "putchar(72); 5" Intstack
+test
+run examples/scratch.scala intStack
+ls
+run "if(5==5) 5" X86Compiler
+run "if(5==5) 5" compX86
+run "5+5"
+run "if(5==5) 5"
+run "if(5==5) 5; 5"
+run "if(5==5) {5} 5"
+run "if(5==5) {5}; 5"
+run "if(5==5) 5 else 3"
+run "5+5"
+run "true;4"
+run examples/scratch.scala

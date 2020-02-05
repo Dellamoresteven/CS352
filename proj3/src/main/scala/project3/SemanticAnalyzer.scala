@@ -169,12 +169,6 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
     case "/" => FunType(List(("", IntType), ("", IntType)), IntType)
     case "==" | "!=" | "<=" | ">=" | "<" | ">" => 
       FunType(List(("", IntType), ("", IntType)), BooleanType)
-    case "==" | "!=" | "<=" | ">=" | "<" | ">" => 
-      FunType(List(("", IntType), ("", IntType)), BooleanType)
-    case "==" | "!=" | "<=" | ">=" | "<" | ">" => 
-      FunType(List(("", IntType), ("", IntType)), BooleanType)
-    case "==" | "!=" | "<=" | ">=" | "<" | ">" => 
-      FunType(List(("", IntType), ("", IntType)), BooleanType)
     case _ =>
       error("undefined binary operator", pos)
       UnknownType
@@ -189,9 +183,9 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
    */
   def typeUnOperator(op: String)(pos: Position) = op match {
     case "+"  => // only ints can be postive / negative i think
-      IntType
+      FunType(List(("", IntType), ("", IntType)), IntType)
     case "-" =>
-      IntType
+      FunType(List(("", IntType), ("", IntType)), IntType)
     case _ =>
       error(s"undefined unary operator", pos)
       UnknownType
@@ -204,6 +198,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
    */
   def typeTerOperator(op: String)(pos: Position) = op match {
     case "block-set" => 
+      // UnitType
       FunType(List(("", ArrayType(IntType)), ("", IntType)), IntType)
     case _ =>
       error(s"undefined ternary operator", pos)
@@ -232,7 +227,8 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
     case (_, UnknownType) => typeWellFormed(tp)(env, pos)  // tp <: Any
     case (UnknownType, _) => typeWellFormed(pt)(env, pos)  // for function arguments
     case (FunType(args1, rtp1), FunType(args2, rtp2)) if args1.length == args2.length =>
-      ??? // TODO: Function type conformity
+      args1.zip(args2).map { case (a,b) => typeConforms(a._2, b._2)(env, pos) }
+      typeConforms(rtp1, rtp2)(env, pos)
     case (ArrayType(tp), ArrayType(pt)) => ArrayType(typeConforms(tp, pt)(env, pos))
     case _ => error(s"type mismatch;\nfound   : $tp\nexpected: $pt", pos); pt
   }
@@ -297,10 +293,24 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
   }
 
   def typeInfer(exp: Exp, pt: Type)(env: TypeEnv): Exp = exp match {
-    case Lit(_: Int) => exp.withType(IntType)
-    case Lit(_: Boolean) => exp.withType(BooleanType)
-    case Lit(_: Unit) => exp.withType(UnitType)
-    case Prim("block-set", args) => ???
+    case Lit(_: Int) => 
+      exp.withType(IntType)
+    case Lit(_: Boolean) => 
+      exp.withType(BooleanType)
+    case Lit(_: Unit) => 
+      exp.withType(UnitType)
+    case Prim("block-set", args) => 
+      // List(Ref(arr), Lit(0), Lit(1))
+      println("Args: " + args)
+      val typev = typeCheck(args(2), UnknownType)(env);
+      println("typee: " + typev.tp)
+      val typei = typeCheck(args(1), IntType)(env);
+
+      val typearr = typeCheck(args(0), ArrayType(typev.tp))(env);
+
+      val list = List(typearr, typei, typev);
+
+      Prim("block-set", list).withType(UnitType);
     case Prim(op, args) =>
       typeOperator(op, args.length)(exp.pos) match {
         case FunType(atps, rtp) => exp.withType(rtp)
@@ -315,7 +325,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       Let(x, nrhs.tp, nrhs, nbody).withType(nbody.tp)
     case Ref(x) =>
       env(x) match {
-        case Some(tp) => ??? // Remember to check that the type taken from the environment is welformed
+        case Some(tp) => exp.withType(tp)
         case _ =>
           error("undefined identifier", exp.pos)
           exp.withType(UnknownType)
@@ -327,9 +337,12 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       val ttBranch = typeCheck(tBranch, eBranch.tp)(env)
       If(ccond, ttBranch, eeBranch).withType(eBranch.tp)
     case VarDec(x, tp, rhs, body) =>
-      if (env.isDefined(x))
+      if (env.isDefined(x)){
         warn("reuse of variable name", exp.pos)
-      ???
+      }
+      val rrhs = typeCheck(rhs, tp)(env)
+      val bbody = typeCheck(body, pt)(env.withVar(x, rrhs.tp))
+      VarDec(x, rrhs.tp, rrhs, bbody).withType(bbody.tp)
     case VarAssign(x, rhs) =>
       val xtp = if (!env.isDefined(x)) {
         error("undefined identifier", exp.pos)
@@ -339,8 +352,6 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
           error("reassignment to val", exp.pos)
         env(x).get
       }
-
-      ???
 
       /* Because of syntactic sugar, a variable assignment
        * statement can be accepted as an expression
@@ -357,19 +368,72 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
        * will need to be modified to have the correct type.
        * Without changing the semantics!
        */
+      //  case Let(x, tp, rhs, body)
+      val rrhs = typeCheck(rhs, xtp)(env)
+      // println("pt: " + pt)
+      // println("rrhs.tp: " + rrhs.tp)
       pt match {
-        case UnitType => ???
-        case _ => ???
+        case BooleanType => 
+          // println("1???")
+          VarAssign(x, rrhs).withType(rrhs.tp) 
+        case IntType =>
+          // println("2???")
+          VarAssign(x, rrhs).withType(rrhs.tp) 
+        case UnitType => 
+          // println("3???")
+          // VarAssign(x, rrhs).withType(rrhs.tp) 
+          Let(freshName(), pt, VarAssign(x, rrhs), Lit(()) ).withType(pt)
+        case _ => 
+          // println("4???")
+          // exp.withType(UnknownType)
+          VarAssign(x, rrhs).withType(rrhs.tp) 
       }
-    case While(cond, lbody, body) => ???
-    case FunDef(fname, args, rtp, fbody) => ???
-    case LetRec(funs, body) =>
+    case While(cond, lbody, body) => 
+      val ccond = typeCheck(cond, BooleanType)(env)
+      val llbody = typeCheck(lbody, UnitType)(env)
+      val bbody = typeCheck(body, pt)(env)
+      While(ccond, llbody, bbody).withType(bbody.tp)
+    case FunDef(fname, args, rtp, fbody) => 
+      println(args);
+      println("AHHHH")
+      checkDuplicateNames(args)
+      var tp = rtp match {
+        case FunType(_, rtp) => rtp
+      }
+      val argsList = args map {case Arg(name, tp, _) => (name, tp)}
+      val nfbody = typeCheck(fbody, tp)(env.withVals(argsList))
+      val nrtp = rtp match {
+        case FunType(args, _) => FunType(args, nfbody.tp)
+      }
+      FunDef(fname, args, nrtp, nfbody).withType(nrtp)
+    case LetRec(funs, body) => // funs = is the list of functions
+      checkDuplicateNames(funs);
+      // println("funs: " + funs)
+      // println("body: " + body)
       // TODO modify to handle general case
-      val nbody = typeCheck(body, pt)(env)
-      LetRec(Nil, nbody).withType(nbody.tp)
+      val fenv = env.withVals(funs.map {case FunDef(name, _, rtp, _) => (name, rtp)})
+      // println("fenv " + fenv);
+      val nfuns = funs.map {case f@FunDef(_, _, rtp, _) => typeCheck(f, rtp)(fenv) }
+      // println("nfuns " + nfuns);
+      val nfenv = env.withVals(nfuns.map {case FunDef(name, _, rtp, _) => (name, rtp)})
+      // println("nfenv " + nfenv);
+      val nbody = typeCheck(body, pt)(nfenv)
+      // println("nbody " + nbody);
+      LetRec(nfuns, nbody).withType(nbody.tp)
     case App(fun, args) =>
-      // TODO Check fun type
-      val nFun: Exp = ???
+      val nFun: Exp = fun match {
+        case Ref(x) =>
+          var res = env(x) match {
+            case Some(tp) => 
+              fun.withType(tp)
+            case _ => 
+              println("I GOTHERE BEST FRIEND")
+              fun.withType(UnknownType)
+          }
+          res
+        case _ => fun.withType(UnknownType) // Maybe I dont need. 
+      }
+      // val nFun : Exp = typeCheck(fun, pt)(env)
 
       // Handling some errors
       val ftp = nFun.tp match {
@@ -389,7 +453,14 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       }
 
       // TODO: Check arguments type
-      val nargs: List[Exp] = ???
+      println("FTP: " + ftp)
+      var nargs: List[Exp] = List[Exp]()
+      for( i <- 0 to args.length - 1){
+        // println("FTP -> " + ftp.args(i)._2);
+        val nArg = typeCheck(args(i), ftp.args(i)._2)(env);
+        nargs = nArg +: nargs
+      }
+
 
       // Transform some function applications into primitives on arrays.
       nFun.tp match {
@@ -400,7 +471,8 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
     case ArrayDec(size: Exp, etp: Type) =>
       // TODO: Check array declaration
       // Note that etp is the type of elements
-      ???
+      val ssize = typeCheck(size, IntType)(env)
+      ArrayDec(ssize, etp).withType(etp)
     case _ => BUG(s"malformed expresstion $exp")
   }
 }

@@ -1,15 +1,12 @@
 package project3
-
 abstract class X86Compiler extends BugReporter with Codegen {
   import Language._
-
   /*
    * Abstract class used to store the location
    */
   abstract class Loc {
     def +(y: Int): Loc
   }
-
   /*
    * Register location, the physical location
    * can be addressed with the register #sp
@@ -17,7 +14,6 @@ abstract class X86Compiler extends BugReporter with Codegen {
   case class Reg(sp: Int) extends Loc {
     def +(y: Int) = Reg(sp+y)
   }
-
   /*
    * Function location, the physical location
    * can be addressed directly with the name
@@ -25,7 +21,6 @@ abstract class X86Compiler extends BugReporter with Codegen {
   case class Func(name: String) extends Loc {
     def +(y: Int) = BUG("This Loc should not be used as a stack location.")
   }
-
   // Function to extra physical address from Loc
   // CHANGE: instead of using regs(...) directly
   // we now use the function loc.
@@ -33,19 +28,14 @@ abstract class X86Compiler extends BugReporter with Codegen {
     case Reg(sp) => avRegs(sp)
     case Func(name) => name
   }
-
   def loc(sp: Int): String = avRegs(sp)
-
   // List of available register.
   // DO NOT CHANGE THE REGISTERS!!
   val avRegs = Seq("%rdi", "%rsi", "%rdx", "%rcx", "%r8", "%r9", "%r10", "%r11", "%r12", "%r13", "%r14", "%r15")
-
   /****************************************************************************/
-
   def onMac = System.getProperty("os.name").toLowerCase contains "mac"
   val entry_point = "entry_point"
   def funcName(name: String) = (if (onMac) "_" else "") + name
-
   /**
    * Env of the compiler. Keep track of the location
    * in memory of each variable defined.
@@ -53,16 +43,13 @@ abstract class X86Compiler extends BugReporter with Codegen {
   val primitives = Map(
     "putchar" -> Func("putchar"),
     "getchar" -> Func("getchar"))
-
   private class Env {
     def undef(name: String) = BUG(s"Undefined identifier $name (should have been found during the semantic analysis)")
     def apply(name: String): Loc =  undef(name)
   }
-
   private case class LocationEnv(
     vars: Map[String, Loc] = primitives,
     outer: Env = new Env) extends Env {
-
       /*
        * Return a copy of the current state plus a
        * variable 'name' at the location 'loc'
@@ -70,7 +57,6 @@ abstract class X86Compiler extends BugReporter with Codegen {
       def withVal(name: String, loc: Loc): LocationEnv = {
         copy(vars = vars + (name -> loc))
       }
-
       /*
        * Return a copy of the current state plus all
        * variables in 'list'
@@ -78,7 +64,6 @@ abstract class X86Compiler extends BugReporter with Codegen {
       def withVals(list: List[(String,Loc)]): LocationEnv = {
         copy(vars = vars ++ list.toMap)
       }
-
       /*
        * Return the location of the variable 'name'
        */
@@ -109,7 +94,8 @@ abstract class X86Compiler extends BugReporter with Codegen {
    * +, -, *, /, ==, !=, <=, <, >=, >, block-get
    */
   def transBin(op: String)(sp: Loc, sp1: Loc) = op match {
-    case "+" => emitln(s"addq ${loc(sp1)}, ${loc(sp)}")
+    case "+" => 
+      emitln(s"addq ${loc(sp1)}, ${loc(sp)}")
     case "-" => emitln(s"subq ${loc(sp1)}, ${loc(sp)}")
     case "*" => emitln(s"imul ${loc(sp1)}, ${loc(sp)}")
     case "/" =>
@@ -124,6 +110,30 @@ abstract class X86Compiler extends BugReporter with Codegen {
       emitln(s"cmp ${loc(sp1)}, ${loc(sp)}")
       emitln(s"sete %al")
       emitln(s"movzbq %al, ${loc(sp)}")
+    case "!=" =>
+      emitln(s"cmp ${loc(sp1)}, ${loc(sp)}")
+      emitln(s"setne %al")
+      emitln(s"movzbq %al, ${loc(sp)}")
+    case "<=" => 
+      emitln(s"cmp ${loc(sp1)}, ${loc(sp)}")
+      emitln(s"setle %al")
+      emitln(s"movzbq %al, ${loc(sp)}")
+    case "<" => 
+      emitln(s"cmp ${loc(sp1)}, ${loc(sp)}")
+      emitln(s"setl %al")
+      emitln(s"movzbq %al, ${loc(sp)}")
+    case ">=" =>
+      emitln(s"cmp ${loc(sp1)}, ${loc(sp)}")
+      emitln(s"setge %al")
+      emitln(s"movzbq %al, ${loc(sp)}")
+    case ">" =>       
+      emitln(s"cmp ${loc(sp1)}, ${loc(sp)}")
+      emitln(s"setg %al")
+      emitln(s"movzbq %al, ${loc(sp)}")
+    case "block-get" =>
+      // emitln(s"movq ${loc(sp1)}, ${loc(sp)}")
+      // emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), %rip")
+      // emitln(s"movq heap(%rip), ${loc(sp)}")
     case _ => BUG(s"Binary operator $op undefined")
   }
 
@@ -136,6 +146,9 @@ abstract class X86Compiler extends BugReporter with Codegen {
    * Valid operators: block-set
    */
   def transTer(op: String)(sp: Loc, sp1: Loc, sp2: Loc) = op match {
+    case "block-set" =>
+      // emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), %rip")
+      // emitln(s"movq ${loc(sp2)}, heap(%rip)")
     case _ => BUG(s"ternary operator $op undefined")
   }
 
@@ -171,9 +184,12 @@ abstract class X86Compiler extends BugReporter with Codegen {
   /*
    * Generate code that jump to the label 'label'
    * if the location 'sp' contains the value 'true'
-   */
+   * TODO
+   */   
   def transJumpIfTrue(sp: Loc)(label: Label) = {
-    ???
+    emitln(s"test ${loc(sp)}, ${loc(sp)}");
+    emitln(s"jnz ${label}");
+    // emitln(s"je ${label}");
   }
 
   /*
@@ -188,7 +204,15 @@ abstract class X86Compiler extends BugReporter with Codegen {
   def trans(exp: Exp, sp: Loc)(env: LocationEnv): Unit = exp match {
     case Lit(x: Int) =>
       emitln(s"movq $$$x, ${loc(sp)}")
-    case Lit(b: Boolean) => () // TODO
+    case Lit(b: Boolean) =>
+      var bool = 1;
+      b match {
+        case true =>
+          emitln(s"movq $$$bool, ${loc(sp)}")
+        case false =>
+          bool = 0;
+          emitln(s"movq $$$bool, ${loc(sp)}")
+      }
     case Lit(x: Unit) => () // TODO
     case Prim(op, args) =>
       val idxs = List.tabulate(args.length)(i => sp + i)
@@ -239,6 +263,11 @@ abstract class X86Compiler extends BugReporter with Codegen {
       val funsLoc = funs map { case FunDef(name, _, _, _) => (name, Func(name)) }
 
       // TODO complete the code
+      for(i <- 0 to funs.length-1) {
+        val f = funs(i);
+        val fEnv = env.withVals(funsLoc)
+        trans(f, sp+i+1)(fEnv);
+      }
 
       emitln("#################################################\n\n", 0)
       emitln("###################### MAIN #####################", 0)
@@ -251,7 +280,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
 
       // emit the main function (body of LetRec) here
       // TODO you may need to change that code.
-      trans(body, Reg(0))(LocationEnv())
+      trans(body, Reg(0))(env.withVals(funsLoc))
       emitln(s"movq ${loc(0)}, %rax")
 
       //////////// DO NOT CHANGE////////////////
@@ -269,6 +298,18 @@ abstract class X86Compiler extends BugReporter with Codegen {
       //////////////////////////////////////////
 
       // TODO
+      val indexs = List.tabulate(args.length)(i => sp + i)
+      // var indexs = List[Int]();
+      // for( i <- 0 to args.length - 1){
+      //   println("SP: " + sp)
+      //   indexs = (sp+i) +: indexs
+      // }
+      //locations of all args
+      val pos = (args zip indexs) map {case (Arg(name, _, _), index) => (name, index)}
+      println("pos: " + pos)
+      //eval body
+      trans(fbody, sp + args.length)(env.withVals(pos))
+      emitln(s"movq ${loc(sp + args.length)}, %rax") // move to return
 
       //////////// DO NOT CHANGE////////////////
       emitln("movq %rbp, %rsp\t# reset frame")

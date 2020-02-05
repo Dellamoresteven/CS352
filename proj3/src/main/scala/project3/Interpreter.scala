@@ -332,14 +332,25 @@ class StackInterpreter extends Interpreter with BugReporter {
     case (">=", Cst(x: Int), Cst(y: Int)) => memory(sp) = Cst(x >= y)
     case ("<" , Cst(x: Int), Cst(y: Int)) => memory(sp) = Cst(x <  y)
     case (">" , Cst(x: Int), Cst(y: Int)) => memory(sp) = Cst(x >  y)
-    case ("block-get", Cst(arr: Array[Any]), Cst(i: Int)) => ???
+    case ("block-get", Cst(arr: Array[Any]), Cst(i: Int)) => 
+      if (arr(i) == null){ 
+        BUG(s"uninitialized memory")
+      }
+      memory(sp) = Cst(arr(i))
     case _    => BUG(s"Binary operator $op undefined")
   }
 
+  /**
+   * TODO
+   */
   def evalTer(op: String)(sp: Loc, sp1: Loc, sp2: Loc) = (op, memory(sp), memory(sp1), memory(sp2)) match {
-    case ("block-set", Cst(arr: Array[Any]), Cst(i: Int), Cst(x)) => ???
+    case ("block-set", Cst(arr: Array[Any]), Cst(i: Int), Cst(x)) => memory(sp) = Cst(arr(i) = x)
     case _ => BUG(s"ternary operator $op undefined")
   }
+  //  def evalTer(op: String)(v: Val, w: Val, z: Val) = (op, v, w, z) match {
+  //   case ("block-set", Cst(arr: Array[Any]), Cst(i: Int), Cst(x)) => Cst(arr(i) = x)
+  //   case _ => BUG(s"ternary operator $op undefined")
+  // }
 
   def evalPrim(op: String)(idxs: List[Int]) = idxs match {
     case List(sp, sp1, sp2) => evalTer(op)(sp, sp1, sp2)
@@ -405,11 +416,91 @@ class StackInterpreter extends Interpreter with BugReporter {
         eval(cond, sp)(env)
       }
       eval(body, sp)(env)
-    case FunDef(_, args, _, fbody) => ???
+    case FunDef(_, args, _, fbody) => 
+      memory(sp) = Func(args map { arg => (arg.name) }, fbody, env)
     case LetRec(funs, body) =>
-      // TODO modify that code
-      eval(body, sp)(env)
-    case App(fun, args) => ???
-    case ArrayDec(size, _) => ???
+
+
+      println("GOT HEREREREREREERERERERERE")
+      println("funs: " + funs)
+      println("body: " + body)
+      
+      var indexs = List[Int]();
+      for( i <- 0 to funs.length - 1){
+        // println("FTP -> " + ftp.args(i)._2);
+        indexs = (sp+i) +: indexs
+      }
+      println("indexs: " + indexs)
+
+      val funcs = (funs zip indexs) map { 
+        case (fun@FunDef(name, _, _, _), idx) => 
+          (name, idx) 
+      }
+
+      println("funcs: " + funcs)
+
+      (funs zip indexs) foreach { 
+        case (fun@FunDef(_, _, _, _), idx:Int) => 
+          eval(fun, idx)(env.withVals(funcs)) 
+      }
+
+      eval(body, sp + funs.length)(env.withVals(funcs))
+      memory(sp) = memory(sp + funs.length) // move our stackpointer!
+
+
+
+      //       // Evaluate all functions
+      // val funcs = funs map { case fun@FunDef(name, _, _, _) =>  (name, eval(fun)(env)) }
+
+      // // Add all functions to the functions environment (recursion)
+      // funcs foreach { case (_, func@Func(_, _, _)) => func.withVals(funcs) }
+
+      // eval(body)(env.withVals(funcs))
+    case App(fun, args) => 
+      println("fun: " + fun);
+      println("args: " + args);
+      
+      var indexs = List[Int]();
+      for( i <- 0 to args.length - 1){
+        // println("FTP -> " + ftp.args(i)._2);
+        indexs = (sp+i) +: indexs
+      }
+      (args zip indexs) map { case (arg, index) => eval(arg, index)(env) }
+      println("indexs: " + indexs)
+      // println("args zip indexs: " + (args zip indexs))
+      eval(fun, sp + args.length)(env)
+
+      memory(sp + args.length) match {
+        case Func(fargs, fbody, fenv) =>
+          eval(fbody, sp + args.length + 1)(fenv.withVals(fargs zip indexs))
+          memory(sp) = memory(sp + args.length + 1)
+        case Primitive("getchar") => Cst(Console.in.read)
+        case Primitive("putchar") =>
+          val List(Cst(c: Int)) = memory(sp)
+          Console.out.write(c)
+          Console.out.flush
+          Cst(())
+      }
+
+      // Evaluate the arguments
+      /* val eargs = args map { arg => eval(arg)(env) } */
+      // eval(fun, sp + args.length)(env)
+      // Evaluate the function to be called.
+      // eval(fun)(env) match {
+      //   case Func(fargs, fbody, fenv) =>
+      //     eval(fbody)(fenv.withVals(fargs zip eargs))
+      //   case Primitive("getchar") => memory(sp) = Cst(Console.in.read)
+      //   case Primitive("putchar") =>
+      //     val List(Cst(c: Int)) = eargs
+      //     Console.out.write(c)
+      //     Console.out.flush
+      //     memory(sp) = Cst(())
+      // }
+    case ArrayDec(size, _) =>       
+      eval(size, sp)(env); 
+      val Cst(s: Int) = memory(sp); 
+      memory(sp) = Cst(new Array[Any](s))
+      println("MEM: " + Cst(new Array[Any](s)))
+      
   }
 }

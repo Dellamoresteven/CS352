@@ -121,7 +121,13 @@ class Scanner(in: Reader[Char]) extends Reader[Tokens.Token] with Reporter {
     if (isKeyword(s)) {
       Keyword(s)
     } else if(isBoolean(s)){
-      Literal(s)
+      if(s == "true"){
+        Literal(true)
+      }else if(s == "false"){
+        Literal(false)
+      }else {
+        Literal(s)
+      }
     } else Ident(s)
   }
 
@@ -654,8 +660,8 @@ class SyntacticSugarParser(in: Scanner) extends BaseParser(in) {
         If(cond, ifbody, parseSimpleExpression).withPos(pos);
       } else {
         // println("WHAWT2")
-        // If(cond, ifbody, Lit()).withpos(pos);
-        If(cond, ifbody, Lit(Unit)).withPos(pos);
+        If(cond, ifbody, Lit()/*.withPos(pos)*/).withPos(pos);
+        // If(cond, ifbody, Lit(Unit)/*.withPos(pos)*/).withPos(pos);
       }
     case _ => super.parseSimpleExpression
   }
@@ -864,12 +870,14 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
       println("parseProgram")
       val pos = in.peek.pos;
       val listOfFunctions = parseList[Exp](parseFunction, ';', 
-      tok => tok match {
-        case Keyword("def") => true;
-        case _ => false
-      })
+        tok => tok match {
+          case Keyword("def") => true;
+          case _ => false
+        }
+      )
       // val list = parseList[Exp](parseFunction, ';', true)
       accept(';') // After the function def has been parsed
+      // println(listOfFunctions)
       
       /* Might not need the `.withPos(pos).asInstanceOf[LetRec]` since it should 
         be stored here. */
