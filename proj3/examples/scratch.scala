@@ -1,4 +1,5 @@
-def g(x: Int, y: (Int, Boolean) => Int) :Int = 2 + x;
-def f(x: Int, y: Boolean): Int = x;
-val z = g(4, f);
-z
+def f(x: Array[Int]): Int = x(0);
+val arr = new Array[Int](4);
+arr(0) = 100;
+val x = f(arr);
+x

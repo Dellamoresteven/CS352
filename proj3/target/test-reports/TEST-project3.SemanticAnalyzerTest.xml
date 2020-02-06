@@ -1,75 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuite hostname="pal-nat186-49-183.itap.purdue.edu" name="project3.SemanticAnalyzerTest" tests="1" errors="0" failures="1" skipped="0" time="0.037" timestamp="2020-02-04T16:36:21">
+<testsuite hostname="pal-nat186-102-185.itap.purdue.edu" name="project3.SemanticAnalyzerTest" tests="1" errors="0" failures="0" skipped="0" time="0.022" timestamp="2020-02-06T15:35:24">
                      <properties>
-      <property name="java.specification.version" value="13"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="sun.arch.data.model" value="64"/><property name="java.vendor.url" value="https://java.oracle.com/"/><property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/openjdk-13.0.1.jdk/Contents/Home/lib"/><property name="sun.java.command" value="/usr/local/Cellar/sbt/1.3.6/libexec/bin/sbt-launch.jar"/><property name="jdk.debug" value="release"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2019-10-15"/><property name="java.home" value="/Library/Java/JavaVirtualMachines/openjdk-13.0.1.jdk/Contents/Home"/><property name="file.separator" value="/"/><property name="java.vm.compressedOopsMode" value="Zero based"/><property name="line.separator" value="
-"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="13.0.1+9"/><property name="user.name" value="stevendellamore"/><property name="file.encoding" value="UTF-8"/><property name="jnidispatch.path" value="/var/folders/8m/l39q357n53b8cz3pk63_gr5r0000gn/T/jna-116758906/jna17669036170119043491.tmp"/><property name="jna.loaded" value="true"/><property name="java.io.tmpdir" value="/var/folders/8m/l39q357n53b8cz3pk63_gr5r0000gn/T/"/><property name="java.version" value="13.0.1"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="java.library.path" value="/Users/stevendellamore/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/><property name="java.vendor" value="Oracle Corporation"/><property name="scala.ext.dirs" value="/Users/stevendellamore/.sbt/0.13/java9-rt-ext-oracle_corporation_13_0_1"/><property name="sun.io.unicode.encoding" value="UnicodeBig"/><property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="java.class.path" value="/usr/local/Cellar/sbt/1.3.6/libexec/bin/sbt-launch.jar"/><property name="java.vm.vendor" value="Oracle Corporation"/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="America/Indiana/Indianapolis"/><property name="java.vm.specification.version" value="13"/><property name="os.name" value="Mac OS X"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="US"/><property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="/Users/stevendellamore"/><property name="user.language" value="en"/><property name="jline.esc.timeout" value="0"/><property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="path.separator" value=":"/><property name="os.version" value="10.14"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="jna.platform.library.path" value="/usr/lib:/usr/lib"/><property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/><property name="user.dir" value="/Users/stevendellamore/Desktop/CS352/proj3"/><property name="os.arch" value="x86_64"/><property name="java.vm.info" value="mixed mode, sharing"/><property name="java.vm.version" value="13.0.1+9"/><property name="java.class.version" value="57.0"/>
+      <property name="jline.esc.timeout" value="0"/><property name="jna.platform.library.path" value="/usr/lib:/usr/lib"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib"/><property name="java.vm.version" value="25.232-b09"/><property name="gopherProxySet" value="false"/><property name="java.vm.vendor" value="AdoptOpenJDK"/><property name="java.vendor.url" value="http://java.oracle.com/"/><property name="path.separator" value=":"/><property name="jna.loaded" value="true"/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="file.encoding.pkg" value="sun.io"/><property name="user.country" value="US"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="sun.os.patch.level" value="unknown"/><property name="jna.nosys" value="true"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="user.dir" value="/Users/stevendellamore/Desktop/CS352/proj3"/><property name="java.runtime.version" value="1.8.0_232-b09"/><property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/><property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/endorsed"/><property name="os.arch" value="x86_64"/><property name="java.io.tmpdir" value="/var/folders/8m/l39q357n53b8cz3pk63_gr5r0000gn/T/"/><property name="line.separator" value="
+"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="os.name" value="Mac OS X"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="jnidispatch.path" value="/var/folders/8m/l39q357n53b8cz3pk63_gr5r0000gn/T/jna-116758906/jna5071600418718351893.tmp"/><property name="java.library.path" value="/Users/stevendellamore/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.class.version" value="52.0"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="os.version" value="10.14"/><property name="user.home" value="/Users/stevendellamore"/><property name="user.timezone" value="America/Indiana/Indianapolis"/><property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/><property name="file.encoding" value="UTF-8"/><property name="java.specification.version" value="1.8"/><property name="java.class.path" value="/usr/local/Cellar/sbt/1.3.6/libexec/bin/sbt-launch.jar"/><property name="user.name" value="stevendellamore"/><property name="jline.shutdownhook" value="false"/><property name="java.vm.specification.version" value="1.8"/><property name="sun.java.command" value="/usr/local/Cellar/sbt/1.3.6/libexec/bin/sbt-launch.jar"/><property name="java.home" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre"/><property name="sun.arch.data.model" value="64"/><property name="user.language" value="en"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/><property name="java.vm.info" value="mixed mode"/><property name="java.version" value="1.8.0_232"/><property name="java.ext.dirs" value="/Users/stevendellamore/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/><property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/classes"/><property name="java.vendor" value="AdoptOpenJDK"/><property name="file.separator" value="/"/><property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/><property name="sun.io.unicode.encoding" value="UnicodeBig"/><property name="sun.cpu.endian" value="little"/><property name="sun.cpu.isalist" value=""/>
     </properties>
-                     <testcase classname="project3.SemanticAnalyzerTest" name="NoErrorNoWarning" time="0.037">
-                                                 <failure message="SemanticAnalyzerTest.this.astTypeEquals(tast, tsa) was false AST does not have correct type" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: SemanticAnalyzerTest.this.astTypeEquals(tast, tsa) was false AST does not have correct type
-	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:528)
-	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:527)
-	at org.scalatest.FunSuite.newAssertionFailedException(FunSuite.scala:1560)
-	at org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:501)
-	at project3.SemanticAnalyzerTest.testSemanticAnalyzer(SemanticAnalyzerTest.scala:43)
-	at project3.SemanticAnalyzerTest.$anonfun$new$1(SemanticAnalyzerTest.scala:48)
-	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
-	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
-	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
-	at org.scalatest.Transformer.apply(Transformer.scala:22)
-	at org.scalatest.Transformer.apply(Transformer.scala:20)
-	at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
-	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
-	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
-	at org.scalatest.FunSuite.withFixture(FunSuite.scala:1560)
-	at org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
-	at org.scalatest.FunSuiteLike.$anonfun$runTest$1(FunSuiteLike.scala:196)
-	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:289)
-	at org.scalatest.FunSuiteLike.runTest(FunSuiteLike.scala:196)
-	at org.scalatest.FunSuiteLike.runTest$(FunSuiteLike.scala:178)
-	at org.scalatest.FunSuite.runTest(FunSuite.scala:1560)
-	at org.scalatest.FunSuiteLike.$anonfun$runTests$1(FunSuiteLike.scala:229)
-	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:396)
-	at scala.collection.immutable.List.foreach(List.scala:392)
-	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:384)
-	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:379)
-	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:461)
-	at org.scalatest.FunSuiteLike.runTests(FunSuiteLike.scala:229)
-	at org.scalatest.FunSuiteLike.runTests$(FunSuiteLike.scala:228)
-	at org.scalatest.FunSuite.runTests(FunSuite.scala:1560)
-	at org.scalatest.Suite.run(Suite.scala:1147)
-	at org.scalatest.Suite.run$(Suite.scala:1129)
-	at org.scalatest.FunSuite.org$scalatest$FunSuiteLike$$super$run(FunSuite.scala:1560)
-	at org.scalatest.FunSuiteLike.$anonfun$run$1(FunSuiteLike.scala:233)
-	at org.scalatest.SuperEngine.runImpl(Engine.scala:521)
-	at org.scalatest.FunSuiteLike.run(FunSuiteLike.scala:233)
-	at org.scalatest.FunSuiteLike.run$(FunSuiteLike.scala:232)
-	at org.scalatest.FunSuite.run(FunSuite.scala:1560)
-	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:314)
-	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:507)
-	at sbt.TestRunner.runTest$1(TestFramework.scala:113)
-	at sbt.TestRunner.run(TestFramework.scala:124)
-	at sbt.TestFramework$$anon$2$$anonfun$$lessinit$greater$1.$anonfun$apply$1(TestFramework.scala:282)
-	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:246)
-	at sbt.TestFramework$$anon$2$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:282)
-	at sbt.TestFramework$$anon$2$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:282)
-	at sbt.TestFunction.apply(TestFramework.scala:294)
-	at sbt.Tests$.processRunnable$1(Tests.scala:347)
-	at sbt.Tests$.$anonfun$makeSerial$1(Tests.scala:353)
-	at sbt.std.Transform$$anon$3.$anonfun$apply$2(System.scala:46)
-	at sbt.std.Transform$$anon$4.work(System.scala:67)
-	at sbt.Execute.$anonfun$submit$2(Execute.scala:269)
-	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:16)
-	at sbt.Execute.work(Execute.scala:278)
-	at sbt.Execute.$anonfun$submit$1(Execute.scala:269)
-	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:830)
-</failure>
+                     <testcase classname="project3.SemanticAnalyzerTest" name="NoErrorNoWarning" time="0.022">
+                                                 
                                                </testcase>
                      <system-out><![CDATA[]]></system-out>
                      <system-err><![CDATA[]]></system-err>

@@ -301,7 +301,8 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       exp.withType(UnitType)
     case Prim("block-set", args) => 
       // List(Ref(arr), Lit(0), Lit(1))
-      println("Args: " + args)
+      println("Args PRIM1: " + args)
+      // println("op PRIM1: " + op)
       val typev = typeCheck(args(2), UnknownType)(env);
       println("typee: " + typev.tp)
       val typei = typeCheck(args(1), IntType)(env);
@@ -310,11 +311,28 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
 
       val list = List(typearr, typei, typev);
 
-      Prim("block-set", list).withType(UnitType);
+      val x = Prim("block-set", list).withType(UnitType);
+      println("XXXXXXX: " + typev);
+      x
     case Prim(op, args) =>
+      println("Args PRIM2: " + args)
+      println("op PRIM2: " + op)
       typeOperator(op, args.length)(exp.pos) match {
-        case FunType(atps, rtp) => exp.withType(rtp)
-        case UnknownType => exp.withType(UnknownType)
+        case FunType(atps, rtp) => 
+          // println("atps: " + atps);
+          // exp.withType(rtp)
+          val tc1 = typeCheck(args(0), atps(0)._2)(env);
+          val tc2 = typeCheck(args(1), atps(1)._2)(env);
+          val fakeArgs = List(tc1, tc2);
+          // println("fakeArgs: " + tc1.tp)
+          // println("fakeArgs: " + tc2.tp)
+          // typeCheck(tc1, tc2.tp)(env);
+          // typeCheck(tc1, rtp)(env);
+          // typeCheck(tc1, rtp)(env);
+          if(tc1.tp != tc2.tp) {
+            error("Types are not the same");
+          }
+          Prim(op, fakeArgs).withType(rtp);
         case _ => BUG("operator's type needs to be FunType")
       }
     case Let(x, tp, rhs, body) =>
@@ -397,45 +415,109 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       val bbody = typeCheck(body, pt)(env)
       While(ccond, llbody, bbody).withType(bbody.tp)
     case FunDef(fname, args, rtp, fbody) => 
-      println(args);
-      println("AHHHH")
+      // println(args);
+      // println("AHHHH")
+      // println("rtp: " + rtp)
       checkDuplicateNames(args)
-      var tp = rtp match {
-        case FunType(_, rtp) => rtp
-      }
+      // println("AHHHH0")
+      // var tp = rtp match {
+      //   case FunType(_, rtp) => rtp
+      // }
+      // println("AHHHH1")
       val argsList = args map {case Arg(name, tp, _) => (name, tp)}
-      val nfbody = typeCheck(fbody, tp)(env.withVals(argsList))
-      val nrtp = rtp match {
-        case FunType(args, _) => FunType(args, nfbody.tp)
-      }
-      FunDef(fname, args, nrtp, nfbody).withType(nrtp)
+      // println("AHHHH2")
+      val nfbody = typeCheck(fbody, rtp)(env.withVals(argsList))
+      // println("AHHHH3")
+      val nrtp = FunType(argsList, nfbody.tp); 
+      // val nrtp = rtp match {
+      //   case FunType(args, _) => FunType(args, nfbody.tp)
+      // }
+      // println("AHHHH4")
+      // println("NRTP " + nrtp)
+      val fff = FunDef(fname, args, rtp, nfbody).withType(nrtp)
+      // println("fff " + fff)
+      fff
     case LetRec(funs, body) => // funs = is the list of functions
       checkDuplicateNames(funs);
       // println("funs: " + funs)
       // println("body: " + body)
-      // TODO modify to handle general case
-      val fenv = env.withVals(funs.map {case FunDef(name, _, rtp, _) => (name, rtp)})
-      // println("fenv " + fenv);
-      val nfuns = funs.map {case f@FunDef(_, _, rtp, _) => typeCheck(f, rtp)(fenv) }
-      // println("nfuns " + nfuns);
-      val nfenv = env.withVals(nfuns.map {case FunDef(name, _, rtp, _) => (name, rtp)})
-      // println("nfenv " + nfenv);
-      val nbody = typeCheck(body, pt)(nfenv)
+      // // TODO modify to handle general case
+      // for(i <- 0 to funs.length-1){
+      //   val argsList = args map {case Arg(, tp, _) => (name, rtp)}
+      //   val nfenv = env.withVals();
+      //   val nbody = typeCheck()()
+      // }
+      
+      // println(argsList);
+
+
+
+      var e = env;
+      for(i <- 0 to funs.length-1) {
+        val argsList = funs(i).asInstanceOf[FunDef].args map {case Arg(name, tp, _) => (name, tp)}
+        e = e.withVal(funs(i).asInstanceOf[FunDef].name, FunType(argsList, funs(i).asInstanceOf[FunDef].rtp)); 
+      }
+
+      // println("NEW ENV " + e)
+      val nfuns = funs.map {case f@FunDef(_, _, _, _) => 
+                            println("f: " + f);
+                            println("f.tp: " + f.tp);
+                            val argsList = f.asInstanceOf[FunDef].args map {case Arg(name, tp, _) => (name, tp)}
+                            val y = FunType(argsList, f.asInstanceOf[FunDef].rtp)
+                            // println("CHECKING FOR " + y)
+                            typeCheck(f, y)(e) }
+      val nbody = typeCheck(body, pt)(e)
       // println("nbody " + nbody);
       LetRec(nfuns, nbody).withType(nbody.tp)
+
+      
+      
+      // // println("AHHHH2")
+      // val nfbody = typeCheck(fbody, rtp)(env.withVals(argsList))
+      // // println("AHHHH3")
+      // val nrtp = FunType(argsList, nfbody.tp); 
+      // // val nrtp = rtp match {
+      // //   case FunType(args, _) => FunType(args, nfbody.tp)
+      // // }
+      // // println("AHHHH4")
+      // println("NRTP " + nrtp)
+      // val fff = FunDef(fname, args, rtp, nfbody).withType(nrtp)
+      // println("fff " + fff)
+
+
+
+
+
+      // val fenv = env.withVals(funs.map {case f@FunDef(name, _, rtp, _) => (name, f.tp)})
+      // println("fenv " + fenv);
+      // // println("rtp " + rtp);
+      // // FunType(args, rtp)
+      // val nfuns = funs.map {case f@FunDef(_, _, _, _) => 
+      //                             println("f: " + f);
+      //                             println("f.tp: " + f.tp);
+      //                             typeCheck(f, f.tp)(fenv) }
+      // println("nfuns " + nfuns);
+      // val nfenv = env.withVals(nfuns.map {case f@FunDef(name, _, _, _) => (name, f.tp)})
+      // println("nfenv " + nfenv);
+      // val nbody = typeCheck(body, pt)(nfenv)
+      // println("nbody " + nbody);
+      // LetRec(nfuns, nbody).withType(nbody.tp)
     case App(fun, args) =>
-      val nFun: Exp = fun match {
-        case Ref(x) =>
-          var res = env(x) match {
-            case Some(tp) => 
-              fun.withType(tp)
-            case _ => 
-              println("I GOTHERE BEST FRIEND")
-              fun.withType(UnknownType)
-          }
-          res
-        case _ => fun.withType(UnknownType) // Maybe I dont need. 
-      }
+      println("fun: " + fun)
+      println("args: " + args)
+      // val nFun: Exp = fun match {
+      //   case Ref(x) =>
+      //     var res = env(x) match {
+      //       case Some(tp) => 
+      //         fun.withType(tp)
+      //       case _ => 
+      //         println("I GOTHERE BEST FRIEND")
+      //         fun.withType(UnknownType)
+      //     }
+      //     res
+      //   case _ => fun.withType(UnknownType) // Maybe I dont need. 
+      // }
+      val nFun: Exp = typeCheck(fun, fun.tp)(env)
       // val nFun : Exp = typeCheck(fun, pt)(env)
 
       // Handling some errors
@@ -459,17 +541,21 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       println("FTP: " + ftp)
       var nargs: List[Exp] = List[Exp]()
       for( i <- 0 to args.length - 1){
-        // println("FTP -> " + ftp.args(i)._2);
+        println("FTP -> " + args(i).tp);
+        // println("FTP -> " + args(i).tp);
         val nArg = typeCheck(args(i), ftp.args(i)._2)(env);
         nargs = nArg +: nargs
       }
+      nargs = nargs.reverse;
 
 
       // Transform some function applications into primitives on arrays.
       nFun.tp match {
         case ArrayType(tp) =>
           Prim("block-get", List(nFun, nargs.head)).withType(tp)
-        case _ => App(nFun, nargs).withType(ftp.rtp)
+        case _ => 
+          println("EAWFJAWGJAFGEWAWEFAEWFAFEW")
+          App(nFun, nargs).withType(ftp.rtp)
       }
     case ArrayDec(size: Exp, etp: Type) =>
       // TODO: Check array declaration

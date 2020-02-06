@@ -386,6 +386,7 @@ class StackInterpreter extends Interpreter with BugReporter {
     case Lit(x) =>
       memory(sp) = Cst(x)
     case Prim(op, args) =>
+      println("I AM PRIM " + op)
       val idxs = List.tabulate(args.length)(i => sp + i)
       (args zip idxs) foreach { case (arg, idx) => eval(arg, idx)(env) }
       evalPrim(op)(idxs)
@@ -441,6 +442,7 @@ class StackInterpreter extends Interpreter with BugReporter {
 
       (funs zip indexs) foreach { 
         case (fun@FunDef(_, _, _, _), idx:Int) => 
+          println("env.withVals(funcs): " + env.withVals(funcs))
           eval(fun, idx)(env.withVals(funcs)) 
       }
 

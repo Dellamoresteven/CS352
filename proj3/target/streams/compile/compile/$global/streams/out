@@ -1,7 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj3/src/main/scala/project3/Compiler.scala:393:32: invalid string interpolation $8, expected: $$, $identifier or ${expression}[0m
-[0m[[0m[31merror[0m] [0m[0m      emitln(s"imulq ${loc(sp)}, $$$8");[0m
-[0m[[0m[31merror[0m] [0m[0m                               ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj3/src/main/scala/project3/Compiler.scala:393:38: unclosed string literal[0m
-[0m[[0m[31merror[0m] [0m[0m      emitln(s"imulq ${loc(sp)}, $$$8");[0m
-[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj3/src/main/scala/project3/SemanticAnalyzer.scala:173:14: unreachable code[0m
+[0m[[0m[33mwarn[0m] [0m[0m      FunType(List(("", BooleanType), ("", BooleanType)), BooleanType)[0m
+[0m[[0m[33mwarn[0m] [0m[0m             ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

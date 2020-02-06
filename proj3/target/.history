@@ -70,3 +70,21 @@ run examples/scratch.scala
 run examples/scratch.scala
 \
 run examples/scratch.scala
+test
+run examples/scratch.scala
+run examples/scratch.scala intStack
+run examples/scratch.scala 
+run examples/scratch.scala intStack
+run examples/scratch.scala
+tezt
+test
+tezt
+run examples/scratch.scala
+run examples/scratch.scala intStack
+run examples/scratch.scala 
+run examples/scratch.scala intStack
+run examples/scratch.scala
+run examples/scratch.scala intStack
+run examples/scratch.scala
+run examples/scratch.scala intStack
+run examples/scratch.scala

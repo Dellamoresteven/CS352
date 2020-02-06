@@ -1,3 +1,2 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mSemanticAnalyzerTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- NoErrorNoWarning *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  SemanticAnalyzerTest.this.astTypeEquals(tast, tsa) was false AST does not have correct type (SemanticAnalyzerTest.scala:43)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- NoErrorNoWarning[0m[0m
