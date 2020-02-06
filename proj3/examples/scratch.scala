@@ -1,3 +1,4 @@
-def f(x: Int): Int = 2;
-def g(x: Int): Int = 5+2;
-5
+def g(x: Int, y: (Int, Boolean) => Int) :Int = 2 + x;
+def f(x: Int, y: Boolean): Int = x;
+val z = g(4, f);
+z

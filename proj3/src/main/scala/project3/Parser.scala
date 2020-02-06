@@ -854,6 +854,7 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
     val typList = listOfArgs.map { case Arg(name, tp, _) => (name, tp) }
     var funType = FunType(typList, rtp)
     FunDef(name, listOfArgs, funType, body).withPos(pos)
+    // FunDef(name, listOfArgs, rtp, body).withPos(pos)
   }
 
   /*

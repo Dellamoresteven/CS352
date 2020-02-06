@@ -131,6 +131,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
       emitln(s"setg %al")
       emitln(s"movzbq %al, ${loc(sp)}")
     case "block-get" =>
+      emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
       // emitln(s"movq ${loc(sp1)}, ${loc(sp)}")
       // emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), %rip")
       // emitln(s"movq heap(%rip), ${loc(sp)}")
@@ -147,8 +148,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
    */
   def transTer(op: String)(sp: Loc, sp1: Loc, sp2: Loc) = op match {
     case "block-set" =>
-      // emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), %rip")
-      // emitln(s"movq ${loc(sp2)}, heap(%rip)")
+      emitln(s"movq  ${loc(sp2)}, (${loc(sp)}, ${loc(sp1)}, 8)")
     case _ => BUG(s"ternary operator $op undefined")
   }
 
@@ -266,7 +266,10 @@ abstract class X86Compiler extends BugReporter with Codegen {
       for(i <- 0 to funs.length-1) {
         val f = funs(i);
         val fEnv = env.withVals(funsLoc)
-        trans(f, sp+i+1)(fEnv);
+        // trans(f, sp+i+1)(fEnv);
+        // println("AHHHH: " + Reg(0));
+        // println("AHHHH: " + sp);
+        trans(f, Reg(0))(fEnv);
       }
 
       emitln("#################################################\n\n", 0)
@@ -317,32 +320,97 @@ abstract class X86Compiler extends BugReporter with Codegen {
       emitln("ret\n")
       //////////////////////////////////////////
     case App(fun, args) =>
-      // Advice: you may want to start to work on functions with only one argument
-      // i.e. change args to List(arg). Once it is working you can generalize your
-      // code and work on multiple arguments.
-      // Evaluate the arguments
-      // TODO
+      // val indexs = List[Int](0);
+      val indexs = List.tabulate(args.length)(i => sp + i)
+      // val indexs = List.tabulate(args.length)(i => i % avRegs.length)
 
+      var i = 0;
+      // while(Reg(i) != sp) {
+      //   emitln(s"push ${loc(i)}");
+      //   i = i + 1;
+      // }
+
+      // (args zip indexs) map {case (arg, idx) => trans(arg, idx)(env)}
+      (args zip indexs) map { case (arg, idx) => trans(arg, idx)(env) }
+      println("args: " + args)
+      println("indexs: " + indexs)
+      // trans(args(0), Reg(0))(env)
+      // println("LOL")
       // Compute the physical location of the function to be called
       val fLoc: String = fun match {
         case Ref(fname) =>
           env(fname) match {
             case Reg(sp) => ??? // Extra credit
-            case Func(name) => "" // TODO
+            case Func(name) => ("call " + funcName(name))
           }
         case _ => ??? // Extra credit
       }
 
-      // Implement the calling conventions after that point
-      // and generate the function call
-      // TODO
-      ()
+      val spRegValue:Int = sp match {
+        case Reg(x) => x
+      }
+
+      for(i <- 0 to avRegs.length-1){
+        println("i: " + i)
+        emitln(s"push ${loc(i)}");
+      }
+      println("spRegValue: " + spRegValue);
+      println("sp: " + sp);
+
+      i = 0;
+      while(i < spRegValue) {
+        emitln(s"movq ${loc(sp + i)}, ${loc(i)}")
+        i = i + 1;
+      }
+
+      emitln(s"${fLoc}")
+
+      // i = 0
+      // while(Reg(i) != sp) {
+      //   emitln(s"pop ${loc(i)}")
+      //   i = i + 1
+      // }
+
+      // i = spRegValue - 1;
+      // while(i >= 0) {
+      //   emitln(s"popq ${loc(i)}")
+      //   i = i - 1;
+      // }
+
+      for(i <- avRegs.length-1 to 0 by -1){
+        println("i: " + i)
+        emitln(s"pop ${loc(i)}");
+      }
+
+      emitln(s"movq %rax, ${loc(sp)}")
+
     case ArrayDec(size, _) =>
       // This node needs to allocate an area of eval(size) * 8 bytes in the heap
       // the assembly variable "heap" contains a pointer to the first valid byte
       // in the heap. Make sure to update its value accordingly.
       // TODO
-      ()
+
+      // println("I AM AN ARRAYYYYYY")
+      // trans(size, sp+1)(env)
+      // println("SIZEY " + size)
+      // val num = 8
+      // emitln(s"movq $$$num, %rax")
+      // emitln(s"imulq ${loc(sp+1)}")
+      // // trans(size, sp)(env);
+      // // val steve = 8;
+      // // emitln(s"imulq ${loc(sp)}, $$$steve");
+      // emitln(s"movq heap(%rip), %rax");
+      // emitln(s"movq heap(${loc(sp)}), %rip")
+
+      emitln(s"movq heap(%rip), ${loc(sp)}")
+
+      trans(size, sp + 1)(env)
+
+      emitln(s"movq heap(%rip), ${loc(sp + 2)}")
+      emitln(s"movq (${loc(sp + 2)}, ${loc(sp + 1)}, 8), ${loc(sp+2)}")
+      // emitln(s"movq ${loc(sp+2)}, %rip")
+
+      
     case _ => BUG(s"don't know how to implement $exp")
   }
 }

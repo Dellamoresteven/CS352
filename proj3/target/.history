@@ -66,3 +66,7 @@ run "if(5==5) 5 else 3"
 run "5+5"
 run "true;4"
 run examples/scratch.scala
+\
+run examples/scratch.scala
+\
+run examples/scratch.scala

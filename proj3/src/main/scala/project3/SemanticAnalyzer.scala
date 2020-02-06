@@ -370,6 +370,9 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
        */
       //  case Let(x, tp, rhs, body)
       val rrhs = typeCheck(rhs, xtp)(env)
+      // val rrhs = typeCheck(rhs, env(x) match {
+      //   case Some(tp) => tp
+      //   case _ => UnknownType })(env)
       // println("pt: " + pt)
       // println("rrhs.tp: " + rrhs.tp)
       pt match {

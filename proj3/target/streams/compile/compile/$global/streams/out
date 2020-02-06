@@ -1,11 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj3/src/main/scala/project3/Compiler.scala:305:24: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : X86Compiler.this.Loc[0m
-[0m[[0m[31merror[0m] [0m[0m required: Int[0m
-[0m[[0m[31merror[0m] [0m[0m        indexs = Reg(sp+i) +: indexs[0m
-[0m[[0m[31merror[0m] [0m[0m                       ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj3/src/main/scala/project3/Compiler.scala:311:51: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : List[(String, Int)][0m
-[0m[[0m[31merror[0m] [0m[0m required: List[(String, X86Compiler.this.Loc)][0m
-[0m[[0m[31merror[0m] [0m[0m      trans(fbody, sp + args.length)(env.withVals(pos))[0m
-[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj3/src/main/scala/project3/Compiler.scala:393:32: invalid string interpolation $8, expected: $$, $identifier or ${expression}[0m
+[0m[[0m[31merror[0m] [0m[0m      emitln(s"imulq ${loc(sp)}, $$$8");[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj3/src/main/scala/project3/Compiler.scala:393:38: unclosed string literal[0m
+[0m[[0m[31merror[0m] [0m[0m      emitln(s"imulq ${loc(sp)}, $$$8");[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
 [0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
