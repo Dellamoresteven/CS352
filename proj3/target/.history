@@ -93,3 +93,18 @@ run examples/scratch.scala
 run examples/scratch.scala intStack
 run examples/scratch.scala 
 run examples/scratch.scala intStack
+putchar(72); putchar(101); putchar(108);
+run putchar(72); putchar(101); putchar(108);
+run putchar(72);
+run "putchar(72);"
+run "putchar(72);5"
+run putchar(72); putchar(101); putchar(108);5"
+run "putchar(72); putchar(101); putchar(108);5"
+run "putchar(72); putchar(101); putchar(108);5" intStack
+run "putchar(72); putchar(101); putchar(108);5"
+run examples/scratch.scala
+run "putchar(72); putchar(101); putchar(108);5"
+run examples/scratch.scala
+run examples/scratch.scala intStack
+run examples/scratch.scala
+run examples/scratch.scala intStack

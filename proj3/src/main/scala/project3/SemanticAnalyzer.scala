@@ -437,7 +437,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       // println("AHHHH4")
 
       FunDef(fname, args, nfbody.tp, nfbody).withType(nrtp)
-      // println("nrtp af÷ter to return " + fff.tp)
+      // println("nrtp after to return " + nrtp)
       // fff
     case LetRec(funs, body) => // funs = is the list of functions
       checkDuplicateNames(funs);
@@ -508,8 +508,8 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       // println("nbody " + nbody);
       // LetRec(nfuns, nbody).withType(nbody.tp)
     case App(fun, args) =>
-      println("fun: " + fun)
-      println("args: " + args)
+      // println("fun: " + fun)
+      // println("args: " + args)
       // val nFun: Exp = fun match {
       //   case Ref(x) =>
       //     var res = env(x) match {
@@ -524,6 +524,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       // }
       val nFun: Exp = typeCheck(fun, fun.tp)(env)
       // val nFun : Exp = typeCheck(fun, pt)(env)
+      // println("nFun: " + nFun)
 
       // Handling some errors
       val ftp = nFun.tp match {
@@ -543,14 +544,14 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       }
 
       // TODO: Check arguments type
-      println("FTP: " + ftp)
+      // println("FTP: " + ftp)
       var nargs: List[Exp] = List[Exp]()
       for( i <- 0 to args.length - 1){
         val nArg = typeCheck(args(i), ftp.args(i)._2)(env);
         nargs = nArg +: nargs
       }
       nargs = nargs.reverse;
-      println("nargs: " + nargs)
+      // println("nargs: " + nargs)
 
 
       // Transform some function applications into primitives on arrays.
@@ -558,7 +559,7 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
         case ArrayType(tp) =>
           Prim("block-get", List(nFun, nargs.head)).withType(tp)
         case _ => 
-          println("EAWFJAWGJAFGEWAWEFAEWFAFEW")
+          // println("EAWFJAWGJAFGEWAWEFAEWFAFEW")
           App(nFun, nargs).withType(ftp.rtp)
       }
     case ArrayDec(size: Exp, etp: Type) =>

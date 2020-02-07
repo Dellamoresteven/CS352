@@ -268,7 +268,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
     case Ref(x) =>
       env(x) match {
         case Reg(sp1) => emitln(s"movq ${loc(sp1)}, ${loc(sp)}")
-        case Func(name) => ??? // Extra credit
+        case Func(name) => println("DO I EVER GET HERE LOL: " + name); name 
       }
     case If(cond, tBranch, eBranch) =>
       val lab = freshLabel("if")
@@ -301,10 +301,11 @@ abstract class X86Compiler extends BugReporter with Codegen {
       // name as a label.
       val funsLoc = funs map { case FunDef(name, _, _, _) => (name, Func(name)) }
 
+      val fEnv = env.withVals(funsLoc)
       // TODO complete the code
       for(i <- 0 to funs.length-1) {
         val f = funs(i);
-        val fEnv = env.withVals(funsLoc)
+        
         // trans(f, sp+i+1)(fEnv);
         // println("AHHHH: " + Reg(0));
         // println("AHHHH: " + sp);
@@ -379,7 +380,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
       val fLoc: String = fun match {
         case Ref(fname) =>
           env(fname) match {
-            case Reg(sp) => ??? // Extra credit
+            case Reg(sp) => println("GOT HERE");??? // Extra credit
             case Func(name) => ("call " + funcName(name))
           }
         case _ => ??? // Extra credit
@@ -390,14 +391,14 @@ abstract class X86Compiler extends BugReporter with Codegen {
       }
 
       for(i <- 0 to avRegs.length-1){
-        println("i: " + i)
+        // println("i: " + i)
         emitln(s"push ${loc(i)}");
       }
       println("spRegValue: " + spRegValue);
       println("sp: " + sp);
 
       i = 0;
-      while(i < spRegValue) {
+      while(i < args.length) {
         emitln(s"movq ${loc(sp + i)}, ${loc(i)}")
         i = i + 1;
       }
@@ -417,7 +418,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
       // }
 
       for(i <- avRegs.length-1 to 0 by -1){
-        println("i: " + i)
+        // println("i: " + i)
         emitln(s"pop ${loc(i)}");
       }
 

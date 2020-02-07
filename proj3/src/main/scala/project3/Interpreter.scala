@@ -478,10 +478,12 @@ class StackInterpreter extends Interpreter with BugReporter {
           memory(sp) = memory(sp + args.length + 1)
         case Primitive("getchar") => Cst(Console.in.read)
         case Primitive("putchar") =>
-          val List(Cst(c: Int)) = memory(sp)
+          val (Cst(c: Int)) = memory(sp)
           Console.out.write(c)
           Console.out.flush
           Cst(())
+        case _ => 
+          ???
       }
 
       // Evaluate the arguments

@@ -1,4 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj3/src/main/scala/project3/Compiler.scala:135:57: not found: value sp2[0m
-[0m[[0m[31merror[0m] [0m[0m      emitln(s"leaq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp2)}")[0m
-[0m[[0m[31merror[0m] [0m[0m                                                        ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj3/src/main/scala/project3/Parser.scala:663:29: Adaptation of argument list by inserting () is deprecated: leaky (Object-receiving) target makes this especially dangerous.[0m
+[0m[[0m[33mwarn[0m] [0m[0m        signature: Lit.apply(x: Any): project3.Language.Lit[0m
+[0m[[0m[33mwarn[0m] [0m[0m  given arguments: <none>[0m
+[0m[[0m[33mwarn[0m] [0m[0m after adaptation: Lit((): Unit)[0m
+[0m[[0m[33mwarn[0m] [0m[0m        If(cond, ifbody, Lit()/*.withPos(pos)*/).withPos(pos);[0m
+[0m[[0m[33mwarn[0m] [0m[0m                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

@@ -99,7 +99,7 @@ class Scanner(in: Reader[Char]) extends Reader[Tokens.Token] with Reporter {
 
   // List of delimiters
   // TODO: Update this as delimiters are added to our language
-  val isDelim      = Set('(',')','=',';','{','}',':', ',', '[', ']')
+  val isDelim      = Set('(',')','=',';','{','}',':', ',', '[', ']', '\'');
 
   // List of keywords
   // TODO: Update this as keywords are added to our language
@@ -838,6 +838,7 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
    * TODO: complete the function
    */
   def parseFunction: Exp = {
+    println("HERERERefefefefefef")
     accept("def")
     val (name, pos) = getName
     accept('(')
