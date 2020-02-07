@@ -1,5 +1,3 @@
-def f(x: Array[Int]): Int = x(0);
-val arr = new Array[Int](4);
-arr(0) = 100;
-val x = f(arr);
-x
+val a = new Array[Int](10);
+a(3) = 826;
+a(3)

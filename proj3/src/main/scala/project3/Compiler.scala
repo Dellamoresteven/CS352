@@ -131,10 +131,17 @@ abstract class X86Compiler extends BugReporter with Codegen {
       emitln(s"setg %al")
       emitln(s"movzbq %al, ${loc(sp)}")
     case "block-get" =>
-      emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
-      // emitln(s"movq ${loc(sp1)}, ${loc(sp)}")
-      // emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), %rip")
-      // emitln(s"movq heap(%rip), ${loc(sp)}")
+      println("block-get-1")
+      // emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
+      // // emitln(s"movq $$2, ${loc(sp)}")
+
+      // println("${loc(sp)} -> " + loc(sp))
+      // // emitln(s"movq (${loc(sp)}), ${loc(sp)}")
+      
+      emitln(s"leaq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
+      emitln(s"movq heap(%rip), ${loc(sp)}")
+      
+      println("block-get-2")
     case _ => BUG(s"Binary operator $op undefined")
   }
 
@@ -148,7 +155,39 @@ abstract class X86Compiler extends BugReporter with Codegen {
    */
   def transTer(op: String)(sp: Loc, sp1: Loc, sp2: Loc) = op match {
     case "block-set" =>
-      emitln(s"movq  ${loc(sp2)}, (${loc(sp)}, ${loc(sp1)}, 8)")
+      println("block-set-1")
+      println("${loc(sp)} -> " + loc(sp))
+      emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
+      emitln(s"movq ${loc(sp2)}, heap(%rip)")
+      // emitln(s"movq  ${loc(sp2)}, (${loc(sp)}, ${loc(sp1)}, 8)")
+      // emitln(s"leaq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
+      // emitln(s"movq  ${loc(sp2)}, ${loc(sp)}")
+
+
+      // emitln(s"movq heap(%rip), ${loc(sp)}")
+      // emitln(s"movq  ${loc(sp)}, (${loc(sp1)}, ${loc(sp2)}, 8)")
+      // emitln(s"movq  ${loc(sp2)}, (${loc(sp1)}, ${loc(sp)}, 8)")
+      // emitln(s"movq  ${loc(sp1)}, (${loc(sp)}, ${loc(sp2)}, 8)")
+      // emitln(s"movq  ${loc(sp1)}, (${loc(sp2)}, ${loc(sp)}, 8)")
+      // emitln(s"movq  ${loc(sp)}, (${loc(sp2)}, ${loc(sp1)}, 8)")
+      // emitln(s"movq $$5, ${loc(sp)}")
+      println("block-set-2")
+      // emitln(s"movq ${loc(sp2)}, heap(%rip)")
+      // //       emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
+      // // emitln(s"movq ${loc(sp2)}, ${loc(sp)}") //move sp2 into arr(i)
+
+      // // emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), %rip")
+
+
+      // emitln(s"leaq heap(%rip), ${loc(sp2)}")
+
+
+
+      // emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
+      // emitln(s"movq ${loc(sp2)}, ${loc(sp)}") //move sp2 into arr(i)
+
+      // emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), %rip")
+      // emitln(s"movq ${loc(sp2)}, heap(%rip)")
     case _ => BUG(s"ternary operator $op undefined")
   }
 
@@ -402,15 +441,44 @@ abstract class X86Compiler extends BugReporter with Codegen {
       // emitln(s"movq heap(%rip), %rax");
       // emitln(s"movq heap(${loc(sp)}), %rip")
 
+
+
+      // emitln(s"movq heap(%rip), ${loc(sp)}")
+
+      // trans(size, sp + 1)(env) // offset
+
+      // // emitln(s"movq heap(%rip), ${loc(sp + 1)}")
+      // // emitln(s"movq heap(%rip), %rax")
+      // emitln(s"movq (${loc(sp)}, ${loc(sp + 1)}, 8), ${loc(sp)}")
+      // // emitln(s"movq ${loc(sp)}, heap(%rip)")
+      // // emitln(s"movq heap(%rip), (${loc(sp)}, ${loc(sp + 1)}, 8)")
+
+      // emitln(s"leaq heap(%rip), %rax");
+      // // emitln(s"movq %rax, heap(%rip)");
+      // // // emitln(s"movq %rax, (${loc(sp)}, ${loc(sp + 1)}, 8)")
+      // // emitln(s"movq (%rax), %rax");
+      println("HERE0")
+
       emitln(s"movq heap(%rip), ${loc(sp)}")
 
       trans(size, sp + 1)(env)
 
-      emitln(s"movq heap(%rip), ${loc(sp + 2)}")
-      emitln(s"movq (${loc(sp + 2)}, ${loc(sp + 1)}, 8), ${loc(sp+2)}")
-      // emitln(s"movq ${loc(sp+2)}, %rip")
+      emitln(s"leaq (${loc(sp)}, ${loc(sp + 1)}, 8), ${loc(sp)}")
+
+      emitln(s"movq heap(%rip), ${loc(sp)}")
+      println("HERE1")
 
       
     case _ => BUG(s"don't know how to implement $exp")
   }
 }
+
+
+/*
+
+HEAP -> SP
+offset = (SP + 1)
+SP + (SP+1) -> SP
+SP -> HEAP
+
+*/

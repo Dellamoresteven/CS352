@@ -183,9 +183,9 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
    */
   def typeUnOperator(op: String)(pos: Position) = op match {
     case "+"  => // only ints can be postive / negative i think
-      FunType(List(("", IntType), ("", IntType)), IntType)
+      FunType(List(("", IntType)), IntType)
     case "-" =>
-      FunType(List(("", IntType), ("", IntType)), IntType)
+      FunType(List(("", IntType)), IntType)
     case _ =>
       error(s"undefined unary operator", pos)
       UnknownType
@@ -228,7 +228,8 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
     case (UnknownType, _) => typeWellFormed(pt)(env, pos)  // for function arguments
     case (FunType(args1, rtp1), FunType(args2, rtp2)) if args1.length == args2.length =>
       args1.zip(args2).map { case (a,b) => typeConforms(a._2, b._2)(env, pos) }
-      typeConforms(rtp1, rtp2)(env, pos)
+      // FunType(args1,rtp1);
+      FunType(args1,typeConforms(rtp1, rtp2)(env, pos));
     case (ArrayType(tp), ArrayType(pt)) => ArrayType(typeConforms(tp, pt)(env, pos))
     case _ => error(s"type mismatch;\nfound   : $tp\nexpected: $pt", pos); pt
   }
@@ -425,18 +426,19 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       // }
       // println("AHHHH1")
       val argsList = args map {case Arg(name, tp, _) => (name, tp)}
-      // println("AHHHH2")
+      // println("argsList: " + argsList)
+      // println("fbody: " + fbody)
       val nfbody = typeCheck(fbody, rtp)(env.withVals(argsList))
-      // println("AHHHH3")
+      // println("nfbody: " + nfbody)
       val nrtp = FunType(argsList, nfbody.tp); 
       // val nrtp = rtp match {
       //   case FunType(args, _) => FunType(args, nfbody.tp)
       // }
       // println("AHHHH4")
-      // println("NRTP " + nrtp)
-      val fff = FunDef(fname, args, rtp, nfbody).withType(nrtp)
-      // println("fff " + fff)
-      fff
+
+      FunDef(fname, args, nfbody.tp, nfbody).withType(nrtp)
+      // println("nrtp af÷ter to return " + fff.tp)
+      // fff
     case LetRec(funs, body) => // funs = is the list of functions
       checkDuplicateNames(funs);
       // println("funs: " + funs)
@@ -459,14 +461,17 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       }
 
       // println("NEW ENV " + e)
+      var eTwo = e;
       val nfuns = funs.map {case f@FunDef(_, _, _, _) => 
-                            println("f: " + f);
-                            println("f.tp: " + f.tp);
                             val argsList = f.asInstanceOf[FunDef].args map {case Arg(name, tp, _) => (name, tp)}
                             val y = FunType(argsList, f.asInstanceOf[FunDef].rtp)
-                            // println("CHECKING FOR " + y)
-                            typeCheck(f, y)(e) }
-      val nbody = typeCheck(body, pt)(e)
+                            println("before i call")
+                            var gg = typeCheck(f, y)(e);
+                            println("after i call " + gg.tp)
+                            eTwo = eTwo.withVal(f.name, gg.tp);
+                            gg
+                            }
+      val nbody = typeCheck(body, pt)(eTwo)
       // println("nbody " + nbody);
       LetRec(nfuns, nbody).withType(nbody.tp)
 
@@ -541,12 +546,11 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       println("FTP: " + ftp)
       var nargs: List[Exp] = List[Exp]()
       for( i <- 0 to args.length - 1){
-        println("FTP -> " + args(i).tp);
-        // println("FTP -> " + args(i).tp);
         val nArg = typeCheck(args(i), ftp.args(i)._2)(env);
         nargs = nArg +: nargs
       }
       nargs = nargs.reverse;
+      println("nargs: " + nargs)
 
 
       // Transform some function applications into primitives on arrays.
