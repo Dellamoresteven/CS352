@@ -138,8 +138,8 @@ abstract class X86Compiler extends BugReporter with Codegen {
       // println("${loc(sp)} -> " + loc(sp))
       // // emitln(s"movq (${loc(sp)}), ${loc(sp)}")
       
-      emitln(s"leaq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
-      emitln(s"movq heap(%rip), ${loc(sp)}")
+      emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
+      // emitln(s"movq heap(%rip), ${loc(sp)}")
       
       println("block-get-2")
     case _ => BUG(s"Binary operator $op undefined")
@@ -157,8 +157,8 @@ abstract class X86Compiler extends BugReporter with Codegen {
     case "block-set" =>
       println("block-set-1")
       println("${loc(sp)} -> " + loc(sp))
-      emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
-      emitln(s"movq ${loc(sp2)}, heap(%rip)")
+      emitln(s"movq ${loc(sp2)}, (${loc(sp)}, ${loc(sp1)}, 8)")
+      // emitln(s"movq ${loc(sp2)}, heap(%rip)")
       // emitln(s"movq  ${loc(sp2)}, (${loc(sp)}, ${loc(sp1)}, 8)")
       // emitln(s"leaq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
       // emitln(s"movq  ${loc(sp2)}, ${loc(sp)}")
@@ -465,7 +465,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
 
       emitln(s"leaq (${loc(sp)}, ${loc(sp + 1)}, 8), ${loc(sp)}")
 
-      emitln(s"movq heap(%rip), ${loc(sp)}")
+      emitln(s"movq ${loc(sp)}, heap(%rip)")
       println("HERE1")
 
       
