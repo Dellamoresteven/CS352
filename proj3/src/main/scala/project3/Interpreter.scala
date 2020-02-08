@@ -386,7 +386,7 @@ class StackInterpreter extends Interpreter with BugReporter {
     case Lit(x) =>
       memory(sp) = Cst(x)
     case Prim(op, args) =>
-      println("I AM PRIM " + op)
+      // println("I AM PRIM " + op)
       val idxs = List.tabulate(args.length)(i => sp + i)
       (args zip idxs) foreach { case (arg, idx) => eval(arg, idx)(env) }
       evalPrim(op)(idxs)
@@ -422,27 +422,27 @@ class StackInterpreter extends Interpreter with BugReporter {
     case LetRec(funs, body) =>
 
 
-      println("GOT HEREREREREREERERERERERE")
-      println("funs: " + funs)
-      println("body: " + body)
+      // println("GOT HEREREREREREERERERERERE")
+      // println("funs: " + funs)
+      // println("body: " + body)
       
       var indexs = List[Int]();
       for( i <- 0 to funs.length - 1){
         // println("FTP -> " + ftp.args(i)._2);
         indexs = (sp+i) +: indexs
       }
-      println("indexs: " + indexs)
+      // println("indexs: " + indexs)
 
       val funcs = (funs zip indexs) map { 
         case (fun@FunDef(name, _, _, _), idx) => 
           (name, idx) 
       }
 
-      println("funcs: " + funcs)
+      // println("funcs: " + funcs)
 
       (funs zip indexs) foreach { 
         case (fun@FunDef(_, _, _, _), idx:Int) => 
-          println("env.withVals(funcs): " + env.withVals(funcs))
+          // println("env.withVals(funcs): " + env.withVals(funcs))
           eval(fun, idx)(env.withVals(funcs)) 
       }
 
@@ -459,8 +459,8 @@ class StackInterpreter extends Interpreter with BugReporter {
 
       // eval(body)(env.withVals(funcs))
     case App(fun, args) => 
-      println("fun: " + fun);
-      println("args: " + args);
+      // println("fun: " + fun);
+      // println("args: " + args);
       
       var indexs = List[Int]();
       for( i <- 0 to args.length - 1){
@@ -468,7 +468,7 @@ class StackInterpreter extends Interpreter with BugReporter {
         indexs = (sp+i) +: indexs
       }
       (args zip indexs) map { case (arg, index) => eval(arg, index)(env) }
-      println("indexs: " + indexs)
+      // println("indexs: " + indexs)
       // println("args zip indexs: " + (args zip indexs))
       eval(fun, sp + args.length)(env)
 
@@ -504,7 +504,7 @@ class StackInterpreter extends Interpreter with BugReporter {
       eval(size, sp)(env); 
       val Cst(s: Int) = memory(sp); 
       memory(sp) = Cst(new Array[Any](s))
-      println("MEM: " + Cst(new Array[Any](s)))
+      // println("MEM: " + Cst(new Array[Any](s)))
       
   }
 }

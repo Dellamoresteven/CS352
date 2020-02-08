@@ -99,7 +99,7 @@ class Scanner(in: Reader[Char]) extends Reader[Tokens.Token] with Reporter {
 
   // List of delimiters
   // TODO: Update this as delimiters are added to our language
-  val isDelim      = Set('(',')','=',';','{','}',':', ',', '[', ']', '\'');
+  val isDelim      = Set('(',')','=',';','{','}',':', ',', '[', ']', '\'', '.');
 
   // List of keywords
   // TODO: Update this as keywords are added to our language
@@ -510,8 +510,47 @@ class BaseParser(in: Scanner) extends Parser(in) {
       accept(')')
       res
     case (Ident(x), _) =>
-      val (_, pos) = getName
-      Ref(x).withPos(pos)
+      x match {
+        case "putchar" => 
+          // println("PUTCHAR")
+          val (_, pos) = getName
+          Ref(x).withPos(pos)
+        case "toInt" =>
+          // println("TOINT")
+          var pos = in.next().pos;
+          accept('(')
+          accept('\'')
+          var letter = in.peek match{
+            case Ident(y)=>
+              pos = in.next().pos;
+              accept('\'')
+              y.charAt(0).toInt
+            case Literal(y) =>
+              // pos = in.next().pos;
+              pos = in.next().pos;
+              val f = y.asInstanceOf[Int];
+              // (y.toInt+48);
+              // pos = in.next().pos;
+              // y.toInt
+              // ???
+              accept('\'')
+              f+48
+            case Delim(y) =>
+              if(in.peek == Delim('\'')){
+                pos = in.next().pos;
+                32;
+              }else {
+                pos = in.next().pos;
+                accept('\'')
+                y.toInt
+              }
+          }
+          accept(')')
+          Lit(letter).withPos(pos);
+        case _ =>
+          val (_, pos) = getName
+          Ref(x).withPos(pos)
+      }
     case (Delim('{'), _) =>
       accept('{')
       val res = parseExpression
@@ -781,7 +820,7 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
     */
   override def parseType = in.peek match {
     case Delim('(') => //'('[<type>[','<type>]*]')' '=>' <type>
-      println("fEAWG")
+      // println("fEAWG")
       accept('(')
       val list = parseList[Type](parseType, ',', tok => tok match {
         case Delim(')') => false;
@@ -796,9 +835,9 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
       FunType(argList, rtp)
     case _ =>  // <ident> && <type> '=>' <type>
       val typee = super.parseType
-      println("Base case parse Type2: " + in.peek + " : " + in.peek1 + " type: " + typee)
+      // println("Base case parse Type2: " + in.peek + " : " + in.peek1 + " type: " + typee)
       if(in.peek == Keyword("=>")) { // <type> '=>' <type>
-        println("Thanks for the memories")
+        // println("Thanks for the memories")
         accept("=>")
         val rtp = parseType
         val typeList: List[(String, Type)] = List(("", typee))
@@ -827,7 +866,7 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
   def parseArg: Arg = {
     val (name, pos) = getName
     accept(':')
-    println("Name of varible: " + name)
+    // println("Name of varible: " + name)
     Arg(name, parseType, pos)
   }
 
@@ -838,7 +877,7 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
    * TODO: complete the function
    */
   def parseFunction: Exp = {
-    println("HERERERefefefefefef")
+    // println("HERERERefefefefefef")
     accept("def")
     val (name, pos) = getName
     accept('(')
@@ -869,7 +908,7 @@ class FunctionParser(in: Scanner) extends SyntacticSugarParser(in) {
    */
   def parseProgram = in.peek match {
     case Keyword("def") =>
-      println("parseProgram")
+      // println("parseProgram")
       val pos = in.peek.pos;
       val listOfFunctions = parseList[Exp](parseFunction, ';', 
         tok => tok match {
@@ -1039,7 +1078,7 @@ class ArrayParser(in: Scanner) extends FunctionParser(in) {
    */
   override def parseSimpleExpression = in.peek match {
     case Keyword("new") =>
-      println("AHH");
+      // println("AHH");
       val pos = in.next.pos
       // println("AHH: " + pos);
       // ???
