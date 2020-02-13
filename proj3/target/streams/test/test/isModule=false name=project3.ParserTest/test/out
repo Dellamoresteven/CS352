@@ -3,3 +3,9 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- GenericPrecedence[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- ParseType[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- ParseOptionalType[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- IfWithoutElse[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- DummyVars[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Arrays *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  LetRec(List(),Let(a,UnknownType,ArrayDec(Lit(10),ArrayType(ArrayType(Int))),Let(x$1,UnknownType,Prim(block-set,List(Ref(a), Lit(0), ArrayDec(Lit(10),ArrayType(Int)))),Let(x$2,UnknownType,Prim(block-set,List(App(Ref(a),List(Lit(0))), Lit(0), Lit(42))),App(App(Ref(a),List(Lit(0))),List(Lit(0))))))) did not equal LetRec(List(),Let(a,UnknownType,ArrayDec(Lit(10),ArrayType(ArrayType(Int))),Let(x$2,UnknownType,Prim(block-set,List(Ref(a), Lit(0), ArrayDec(Lit(10),ArrayType(Int)))),Let(x$1,UnknownType,Prim(block-set,List(App(Ref(a),List(Lit(0))), Lit(0), Lit(42))),App(App(Ref(a),List(Lit(0))),List(Lit(0))))))) Invalid result (ParserTest.scala:28)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Loops[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Num[0m[0m

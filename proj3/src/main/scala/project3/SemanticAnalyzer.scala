@@ -319,21 +319,30 @@ class SemanticAnalyzer(parser: Parser) extends Reporter with BugReporter {
       println("Args PRIM2: " + args)
       println("op PRIM2: " + op)
       typeOperator(op, args.length)(exp.pos) match {
-        case FunType(atps, rtp) => 
-          // println("atps: " + atps);
-          // exp.withType(rtp)
-          val tc1 = typeCheck(args(0), atps(0)._2)(env);
-          val tc2 = typeCheck(args(1), atps(1)._2)(env);
-          val fakeArgs = List(tc1, tc2);
-          // println("fakeArgs: " + tc1.tp)
-          // println("fakeArgs: " + tc2.tp)
-          // typeCheck(tc1, tc2.tp)(env);
-          // typeCheck(tc1, rtp)(env);
-          // typeCheck(tc1, rtp)(env);
-          if(tc1.tp != tc2.tp) {
-            error("Types are not the same");
+        case FunType(atps, rtp) =>
+          if(atps.length == 1){
+            println("YES")
+            val tc1 = typeCheck(args(0), atps(0)._2)(env);
+            val fakeArgs = List(tc1);
+            Prim(op, fakeArgs).withType(rtp);
+          } else {
+            // println("atps: " + atps);
+            // exp.withType(rtp)
+            val tc1 = typeCheck(args(0), atps(0)._2)(env);
+            val tc2 = typeCheck(args(1), atps(1)._2)(env);
+            val fakeArgs = List(tc1, tc2);
+            // println("fakeArgs: " + tc1.tp)
+            // println("fakeArgs: " + tc2.tp)
+            // typeCheck(tc1, tc2.tp)(env);
+            // typeCheck(tc1, rtp)(env);
+            // typeCheck(tc1, rtp)(env);
+            if(tc1.tp != tc2.tp) {
+              error("Types are not the same");
+            }
+            Prim(op, fakeArgs).withType(rtp);
           }
-          Prim(op, fakeArgs).withType(rtp);
+        case UnknownType =>
+          exp.withType(UnknownType);
         case _ => BUG("operator's type needs to be FunType")
       }
     case Let(x, tp, rhs, body) =>

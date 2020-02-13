@@ -5938,3 +5938,13 @@ WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/examples/valid
 WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/examples/valid_imm_variable.scala
 WARN  no build tool detected in workspace '/Users/stevendellamore/Desktop/CS352'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 INFO  shutting down Metals
+INFO  time: initialize in 0.24s
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/src/main/scala/project2/Parser.scala
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/examples/invalid_syntax_arithm.scala
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/examples/valid_imm_variable.scala
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/examples/invalid_syntax_mut_variables.scala
+WARN  no build target: /Users/stevendellamore/Desktop/CS352/proj2/examples/valid_loop.scala
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj2/examples/valid_loop.scala' because it doesn't belong to a build target.
+INFO  no build target: using presentation compiler with only scala-library
+WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj2/examples/valid_loop.scala' because it doesn't belong to a build target.
+INFO  shutting down Metals

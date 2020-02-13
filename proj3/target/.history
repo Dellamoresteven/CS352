@@ -108,3 +108,18 @@ run examples/scratch.scala
 run examples/scratch.scala intStack
 run examples/scratch.scala
 run examples/scratch.scala intStack
+run "-5"
+easy peazy
+run "5+5"
+run "5+(-5)"
+run "5+(5*2)"
+run examples/scratch.scala intStack
+run examples/scratch.scala
+run "var x = 5; x = if(1!=1) 4; x"
+run examples/scratch.scala
+run examples/scratch.scala intStack
+make
+run examples/scratch.scala intStack
+test
+run examples/scratch.scala intStack
+ls

@@ -1,57 +1,45 @@
-[0m[[0m[0mdebug[0m] [0m[0mThe project3.StackVal$Val has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(getClass,[Default]), UsedName(notify,[Default]), UsedName(notifyAll,[Default]), UsedName(clone,[Default]), UsedName(finalize,[Default]), UsedName(hashCode,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project3.StackVal$Val: Set(); now invalidating by inheritance (internally).[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project3.StackVal$Val.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project3.InterpretTest. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mThe project3.StackInterpreter has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(evalTer,[Default]), UsedName(getClass,[Default]), UsedName(notify,[Default]), UsedName(notifyAll,[Default]), UsedName(clone,[Default]), UsedName(finalize,[Default]), UsedName(hashCode,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project3.StackInterpreter: Set(); now invalidating by inheritance (internally).[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project3.StackInterpreter.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project3.InterpretTest. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mThe project3.BaseParser has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(getClass,[Default]), UsedName(notify,[Default]), UsedName(notifyAll,[Default]), UsedName(clone,[Default]), UsedName(finalize,[Default]), UsedName(hashCode,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project3.BaseParser: Set(); now invalidating by inheritance (internally).[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project3.BaseParser.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project3.ParserTest. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mThe project3.StackVal$ has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(getClass,[Default]), UsedName(notify,[Default]), UsedName(notifyAll,[Default]), UsedName(clone,[Default]), UsedName(finalize,[Default]), UsedName(hashCode,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project3.StackVal$: Set(); now invalidating by inheritance (internally).[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project3.StackVal$.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project3.InterpretTest. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mThe project3.Language$Let$ has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(getClass,[Default]), UsedName(notify,[Default]), UsedName(notifyAll,[Default]), UsedName(clone,[Default]), UsedName(finalize,[Default]), UsedName(hashCode,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project3.Language$Let$: Set(); now invalidating by inheritance (internally).[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project3.Language$Let$.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project3.ParserTest. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mThe project3.StackVal$Cst$ has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(getClass,[Default]), UsedName(notify,[Default]), UsedName(notifyAll,[Default]), UsedName(clone,[Default]), UsedName(finalize,[Default]), UsedName(hashCode,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project3.StackVal$Cst$: Set(); now invalidating by inheritance (internally).[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project3.StackVal$Cst$.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project3.InterpretTest. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mThe project3.Language$UnknownType$ has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(getClass,[Default]), UsedName(notify,[Default]), UsedName(notifyAll,[Default]), UsedName(clone,[Default]), UsedName(finalize,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project3.Language$UnknownType$: Set(); now invalidating by inheritance (internally).[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project3.Language$UnknownType$.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project3.ParserTest. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mThe project3.StackVal$Cst has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(getClass,[Default]), UsedName(notify,[Default]), UsedName(notifyAll,[Default]), UsedName(clone,[Default]), UsedName(finalize,[Default]), UsedName(hashCode,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) project3.StackVal$Cst: Set(); now invalidating by inheritance (internally).[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) project3.StackVal$Cst.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of project3.InterpretTest. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNo changes[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/Users/stevendellamore/Desktop/CS352/proj3/src/test/scala/project3/InterpreterTest.scala, /Users/stevendellamore/Desktop/CS352/proj3/src/test/scala/project3/ParserTest.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(project3.InterpretTest, project3.ParserTest)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(project3.InterpretTest, project3.ParserTest)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/Users/stevendellamore/Desktop/CS352/proj3/src/test/scala/project3/InterpreterTest.scala, /Users/stevendellamore/Desktop/CS352/proj3/src/test/scala/project3/ParserTest.scala)[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 2 Scala sources to /Users/stevendellamore/Desktop/CS352/proj3/target/scala-2.12/test-classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.5:compile for Scala 2.12.10[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.5:compile for Scala 2.12.10[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 9cd7f00 for Scala compiler version 2.12.10[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-unchecked[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-deprecation[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-feature[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/stevendellamore/Desktop/CS352/proj3/target/scala-2.12/test-classes:/Users/stevendellamore/Desktop/CS352/proj3/target/scala-2.12/classes:/Users/stevendellamore/.ivy2/cache/org.scalatest/scalatest_2.12/bundles/scalatest_2.12-3.0.1.jar:/Users/stevendellamore/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.1.jar:/Users/stevendellamore/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.10.jar:/Users/stevendellamore/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.5.jar:/Users/stevendellamore/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/bundles/scala-parser-combinators_2.12-1.0.4.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.674777367 s[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from project3.ParserTest...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(project3.ParserTest)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(project3.ParserTest)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(project3.ParserTest,ModifiedNames(changes = UsedName(testArrayParser,[Default]))) invalidates 1 classes due to The project3.ParserTest has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(testArrayParser,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(project3.ParserTest)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m

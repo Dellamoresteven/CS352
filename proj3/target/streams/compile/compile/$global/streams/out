@@ -1,7 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj3/src/main/scala/project3/Parser.scala:702:29: Adaptation of argument list by inserting () is deprecated: leaky (Object-receiving) target makes this especially dangerous.[0m
-[0m[[0m[33mwarn[0m] [0m[0m        signature: Lit.apply(x: Any): project3.Language.Lit[0m
-[0m[[0m[33mwarn[0m] [0m[0m  given arguments: <none>[0m
-[0m[[0m[33mwarn[0m] [0m[0m after adaptation: Lit((): Unit)[0m
-[0m[[0m[33mwarn[0m] [0m[0m        If(cond, ifbody, Lit()/*.withPos(pos)*/).withPos(pos);[0m
-[0m[[0m[33mwarn[0m] [0m[0m                            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj3/src/main/scala/project3/Compiler.scala:272:28: a pure expression does nothing in statement position[0m
+[0m[[0m[33mwarn[0m] [0m[0m        case Func(name) => name [0m
+[0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

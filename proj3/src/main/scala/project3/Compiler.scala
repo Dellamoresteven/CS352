@@ -131,7 +131,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
       emitln(s"setg %al")
       emitln(s"movzbq %al, ${loc(sp)}")
     case "block-get" =>
-      println("block-get-1")
+      // println("block-get-1")
       // emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
       // // emitln(s"movq $$2, ${loc(sp)}")
 
@@ -141,7 +141,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
       emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
       // emitln(s"movq heap(%rip), ${loc(sp)}")
       
-      println("block-get-2")
+      // println("block-get-2")
     case _ => BUG(s"Binary operator $op undefined")
   }
 
@@ -155,8 +155,8 @@ abstract class X86Compiler extends BugReporter with Codegen {
    */
   def transTer(op: String)(sp: Loc, sp1: Loc, sp2: Loc) = op match {
     case "block-set" =>
-      println("block-set-1")
-      println("${loc(sp)} -> " + loc(sp))
+      // println("block-set-1")
+      // println("${loc(sp)} -> " + loc(sp))
       emitln(s"movq ${loc(sp2)}, (${loc(sp)}, ${loc(sp1)}, 8)")
       // emitln(s"movq ${loc(sp2)}, heap(%rip)")
       // emitln(s"movq  ${loc(sp2)}, (${loc(sp)}, ${loc(sp1)}, 8)")
@@ -171,7 +171,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
       // emitln(s"movq  ${loc(sp1)}, (${loc(sp2)}, ${loc(sp)}, 8)")
       // emitln(s"movq  ${loc(sp)}, (${loc(sp2)}, ${loc(sp1)}, 8)")
       // emitln(s"movq $$5, ${loc(sp)}")
-      println("block-set-2")
+      // println("block-set-2")
       // emitln(s"movq ${loc(sp2)}, heap(%rip)")
       // //       emitln(s"movq (${loc(sp)}, ${loc(sp1)}, 8), ${loc(sp)}")
       // // emitln(s"movq ${loc(sp2)}, ${loc(sp)}") //move sp2 into arr(i)
@@ -208,6 +208,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
    * computation represented by the AST 'exp'.
    */
   val global = (primitives.keySet + entry_point) map(funcName(_))
+  // var funsLocG = map;
   def emitCode(exp: Exp): Unit = {
     emitln(".text", 0)
     emitln(s".global ${global mkString ", "}\n", 0)
@@ -268,7 +269,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
     case Ref(x) =>
       env(x) match {
         case Reg(sp1) => emitln(s"movq ${loc(sp1)}, ${loc(sp)}")
-        case Func(name) => println("DO I EVER GET HERE LOL: " + name); name 
+        case Func(name) => name 
       }
     case If(cond, tBranch, eBranch) =>
       val lab = freshLabel("if")
@@ -300,7 +301,8 @@ abstract class X86Compiler extends BugReporter with Codegen {
       // We do not save the location of the function into register because we can use their
       // name as a label.
       val funsLoc = funs map { case FunDef(name, _, _, _) => (name, Func(name)) }
-
+      // funsLocG = funsLoc;
+      // println("EAWFAWEFAEWF: " + funsLoc)
       val fEnv = env.withVals(funsLoc)
       // TODO complete the code
       for(i <- 0 to funs.length-1) {
@@ -349,7 +351,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
       // }
       //locations of all args
       val pos = (args zip indexs) map {case (Arg(name, _, _), index) => (name, index)}
-      println("pos: " + pos)
+      // println("pos: " + pos)
       //eval body
       trans(fbody, sp + args.length)(env.withVals(pos))
       emitln(s"movq ${loc(sp + args.length)}, %rax") // move to return
@@ -371,16 +373,20 @@ abstract class X86Compiler extends BugReporter with Codegen {
       // }
 
       // (args zip indexs) map {case (arg, idx) => trans(arg, idx)(env)}
-      (args zip indexs) map { case (arg, idx) => trans(arg, idx)(env) }
-      println("args: " + args)
-      println("indexs: " + indexs)
+      val ff = (args zip indexs) map { case (arg, idx) => trans(arg, idx)(env) }
+      // println("args: " + args)
+      // println("indexs: " + indexs)
       // trans(args(0), Reg(0))(env)
       // println("LOL")
       // Compute the physical location of the function to be called
       val fLoc: String = fun match {
         case Ref(fname) =>
           env(fname) match {
-            case Reg(sp) => println("GOT HERE");??? // Extra credit
+            case Reg(sp) => 
+              // println("sp " + sp); 
+              // ??? //("call " + funcName(  )
+              // ("jmp " + "*("+loc(sp)+")")
+              ???
             case Func(name) => ("call " + funcName(name))
           }
         case _ => ??? // Extra credit
@@ -394,8 +400,8 @@ abstract class X86Compiler extends BugReporter with Codegen {
         // println("i: " + i)
         emitln(s"push ${loc(i)}");
       }
-      println("spRegValue: " + spRegValue);
-      println("sp: " + sp);
+      // println("spRegValue: " + spRegValue);
+      // println("sp: " + sp);
 
       i = 0;
       while(i < args.length) {
@@ -458,7 +464,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
       // // emitln(s"movq %rax, heap(%rip)");
       // // // emitln(s"movq %rax, (${loc(sp)}, ${loc(sp + 1)}, 8)")
       // // emitln(s"movq (%rax), %rax");
-      println("HERE0")
+      // println("HERE0")
 
       emitln(s"movq heap(%rip), ${loc(sp)}")
 
@@ -467,7 +473,7 @@ abstract class X86Compiler extends BugReporter with Codegen {
       emitln(s"leaq (${loc(sp)}, ${loc(sp + 1)}, 8), ${loc(sp)}")
 
       emitln(s"movq ${loc(sp)}, heap(%rip)")
-      println("HERE1")
+      // println("HERE1")
 
       
     case _ => BUG(s"don't know how to implement $exp")

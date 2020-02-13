@@ -1,0 +1,32 @@
+yesy
+test
+run "5+5"
+run "val x = 5; x"
+run "5"
+run "val x = 5; x"
+run "5"
+run "val 5 = x;"
+run "val 5 = x; x"
+run "val x = 5"
+run "val x = 5;"
+run "val x = 5; x"
+run "4"
+run "val x = 5;"
+run "val x = 5; x"
+test
+run "val x = 5; x"
+run "var x = 5; x"
+run "val x = 5; x"
+run "var x = 5; x"
+run "var x = 5; 2"
+run "var x = 5; x"
+run "var x = 5; 2"
+run "var x = 5; x"
+run "var x = 5; 2"
+run "var x = 5; x"
+test
+run "var x = 5; x"
+run "var x = 5; x = 2"
+run "var x = 5; x"
+run "var x = 5; x = 2; x"
+test
