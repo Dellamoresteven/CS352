@@ -26,9 +26,16 @@ object CMScalaToCPSTranslator extends (S.Tree => C.Tree) {
         C.LetL(freshSymbol, value, ctx(freshSymbol))
 
       // TODO: Dont tell me what to do.
+      // case class LetF(funs: Seq[FunDef], body: Tree) extends Tree
+      // case class FunDef(name: Name, ptps: List[String], args: List[Arg], rtp: Type, body: Tree)
       case S.LetRec(functions, body) =>
-        // println("AEWFEAFWFFFFW\n\n\n\n\n\n");
-        ???
+        println("AEWFEAFWFFFFW " + functions + "\n");
+        val funcDefs = functions map { f => 
+            var fresh = Symbol.fresh("rc");
+            C.FunDef(f.name, fresh ,f.args map { arg => arg.name}, nonTail(f.body)(v => C.AppC(fresh, Seq(v))))
+        }
+        println("AEWFEAFWFFFFW " + funcDefs + "\n\n\n\n\n\n");
+        C.LetF(funcDefs, nonTail(body)(ctx))
 
       // Reference of an immutable variable
       case S.Ref(name) if !mut(name) =>
@@ -71,6 +78,20 @@ object CMScalaToCPSTranslator extends (S.Tree => C.Tree) {
           nonTail(rhs)(v =>
             C.LetP(d, MiniScalaBlockSet, Seq(name, z, v), ctx(v))))
 
+      case S.App(f, _, args) =>
+        val r = Symbol.fresh("r");
+        nonTail(f)(p =>
+          nonTail_*(args)(as =>
+            // tempLetC("c", Seq(r), ctx(r))(k => App(f, k, as))
+            tempLetC("c", Seq(r), ctx(r))(k => C.AppF(p, k, as))))
+
+      case S.If(con, te, ee) =>
+        val r = Symbol.fresh("r")
+        tempLetC("c", Seq(r), ctx(r))(c =>
+          tempLetC("ct", Seq(), nonTail(te)(v2 => C.AppC(c, Seq(v2))))(ct =>
+            tempLetC("cf", Seq(), nonTail(ee)(v3 => C.AppC(c, Seq(v3))))(cf =>
+              cond(con,ct,cf) ) ) )
+
     // case class FunDef(name: Name, ptps: List[String], args: List[Arg], rtp: Type, body: Tree)
     }
   }
@@ -94,11 +115,18 @@ object CMScalaToCPSTranslator extends (S.Tree => C.Tree) {
         nonTail(value)(v =>
           C.LetP(name, MiniScalaId, Seq(v), tail(body, c)))
 
-
+      case S.If(condE, thenE, elseE) =>
+        tempLetC("cf", Seq(), tail(thenE, c))(cf =>
+          tempLetC("cf", Seq(), tail(elseE, c))(cf =>
+            cond(condE, cf, cf)))
+      
       case S.LetRec(functions, body) =>
         println("EWAFAWEFAWEGFEWAGF\n\n\n\n\n\n\n\n\n\n");
         ???
-      // TODO: add the missing cases.
+
+      case S.Lit(value) =>
+        val i = Symbol.fresh("i")
+        C.LetL(i, value, C.AppC(c, Seq(i)))
     }
   }
 
@@ -110,7 +138,13 @@ object CMScalaToCPSTranslator extends (S.Tree => C.Tree) {
       case S.If(condE, S.Lit(tl), S.Lit(fl)) =>
         cond(condE, litToCont(tl), litToCont(fl))
 
-      // TODO add missing cases
+      // case S.If(condE, thenE, S.Lit(l)) =>
+      //   tempLetC("tc", Seq(), cond(thenE, trueC, falseC))(tc =>
+      //     cond(condE, tc, litToCont(l)))
+
+      // case S.If(condE, S.Lit(l), elseE) =>
+      //   tempLetC("ec", Seq(), cond(elseE, trueC, falseC))(ec =>
+      //     cond(condE, litToCont(l), ec))
 
       case S.Prim(p: MiniScalaTestPrimitive, args) =>
         nonTail_*(args)(as => C.If(p, as, trueC, falseC))
