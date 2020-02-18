@@ -74,8 +74,32 @@
 // };
 // 3
 
-def g(x: Int):Int = {
-    def f(x:Int):Int = 3; 
-    4
+// def g(x: Int):Int = {
+//     def f(x:Int):Int = 3; 
+//     f(5)
+// };
+// g(3)
+
+// def g(x: Int):Boolean = {
+//     true
+// };
+// if( g(3) == g(4) ) {
+//     false
+// } else {
+//     false
+// };
+// 5
+
+
+def g(x: Int):Boolean = {
+    false
 };
-g(3)
+def f(x: Int):Boolean = {
+    false
+};
+
+if( if( false ) g(3) else if(true) if(f(2)) f(1) else false else true ){
+    5
+} else {
+    4
+}

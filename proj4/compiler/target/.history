@@ -91,3 +91,11 @@ run ../examples/scratch.scala
 test
 run ../examples/scratch.scala
 test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test

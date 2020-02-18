@@ -168,7 +168,7 @@ object CMScalaToCPSTranslator extends (S.Tree => C.Tree) {
       case S.LetRec(functions, body) =>
         /* TAIL */
         val funcDefs = functions map { f => 
-            var fresh = Symbol.fresh("rc");
+            var fresh = Symbol.fresh("c");
             C.FunDef(f.name, fresh, f.args map { arg => arg.name}, tail(f.body, fresh))
         }
         C.LetF(funcDefs, tail(body, c))
@@ -249,11 +249,24 @@ object CMScalaToCPSTranslator extends (S.Tree => C.Tree) {
       case S.If(condE, S.Lit(tl), S.Lit(fl)) =>
         cond(condE, litToCont(tl), litToCont(fl))
 
-      // case S.If(condE, tBranch, S.Lit(fl)) =>
-      //   ???
+      case S.If(condE, tBranch, S.Lit(fl)) =>
+        // println("trueC: " + trueC);
+        // println("falseC: " + falseC);
+        // println("condE: " + condE);
+        // println("tBranch: " + tBranch);
+        // println("S.Lit(fl): " + S.Lit(fl));
+        if(litToCont(fl) == BooleanLit(false)){
+          tempLetC("ac", Seq(), cond(tBranch, trueC, falseC ))(f =>
+            cond(condE, f, falseC ) )
+        } else {
+          tempLetC("ac", Seq(), cond(tBranch, trueC, falseC ))(f =>
+            cond(condE, f, trueC ) )
+        } 
 
-      // case S.If(condE, S.Lit(tl), eBranch) =>
-      //   ???
+
+      case S.If(condE, S.Lit(tl), eBranch) =>
+        tempLetC("ac", Seq(), cond(eBranch, trueC, falseC))(f =>
+          cond(condE, litToCont(tl), f ) )
 
       // case S.If(condE, tBranch, eBranch) =>
       //   ???
