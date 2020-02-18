@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj4/compiler/src/miniscala/CMScalaToCPSTranslator.scala:37:57: missing parameter type for expanded function ((x$1: <error>) => x$1.name)[0m
-[0m[[0m[31merror[0m] [0m[0m            C.FunDef(f.name, fresh ,f.args map { arg => _.name}, nonTail(f.body)(v => C.AppC(fresh, Seq(v))))[0m
-[0m[[0m[31merror[0m] [0m[0m                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj4/compiler/src/miniscala/CMScalaToCPSTranslator.scala:238:84: ')' expected but ';' found.[0m
+[0m[[0m[31merror[0m] [0m[0m          C.LetP(p, op.asInstanceOf[MiniScalaValuePrimitive], a, C.AppC(c, Seq(p)));[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                   ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

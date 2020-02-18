@@ -72,3 +72,22 @@ run "if(1!=1) 5 else 4"
 run "if(1==1) 5 else 4"
 run ../examples/scratch.scala
 git status
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+tet
+test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test

@@ -7,8 +7,8 @@ object CMScalaToCPSTranslator extends (S.Tree => C.Tree) {
   def apply(tree: S.Tree): C.Tree = {
     nonTail(tree){ ret =>
       val z = Symbol.fresh("c0")
-      C.LetL(z, IntLit(0), C.Halt(ret)) // TODO REVERT TO C.Halt(z)
-      // C.LetL(z, IntLit(0), C.Halt(z))
+      // C.LetL(z, IntLit(0), C.Halt(ret)) // TODO REVERT TO C.Halt(z)
+      C.LetL(z, IntLit(0), C.Halt(z))
     }(Set.empty)
   }
 
@@ -29,12 +29,17 @@ object CMScalaToCPSTranslator extends (S.Tree => C.Tree) {
       // case class LetF(funs: Seq[FunDef], body: Tree) extends Tree
       // case class FunDef(name: Name, ptps: List[String], args: List[Arg], rtp: Type, body: Tree)
       case S.LetRec(functions, body) =>
-        println("AEWFEAFWFFFFW " + functions + "\n");
+        // val funcDefs = functions map { f => 
+        //     var fresh = Symbol.fresh("rc");
+        //     C.FunDef(f.name, fresh ,f.args map { arg => arg.name}, nonTail(f.body)(v => C.AppC(fresh, Seq(v))))
+        // }
+        // C.LetF(funcDefs, nonTail(body)(ctx))
+
+        /* TAIL */
         val funcDefs = functions map { f => 
             var fresh = Symbol.fresh("rc");
-            C.FunDef(f.name, fresh ,f.args map { arg => arg.name}, nonTail(f.body)(v => C.AppC(fresh, Seq(v))))
+            C.FunDef(f.name, fresh, f.args map { arg => arg.name}, tail(f.body, fresh))
         }
-        println("AEWFEAFWFFFFW " + funcDefs + "\n\n\n\n\n\n");
         C.LetF(funcDefs, nonTail(body)(ctx))
 
       // Reference of an immutable variable
@@ -83,16 +88,56 @@ object CMScalaToCPSTranslator extends (S.Tree => C.Tree) {
         nonTail(f)(p =>
           nonTail_*(args)(as =>
             // tempLetC("c", Seq(r), ctx(r))(k => App(f, k, as))
-            tempLetC("c", Seq(r), ctx(r))(k => C.AppF(p, k, as))))
+            tempLetC("c", Seq(r), ctx(r))(k => 
+              C.AppF(p, k, as))))
 
       case S.If(con, te, ee) =>
-        val r = Symbol.fresh("r")
-        tempLetC("c", Seq(r), ctx(r))(c =>
-          tempLetC("ct", Seq(), nonTail(te)(v2 => C.AppC(c, Seq(v2))))(ct =>
-            tempLetC("cf", Seq(), nonTail(ee)(v3 => C.AppC(c, Seq(v3))))(cf =>
-              cond(con,ct,cf) ) ) )
+        // val r = Symbol.fresh("r")
+        // tempLetC("c", Seq(r), ctx(r))(c =>
+        //   tempLetC("ct", Seq(), nonTail(te)(v2 => C.AppC(c, Seq(v2))))(ct =>
+        //     tempLetC("cf", Seq(), nonTail(ee)(v3 => C.AppC(c, Seq(v3))))(cf =>
+        //       cond(con,ct,cf) ) ) )
 
-    // case class FunDef(name: Name, ptps: List[String], args: List[Arg], rtp: Type, body: Tree)
+        val r = Symbol.fresh("r")
+        tempLetC("c",Seq(r), ctx(r))(c =>
+          tempLetC("ct", Seq(), tail(te, c))(v1 =>
+            tempLetC("cf", Seq(), tail(ee, c))(v2 =>
+              cond(con,v1,v2) ) ) )
+
+      // case class While(cond: Tree, lbody: Tree, body: Tree) extends Tree
+      case S.While(con, lbody, body) =>
+        // val loop = Symbol.fresh("loop")
+        // val tempbody = tempLetC("c", Seq(), nonTail(body)(ctx))(c =>
+        //   tempLetC("ct", Seq(), nonTail(lbody)(_ => 
+        //     C.AppC(loop, Seq()))) (ct =>
+        //       cond(con, ct, c) ) )
+        // C.LetC(Seq(C.CntDef(loop, Seq(), tempbody)),C.AppC(loop, Seq()))
+
+        val d = Symbol.fresh("d")
+        val loop = Symbol.fresh("loop")
+        val tempbody = tempLetC("c", Seq(), nonTail(body)(ctx))(c =>
+          tempLetC("ct", Seq(), tail(lbody, loop))(ct =>
+            cond(con, ct , c)
+          )
+        )
+        // ???
+        val dd = Symbol.fresh("d");
+        C.LetC(Seq(C.CntDef(loop, Seq(d),tempbody)), 
+          C.LetL(dd, UnitLit, C.AppC(loop, Seq(dd)))
+        )
+
+      case S.Prim(op : MiniScalaTestPrimitive, args) =>
+        // case S.If(con, te, ee) =>
+        nonTail(S.If(tree, S.Lit(BooleanLit(true)), S.Lit(BooleanLit(false) ) ) )(ctx)
+        
+
+      // case class Prim(op: Primitive, args: List[Tree]) extends Tree
+      case S.Prim(op, args) =>
+        // case class LetP(name: Name, prim: ValuePrimitive, args: Seq[Name], body:Tree)
+        // MiniScalaTestPrimitive
+        val p = Symbol.fresh("p");
+        nonTail_*(args)(a  =>
+          C.LetP(p, op.asInstanceOf[MiniScalaValuePrimitive], a, ctx(p)));
     }
   }
   
@@ -115,18 +160,84 @@ object CMScalaToCPSTranslator extends (S.Tree => C.Tree) {
         nonTail(value)(v =>
           C.LetP(name, MiniScalaId, Seq(v), tail(body, c)))
 
-      case S.If(condE, thenE, elseE) =>
-        tempLetC("cf", Seq(), tail(thenE, c))(cf =>
-          tempLetC("cf", Seq(), tail(elseE, c))(cf =>
-            cond(condE, cf, cf)))
+      case S.If(condE, te, ee) =>
+        tempLetC("ct", Seq(), tail(te, c))(ct =>
+          tempLetC("cf", Seq(), tail(ee, c))(cf =>
+            cond(condE, ct, cf)))
       
       case S.LetRec(functions, body) =>
-        println("EWAFAWEFAWEGFEWAGF\n\n\n\n\n\n\n\n\n\n");
-        ???
+        /* TAIL */
+        val funcDefs = functions map { f => 
+            var fresh = Symbol.fresh("rc");
+            C.FunDef(f.name, fresh, f.args map { arg => arg.name}, tail(f.body, fresh))
+        }
+        C.LetF(funcDefs, tail(body, c))
 
       case S.Lit(value) =>
         val i = Symbol.fresh("i")
         C.LetL(i, value, C.AppC(c, Seq(i)))
+
+      case S.Ref(n) if !mut(n) =>
+        C.AppC(c, Seq(n))
+
+      case S.Ref(n) if mut(n) =>
+        // val z = Symbol.fresh("z") // z
+        // val v = Symbol.fresh("v") // z
+        // C.LetL(z, IntLit(0),
+        //   C.LetP(v, MiniScalaBlockGet, Seq(name, z), ctx(v)))
+        val z = Symbol.fresh("z")
+        val v = Symbol.fresh("v")
+        C.LetL(z, IntLit(0), C.LetP(v, MiniScalaBlockGet, Seq(n, z), C.AppC(c, Seq(v))))
+
+      case S.VarDec(name, typ, value, body) =>
+        val s1 = Symbol.fresh("s") // s
+        val s2 = Symbol.fresh("z") // z
+        val s3 = Symbol.fresh("d") // d
+
+        C.LetL(s1, IntLit(1),
+          C.LetP(name, MiniScalaBlockAlloc(BlockTag.Variable.id), Seq(s1),
+            C.LetL(s2, IntLit(0), nonTail(value)(v => 
+              C.LetP(s3, MiniScalaBlockSet, Seq(name, s2, v), tail(body, c)(mut + name))))))
+
+      case S.VarAssign(name, rhs) =>
+        val z = Symbol.fresh("z")
+        val d = Symbol.fresh("d")
+        C.LetL(z, IntLit(0),
+          nonTail(rhs)(v =>
+            C.LetP(d, MiniScalaBlockSet, Seq(name, z, v), C.AppC(c, Seq(v)))))
+
+      case S.App(f, _, args) =>
+        val r = Symbol.fresh("r");
+        nonTail(f)(p =>
+          nonTail_*(args)(as =>
+            // tempLetC("c", Seq(r), ctx(r))(k => App(f, k, as))
+            C.AppF(p, c, as)))
+
+      case S.While(con, lbody, body) =>
+        val d = Symbol.fresh("d")
+        val loop = Symbol.fresh("loop")
+        val tempbody = tempLetC("c", Seq(), tail(body, c))(c =>
+          tempLetC("ct", Seq(), tail(lbody, loop))(ct =>
+            cond(con, ct , c)
+          )
+        )
+        val dd = Symbol.fresh("d");
+        C.LetC(Seq(C.CntDef(loop, Seq(d),tempbody)), 
+          C.LetL(dd, UnitLit, C.AppC(loop, Seq(dd)))
+        )
+
+      case S.Prim(op : MiniScalaTestPrimitive, args) =>
+        tail(S.If(tree, S.Lit(BooleanLit(true)), S.Lit(BooleanLit(false))), c)
+        
+
+      // case class Prim(op: Primitive, args: List[Tree]) extends Tree
+      case S.Prim(op, args) =>
+        // case class LetP(name: Name, prim: ValuePrimitive, args: Seq[Name], body:Tree)
+        // MiniScalaTestPrimitive
+        val p = Symbol.fresh("p");
+        nonTail_*(args)(a  =>
+          C.LetP(p, op.asInstanceOf[MiniScalaValuePrimitive], a, C.AppC(c, Seq(p) ) ) );
+  
     }
   }
 
@@ -138,13 +249,14 @@ object CMScalaToCPSTranslator extends (S.Tree => C.Tree) {
       case S.If(condE, S.Lit(tl), S.Lit(fl)) =>
         cond(condE, litToCont(tl), litToCont(fl))
 
-      // case S.If(condE, thenE, S.Lit(l)) =>
-      //   tempLetC("tc", Seq(), cond(thenE, trueC, falseC))(tc =>
-      //     cond(condE, tc, litToCont(l)))
+      // case S.If(condE, tBranch, S.Lit(fl)) =>
+      //   ???
 
-      // case S.If(condE, S.Lit(l), elseE) =>
-      //   tempLetC("ec", Seq(), cond(elseE, trueC, falseC))(ec =>
-      //     cond(condE, litToCont(l), ec))
+      // case S.If(condE, S.Lit(tl), eBranch) =>
+      //   ???
+
+      // case S.If(condE, tBranch, eBranch) =>
+      //   ???
 
       case S.Prim(p: MiniScalaTestPrimitive, args) =>
         nonTail_*(args)(as => C.If(p, as, trueC, falseC))
