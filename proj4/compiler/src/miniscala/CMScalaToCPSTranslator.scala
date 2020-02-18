@@ -255,13 +255,14 @@ object CMScalaToCPSTranslator extends (S.Tree => C.Tree) {
         // println("condE: " + condE);
         // println("tBranch: " + tBranch);
         // println("S.Lit(fl): " + S.Lit(fl));
-        if(litToCont(fl) == BooleanLit(false)){
+
+        if(litToCont(fl) == falseC){
           tempLetC("ac", Seq(), cond(tBranch, trueC, falseC ))(f =>
             cond(condE, f, falseC ) )
         } else {
           tempLetC("ac", Seq(), cond(tBranch, trueC, falseC ))(f =>
             cond(condE, f, trueC ) )
-        } 
+        }
 
 
       case S.If(condE, S.Lit(tl), eBranch) =>

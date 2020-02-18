@@ -91,15 +91,22 @@
 // 5
 
 
-def g(x: Int):Boolean = {
-    false
-};
-def f(x: Int):Boolean = {
-    false
-};
+// def g(x: Int):Boolean = {
+//     false
+// };
+// def f(x: Int):Boolean = {
+//     false
+// };
 
-if( if( false ) g(3) else if(true) if(f(2)) f(1) else false else true ){
-    5
-} else {
+// if( if( false ) g(3) else if(true) if(f(2)) f(1) else false else true ){
+//     5
+// } else {
+//     4
+// }
+
+var x = 5;
+if( x == 5 ) {
     4
+} else {
+    3
 }

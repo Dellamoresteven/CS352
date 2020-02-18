@@ -99,3 +99,33 @@ run ../examples/scratch.scala
 test
 run ../examples/scratch.scala
 test
+run ../example/bignumbs.scala
+run ../examples/bignumbs.scala
+run ../examples/bignums.scala
+run ../examples/maze.scala
+run ../examples/bigNums.scala 79
+run ../examples/maze.scala
+run ../examples/makeAdder.scala
+run ../examples/pascal.scala
+run ../examples/pow.scala
+run ../examples/queens.scala
+run ../examples/queens.scala 1,2,3,4
+run ../examples/queens.scala "1"
+run ../examples/queens.scala
+run ../library/miniscala.lib ../examples/pascal.scala
+run ../library/miniscala.lib ../examples/bignums.scala
+run ../library/miniscala.lib ../examples/makeAdder.scala
+run ../library/miniscala.lib ../examples/bignums.scala
+run ../library/miniscala.lib ../examples/maze.scala
+run ../library/miniscala.lib ../examples/pascal.scala
+run ../library/miniscala.lib ../examples/pow.scala
+run ../library/miniscala.lib ../examples/queens.scala
+run ../library/miniscala.lib ../examples/maze.scala
+ls
+run ../library/miniscala.lib ../examples/maze.scala
+run ../library/miniscala.lib ../examples/queens.scala
+test
+=run=
+test
+run ../examples/scratch.scala
+test
