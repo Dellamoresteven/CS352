@@ -129,3 +129,10 @@ test
 test
 run ../examples/scratch.scala
 test
+run "if (if (3 == 4) true else true) 1 else 2"
+test
+ test
+test
+ls
+tet
+test

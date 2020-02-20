@@ -1,4 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj4/compiler/test/miniscala/test/CMScalaToCPS_Blackbox.scala:151:1: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0m12:02[0m
-[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj4/compiler/test/miniscala/test/CMScalaToCPS_Whitebox_NonTail.scala:187:13: method testNonTailMultiVarDecIf is defined twice;[0m
+[0m[[0m[31merror[0m] [0m[0m  the conflicting method testNonTailMultiVarDecIf was defined at line 43:13[0m
+[0m[[0m[31merror[0m] [0m[0m  @Test def testNonTailMultiVarDecIf =[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
