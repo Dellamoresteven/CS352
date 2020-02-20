@@ -136,3 +136,11 @@ test
 ls
 tet
 test
+run ../library/miniscala.lib ../examples/bignums.scala
+run ../library/miniscala.lib ../examples/makeAdder.scala
+run ../library/miniscala.lib ../examples/maze.scala
+run ../library/miniscala.lib ../examples/pascel.scala
+run ../library/miniscala.lib ../examples/pascal.scala
+run ../library/miniscala.lib ../examples/pow.scala
+run ../library/miniscala.lib ../examples/queens.scala
+test

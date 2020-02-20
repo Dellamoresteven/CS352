@@ -5948,3 +5948,4 @@ WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop
 INFO  no build target: using presentation compiler with only scala-library
 WARN  code navigation does not work for the file '/Users/stevendellamore/Desktop/CS352/proj2/examples/valid_loop.scala' because it doesn't belong to a build target.
 INFO  shutting down Metals
+INFO  time: initialize in 0.34s
