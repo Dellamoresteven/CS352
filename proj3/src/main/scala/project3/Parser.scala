@@ -574,9 +574,11 @@ class BaseParser(in: Scanner) extends Parser(in) {
       val rhs = parseSimpleExpression(nMin)
       res = Prim(op, List(res, rhs)).withPos(pos)
     }
+    println("AHHHH");
+    println(res);
     res
   }
-
+  // Prim(-,Prim(+,List(Prim(+,Prim(+,List(Prim(+,List(Lit(1), Lit(2))), Lit(3))), Lit(7)), Prim(/,Prim(*,List(Lit(8), Lit(2))), Lit(1)))), Lit(4))
   def parseSimpleExpression: Exp = (in.peek, in.peek1) match {
     case (Ident(x), Delim('=')) =>
       val (_, pos) = getName

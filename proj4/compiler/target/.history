@@ -144,3 +144,4 @@ run ../library/miniscala.lib ../examples/pascal.scala
 run ../library/miniscala.lib ../examples/pow.scala
 run ../library/miniscala.lib ../examples/queens.scala
 test
+run ../examples/examples.scala

@@ -249,3 +249,5 @@ run 5--5
 run (1+1+1-1-1)
 tesat
 test
+run "valx=5"
+l
