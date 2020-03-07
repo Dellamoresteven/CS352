@@ -26,9 +26,21 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
 
     // Literals
     case H.LetL(name, IntLit(value), body) =>
-      L.LetL(name, (value << 1) | 1, transform(body))
+      L.LetL(name, (value << 1) | bitsToIntMSBF(1), transform(body))
+
     case H.LetL(name, CharLit(value), body) =>
       L.LetL(name, (value << 3) | bitsToIntMSBF(1, 1, 0), transform(body))
+  
+    case H.LetL(name, BooleanLit(value), body) =>
+      value match {
+        case true =>
+          L.LetL(name, bitsToIntMSBF(1, 1, 0, 1, 0), transform(body))
+        case false =>
+          L.LetL(name, bitsToIntMSBF(0, 1, 0, 1, 0), transform(body))
+      }
+
+    case H.LetL(name, UnitLit, body) =>
+      L.LetL(name, bitsToIntMSBF(0, 0, 1, 0), transform(body))
 
     // TODO: Add missing literals
 
@@ -42,11 +54,86 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
         tempLetL(1) { c1 =>
           L.LetP(name, CPSSub, Seq(r, c1), transform(body)) } }
 
+    case H.LetP(name, MiniScalaIntSub, args, body) =>
+      tempLetP(CPSSub, args) { r =>
+        tempLetL(1) { c1 =>
+          L.LetP(name, CPSAdd, Seq(r, c1), transform(body)) } }
+  
+    // (n - 1) * (m >> 1) + 1
+    case H.LetP(name, MiniScalaIntMul, args, body) =>
+      tempLetL(1) {c1 => // make the vall 1 first
+        tempLetP(CPSSub, Seq(args(0), c1) ) { c2 => // subtract n from vall 1
+          tempLetP(CPSArithShiftR, Seq(args(1), c1)) { c3 => // m >> vall 1
+            tempLetP(CPSMul, Seq(c2, c3)) { c4 => // multi the 2 things we just made
+              L.LetP(name, CPSAdd, Seq(c4, c1), transform(body)) // add the 1 onto the end and keep going with the body
+            } } } }
+
+    case H.LetP(name, MiniScalaIntDiv, args, body) =>
+      tempLetL(1) {c1 => // make the vall 1 first
+        tempLetP(CPSSub, Seq(args(0), c1) ) { c2 => // subtract n from vall 1
+          tempLetP(CPSArithShiftR, Seq(args(1), c1)) { c3 => // m >> vall 1
+            tempLetP(CPSDiv, Seq(c2, c3)) { c4 => // div the 2 things we just made
+              L.LetP(name, CPSAdd, Seq(c4, c1), transform(body)) // add the 1 onto the end and keep going with the body
+            } } } }
+    
+    case H.LetP(name, MiniScalaIntMod, args, body) =>
+      tempLetL(1) {c1 => 
+        tempLetL(2) {c2 => 
+          tempLetP(CPSSub, Seq(args(0), c1) ) { c3 =>
+            tempLetP(CPSDiv, Seq(c3, c2) ) { c4 =>
+              tempLetP(CPSSub, Seq(args(1), c1) ) { c5 => 
+                tempLetP(CPSDiv, Seq(c5, c2) ) { c6 => 
+                  tempLetP(CPSMod, Seq(c4, c6) ) { c7 => 
+                    tempLetP(CPSMul, Seq(c2, c7) ) { c8 => 
+                      L.LetP(name, CPSAdd, Seq(c8, c1), transform(body)) }}}}}}}}
+
+      // tempLetP(CPSMod, args) { r =>
+      //   tempLetL(0) { c1 =>
+          // L.LetP(name, CPSMod, Seq(args(0), args(1)), transform(body)) 
+          // } }
+
     // TODO: Add missing integer primitives
 
     // Block primitives
     // TODO: Add block primitives
+    case H.LetP(name, MiniScalaBlockAlloc(x), args, body) =>
+      tempLetL(1) {c1 => 
+        tempLetP(CPSArithShiftR, Seq(args(0), c1)) { c2 => 
+          L.LetP(name, CPSBlockAlloc(x), Seq(c2), transform(body)) }}
 
+    case H.LetP(name, MiniScalaBlockTag, args, body) =>
+      tempLetL(1) {c1 => 
+        tempLetP(CPSBlockTag, Seq(args(0))) { c2 => 
+          tempLetP(CPSArithShiftL, Seq(c2,c1)) { c3 =>
+            L.LetP(name, CPSAdd, Seq(c3, c1), transform(body))}}}
+    
+    case H.LetP(name, MiniScalaBlockLength, args, body) =>
+        // tempLetL(1) {c1 => 
+        //   tempLetP(CPSArithShiftL, Seq(args(0), c1)) { c2 => 
+        //     tempLetP(CPSAdd, Seq(args(0), c2)) { c3 => 
+        //       L.LetP(name, CPSBlockLength, Seq(c3), transform(body)) }}}
+        tempLetP(CPSBlockLength, args){ c1 =>
+          tempLetL(1) { c2 =>
+            tempLetP(CPSArithShiftL, Seq(c1,c2)) { c3 =>
+              L.LetP(name, CPSAdd, Seq(c3,c2), transform(body))}}}
+        // tempLetP(CPSBlockLength, args){ c1 =>
+        //     L.LetL(name, c1, transform(body))}
+              // L.LetP(name, CPSAdd, Seq(c3,c2), transform(body))}
+
+    case H.LetP(name, MiniScalaBlockGet, args, body) =>
+      // tempLetP(CPSBlockLength, args){ c1 =>
+      //   tempLetL(1) { c2 =>
+      //     tempLetP(CPSArithShiftL, Seq(c1,c2)) { c3 =>
+      //       L.LetP(name, CPSAdd, Seq(c3,c2), transform(body))}}}
+      // L.LetP(name, CPSBlockGet, args, transform(body))
+      tempLetL(1) { c1 => 
+        tempLetP(CPSArithShiftR, Seq(args(1), c1)) { c2 =>
+            L.LetP(name, CPSBlockGet, Seq(args(0), c2), transform(body)) }}
+
+    case H.LetP(name, MiniScalaBlockSet, args, body) =>
+      tempLetL(1) { c1 => 
+        tempLetP(CPSArithShiftR, Seq(args(1), c1)) { c2 =>
+            L.LetP(name, CPSBlockSet, Seq(args(0), c2, args(2)), transform(body)) }}
 
     // Conversion primitives int->char/char->int
     // TODO
@@ -56,7 +143,8 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
 
     // Other primitives
     // TODO
-
+    case H.LetP(name, MiniScalaId, args, body) =>
+      L.LetP(name, CPSId, args, transform(body))
     // Continuations nodes (LetC, AppC)
     // TODO
 
@@ -73,7 +161,8 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
     // TODO
 
     // Halt case
-    // TODO
+    case H.Halt(arg) =>
+      L.Halt(arg);
   }
 
   /*
