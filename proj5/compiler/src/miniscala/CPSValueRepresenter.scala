@@ -137,19 +137,103 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
 
     // Conversion primitives int->char/char->int
     // TODO
+    case H.LetP(name, MiniScalaCharToInt, args, body) =>
+      tempLetL(2) { c1 => 
+        L.LetP(name, CPSArithShiftR, Seq(args(0), c1), transform(body)) }
+
+    case H.LetP(name, MiniScalaIntToChar, args, body) =>
+      tempLetL(2) { c1 => 
+        tempLetP(CPSArithShiftL, Seq(args(0), c1)) { c2 => 
+          L.LetP(name, CPSAdd, Seq(c2, c1), transform(body)) }}
 
     // IO primitives
     // TODO
+
+    case H.LetP(name, MiniScalaByteRead, args, body) =>
+      tempLetL(1) { c1 => 
+        tempLetP(CPSByteRead, Seq()) { c2 => 
+          tempLetP(CPSArithShiftL, Seq(c2, c1)) { c3 => 
+            L.LetP(name, CPSAdd, Seq(c3, c1), transform(body)) }}}
+
+    case H.LetP(name, MiniScalaByteWrite, args, body) =>
+      tempLetL(1) { c1 => 
+          tempLetP(CPSArithShiftR, Seq(args(0), c1)) { c2 => 
+            L.LetP(name, CPSByteWrite, Seq(c2), transform(body)) }}
 
     // Other primitives
     // TODO
     case H.LetP(name, MiniScalaId, args, body) =>
       L.LetP(name, CPSId, args, transform(body))
+
+    case H.LetP(name, MiniScalaIntArithShiftLeft, args, body) =>
+      tempLetL(1) { c1 => 
+        tempLetP(CPSSub, Seq(args(0), c1)) { c2 => 
+          tempLetP(CPSArithShiftR, Seq(args(1), c1)) { c3 => 
+            tempLetP(CPSArithShiftL, Seq(c2, c3)) { c4 => 
+              L.LetP(name, CPSAdd, Seq(c4, c1), transform(body)) }}}}
+      // tempLetL(1) { c1 => 
+      //   tempLetL(2) { c2 => 
+      //     tempLetP(CPSSub, Seq(args(0), c1)) { c3 => 
+      //       tempLetP(CPSDiv, Seq(c3, c2)) { c4 => // d
+      //         tempLetP(CPSSub, Seq(args(1), c1)) { c5 => 
+      //           tempLetP(CPSDiv, Seq(c5, c2)) { c6 => 
+      //             tempLetP(CPSArithShiftL, Seq(c4, c6)) { c7 => 
+      //               tempLetP(CPSMul, Seq(c2, c7)) { c8 => 
+      //               L.LetP(name, CPSAdd, Seq(c8, c1), transform(body)) }}}}}}}}
+
+    case H.LetP(name, MiniScalaIntArithShiftRight, args, body) =>
+      tempLetL(1) { c1 => 
+        tempLetP(CPSSub, Seq(args(0), c1)) { c2 => 
+          tempLetP(CPSArithShiftR, Seq(args(1), c1)) { c3 => 
+            tempLetP(CPSArithShiftR, Seq(c2, c3)) { c4 => 
+              L.LetP(name, CPSAdd, Seq(c4, c1), transform(body)) }}}}
+
+    case H.LetP(name, MiniScalaIntBitwiseAnd, args, body) =>
+      // tempLetL(1) { c1 => 
+        // tempLetP(CPSAnd, Seq(args(0), args(1))) { c2 => 
+          L.LetP(name, CPSAnd, Seq(args(0),args(1)), transform(body)) 
+
+    case H.LetP(name, MiniScalaIntBitwiseOr, args, body) =>
+      // tempLetL(1) { c1 => 
+      //   tempLetP(CPSAnd, Seq(args(0), args(1))) { c2 => 
+          L.LetP(name, CPSOr, Seq(args(0), args(1)), transform(body)) 
+
+    case H.LetP(name, MiniScalaIntBitwiseXOr, args, body) =>
+      // tempLetL(1) { c1 => 
+      //   tempLetP(CPSAnd, Seq(args(0), args(1))) { c2 => 
+      tempLetL(1) { c1 => 
+        tempLetP(CPSXOr, Seq(args(0), args(1))) { c2 => 
+          L.LetP(name, CPSAdd, Seq(c2, c1), transform(body)) }}
+
     // Continuations nodes (LetC, AppC)
     // TODO
+    // val substCnts = cnts map {
+    //   case CntDef(name, args, body) =>
+    //     CntDef(s(name), args map s, substIn(body))
+    // }
+    
+    case H.LetC(cnts, body) =>
+      var s : List[L.CntDef] = List();
+      for(i <- 0 to cnts.length - 1) {
+        s = s :+ L.CntDef(cnts(i).name, cnts(i).args, transform(cnts(i).body))
+      }
+      println(s);
+      L.LetC(s, transform(body))
+
+    case H.AppC(cnts, body) =>
+      L.AppC(cnts, body);
 
     // Functions nodes (LetF, AppF)
     // TODO
+    case H.LetF(funs, body) =>
+      println("FFFF" + funs);
+      for( i <- 0 to funs.length - 1 ) {
+        wrap(funs(i).args, transform(funs(i).body))(_);
+      }
+      ???
+
+    case H.AppF(fun, retC, args) =>
+      L.AppF(fun, retC, args)
 
     // ********************* Conditionnals ***********************
     // Type tests
@@ -159,6 +243,30 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
 
     // Test primitives (<, >, ==, ...)
     // TODO
+    // case H.LetP(name, MiniScalaIntLt, args, body) =>
+    //   // L.LetP(name, CPSLt, Seq(args(0), args(1)), transform(body))
+    //   ???
+    // case H.LetC(args, body) =>
+    //   // println(args(0));
+    //   L.LetC(Seq(args(0), args(1)), transform(body))
+
+    case H.If(MiniScalaIntLt, args, thenC, elseC) =>
+      L.If(CPSLt, args, thenC, elseC)
+
+    case H.If(MiniScalaIntLe, args, thenC, elseC) =>
+      L.If(CPSLe, args, thenC, elseC)
+
+    case H.If(MiniScalaEq, args, thenC, elseC) =>
+      L.If(CPSEq, args, thenC, elseC)
+
+    case H.If(MiniScalaNe, args, thenC, elseC) =>
+      L.If(CPSNe, args, thenC, elseC)
+
+    case H.If(MiniScalaIntGt, args, thenC, elseC) =>
+      L.If(CPSGt, args, thenC, elseC)
+
+    case H.If(MiniScalaIntGe, args, thenC, elseC) =>
+      L.If(CPSGe, args, thenC, elseC)
 
     // Halt case
     case H.Halt(arg) =>
@@ -200,6 +308,37 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
       freeVariables(body) - name
     case H.LetP(name, _, args, body) =>
       freeVariables(body) - name ++ args
+    case H.LetC(cont, body) =>
+      val x = freeVariables(body);
+      for( i <- 0 to cont.length - 1 ) {
+          x ++ (freeVariables(cont(i)) -- cont(i).args)
+      }
+      x
+
+    case H.LetF(funs, body) =>
+      val x = freeVariables(body);
+      for( i <- 0 to funs.length - 1 ) {
+          x ++ (freeVariables(funs(i)) -- funs(i).args)
+      }
+      for( i <- 0 to funs.length - 1 ) {
+        x - funs(i).name
+      }
+      x
+
+    case H.AppC(args, body) =>
+      args
+
+    case H.AppF(fun, _, args) =>
+      fun ++ args
+
+    case H.If(op, args, thenC, elseC) =>
+    // val s : type args = Set()
+    // // for(i <- 0 to args.length - 1){
+    // //   s += args(i)
+    // // }
+    // s
+    args.toSet;
+      // ???
     // TODO: add missing cases
   }
 

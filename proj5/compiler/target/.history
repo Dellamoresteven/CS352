@@ -70,3 +70,10 @@ run "val arr = new Array[Int](5000); arr(10) = 6; arr(10) + 2"
 run ../examples/scratch.scala
 test
 '
+run ../examples/scratch.scala
+l
+run ../examples/scratch.scala
+test
+clear
+test
+run ../examples/scratch.scala
