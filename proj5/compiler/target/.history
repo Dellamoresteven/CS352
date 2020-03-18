@@ -77,3 +77,29 @@ test
 clear
 test
 run ../examples/scratch.scala
+test
+../examples/scratch.scala
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test
+c
+test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+c
+run ../examples/scratch.scala
+c
+run ../examples/scratch.scala
+test
+run ../examples/scratch.scala
+test

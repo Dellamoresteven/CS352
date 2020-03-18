@@ -43,7 +43,32 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
       L.LetL(name, bitsToIntMSBF(0, 0, 1, 0), transform(body))
 
     // TODO: Add missing literals
-
+    case H.If(MiniScalaIntP, args, ct, cf) =>
+      // ???
+      tempLetL(1) { c1 =>
+        tempLetP(CPSAnd, Seq(args(0), c1)) { c2 =>
+          L.If(CPSEq, Seq(c2, c1), ct, cf) } }
+    
+    case H.If(MiniScalaUnitP, args, ct, cf) =>
+      // ???
+      tempLetL(bitsToIntMSBF(1, 1, 1, 1)) { m =>
+        tempLetL(bitsToIntMSBF(0, 0, 1, 0)) { t =>
+          tempLetP(CPSAnd, Seq(args(0), m)) { r =>
+            L.If(CPSEq, Seq(r, t), ct, cf) } } }
+  
+    case H.If(MiniScalaBoolP, args, ct, cf) =>
+      // ???
+      tempLetL(bitsToIntMSBF(1, 1, 1, 1)) { m =>
+        tempLetL(bitsToIntMSBF(1, 0, 1, 0)) { t =>
+          tempLetP(CPSAnd, Seq(args(0), m)) { r =>
+            L.If(CPSEq, Seq(r, t), ct, cf) } } }
+    
+    case H.If(MiniScalaCharP, args, ct, cf) =>
+      // ???
+      tempLetL(bitsToIntMSBF(1, 1, 1)) { m =>
+        tempLetL(bitsToIntMSBF(1, 1, 0)) { t =>
+          tempLetP(CPSAnd, Seq(args(0), m)) { r =>
+            L.If(CPSEq, Seq(r, t), ct, cf) } } }
     // *************** Primitives ***********************
     // Make sure you implement all possible primitives
     // (defined in MiniScalaPrimitives.scala)
@@ -55,9 +80,15 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
           L.LetP(name, CPSSub, Seq(r, c1), transform(body)) } }
 
     case H.LetP(name, MiniScalaIntSub, args, body) =>
-      tempLetP(CPSSub, args) { r =>
-        tempLetL(1) { c1 =>
-          L.LetP(name, CPSAdd, Seq(r, c1), transform(body)) } }
+      if(args.length == 1){
+        tempLetL(2) { c1 =>
+          // tempLetP(CPSSub, Seq(c1, args(0))) { r =>
+              L.LetP(name, CPSSub, Seq(c1, args(0)), transform(body)) } 
+      }else {
+        tempLetP(CPSSub, args) { r =>
+          tempLetL(1) { c1 =>
+            L.LetP(name, CPSAdd, Seq(r, c1), transform(body)) } }
+      }
   
     // (n - 1) * (m >> 1) + 1
     case H.LetP(name, MiniScalaIntMul, args, body) =>
@@ -77,15 +108,21 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
             } } } }
     
     case H.LetP(name, MiniScalaIntMod, args, body) =>
-      tempLetL(1) {c1 => 
-        tempLetL(2) {c2 => 
-          tempLetP(CPSSub, Seq(args(0), c1) ) { c3 =>
-            tempLetP(CPSDiv, Seq(c3, c2) ) { c4 =>
-              tempLetP(CPSSub, Seq(args(1), c1) ) { c5 => 
-                tempLetP(CPSDiv, Seq(c5, c2) ) { c6 => 
-                  tempLetP(CPSMod, Seq(c4, c6) ) { c7 => 
-                    tempLetP(CPSMul, Seq(c2, c7) ) { c8 => 
-                      L.LetP(name, CPSAdd, Seq(c8, c1), transform(body)) }}}}}}}}
+     tempLetL(1) { c1 =>
+        tempLetP(CPSArithShiftR, Seq(args(0), c1)) { c2 =>
+          tempLetP(CPSArithShiftR, Seq(args(1), c1)) { c3 =>
+            tempLetP(CPSMod, Seq(c2, c3)) { c4 =>
+              tempLetP(CPSArithShiftL, Seq(c4, c1)) { c5 =>
+                L.LetP(name, CPSAdd, Seq(c1, c5), transform(body)) }}}}}
+      // tempLetL(1) {c1 => 
+      //   tempLetL(2) {c2 => 
+      //     tempLetP(CPSSub, Seq(args(0), c1) ) { c3 =>
+      //       tempLetP(CPSDiv, Seq(c3, c2) ) { c4 =>
+      //         tempLetP(CPSSub, Seq(args(1), c1) ) { c5 => 
+      //           tempLetP(CPSDiv, Seq(c5, c2) ) { c6 => 
+      //             tempLetP(CPSMod, Seq(c4, c6) ) { c7 => 
+      //               tempLetP(CPSMul, Seq(c2, c7) ) { c8 => 
+      //                 L.LetP(name, CPSAdd, Seq(c8, c1), transform(body)) }}}}}}}}
 
       // tempLetP(CPSMod, args) { r =>
       //   tempLetL(0) { c1 =>
@@ -171,6 +208,12 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
           tempLetP(CPSArithShiftR, Seq(args(1), c1)) { c3 => 
             tempLetP(CPSArithShiftL, Seq(c2, c3)) { c4 => 
               L.LetP(name, CPSAdd, Seq(c4, c1), transform(body)) }}}}
+      // tempLetL(1) { c1 =>
+      //   tempLetP(CPSArithShiftR, Seq(args(0), c1)) { c2 =>
+      //     tempLetP(CPSArithShiftR, Seq(args(1), c1)) { c3 =>
+      //       tempLetP(CPSArithShiftL, Seq(c2, c3)) { c4 =>
+      //         tempLetP(CPSArithShiftL, Seq(c4, c1)) { c5 =>
+      //           L.LetP(name, CPSAdd, Seq(c1, c5), transform(body)) }}}}}
       // tempLetL(1) { c1 => 
       //   tempLetL(2) { c2 => 
       //     tempLetP(CPSSub, Seq(args(0), c1)) { c3 => 
@@ -182,11 +225,23 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
       //               L.LetP(name, CPSAdd, Seq(c8, c1), transform(body)) }}}}}}}}
 
     case H.LetP(name, MiniScalaIntArithShiftRight, args, body) =>
-      tempLetL(1) { c1 => 
-        tempLetP(CPSSub, Seq(args(0), c1)) { c2 => 
-          tempLetP(CPSArithShiftR, Seq(args(1), c1)) { c3 => 
-            tempLetP(CPSArithShiftR, Seq(c2, c3)) { c4 => 
-              L.LetP(name, CPSAdd, Seq(c4, c1), transform(body)) }}}}
+      // tempLetL(1) { c1 => 
+      //   tempLetP(CPSSub, Seq(args(0), c1)) { c2 => 
+      //     tempLetP(CPSArithShiftR, Seq(args(1), c1)) { c3 => 
+      //       tempLetP(CPSArithShiftL, Seq(c2, c3)) { c4 => 
+      //         L.LetP(name, CPSAdd, Seq(c4, c1), transform(body)) }}}}
+      /* broke */
+      // tempLetL(1) { c1 => 
+      //   tempLetP(CPSSub, Seq(args(0), c1)) { c2 => 
+      //     tempLetP(CPSArithShiftR, Seq(args(1), c1)) { c3 => 
+      //       tempLetP(CPSArithShiftR, Seq(c2, c3)) { c4 => 
+      //         L.LetP(name, CPSAdd, Seq(c4, c1), transform(body)) }}}}
+     tempLetL(1) { c1 =>
+        tempLetP(CPSArithShiftR, Seq(args(0), c1)) { c2 =>
+          tempLetP(CPSArithShiftR, Seq(args(1), c1)) { c3 =>
+            tempLetP(CPSArithShiftR, Seq(c2, c3)) { c4 =>
+              tempLetP(CPSArithShiftL, Seq(c4, c1)) { c5 =>
+                L.LetP(name, CPSAdd, Seq(c1, c5), transform(body)) }}}}}
 
     case H.LetP(name, MiniScalaIntBitwiseAnd, args, body) =>
       // tempLetL(1) { c1 => 
@@ -217,7 +272,7 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
       for(i <- 0 to cnts.length - 1) {
         s = s :+ L.CntDef(cnts(i).name, cnts(i).args, transform(cnts(i).body))
       }
-      println(s);
+      // println(s);
       L.LetC(s, transform(body))
 
     case H.AppC(cnts, body) =>
@@ -225,15 +280,123 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
 
     // Functions nodes (LetF, AppF)
     // TODO
-    case H.LetF(funs, body) =>
-      println("FFFF" + funs);
-      for( i <- 0 to funs.length - 1 ) {
-        wrap(funs(i).args, transform(funs(i).body))(_);
-      }
-      ???
+    // case H.LetF(funs, body) =>
+      // println("FFFF" + funs);
+      // for( i <- 0 to funs.length - 1 ) {
+      //   wrap(funs(i).args, transform(funs(i).body))(_);
+      // }
+      // ???
 
-    case H.AppF(fun, retC, args) =>
-      L.AppF(fun, retC, args)
+    // val funDefs = functions map { f =>
+    //   val rc = Symbol.fresh("rc")
+    //   C.FunDef(f.name, rc, f.args map(_.name), tail(f.body, rc))
+    // }
+    // C.LetF(funDefs, tail(body, c))
+
+    // case FunDef(name, retC, args, body) =>
+
+    /** WORKING KINDA SORATA 52 */
+    // case H.LetF(funs, body) =>
+    //   // println("YES" + funs + "\n\n\n\n");
+    //   val funDefs = funs map { f =>
+    //     L.FunDef(f.name, f.retC, f.args, transform(f.body))
+    //   }
+    //   L.LetF(funDefs, transform(body))
+    /** END WORKING */
+
+    // case H.LetF(funs, body) =>
+    //   val funDefs = funs map { f =>
+    //     // var fv = freeVariables(transform(f.body))(_);
+    //     // var argsList = f.args map { _ => Symbol.fresh("sc") }
+    //     // argsList +: Symbol.fresh("env");
+    //     var agrsList = Seq();
+    //     var e = Symbol.fresh("env");
+    //     agrsList :+ e;
+    //     for(i <- 0 to f.args.length-1 ) {
+    //       agrsList :+ Symbol.fresh("sn");
+    //     }
+    //     // var b = 
+    //     var vstuff = Seq();
+    //     // freeVariables(f.body)();
+    //     // private def wrap[T](args: Seq[T], inner: L.Tree)(createLayer: (T, L.Tree) => L.Tree) = {
+    //     // for(i <- 0 to f(i).args.length-1 ) {
+    //       // 
+    //       // var blockGetThing = tempLetL(i+1) { c1 => 
+    //       //                           L.LetP( Symbol.fresh("v"), CPSBlockGet, Seq(e, c2), 
+    //       //                                 wrap() ) }
+    //       // vstuff :+ blockGetThing;
+    //     // }
+    //     // subst(???, agrsList zip vstuff);
+    //     // var s1 = L.FunDef(Symbol.fresh("s"), Symbol.fresh("sc1"), argsList, b);
+    //   }
+    //   // L.LetF(funDefs, transform(body))
+    //   ???
+    
+  case H.LetF(funs, body) =>
+      // ???
+      var s:Set[Symbol] = Set()
+      var n:Set[Int] = Set()
+      var ff:Set[Symbol] = Set()
+      var ffgg:Set[Int] = Set()
+      var pleaseHelpMe:Set[Symbol] = Set()
+      val funDefs = funs map { f =>
+        var fv = freeVariables(f)(Map.empty)
+        val env = Symbol.fresh("env")
+        val sVs = fv map { c => Symbol.fresh("v") }
+        var e1 = transform(f.body)
+        val sub = Substitution(f.name +: fv.toSeq, env +: sVs.toSeq)
+        var subcall = e1.subst(sub)
+        val ind = Seq.range(1, fv.size + 1, 1)
+        val zipped = fv.toSeq zip ind
+        val res = wrap(zipped, subcall) {
+          case ((n, v), inner) => tempLetL(v) { c =>
+              L.LetP(n, CPSBlockGet, Seq(env, c), inner)}
+        }
+        var w = Symbol.fresh("w")
+        
+        s = s + w
+        s = s ++ fv
+        val testMyLife = fv.size + 1;
+        pleaseHelpMe = pleaseHelpMe + f.name
+        ffgg = ffgg + testMyLife
+        // n = n ++ Seq.range(1, fv.size + 1, 1)
+        n = n ++ Seq.range(0, fv.size + 1,1).toSet
+        for(i <- 0 to fv.size) {
+          ff = ff + f.name
+        }
+        L.FunDef(w, f.retC, f.args, res)
+      }
+      var fff = ff zip n zip s map { 
+        case ((a,b), c) => (a,b,c)
+      }
+
+      var eagfij = wrap(fff.toSeq, transform(body)) {
+        case((a, b, c), d) =>
+          tempLetL(b) { newB => val t = Symbol.fresh("t");
+            L.LetP(t, CPSBlockSet, Seq(a, newB, c), d)
+          }
+      }
+
+      var eagfijffff = wrap((pleaseHelpMe zip ffgg).toSeq, eagfij) {
+        case((a, b), c) =>
+          tempLetL(b) { newB =>
+            L.LetP(a, CPSBlockAlloc(202), Seq(newB), c)
+          }
+      }
+      // println(funDefs)
+      // println("---------")
+      // println(eagfijffff)
+      L.LetF(funDefs, eagfijffff)
+      // ???
+
+    case H.AppF(name, retC, args) =>
+      tempLetL(0) { c1 => 
+        tempLetP(CPSBlockGet, Seq(name, c1)) { c2 => 
+          L.AppF(c2, retC, name +: args) }}
+          
+
+    // case H.AppF(fun, retC, args) =>
+    //   L.AppF(fun, retC, args)
 
     // ********************* Conditionnals ***********************
     // Type tests
@@ -270,7 +433,14 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
 
     // Halt case
     case H.Halt(arg) =>
-      L.Halt(arg);
+      tempLetL(1) { c1 => 
+          tempLetP(CPSArithShiftR, Seq(arg, c1)) { c2 => 
+              L.Halt(c2) }}
+      
+  }
+
+  private def blockGetHelperFunction(i: Int, s: String*) {
+    println("HERERERERERE\n\n\n");
   }
 
   /*
@@ -316,28 +486,23 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
       x
 
     case H.LetF(funs, body) =>
-      val x = freeVariables(body);
+      var x = freeVariables(body);
       for( i <- 0 to funs.length - 1 ) {
-          x ++ (freeVariables(funs(i)) -- funs(i).args)
+          x = x ++ (freeVariables(funs(i).body) -- funs(i).args)
       }
       for( i <- 0 to funs.length - 1 ) {
-        x - funs(i).name
+        x = x - funs(i).name
       }
       x
 
-    case H.AppC(args, body) =>
-      args
+    case H.AppC(name, args) => 
+      args.toSet
 
     case H.AppF(fun, _, args) =>
-      fun ++ args
+      args.toSet + fun
 
     case H.If(op, args, thenC, elseC) =>
-    // val s : type args = Set()
-    // // for(i <- 0 to args.length - 1){
-    // //   s += args(i)
-    // // }
-    // s
-    args.toSet;
+      args.toSet;
       // ???
     // TODO: add missing cases
   }
@@ -388,4 +553,5 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
       tempLetP(CPSAnd, Seq(arg, mask)) { masked =>
         tempLetL(bitsToIntMSBF(bits : _*)) { value =>
           L.If(CPSEq, Seq(masked, value), tC, eC) } } }
+
 }
