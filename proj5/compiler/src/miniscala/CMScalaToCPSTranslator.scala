@@ -7,8 +7,8 @@ object CMScalaToCPSTranslator extends (S.Tree => C.Tree) {
   def apply(tree: S.Tree): C.Tree = {
     nonTail(tree){v =>
       val z = Symbol.fresh("c0")
-      // C.LetL(z, IntLit(0), C.Halt(z))
-      C.LetL(z, IntLit(0), C.Halt(v))
+      C.LetL(z, IntLit(0), C.Halt(z))
+      // C.LetL(z, IntLit(0), C.Halt(v))
     }(Set.empty)
   }
 

@@ -195,7 +195,7 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
     case H.LetP(name, MiniScalaByteWrite, args, body) =>
       tempLetL(1) { c1 => 
           tempLetP(CPSArithShiftR, Seq(args(0), c1)) { c2 => 
-            L.LetP(name, CPSByteWrite, Seq(c2), transform(body)) }}
+            L.LetP(name, CPSByteWrite, Seq(c2), L.LetL(name, unitLit, transform(body)) ) }}
 
     // Other primitives
     // TODO
@@ -331,14 +331,12 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
     //   }
     //   // L.LetF(funDefs, transform(body))
     //   ???
-    
-  case H.LetF(funs, body) =>
-      // ???
-      var s:Set[Symbol] = Set()
-      var n:Set[Int] = Set()
-      var ff:Set[Symbol] = Set()
-      var ffgg:Set[Int] = Set()
-      var pleaseHelpMe:Set[Symbol] = Set()
+    case H.LetF(funs, body) =>
+      var s:Seq[Symbol] = Seq()
+      var n:Seq[Int] = Seq()
+      var ff:Seq[Symbol] = Seq()
+      var ffgg:Seq[Int] = Seq()
+      var pleaseHelpMe:Seq[Symbol] = Seq()
       val funDefs = funs map { f =>
         var fv = freeVariables(f)(Map.empty)
         val env = Symbol.fresh("env")
@@ -346,48 +344,56 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
         var e1 = transform(f.body)
         val sub = Substitution(f.name +: fv.toSeq, env +: sVs.toSeq)
         var subcall = e1.subst(sub)
-        val ind = Seq.range(1, fv.size + 1, 1)
-        val zipped = fv.toSeq zip ind
+        val ind = Seq.range(1, fv.size + 2, 1)
+        val zipped = sVs.toSeq zip ind
+        // println("ZIPPED IS " + zipped)
         val res = wrap(zipped, subcall) {
           case ((n, v), inner) => tempLetL(v) { c =>
               L.LetP(n, CPSBlockGet, Seq(env, c), inner)}
         }
         var w = Symbol.fresh("w")
-        
-        s = s + w
+        s = s :+ w
         s = s ++ fv
         val testMyLife = fv.size + 1;
-        pleaseHelpMe = pleaseHelpMe + f.name
-        ffgg = ffgg + testMyLife
+        pleaseHelpMe = pleaseHelpMe :+ f.name
+        ffgg = ffgg :+ testMyLife
         // n = n ++ Seq.range(1, fv.size + 1, 1)
-        n = n ++ Seq.range(0, fv.size + 1,1).toSet
+        n = n ++ Seq.range(0, fv.size + 1,1)
         for(i <- 0 to fv.size) {
-          ff = ff + f.name
+          ff = ff :+ f.name
         }
-        L.FunDef(w, f.retC, f.args, res)
+        L.FunDef(w, f.retC, env +: f.args, res)
       }
+      // println("SSS IS " + s)
+      // println("NNN IS " + n)
+      // println("FFF IS " + ff)
       var fff = ff zip n zip s map { 
         case ((a,b), c) => (a,b,c)
       }
-
+      // println("FFF " + fff)
       var eagfij = wrap(fff.toSeq, transform(body)) {
         case((a, b, c), d) =>
           tempLetL(b) { newB => val t = Symbol.fresh("t");
             L.LetP(t, CPSBlockSet, Seq(a, newB, c), d)
           }
       }
-
+      // println("EAFGIG " + eagfij)
       var eagfijffff = wrap((pleaseHelpMe zip ffgg).toSeq, eagfij) {
         case((a, b), c) =>
           tempLetL(b) { newB =>
             L.LetP(a, CPSBlockAlloc(202), Seq(newB), c)
           }
       }
+      // println("EAFGIGFFFFF " + eagfijffff)
       // println(funDefs)
       // println("---------")
       // println(eagfijffff)
-      L.LetF(funDefs, eagfijffff)
+      // println("FUNDEF" + funDefs)
+      val x = L.LetF(funDefs, eagfijffff)
+      println("FEFEFE: " + x);
+      x
       // ???
+
 
     case H.AppF(name, retC, args) =>
       tempLetL(0) { c1 => 
@@ -479,9 +485,9 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
     case H.LetP(name, _, args, body) =>
       freeVariables(body) - name ++ args
     case H.LetC(cont, body) =>
-      val x = freeVariables(body);
+      var x = freeVariables(body);
       for( i <- 0 to cont.length - 1 ) {
-          x ++ (freeVariables(cont(i)) -- cont(i).args)
+          x = x ++ (freeVariables(cont(i)) -- cont(i).args)
       }
       x
 
@@ -503,6 +509,9 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
 
     case H.If(op, args, thenC, elseC) =>
       args.toSet;
+      
+    case H.Halt(a) =>
+      Set(a)
       // ???
     // TODO: add missing cases
   }

@@ -1,5 +1,0 @@
-[0m[[0m[33mwarn[0m] [0m[0m/Users/stevendellamore/Desktop/CS352/proj5/compiler/src/miniscala/CPSValueRepresenter.scala:478:23: match may not be exhaustive.[0m
-[0m[[0m[33mwarn[0m] [0m[0mIt would fail on the following input: Halt(_)[0m
-[0m[[0m[33mwarn[0m] [0m[0m      : Set[Symbol] = tree match {[0m
-[0m[[0m[33mwarn[0m] [0m[0m                      ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

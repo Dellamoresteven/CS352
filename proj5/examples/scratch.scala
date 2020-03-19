@@ -38,5 +38,35 @@
 // -5 * 10
 // -4 * -3
 
-def f(): Int = 5;
-f()
+// def f(): Int = 5;
+// f()
+
+// val k = 1;
+// def f(): Int = k;
+// f()
+
+// def listMake1[T](e1: T) = e1::Nil;
+// def listMake2[T](e1: T, e2: T) = e1::listMake1[T](e2);
+// def listMake3[T](e1: T, e2: T, e3: T) = e1::listMake2[T](e2, e3);
+// def listForeach[T](f: T => Unit, l: List[T]): Unit =
+//   if (!l.isEmpty) {
+//     f(l.head);
+//     listForeach[T](f, l.tail)
+//   };
+// def printChar(c: Char) = putchar(c.toInt);
+// val l = listMake3[Char]('O', 'K', '\n');
+// listForeach[Char](printChar, l);
+// 3
+
+def printChar(c: Char) = putchar(c.toInt);
+def printString(s: String) = {
+  var idx = 0;
+  while (idx < s.length) {
+    printChar(s(idx));
+    idx = idx + 1
+  };
+  ()
+};
+printString("OK");
+printChar('\n');
+3
