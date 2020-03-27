@@ -1,0 +1,55 @@
+
+
+Dataflow Analyses:
+* Avaiable expressions: Common Subexpression Elimination
+* Live variables: Dead code elimination
+* Reaching Definition: Constant Propagation
+* Very Busy Expresssions: Code Hoisting
+
+These work in tandem, one optimization may create more opportunities for another.
+
+(((DATA FLOW CLASSIFICATION)))
+Classification of Dataflow Analyses
+            may(U)     must(intersection)
+Forward     RD         AE
+Backward    Live       VBE
+
+How information propagrates/Flow through CFG
+
+(((MAY AND MUST)))
+MUST:
+* 'for all' paths, e.g., expression 'e' always reachest the current node, no matter which path was taken.
+* Compute 'intersection' of incoming edges (according to directionality)
+* Solve the greatestfixpoint (GFP)
+
+MAY:
+* 'exsists' path, e.g., variable 'x' is read at some point.
+* Compute 'U' of incoming edges (according to directionality)
+* Solve for least fixpoint (LFP)
+
+Directionality:
+        | In
+        v
+    --------
+n: |        |
+    --------
+        | On
+        v
+* Forward: Past, compute 'On' from input 'In' (Which is (must/may) combination of 'Op' of each **predecessor** 'p'), 'gen(n)' and 'kill(n)'
+* Backward: Future, compute 'In' from output 'On'
+
+Work-List Algorithm
+Computing the fixed point by simple iteration as we did works, but is wasteful as the infromation for all nodes is recomputed at every iteration
+
+It is possible to do better by remembering, for every varible v, the set dep(v) of the variables whose value depends on the value of v itself.
+
+Then, whenever the value of some variable v changes, we only re-compute the value of the varibles
+
+NEW LECTURE REG ALLOC 1
+
+((Register allocation)) is writing code that makes the most afficent use of registers. If they are "spilled" that means they get (((spilled))) over to memory.
+
+We have virtual registers, v0, v1 .... vn are available before register allocation. 
+
+Machine registers that play a speical role, like the link register, are identified with a non-numerical index, 'Rlk'.
+
