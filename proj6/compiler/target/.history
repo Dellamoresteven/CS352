@@ -1,0 +1,80 @@
+l
+test
+run "val n = 5; 3"
+test
+run "val n = 5; 3"
+test
+run "val n = 5; 3"
+run "val x = 80.toChar; 0"
+vall i_1 = 161;
+vall t_1 = 2;
+valp t_2 = i_1 << t_1;
+valp v_1 = t_2 | t_1;
+valp x = id(v_1);
+vall i_2 = 1;
+vall c0_1 = 1;
+vall t_3 = 1;
+valp t_4 = c0_1 >> t_3;
+run "val x = 80.toChar; 0"
+test
+run "val x = 5; 4"
+l
+run ../examples/s.scala
+run ../library/miniscala.lib ../examples/pascal.scala
+test
+run "val u = 1; 0"
+run "val u = 6; 0"
+run "val u = 1; 0"
+test
+run "val x = 5; val y = 3; val z = x+y;
+run "val x = 5; val y = 3; val z = x+y; z"
+run "val x = 3; x"
+test
+run "val x = 3; x"
+test
+run "val x = 3; x"
+run "val x = 3; val y = x; y"
+run "val x = 3; x"
+run "val x = 3; val y = x; y"
+run "val x = 3; x"
+run "val x = 3; val y = x; y"
+run "val x = 3; val y = x; putchar(y)"
+run "val x = 3; val y = x; putchar(y.toInt)"
+run "val x = 3; val y = x; putchar(y+65);4"
+test
+ run "val x = 5; val y = 3; val z = x + y; putchar(z+65)"
+run "val x = 5; val y = 3; val z = x + y; putchar(z+65); 4"
+ run "val x = 5; val y = 3; val z = x + y; putchar(z+65)"
+ run "val x = 5; val y = 3; val z = x + y; putchar(z+65); 4"
+test
+ run "val x = 5; val y = 3; val z = x + y; putchar(z+65); 4"
+test
+ run "val x = 5; val y = 3; val z = x + y; putchar(z+65); 4"
+test
+ run "val x = 5; val y = 3; val z = x + y; putchar(z+65); 4"
+test
+ run "val x = 5; val y = 3; val z = x + y; putchar(z+65); 4"
+test
+ run "val x = 5; val y = 3; val z = x + y; putchar(z+65); 4"
+test
+ run "val x = 5; val y = 3; val z = x + y; putchar(z+65); 4"
+test
+run 2+1
+test
+run "'a'.toInt"
+test testConstantFoldingPlus
+test
+tst
+test
+run 2+1
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
+run ../examples/s.scala
+run "def f(x: Int): Int = if (x == 0) 0 else g(x - 1); def g(y: Int): Int = f(y); def h(z: Int) = z; f(0) + f(0) + f(0)"
+test
+run ../examples/s.scala
+test

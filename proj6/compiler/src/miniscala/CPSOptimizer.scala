@@ -89,15 +89,83 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
 
   // Shrinking optimizations
 
+  private def substitute (from : Name, to : Name)(body : Tree) : Tree =
+    (body.subst(Substitution(from, to)))
+
+  private def substitute (from : Seq[Name], to : Seq[Name])(body : Tree) : Tree =
+    (body.subst(Substitution(from, to)))
+
   private def shrink(tree: Tree): Tree = {
     def shrinkT(tree: Tree)(implicit s: State): Tree = tree match {
+      case LetL(name, value, body) if s.dead(name) => 
+        println("LetL DEAD Name: " + name)
+        shrinkT(body)
+
+      // case LetL(name, value, body) if (s.lInvEnv contains value) =>
+      //   shrinkT(body.subst(Substitution(name, s.lInvEnv(value))))
+
+      case LetL(name, value, body) =>
+        LetL(name, value, shrinkT(body)(s.withLit(name, value)))
+
+      case LetP(name, operation, arg, body) if (operation == identity) =>
+        println("LetP ID Name: " + name + " : " + arg(0))
+        shrinkT(body.subst(Substitution(name, arg(0))))
+
+      // case LetP(name, prim, Seq(x,y), body) if (x == y && sameArgReduce.isDefinedAt(prim)) =>
+      //   val value = sameArgReduce(prim)
+      //   LetL(name, value, shrinkT(body)(s.withLit(name, value)))
+
+      /* run "val x = 5; val y = 3; val z = x + y; putchar(z+65); 4" */
+      case LetP(name, operation, args, body) if !impure(operation) && !unstable(operation) =>
+        val v = vEvaluator((operation, args map { arg => s.lEnv(arg) }))
+        LetL(name, v, shrinkT(body)(s.withLit(name, v)))
+
+      case LetP(name, operation, args, body) if s.dead(name) && !impure(operation) =>
+        // println("LetP DEAD Name: " + name)
+        shrinkT(body)
+
+      // case LetP(name, operation, args, body) if s.eInvEnv contains (operation, args) =>
+      //   val newName = s.eInvEnv((operation, args))
+      //   shrinkT(body.subst(Substitution(name, newName)))
+
+      case LetP(name, operation, args, body) =>
+        // println("LetP ALIVE Name: " + name)
+        LetP(name, operation, args, shrinkT(body)(s.withExp(name, operation, args)))
+
+      case If(cond, Seq(x,y), thenC, elseC) if (x == y) =>
+        if (sameArgReduceC(cond))
+          AppC(thenC, Seq())
+        else
+          AppC(elseC, Seq())
+          
+      case If(cond, args, thenC, elseC) =>
+        if (cEvaluator(cond, args map { x => s.lEnv(x) }))
+          AppC(thenC, Seq())
+        else
+          AppC(elseC, Seq())
+
+      case LetF(funs, body) =>
+        var retF = funs filter { case FunDef(name, _, _, _) => !s.dead(name) }
+        retF = retF map { case FunDef(a, b, c, d) => FunDef(a, b, c, shrinkT(d)(s.withEmptyInvEnvs)) }
+        // val fInline =  retF filter { x => s.appliedOnce(x.name) }
+        // val nRetF = (retF filter { x => !s.appliedOnce(x.name) }) 
+        LetF(retF, shrinkT(body)(s))
+
+      // case LetC(c, body) =>
+      //   var retC = c filter { case CntDef(name, _, _) => !s.dead(name) }
+      //   retC = retC map { case CntDef(a, b, c) => CntDef(a, b, shrinkT(c)(s.withEmptyInvEnvs)) }
+      //   // val fInline =  retFuns filter { x => s.appliedOnce(x.name) }
+      //   // val nRetFuns = (retFuns filter { x => !s.appliedOnce(x.name) }) 
+      //   LetC(retC, shrinkT(body))
+
       case _ =>
-        // TODO
+        // println("Default: ")
         tree
     }
 
     shrinkT(tree)(State(census(tree)))
   }
+
 
   // (Non-shrinking) inlining
 
@@ -214,7 +282,7 @@ object CPSOptimizerHigh extends CPSOptimizer(SymbolicCPSTreeModule)
     Set(MiniScalaBlockSet, MiniScalaByteRead, MiniScalaByteWrite)
 
   protected val unstable: ValuePrimitive => Boolean = {
-    // TODO
+    case MiniScalaBlockAlloc(_) | MiniScalaBlockGet | MiniScalaByteRead => true
     case _ => false
   }
 
@@ -247,14 +315,36 @@ object CPSOptimizerHigh extends CPSOptimizer(SymbolicCPSTreeModule)
   protected val vEvaluator: PartialFunction[(ValuePrimitive, Seq[Literal]),
                                             Literal] = {
     case (MiniScalaIntAdd, Seq(IntLit(x), IntLit(y))) => IntLit(x + y)
-    // TODO
+    case (MiniScalaIntSub, Seq(IntLit(x), IntLit(y))) => IntLit(x - y)
+    case (MiniScalaIntMul, Seq(IntLit(x), IntLit(y))) => IntLit(x * y)
+    case (MiniScalaIntDiv, Seq(IntLit(x), IntLit(y))) if (y != 0) => (IntLit(Math.floorDiv(x, y)))
+    case (MiniScalaIntMod, Seq(IntLit(x), IntLit(y))) if (y != 0) => (IntLit(Math.floorMod(x, y)))
+    case (MiniScalaIntArithShiftLeft, Seq(IntLit(x), IntLit(y))) => (IntLit(x << y))
+    case (MiniScalaIntArithShiftRight, Seq(IntLit(x), IntLit(y))) => (IntLit(x >> y))
+    case (MiniScalaIntBitwiseAnd, Seq(IntLit(x), IntLit(y))) => (IntLit(x & y))
+    case (MiniScalaIntBitwiseOr, Seq(IntLit(x), IntLit(y))) => (IntLit(x | y))
+    case (MiniScalaIntBitwiseXOr, Seq(IntLit(x), IntLit(y))) => (IntLit(x ^ y)) 
+    case (MiniScalaIntToChar, Seq(IntLit(x))) => CharLit(x.toChar)
+    case (MiniScalaCharToInt, Seq(CharLit(x))) => IntLit(x)
+    case (MiniScalaIntSub, Seq(IntLit(x))) => IntLit(-x)
+    case (MiniScalaBlockTag, Seq(v)) => v
   }
 
   protected val cEvaluator: PartialFunction[(TestPrimitive, Seq[Literal]),
                                             Boolean] = {
 
     case (MiniScalaIntP, Seq(IntLit(_))) => true
-    // TODO
+    case (MiniScalaBoolP, Seq(BooleanLit(_))) => true
+    case (MiniScalaCharP, Seq(CharLit(_)))    => true
+    case (MiniScalaUnitP, Seq(UnitLit))       => true
+    case (MiniScalaIntLt, Seq(IntLit(x),IntLit(y))) => x < y
+    case (MiniScalaIntLe, Seq(IntLit(x),IntLit(y))) => x <= y
+    case (MiniScalaEq, Seq(IntLit(x),IntLit(y))) => x == y
+    case (MiniScalaNe, Seq(IntLit(x),IntLit(y))) => x != y
+    case (MiniScalaEq, Seq(BooleanLit(x),BooleanLit(y))) => x == y
+    case (MiniScalaNe, Seq(BooleanLit(x),BooleanLit(y))) => x != y
+    case (MiniScalaIntGe, Seq(IntLit(x),IntLit(y))) => x >= y
+    case (MiniScalaIntGt, Seq(IntLit(x),IntLit(y))) => x > y
   }
 }
 
