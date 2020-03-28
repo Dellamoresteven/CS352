@@ -56,7 +56,6 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
     // Adds a Seq of substitutions to the state
     def withSubst(from: Seq[Name], to: Seq[Name]): State =
       copy(subst = subst ++ (from zip to))
-
     // Adds a constant to the State
     def withLit(name: Name, value: Literal) =
       copy(lEnv = lEnv + (name -> value), lInvEnv = lInvEnv + (value -> name))
@@ -86,7 +85,16 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
     def withEmptyInvEnvs =
       copy(lInvEnv = Map.empty, eInvEnv = Map.empty)
   }
-  
+
+  private def checkIfArgsExist (args : Seq[Name])(s : State) : Boolean = {
+    var e = true
+    for(i <- 0 to args.length - 1) {
+      if (!s.lEnv.contains(args(i))) {
+        e = false
+      }
+    }
+    e
+  }
   // Shrinking optimizations
 
   private def shrink(tree: Tree): Tree = {
@@ -110,7 +118,7 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
       //   LetL(name, value, shrinkT(body)(s.withLit(name, value)))
 
       /* run "val x = 5; val y = 3; val z = x + y; putchar(z+65); 4" */
-      case LetP(name, operation, args, body) if !impure(operation) && !unstable(operation) =>
+      case LetP(name, operation, args, body) if (checkIfArgsExist(args)(s)) && !impure(operation) && !unstable(operation) =>
         val v = vEvaluator((operation, args map { arg => s.lEnv(arg) }))
         LetL(name, v, shrinkT(body)(s.withLit(name, v)))
 
@@ -131,12 +139,13 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
           AppC(thenC, Seq())
         else
           AppC(elseC, Seq())
-          
-      case If(cond, args, thenC, elseC) =>
-        if (cEvaluator(cond, args map { x => s.lEnv(x) }))
-          AppC(thenC, Seq())
-        else
-          AppC(elseC, Seq())
+
+      case If(cond, args, ct, cf) if (checkIfArgsExist(args)(s)) =>
+          if(cEvaluator(cond, args map {x => s.lEnv(x)})) {
+            AppC(ct, Seq())
+          } else {
+            AppC(cf, Seq())
+          }
 
       case LetF(funs, body) =>
         var retF = funs filter { case FunDef(name, _, _, _) => !s.dead(name) }
@@ -148,17 +157,17 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
         retC = retC map { case CntDef(a, b, c) => CntDef(a, b, shrinkT(c)(s.withEmptyInvEnvs)) }
         LetC(retC, shrinkT(body))
 
-      case id@AppF(fun, retC, args) =>
-        if (s.fEnv contains fun) {
-          val FunDef(_, b, c, d) = s.fEnv(fun)
-          shrinkT(d.subst(Substitution(b +: c, retC +: args)))
-        } else id 
+      // case id@AppF(fun, retC, args) =>
+      //   if (s.fEnv contains fun) {
+      //     val FunDef(_, b, c, d) = s.fEnv(fun)
+      //     shrinkT(d.subst(Substitution(b +: c, retC +: args)))
+      //   } else id 
 
-      case id@AppC(cnt, args) =>
-        if (s.cEnv contains cnt) {
-          val CntDef(_, a, b) = s.cEnv(cnt)
-          shrinkT(b.subst(Substitution(a, args)))
-        } else id 
+      // case id@AppC(cnt, args) =>
+      //   if (s.cEnv contains cnt) {
+      //     val CntDef(_, a, b) = s.cEnv(cnt)
+      //     shrinkT(b.subst(Substitution(a, args)))
+      //   } else id 
 
       case _ =>
         // println("Default: ")
@@ -347,6 +356,12 @@ object CPSOptimizerHigh extends CPSOptimizer(SymbolicCPSTreeModule)
     case (MiniScalaNe, Seq(BooleanLit(x),BooleanLit(y))) => x != y
     case (MiniScalaIntGe, Seq(IntLit(x),IntLit(y))) => x >= y
     case (MiniScalaIntGt, Seq(IntLit(x),IntLit(y))) => x > y
+    // case _ => false // could also use this i suppose
+    case (MiniScalaIntP,  _)       => false
+    case (MiniScalaBoolP, _)       => false
+    case (MiniScalaCharP, _)       => false
+    case (MiniScalaUnitP, _)       => false
+    case (MiniScalaBlockP, _)      => false
   }
 }
 

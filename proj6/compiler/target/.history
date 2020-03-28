@@ -89,3 +89,8 @@ test
 run ../examples/s.scala
 test
 run ../examples/s.scala
+test
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
