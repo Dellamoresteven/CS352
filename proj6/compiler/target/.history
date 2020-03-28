@@ -78,3 +78,14 @@ run "def f(x: Int): Int = if (x == 0) 0 else g(x - 1); def g(y: Int): Int = f(y)
 test
 run ../examples/s.scala
 test
+run ../examples/s.scala
+run ../examples/s.scalal
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
+run ../examples/s.scala

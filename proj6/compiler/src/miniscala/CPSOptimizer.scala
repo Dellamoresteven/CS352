@@ -86,14 +86,8 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
     def withEmptyInvEnvs =
       copy(lInvEnv = Map.empty, eInvEnv = Map.empty)
   }
-
+  
   // Shrinking optimizations
-
-  private def substitute (from : Name, to : Name)(body : Tree) : Tree =
-    (body.subst(Substitution(from, to)))
-
-  private def substitute (from : Seq[Name], to : Seq[Name])(body : Tree) : Tree =
-    (body.subst(Substitution(from, to)))
 
   private def shrink(tree: Tree): Tree = {
     def shrinkT(tree: Tree)(implicit s: State): Tree = tree match {
@@ -147,16 +141,24 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
       case LetF(funs, body) =>
         var retF = funs filter { case FunDef(name, _, _, _) => !s.dead(name) }
         retF = retF map { case FunDef(a, b, c, d) => FunDef(a, b, c, shrinkT(d)(s.withEmptyInvEnvs)) }
-        // val fInline =  retF filter { x => s.appliedOnce(x.name) }
-        // val nRetF = (retF filter { x => !s.appliedOnce(x.name) }) 
         LetF(retF, shrinkT(body)(s))
 
-      // case LetC(c, body) =>
-      //   var retC = c filter { case CntDef(name, _, _) => !s.dead(name) }
-      //   retC = retC map { case CntDef(a, b, c) => CntDef(a, b, shrinkT(c)(s.withEmptyInvEnvs)) }
-      //   // val fInline =  retFuns filter { x => s.appliedOnce(x.name) }
-      //   // val nRetFuns = (retFuns filter { x => !s.appliedOnce(x.name) }) 
-      //   LetC(retC, shrinkT(body))
+      case LetC(c, body) =>
+        var retC = c filter { case CntDef(name, _, _) => !s.dead(name) }
+        retC = retC map { case CntDef(a, b, c) => CntDef(a, b, shrinkT(c)(s.withEmptyInvEnvs)) }
+        LetC(retC, shrinkT(body))
+
+      case id@AppF(fun, retC, args) =>
+        if (s.fEnv contains fun) {
+          val FunDef(_, b, c, d) = s.fEnv(fun)
+          shrinkT(d.subst(Substitution(b +: c, retC +: args)))
+        } else id 
+
+      case id@AppC(cnt, args) =>
+        if (s.cEnv contains cnt) {
+          val CntDef(_, a, b) = s.cEnv(cnt)
+          shrinkT(b.subst(Substitution(a, args)))
+        } else id 
 
       case _ =>
         // println("Default: ")

@@ -1,24 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuite hostname="Stevens-MacBook-Pro.local" name="miniscala.test.CPSOptimizer_Greybox" tests="42" errors="0" failures="29" skipped="0" time="0.205" timestamp="2020-03-28T13:19:45">
+<testsuite hostname="Stevens-MacBook-Pro.local" name="miniscala.test.CPSOptimizer_Greybox" tests="42" errors="0" failures="42" skipped="0" time="0.212" timestamp="2020-03-28T14:07:14">
                      <properties>
       <property name="jline.esc.timeout" value="0"/><property name="jna.platform.library.path" value="/usr/lib:/usr/lib"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib"/><property name="java.vm.version" value="25.232-b09"/><property name="gopherProxySet" value="false"/><property name="java.vm.vendor" value="AdoptOpenJDK"/><property name="java.vendor.url" value="http://java.oracle.com/"/><property name="path.separator" value=":"/><property name="jna.loaded" value="true"/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="file.encoding.pkg" value="sun.io"/><property name="user.country" value="US"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="sun.os.patch.level" value="unknown"/><property name="jna.nosys" value="true"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="user.dir" value="/Users/stevendellamore/Desktop/CS352/proj6/compiler"/><property name="java.runtime.version" value="1.8.0_232-b09"/><property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/><property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/endorsed"/><property name="os.arch" value="x86_64"/><property name="java.io.tmpdir" value="/var/folders/8m/l39q357n53b8cz3pk63_gr5r0000gn/T/"/><property name="line.separator" value="
 "/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="os.name" value="Mac OS X"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="jnidispatch.path" value="/var/folders/8m/l39q357n53b8cz3pk63_gr5r0000gn/T/jna-116758906/jna1846545869795644936.tmp"/><property name="java.library.path" value="/Users/stevendellamore/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.class.version" value="52.0"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="os.version" value="10.14"/><property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="user.home" value="/Users/stevendellamore"/><property name="user.timezone" value="America/Indiana/Indianapolis"/><property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/><property name="file.encoding" value="UTF-8"/><property name="java.specification.version" value="1.8"/><property name="java.class.path" value="/usr/local/Cellar/sbt/1.3.6/libexec/bin/sbt-launch.jar"/><property name="user.name" value="stevendellamore"/><property name="jline.shutdownhook" value="false"/><property name="java.vm.specification.version" value="1.8"/><property name="sun.java.command" value="/usr/local/Cellar/sbt/1.3.6/libexec/bin/sbt-launch.jar"/><property name="java.home" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre"/><property name="sun.arch.data.model" value="64"/><property name="user.language" value="en"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/><property name="java.vm.info" value="mixed mode"/><property name="java.version" value="1.8.0_232"/><property name="java.ext.dirs" value="/Users/stevendellamore/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/><property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/classes"/><property name="java.vendor" value="AdoptOpenJDK"/><property name="file.separator" value="/"/><property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/><property name="sun.io.unicode.encoding" value="UnicodeBig"/><property name="sun.cpu.endian" value="little"/><property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="sun.cpu.isalist" value=""/>
     </properties>
-                     <testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingCharInt" time="0.022">
-                                                 
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsDivOne" time="0.002">
-                                                 <failure message="java.util.NoSuchElementException: key not found: v_6018" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6018
-	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
-	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
-	at scala.collection.immutable.List.foreach(List.scala:392)
-	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
-	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
-	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:133)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+                     <testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingCharInt" time="0.084">
+                                                 <failure message="scala.MatchError: Halt(t_3) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(t_3) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -29,7 +25,82 @@
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:277)
+	at miniscala.CPSOptimizerLow$.apply(CPSOptimizer.scala:358)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptLate(CPSOptTest.scala:70)
+	at miniscala.test.CPSOptimizer_Greybox.testConstantFoldingCharInt(CPSOptimizer_Greybox.scala:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsDivOne" time="0.002">
+                                                 <failure message="java.util.NoSuchElementException: key not found: v_6018" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6018
+	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
@@ -84,48 +155,49 @@
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningRecursiveTrick" time="0.025">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int): Int = g(x); def g(y: Int): Int = f(y); def h(z: Int) = z; h(3)
-Statistics:
-Instruction Stats
-=================
-       3  LetL
-       1  AppC
-       1  Halt
-       1  AppF
-       1  LetF
-       1  LetP
-       1  LetC
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Functions defined: 1
-Continuations defined: 1
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int): Int = g(x); def g(y: Int): Int = f(y); def h(z: Int) = z; h(3)
-Statistics:
-Instruction Stats
-=================
-       3  LetL
-       1  AppC
-       1  Halt
-       1  AppF
-       1  LetF
-       1  LetP
-       1  LetC
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Functions defined: 1
-Continuations defined: 1
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningRecursiveTrick" time="0.004">
+                                                 <failure message="scala.MatchError: Halt(c0_65) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_65) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
 	at miniscala.test.CPSOptimizer_Greybox.testFunInliningRecursiveTrick(CPSOptimizer_Greybox.scala:55)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -162,62 +234,62 @@ Continuations defined: 1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCEFunsRecursive3WithEtaReduction" time="0.01">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int): Int = if (x == 0) 0 else g(x - 1); def g(y: Int): Int = f(y); def h(z: Int) = z; f(0) + f(0) + f(0)
-Statistics:
-Instruction Stats
-=================
-      13  LetL
-       9  LetC
-       5  LetP
-       3  AppC
-       3  AppF
-       3  If
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       2  CPSSub$
-       2  CPSAdd$
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       3  CPSEq$
-
-Functions defined: 2
-Continuations defined: 9
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int): Int = if (x == 0) 0 else g(x - 1); def g(y: Int): Int = f(y); def h(z: Int) = z; f(0) + f(0) + f(0)
-Statistics:
-Instruction Stats
-=================
-      13  LetL
-       9  LetC
-       5  LetP
-       3  AppC
-       3  AppF
-       3  If
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       2  CPSSub$
-       2  CPSAdd$
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       3  CPSEq$
-
-Functions defined: 2
-Continuations defined: 9
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCEFunsRecursive3WithEtaReduction" time="0.003">
+                                                 <failure message="java.util.NoSuchElementException: key not found: x" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: x
+	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:149)
+	at miniscala.CPSOptimizer.$anonfun$shrink$4(CPSOptimizer.scala:143)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:143)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
 	at miniscala.test.CPSOptimizer_Greybox.testDCEFunsRecursive3WithEtaReduction(CPSOptimizer_Greybox.scala:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -254,25 +326,25 @@ Continuations defined: 9
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testInliningConstantFoldingDCE" time="0.004">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testInliningConstantFoldingDCE" time="0.003">
                                                  <failure message="java.util.NoSuchElementException: key not found: x" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: x
 	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
 	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
 	at scala.collection.immutable.List.foreach(List.scala:392)
 	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
 	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
 	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.$anonfun$shrink$4(CPSOptimizer.scala:149)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$4(CPSOptimizer.scala:143)
 	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
 	at scala.collection.immutable.List.foreach(List.scala:392)
 	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
 	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
 	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:149)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:143)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -283,7 +355,7 @@ Continuations defined: 9
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:277)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
@@ -334,19 +406,19 @@ Continuations defined: 9
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantPropagationSimple" time="0.001">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantPropagationSimple" time="0.002">
                                                  <failure message="java.util.NoSuchElementException: key not found: v_6032" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6032
 	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
 	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
 	at scala.collection.immutable.List.foreach(List.scala:392)
 	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
 	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
 	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:133)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -357,7 +429,7 @@ Continuations defined: 9
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:277)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
@@ -412,19 +484,19 @@ Continuations defined: 9
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulZero1" time="0.003">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulZero1" time="0.002">
                                                  <failure message="java.util.NoSuchElementException: key not found: v_6033" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6033
 	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
 	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
 	at scala.collection.immutable.List.foreach(List.scala:392)
 	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
 	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
 	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:133)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -435,7 +507,7 @@ Continuations defined: 9
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:277)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
@@ -490,19 +562,19 @@ Continuations defined: 9
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulZero2" time="0.001">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulZero2" time="0.002">
                                                  <failure message="java.util.NoSuchElementException: key not found: v_6036" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6036
 	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
 	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
 	at scala.collection.immutable.List.foreach(List.scala:392)
 	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
 	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
 	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:133)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -513,7 +585,7 @@ Continuations defined: 9
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:277)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
@@ -568,48 +640,49 @@ Continuations defined: 9
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInlining" time="0.009">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int) = x; f(1)
-Statistics:
-Instruction Stats
-=================
-       3  LetL
-       1  AppC
-       1  Halt
-       1  AppF
-       1  LetF
-       1  LetP
-       1  LetC
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Functions defined: 1
-Continuations defined: 1
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int) = x; f(1)
-Statistics:
-Instruction Stats
-=================
-       3  LetL
-       1  AppC
-       1  Halt
-       1  AppF
-       1  LetF
-       1  LetP
-       1  LetC
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Functions defined: 1
-Continuations defined: 1
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInlining" time="0.002">
+                                                 <failure message="scala.MatchError: Halt(c0_71) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_71) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
 	at miniscala.test.CPSOptimizer_Greybox.testFunInlining(CPSOptimizer_Greybox.scala:43)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -647,75 +720,203 @@ Continuations defined: 1
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingDiv" time="0.003">
-                                                 
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingMod" time="0.003">
-                                                 
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testCommonSubexpressionEliminationSimpleBlockTag" time="0.016">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-val a = new Array[Int](1); putchar(if (a.isList || a.isArray) 96 else 87)
-Statistics:
-Instruction Stats
-=================
-      19  LetL
-      16  LetC
-      16  LetP
-       7  If
-       3  AppC
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       4  CPSId$
-       2  CPSArithShiftL$
-       2  CPSOr$
-       2  CPSAnd$
-       2  CPSBlockTag$
-       2  CPSArithShiftR$
-       1  CPSByteWrite$
-       1  CPSBlockAlloc
-
-Logic Primitives Stats
-======================
-       5  CPSEq$
-       2  CPSNe$
-
-Functions defined: 0
-Continuations defined: 16
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-val a = new Array[Int](1); putchar(if (a.isList || a.isArray) 96 else 87)
-Statistics:
-Instruction Stats
-=================
-      19  LetL
-      16  LetC
-      16  LetP
-       7  If
-       3  AppC
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       4  CPSId$
-       2  CPSArithShiftL$
-       2  CPSOr$
-       2  CPSAnd$
-       2  CPSBlockTag$
-       2  CPSArithShiftR$
-       1  CPSByteWrite$
-       1  CPSBlockAlloc
-
-Logic Primitives Stats
-======================
-       5  CPSEq$
-       2  CPSNe$
-
-Functions defined: 0
-Continuations defined: 16
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                                 <failure message="scala.MatchError: Halt(t_9) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(t_9) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerLow$.apply(CPSOptimizer.scala:358)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptLate(CPSOptTest.scala:70)
+	at miniscala.test.CPSOptimizer_Greybox.testConstantFoldingDiv(CPSOptimizer_Greybox.scala:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingMod" time="0.008">
+                                                 <failure message="scala.MatchError: Halt(t_15) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(t_15) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerLow$.apply(CPSOptimizer.scala:358)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptLate(CPSOptTest.scala:70)
+	at miniscala.test.CPSOptimizer_Greybox.testConstantFoldingMod(CPSOptimizer_Greybox.scala:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testCommonSubexpressionEliminationSimpleBlockTag" time="0.004">
+                                                 <failure message="scala.MatchError: Halt(c0_74) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_74) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSBothSeq(CPSOptTest.scala:73)
 	at miniscala.test.CPSOptimizer_Greybox.testCommonSubexpressionEliminationSimpleBlockTag(CPSOptimizer_Greybox.scala:145)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -752,56 +953,47 @@ Continuations defined: 16
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingBooleanAnd" time="0.003">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-true &amp;&amp; false
-Statistics:
-Instruction Stats
-=================
-       5  LetL
-       3  LetC
-       1  AppC
-       1  Halt
-       1  LetF
-       1  LetP
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       1  CPSNe$
-
-Functions defined: 0
-Continuations defined: 3
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-true &amp;&amp; false
-Statistics:
-Instruction Stats
-=================
-       5  LetL
-       3  LetC
-       1  AppC
-       1  Halt
-       1  LetF
-       1  LetP
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       1  CPSNe$
-
-Functions defined: 0
-Continuations defined: 3
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingBooleanAnd" time="0.002">
+                                                 <failure message="scala.MatchError: Halt(c0_75) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_75) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
 	at miniscala.test.CPSOptimizer_Greybox.testConstantFoldingBooleanAnd(CPSOptimizer_Greybox.scala:95)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -838,64 +1030,48 @@ Continuations defined: 3
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testEtaReductionInfintelyRecursiveFunction" time="0.008">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int): Int = g(x); def g(x: Int): Int = f(x); if (getchar() == -1) g(3) else 0
-Statistics:
-Instruction Stats
-=================
-       6  LetL
-       5  LetP
-       3  LetC
-       1  AppC
-       1  Halt
-       1  LetF
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftL$
-       1  CPSOr$
-       1  CPSArithShiftR$
-       1  CPSSub$
-       1  CPSByteRead$
-
-Logic Primitives Stats
-======================
-       1  CPSEq$
-
-Functions defined: 2
-Continuations defined: 3
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int): Int = g(x); def g(x: Int): Int = f(x); if (getchar() == -1) g(3) else 0
-Statistics:
-Instruction Stats
-=================
-       6  LetL
-       5  LetP
-       3  LetC
-       1  AppC
-       1  Halt
-       1  LetF
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftL$
-       1  CPSOr$
-       1  CPSArithShiftR$
-       1  CPSSub$
-       1  CPSByteRead$
-
-Logic Primitives Stats
-======================
-       1  CPSEq$
-
-Functions defined: 2
-Continuations defined: 3
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testEtaReductionInfintelyRecursiveFunction" time="0.002">
+                                                 <failure message="scala.MatchError: Halt(c0_76) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_76) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
 	at miniscala.test.CPSOptimizer_Greybox.testEtaReductionInfintelyRecursiveFunction(CPSOptimizer_Greybox.scala:20)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -932,62 +1108,121 @@ Continuations defined: 3
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingIntChar" time="0.007">
-                                                 
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingIntPNot" time="0.004">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-val x = ().isUnit; ()
-Statistics:
-Instruction Stats
-=================
-       7  LetL
-       3  LetP
-       3  LetC
-       1  AppC
-       1  Halt
-       1  LetF
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSAnd$
-       1  CPSArithShiftR$
-       1  CPSId$
-
-Logic Primitives Stats
-======================
-       1  CPSEq$
-
-Functions defined: 0
-Continuations defined: 3
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-val x = ().isUnit; ()
-Statistics:
-Instruction Stats
-=================
-       7  LetL
-       3  LetP
-       3  LetC
-       1  AppC
-       1  Halt
-       1  LetF
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSAnd$
-       1  CPSArithShiftR$
-       1  CPSId$
-
-Logic Primitives Stats
-======================
-       1  CPSEq$
-
-Functions defined: 0
-Continuations defined: 3
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingIntChar" time="0.004">
+                                                 <failure message="scala.MatchError: Halt(t_19) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(t_19) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerLow$.apply(CPSOptimizer.scala:358)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptLate(CPSOptTest.scala:70)
+	at miniscala.test.CPSOptimizer_Greybox.testConstantFoldingIntChar(CPSOptimizer_Greybox.scala:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingIntPNot" time="0.011">
+                                                 <failure message="scala.MatchError: Halt(t_21) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(t_21) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerLow$.apply(CPSOptimizer.scala:358)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptLate(CPSOptTest.scala:70)
 	at miniscala.test.CPSOptimizer_Greybox.testConstantFoldingIntPNot(CPSOptimizer_Greybox.scala:62)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1024,56 +1259,47 @@ Continuations defined: 3
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldDCEContinuations" time="0.003">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-if (true) 1 else 2
-Statistics:
-Instruction Stats
-=================
-       5  LetL
-       3  LetC
-       1  AppC
-       1  Halt
-       1  LetF
-       1  LetP
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       1  CPSNe$
-
-Functions defined: 0
-Continuations defined: 3
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-if (true) 1 else 2
-Statistics:
-Instruction Stats
-=================
-       5  LetL
-       3  LetC
-       1  AppC
-       1  Halt
-       1  LetF
-       1  LetP
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       1  CPSNe$
-
-Functions defined: 0
-Continuations defined: 3
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldDCEContinuations" time="0.005">
+                                                 <failure message="scala.MatchError: Halt(c0_79) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_79) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
 	at miniscala.test.CPSOptimizer_Greybox.testConstantFoldDCEContinuations(CPSOptimizer_Greybox.scala:101)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1110,60 +1336,47 @@ Continuations defined: 3
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingIntP" time="0.011">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-val x = 1.isInt; ()
-Statistics:
-Instruction Stats
-=================
-       7  LetL
-       3  LetP
-       3  LetC
-       1  AppC
-       1  Halt
-       1  LetF
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSAnd$
-       1  CPSArithShiftR$
-       1  CPSId$
-
-Logic Primitives Stats
-======================
-       1  CPSEq$
-
-Functions defined: 0
-Continuations defined: 3
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-val x = 1.isInt; ()
-Statistics:
-Instruction Stats
-=================
-       7  LetL
-       3  LetP
-       3  LetC
-       1  AppC
-       1  Halt
-       1  LetF
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSAnd$
-       1  CPSArithShiftR$
-       1  CPSId$
-
-Logic Primitives Stats
-======================
-       1  CPSEq$
-
-Functions defined: 0
-Continuations defined: 3
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingIntP" time="0.004">
+                                                 <failure message="scala.MatchError: Halt(t_26) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(t_26) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerLow$.apply(CPSOptimizer.scala:358)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptLate(CPSOptTest.scala:70)
 	at miniscala.test.CPSOptimizer_Greybox.testConstantFoldingIntP(CPSOptimizer_Greybox.scala:59)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1201,49 +1414,124 @@ Continuations defined: 3
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingPlus" time="0.002">
-                                                 
+                                                 <failure message="scala.MatchError: Halt(t_33) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(t_33) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerLow$.apply(CPSOptimizer.scala:358)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptLate(CPSOptTest.scala:70)
+	at miniscala.test.CPSOptimizer_Greybox.testConstantFoldingPlus(CPSOptimizer_Greybox.scala:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningInsideFunctionBodyDifferentLetRecs" time="0.005">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int) = x; val o = 1; def g(x: Int) = f(x); g(o)
-Statistics:
-Instruction Stats
-=================
-       3  LetL
-       2  AppF
-       1  AppC
-       1  Halt
-       1  LetF
-       1  LetP
-       1  LetC
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Functions defined: 2
-Continuations defined: 1
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int) = x; val o = 1; def g(x: Int) = f(x); g(o)
-Statistics:
-Instruction Stats
-=================
-       3  LetL
-       2  AppF
-       1  AppC
-       1  Halt
-       1  LetF
-       1  LetP
-       1  LetC
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Functions defined: 2
-Continuations defined: 1
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                                 <failure message="scala.MatchError: Halt(c0_82) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_82) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
 	at miniscala.test.CPSOptimizer_Greybox.testFunInliningInsideFunctionBodyDifferentLetRecs(CPSOptimizer_Greybox.scala:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -1280,60 +1568,118 @@ Continuations defined: 1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInlingAndDCE" time="0.001">
-                                                 
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingTypePrims" time="0.003">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-true.isBool
-Statistics:
-Instruction Stats
-=================
-       6  LetL
-       3  LetC
-       2  LetP
-       1  AppC
-       1  Halt
-       1  LetF
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSAnd$
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       1  CPSEq$
-
-Functions defined: 0
-Continuations defined: 3
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-true.isBool
-Statistics:
-Instruction Stats
-=================
-       6  LetL
-       3  LetC
-       2  LetP
-       1  AppC
-       1  Halt
-       1  LetF
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSAnd$
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       1  CPSEq$
-
-Functions defined: 0
-Continuations defined: 3
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInlingAndDCE" time="0.002">
+                                                 <failure message="scala.MatchError: Halt(c0_83) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_83) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
+	at miniscala.test.CPSOptimizer_Greybox.testFunInlingAndDCE(CPSOptimizer_Greybox.scala:152)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingTypePrims" time="0.002">
+                                                 <failure message="scala.MatchError: Halt(c0_84) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_84) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
 	at miniscala.test.CPSOptimizer_Greybox.$anonfun$testConstantFoldingTypePrims$2(CPSOptimizer_Greybox.scala:91)
 	at miniscala.test.CPSOptimizer_Greybox.$anonfun$testConstantFoldingTypePrims$2$adapted(CPSOptimizer_Greybox.scala:87)
@@ -1377,30 +1723,11 @@ Continuations defined: 3
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCEFunsRecursive1" time="0.002">
-                                                 
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCEFunsRecursive2" time="0.002">
-                                                 
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantCapturingInFunction1" time="0.003">
-                                                 <failure message="java.util.NoSuchElementException: key not found: x" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: x
-	at scala.collection.immutable.Map$Map3.apply(Map.scala:170)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
-	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
-	at scala.collection.immutable.List.foreach(List.scala:392)
-	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
-	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
-	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.$anonfun$shrink$4(CPSOptimizer.scala:149)
-	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
-	at scala.collection.immutable.List.foreach(List.scala:392)
-	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
-	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
-	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:149)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+                                                 <failure message="scala.MatchError: Halt(c0_85) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_85) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -1411,7 +1738,164 @@ Continuations defined: 3
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:277)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
+	at miniscala.test.CPSOptimizer_Greybox.testDCEFunsRecursive1(CPSOptimizer_Greybox.scala:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCEFunsRecursive2" time="0.002">
+                                                 <failure message="scala.MatchError: Halt(c0_86) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_86) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
+	at miniscala.test.CPSOptimizer_Greybox.testDCEFunsRecursive2(CPSOptimizer_Greybox.scala:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantCapturingInFunction1" time="0.003">
+                                                 <failure message="java.util.NoSuchElementException: key not found: x" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: x
+	at scala.collection.immutable.Map$Map3.apply(Map.scala:170)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.$anonfun$shrink$4(CPSOptimizer.scala:143)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:143)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
@@ -1466,25 +1950,25 @@ Continuations defined: 3
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantCapturingInFunction2" time="0.001">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantCapturingInFunction2" time="0.003">
                                                  <failure message="java.util.NoSuchElementException: key not found: x" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: x
 	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
 	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
 	at scala.collection.immutable.List.foreach(List.scala:392)
 	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
 	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
 	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.$anonfun$shrink$4(CPSOptimizer.scala:149)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.$anonfun$shrink$4(CPSOptimizer.scala:143)
 	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
 	at scala.collection.immutable.List.foreach(List.scala:392)
 	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
 	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
 	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:149)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:143)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -1495,7 +1979,7 @@ Continuations defined: 3
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:277)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
@@ -1554,15 +2038,15 @@ Continuations defined: 3
                                                  <failure message="java.util.NoSuchElementException: key not found: v_6073" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6073
 	at scala.collection.immutable.Map$EmptyMap$.apply(Map.scala:101)
 	at scala.collection.immutable.Map$EmptyMap$.apply(Map.scala:99)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
 	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
 	at scala.collection.immutable.List.foreach(List.scala:392)
 	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
 	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
 	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:133)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -1573,7 +2057,7 @@ Continuations defined: 3
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:277)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
@@ -1628,23 +2112,19 @@ Continuations defined: 3
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingMinus" time="0.001">
-                                                 
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingTimes" time="0.004">
-                                                 
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsAddZero1" time="0.003">
-                                                 <failure message="java.util.NoSuchElementException: key not found: v_6078" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6078
-	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
-	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
-	at scala.collection.immutable.List.foreach(List.scala:392)
-	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
-	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
-	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:133)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingMinus" time="0.003">
+                                                 <failure message="scala.MatchError: Halt(t_37) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(t_37) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -1655,7 +2135,159 @@ Continuations defined: 3
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:277)
+	at miniscala.CPSOptimizerLow$.apply(CPSOptimizer.scala:358)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptLate(CPSOptTest.scala:70)
+	at miniscala.test.CPSOptimizer_Greybox.testConstantFoldingMinus(CPSOptimizer_Greybox.scala:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingTimes" time="0.005">
+                                                 <failure message="scala.MatchError: Halt(t_43) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(t_43) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerLow$.apply(CPSOptimizer.scala:358)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptLate(CPSOptTest.scala:70)
+	at miniscala.test.CPSOptimizer_Greybox.testConstantFoldingTimes(CPSOptimizer_Greybox.scala:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsAddZero1" time="0.003">
+                                                 <failure message="java.util.NoSuchElementException: key not found: v_6078" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6078
+	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
@@ -1710,19 +2342,19 @@ Continuations defined: 3
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsAddZero2" time="0.001">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsAddZero2" time="0.004">
                                                  <failure message="java.util.NoSuchElementException: key not found: v_6081" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6081
 	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
 	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
 	at scala.collection.immutable.List.foreach(List.scala:392)
 	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
 	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
 	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:133)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -1733,7 +2365,7 @@ Continuations defined: 3
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:277)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
@@ -1789,23 +2421,34 @@ Continuations defined: 3
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testCommonSubexpressionEliminationComplexBlockTag" time="0.007">
-                                                 <failure message="java.util.NoSuchElementException: key not found: t_761" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: t_761
-	at scala.collection.immutable.Map$Map4.apply(Map.scala:207)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
+                                                 <failure message="java.util.NoSuchElementException: key not found: v_6089" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6089
+	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
 	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
 	at scala.collection.immutable.List.foreach(List.scala:392)
 	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
 	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
 	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:133)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:133)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:121)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:152)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -1816,7 +2459,10 @@ Continuations defined: 3
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerLow$.apply(CPSOptimizer.scala:351)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
@@ -1868,21 +2514,13 @@ Continuations defined: 3
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCELetPrimitive" time="0.002">
-                                                 
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulOne1" time="0.002">
-                                                 <failure message="java.util.NoSuchElementException: key not found: v_6096" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6096
-	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
-	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
-	at scala.collection.immutable.List.foreach(List.scala:392)
-	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
-	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
-	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:133)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCELetPrimitive" time="0.004">
+                                                 <failure message="scala.MatchError: Halt(c0_95) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_95) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:115)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -1893,7 +2531,85 @@ Continuations defined: 3
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:277)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
+	at miniscala.test.CPSOptimizer_Greybox.testDCELetPrimitive(CPSOptimizer_Greybox.scala:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulOne1" time="0.001">
+                                                 <failure message="java.util.NoSuchElementException: key not found: v_6096" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6096
+	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
@@ -1948,19 +2664,19 @@ Continuations defined: 3
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulOne2" time="0.006">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulOne2" time="0.002">
                                                  <failure message="java.util.NoSuchElementException: key not found: v_6099" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6099
 	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
 	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
 	at scala.collection.immutable.List.foreach(List.scala:392)
 	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
 	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
 	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:133)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -1971,7 +2687,7 @@ Continuations defined: 3
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:277)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
@@ -2026,58 +2742,63 @@ Continuations defined: 3
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testEtaReduction" time="0.006">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-
-      def f(x: Int) = x; def g(y: Int) = f(y); def h(z: Int) = g(z);
-      g(1) + g(2) + g(3) + h(1) + h(2) + h(3) + f(1) + f(2) + f(3)
-    
-Statistics:
-Instruction Stats
-=================
-      19  LetL
-      18  AppF
-      17  LetP
-       9  AppC
-       9  LetC
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       8  CPSSub$
-       8  CPSAdd$
-       1  CPSArithShiftR$
-
-Functions defined: 3
-Continuations defined: 9
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-
-      def f(x: Int) = x; def g(y: Int) = f(y); def h(z: Int) = g(z);
-      g(1) + g(2) + g(3) + h(1) + h(2) + h(3) + f(1) + f(2) + f(3)
-    
-Statistics:
-Instruction Stats
-=================
-      19  LetL
-      18  AppF
-      17  LetP
-       9  AppC
-       9  LetC
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       8  CPSSub$
-       8  CPSAdd$
-       1  CPSArithShiftR$
-
-Functions defined: 3
-Continuations defined: 9
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testEtaReduction" time="0.004">
+                                                 <failure message="java.util.NoSuchElementException: key not found: r_1412" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: r_1412
+	at scala.collection.immutable.Map$Map2.apply(Map.scala:138)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
 	at miniscala.test.CPSOptimizer_Greybox.testEtaReduction(CPSOptimizer_Greybox.scala:17)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2115,51 +2836,190 @@ Continuations defined: 9
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCELetLiteral" time="0.001">
-                                                 
+                                                 <failure message="scala.MatchError: Halt(c0_99) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_99) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSBothSeq(CPSOptTest.scala:73)
+	at miniscala.test.CPSOptimizer_Greybox.testDCELetLiteral(CPSOptimizer_Greybox.scala:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCEFunsSimple" time="0.002">
-                                                 
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningInsideFunctionBodySameLetRec" time="0.003">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int) = x; def g(x: Int) = f(x); g(1)
-Statistics:
-Instruction Stats
-=================
-       3  LetL
-       2  AppF
-       1  AppC
-       1  Halt
-       1  LetF
-       1  LetP
-       1  LetC
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Functions defined: 2
-Continuations defined: 1
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int) = x; def g(x: Int) = f(x); g(1)
-Statistics:
-Instruction Stats
-=================
-       3  LetL
-       2  AppF
-       1  AppC
-       1  Halt
-       1  LetF
-       1  LetP
-       1  LetC
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Functions defined: 2
-Continuations defined: 1
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                                 <failure message="scala.MatchError: Halt(c0_100) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_100) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
+	at miniscala.test.CPSOptimizer_Greybox.testDCEFunsSimple(CPSOptimizer_Greybox.scala:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningInsideFunctionBodySameLetRec" time="0.002">
+                                                 <failure message="scala.MatchError: Halt(c0_101) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_101) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:144)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
 	at miniscala.test.CPSOptimizer_Greybox.testFunInliningInsideFunctionBodySameLetRec(CPSOptimizer_Greybox.scala:46)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2196,56 +3056,47 @@ Continuations defined: 1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingBooleanOr" time="0.003">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-true || false
-Statistics:
-Instruction Stats
-=================
-       5  LetL
-       3  LetC
-       1  AppC
-       1  Halt
-       1  LetF
-       1  LetP
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       1  CPSNe$
-
-Functions defined: 0
-Continuations defined: 3
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-true || false
-Statistics:
-Instruction Stats
-=================
-       5  LetL
-       3  LetC
-       1  AppC
-       1  Halt
-       1  LetF
-       1  LetP
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       1  CPSNe$
-
-Functions defined: 0
-Continuations defined: 3
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingBooleanOr" time="0.002">
+                                                 <failure message="scala.MatchError: Halt(c0_102) (of class miniscala.CPSTreeModule$Halt)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: scala.MatchError: Halt(c0_102) (of class miniscala.CPSTreeModule$Halt)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:93)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
 	at miniscala.test.CPSOptimizer_Greybox.testConstantFoldingBooleanOr(CPSOptimizer_Greybox.scala:98)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2282,58 +3133,62 @@ Continuations defined: 3
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningCrasher" time="0.008">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int): Int = if (x == 0) 0 else g(x - 1); def g(y: Int): Int = f(y); def h(z: Int) = z; f(0)
-Statistics:
-Instruction Stats
-=================
-       5  LetL
-       3  LetC
-       1  AppC
-       1  Halt
-       1  AppF
-       1  LetF
-       1  LetP
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       1  CPSEq$
-
-Functions defined: 2
-Continuations defined: 3
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int): Int = if (x == 0) 0 else g(x - 1); def g(y: Int): Int = f(y); def h(z: Int) = z; f(0)
-Statistics:
-Instruction Stats
-=================
-       5  LetL
-       3  LetC
-       1  AppC
-       1  Halt
-       1  AppF
-       1  LetF
-       1  LetP
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       1  CPSEq$
-
-Functions defined: 2
-Continuations defined: 3
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningCrasher" time="0.001">
+                                                 <failure message="java.util.NoSuchElementException: key not found: x" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: x
+	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.$anonfun$shrink$6(CPSOptimizer.scala:148)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:148)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:149)
+	at miniscala.CPSOptimizer.$anonfun$shrink$4(CPSOptimizer.scala:143)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:143)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
+	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:9)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
 	at miniscala.test.CPSOptimizer_Greybox.testFunInliningCrasher(CPSOptimizer_Greybox.scala:52)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -2370,19 +3225,19 @@ Continuations defined: 3
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsSubZero" time="0.001">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsSubZero" time="0.002">
                                                  <failure message="java.util.NoSuchElementException: key not found: v_6112" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: v_6112
 	at scala.collection.immutable.Map$Map1.apply(Map.scala:114)
-	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:120)
+	at miniscala.CPSOptimizer.$anonfun$shrink$1(CPSOptimizer.scala:114)
 	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
 	at scala.collection.immutable.List.foreach(List.scala:392)
 	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
 	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
 	at scala.collection.immutable.List.map(List.scala:298)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:120)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:108)
-	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:133)
-	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:166)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:114)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:102)
+	at miniscala.CPSOptimizer.shrinkT$1(CPSOptimizer.scala:127)
+	at miniscala.CPSOptimizer.shrink(CPSOptimizer.scala:168)
 	at miniscala.CPSOptimizer.$anonfun$apply$1(CPSOptimizer.scala:10)
 	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
 	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
@@ -2393,7 +3248,7 @@ Continuations defined: 3
 	at miniscala.package$.fixedPoint(package.scala:4)
 	at miniscala.package$.fixedPoint(package.scala:9)
 	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:10)
-	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:277)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:279)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
 	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
