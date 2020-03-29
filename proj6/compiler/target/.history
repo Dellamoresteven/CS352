@@ -94,3 +94,20 @@ run ../examples/s.scala
 test
 run ../examples/s.scala
 test
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
+`run `def f(x: Int) = x; def g(y: Boolean, z: Int) = f(z); g`
+run "def f(x: Int) = x; def g(y: Boolean, z: Int) = f(z); g"
+test
+run "def f(x: Int):Int = x; f(1); putchar(65); 2"
+test

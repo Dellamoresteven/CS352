@@ -1,3 +1,4 @@
+
 package miniscala
 
 import scala.collection.mutable.{ Map => MutableMap }
@@ -113,9 +114,28 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
         println("LetP ID Name: " + name + " : " + arg(0))
         shrinkT(body.subst(Substitution(name, arg(0))))
 
-      // case LetP(name, prim, Seq(x,y), body) if (x == y && sameArgReduce.isDefinedAt(prim)) =>
-      //   val value = sameArgReduce(prim)
-      //   LetL(name, value, shrinkT(body)(s.withLit(name, value)))
+      // neutral left
+      case LetP(name, operation, Seq(x, y), body) if s.lEnv.get(x).exists(arg => leftNeutral(arg -> operation)) =>
+        // println("WHERE")
+        shrinkT(body.subst(Substitution(name, y)))
+
+      // neutral right
+      case LetP(name, operation, Seq(x, y), body) if s.lEnv.get(y).exists(arg => rightNeutral(operation -> arg)) =>
+        // println("WHERE")
+        shrinkT(body.subst(Substitution(name, x)))
+
+      // Absorbing left
+      case LetP(name, operation, Seq(x, y), body) if s.lEnv.get(x).exists(arg => leftAbsorbing(arg -> operation)) =>
+        shrinkT(body.subst(Substitution(name, x)))
+
+      // Absorbing right
+      case LetP(name, operation, Seq(x, y), body) if s.lEnv.get(y).exists(arg => rightAbsorbing(operation -> arg)) =>
+        shrinkT(body.subst(Substitution(name, y)))
+
+      //https://www.scala-lang.org/api/2.9.3/scala/PartialFunction.html
+      case LetP(name, operation, Seq(x,y), body) if (x == y && sameArgReduce.isDefinedAt(operation)) =>
+        val v = sameArgReduce(operation)
+        LetL(name, v, shrinkT(body)(s.withLit(name, v)))
 
       /* run "val x = 5; val y = 3; val z = x + y; putchar(z+65); 4" */
       case LetP(name, operation, args, body) if (checkIfArgsExist(args)(s)) && !impure(operation) && !unstable(operation) =>
@@ -147,27 +167,45 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
             AppC(cf, Seq())
           }
 
+      // default
       case LetF(funs, body) =>
-        var retF = funs filter { case FunDef(name, _, _, _) => !s.dead(name) }
-        retF = retF map { case FunDef(a, b, c, d) => FunDef(a, b, c, shrinkT(d)(s.withEmptyInvEnvs)) }
-        LetF(retF, shrinkT(body)(s))
+        if (funs.exists(f => s.dead(f.name))) { // remove dead stuff
+          var retF = funs filter { case FunDef(name, _, _, _) => !s.dead(name) }
+          shrinkT(LetF(retF, body))
+        } else if(funs.exists(f => s.appliedOnce(f.name))) { // check if the function is called ONCE
+          var inlined = funs filter { case FunDef(name, _, _, _) => s.appliedOnce(name) }
+          var whyDoesThisNotWork = funs filter { case FunDef(name, _, _, _) => !s.appliedOnce(name) }
+          // println("\n\n\nINLINE\n" + inlined)
+          // println("\n\n\nNOPE" + whyDoesThisNotWork)
+          val st = s.withEmptyInvEnvs.withFuns(inlined)
+          shrinkT(LetF(whyDoesThisNotWork, body))(st)
+        } else { // if the function is not dead and is called more then once
+          val optimizedFunctions = 
+            funs map { case FunDef(name, r, a, b) => FunDef(name, r, a, shrinkT(b)) }
+          LetF(optimizedFunctions, shrinkT(body))
+        }
 
       case LetC(c, body) =>
         var retC = c filter { case CntDef(name, _, _) => !s.dead(name) }
         retC = retC map { case CntDef(a, b, c) => CntDef(a, b, shrinkT(c)(s.withEmptyInvEnvs)) }
         LetC(retC, shrinkT(body))
 
-      // case id@AppF(fun, retC, args) =>
-      //   if (s.fEnv contains fun) {
-      //     val FunDef(_, b, c, d) = s.fEnv(fun)
-      //     shrinkT(d.subst(Substitution(b +: c, retC +: args)))
-      //   } else id 
+      case AppF(fun, retC, args) =>
+        if (s.fEnv contains fun) {
+          val FunDef(_, b, c, d) = s.fEnv(fun)
+          shrinkT(d.subst(Substitution(b +: c, retC +: args)))
+          // shrinkT(d)(s.withSubst(b +: c, retC +: args))
+        } else {
+          tree 
+        }
 
-      // case id@AppC(cnt, args) =>
-      //   if (s.cEnv contains cnt) {
-      //     val CntDef(_, a, b) = s.cEnv(cnt)
-      //     shrinkT(b.subst(Substitution(a, args)))
-      //   } else id 
+      case AppC(cnt, args) =>
+        if (s.cEnv contains cnt) {
+          val CntDef(_, a, b) = s.cEnv(cnt)
+          shrinkT(b.subst(Substitution(a, args)))
+        } else {
+          tree 
+        }
 
       case _ =>
         // println("Default: ")
@@ -306,17 +344,38 @@ object CPSOptimizerHigh extends CPSOptimizer(SymbolicCPSTreeModule)
   protected val identity: ValuePrimitive = MiniScalaId
 
   protected val leftNeutral: Set[(Literal, ValuePrimitive)] =
-    Set() // TODO
+    Set((IntLit(0), MiniScalaIntAdd), 
+    (IntLit(1), MiniScalaIntMul), 
+    (IntLit(~0), MiniScalaIntBitwiseAnd), 
+    (IntLit(0), MiniScalaIntBitwiseOr), 
+    (IntLit(0), MiniScalaIntBitwiseXOr))
+
   protected val rightNeutral: Set[(ValuePrimitive, Literal)] =
-    Set() // TODO
+    Set((MiniScalaIntAdd, IntLit(0)), 
+    (MiniScalaIntSub, IntLit(0)), 
+    (MiniScalaIntMul, IntLit(1)), 
+    (MiniScalaIntDiv, IntLit(1)), 
+    (MiniScalaIntArithShiftLeft, IntLit(0)), 
+    (MiniScalaIntArithShiftRight, IntLit(0)), 
+    (MiniScalaIntBitwiseAnd, IntLit(~0)), 
+    (MiniScalaIntBitwiseOr, IntLit(0)), 
+    (MiniScalaIntBitwiseXOr, IntLit(0)))
 
   protected val leftAbsorbing: Set[(Literal, ValuePrimitive)] =
-    Set() // TODO
+    Set((IntLit(0), MiniScalaIntMul), 
+    (IntLit(0), MiniScalaIntBitwiseAnd), 
+    (IntLit(~0), MiniScalaIntBitwiseOr))
+
   protected val rightAbsorbing: Set[(ValuePrimitive, Literal)] =
-    Set() // TODO
+    Set((MiniScalaIntMul, IntLit(0)), 
+    (MiniScalaIntBitwiseAnd, IntLit(0)), 
+    (MiniScalaIntBitwiseOr, IntLit(~0)))
 
   protected val sameArgReduce: PartialFunction[ValuePrimitive, Literal] =
-    Map() // TODO
+    Map(MiniScalaIntSub -> IntLit(0), 
+    MiniScalaIntDiv -> IntLit(1), 
+    MiniScalaIntMod -> IntLit(0), 
+    MiniScalaIntBitwiseOr -> IntLit(~0))
 
   protected val sameArgReduceC: PartialFunction[TestPrimitive, Boolean] = {
     case MiniScalaIntLe | MiniScalaIntGe | MiniScalaEq => true
@@ -388,9 +447,15 @@ object CPSOptimizerLow extends CPSOptimizer(SymbolicCPSTreeModuleLow)
   protected val leftNeutral: Set[(Literal, ValuePrimitive)] =
     Set((0, CPSAdd), (1, CPSMul), (~0, CPSAnd), (0, CPSOr), (0, CPSXOr))
   protected val rightNeutral: Set[(ValuePrimitive, Literal)] =
-    Set((CPSAdd, 0), (CPSSub, 0), (CPSMul, 1), (CPSDiv, 1),
-        (CPSArithShiftL, 0), (CPSArithShiftR, 0),
-        (CPSAnd, ~0), (CPSOr, 0), (CPSXOr, 0))
+    Set((CPSAdd, 0), 
+    (CPSSub, 0), 
+    (CPSMul, 1), 
+    (CPSDiv, 1),
+    (CPSArithShiftL, 0), 
+    (CPSArithShiftR, 0),
+    (CPSAnd, ~0), 
+    (CPSOr, 0), 
+    (CPSXOr, 0))
 
   protected val leftAbsorbing: Set[(Literal, ValuePrimitive)] =
     Set((0, CPSMul), (0, CPSAnd), (~0, CPSOr))

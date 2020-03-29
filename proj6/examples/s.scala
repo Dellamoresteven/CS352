@@ -20,8 +20,12 @@
 // f(0)
 
 
-def nl() = putchar(10);
-putchar((if (0.isInt) 'O' else 'K').toInt);
-putchar((if ('K'.isInt) 'O' else 'K').toInt);
-nl();
-5
+// def nl() = putchar(10);
+// putchar((if (0.isInt) 'O' else 'K').toInt);
+// putchar((if ('K'.isInt) 'O' else 'K').toInt);
+// nl();
+// 5
+
+val u = getchar(); 
+putchar(0 + u);
+2
