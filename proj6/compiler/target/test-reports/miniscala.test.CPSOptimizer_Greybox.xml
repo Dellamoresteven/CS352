@@ -1,237 +1,113 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuite hostname="Stevens-MacBook-Pro.local" name="miniscala.test.CPSOptimizer_Greybox" tests="42" errors="0" failures="8" skipped="0" time="0.289" timestamp="2020-03-29T14:48:30">
+<testsuite hostname="Stevens-MacBook-Pro.local" name="miniscala.test.CPSOptimizer_Greybox" tests="42" errors="0" failures="4" skipped="0" time="0.213" timestamp="2020-03-31T14:37:32">
                      <properties>
-      <property name="jline.esc.timeout" value="0"/><property name="jna.platform.library.path" value="/usr/lib:/usr/lib"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib"/><property name="java.vm.version" value="25.232-b09"/><property name="gopherProxySet" value="false"/><property name="java.vm.vendor" value="AdoptOpenJDK"/><property name="java.vendor.url" value="http://java.oracle.com/"/><property name="path.separator" value=":"/><property name="jna.loaded" value="true"/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="file.encoding.pkg" value="sun.io"/><property name="user.country" value="US"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="sun.os.patch.level" value="unknown"/><property name="jna.nosys" value="true"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="user.dir" value="/Users/stevendellamore/Desktop/CS352/proj6/compiler"/><property name="java.runtime.version" value="1.8.0_232-b09"/><property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/><property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/endorsed"/><property name="os.arch" value="x86_64"/><property name="java.io.tmpdir" value="/var/folders/8m/l39q357n53b8cz3pk63_gr5r0000gn/T/"/><property name="line.separator" value="
-"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="os.name" value="Mac OS X"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="jnidispatch.path" value="/var/folders/8m/l39q357n53b8cz3pk63_gr5r0000gn/T/jna-116758906/jna1846545869795644936.tmp"/><property name="java.library.path" value="/Users/stevendellamore/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.class.version" value="52.0"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="os.version" value="10.14"/><property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="user.home" value="/Users/stevendellamore"/><property name="user.timezone" value="America/Indiana/Indianapolis"/><property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/><property name="file.encoding" value="UTF-8"/><property name="java.specification.version" value="1.8"/><property name="java.class.path" value="/usr/local/Cellar/sbt/1.3.6/libexec/bin/sbt-launch.jar"/><property name="user.name" value="stevendellamore"/><property name="jline.shutdownhook" value="false"/><property name="java.vm.specification.version" value="1.8"/><property name="sun.java.command" value="/usr/local/Cellar/sbt/1.3.6/libexec/bin/sbt-launch.jar"/><property name="java.home" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre"/><property name="sun.arch.data.model" value="64"/><property name="user.language" value="en"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/><property name="java.vm.info" value="mixed mode"/><property name="java.version" value="1.8.0_232"/><property name="java.ext.dirs" value="/Users/stevendellamore/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/><property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/classes"/><property name="java.vendor" value="AdoptOpenJDK"/><property name="file.separator" value="/"/><property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/><property name="sun.io.unicode.encoding" value="UnicodeBig"/><property name="sun.cpu.endian" value="little"/><property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="sun.cpu.isalist" value=""/>
+      <property name="java.specification.version" value="13"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="sun.arch.data.model" value="64"/><property name="java.vendor.url" value="https://java.oracle.com/"/><property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/openjdk-13.0.1.jdk/Contents/Home/lib"/><property name="sun.java.command" value="/usr/local/Cellar/sbt/1.3.6/libexec/bin/sbt-launch.jar"/><property name="jdk.debug" value="release"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2019-10-15"/><property name="java.home" value="/Library/Java/JavaVirtualMachines/openjdk-13.0.1.jdk/Contents/Home"/><property name="file.separator" value="/"/><property name="java.vm.compressedOopsMode" value="Zero based"/><property name="line.separator" value="
+"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="13.0.1+9"/><property name="user.name" value="stevendellamore"/><property name="file.encoding" value="UTF-8"/><property name="jnidispatch.path" value="/var/folders/8m/l39q357n53b8cz3pk63_gr5r0000gn/T/jna-116758906/jna8752082334696779703.tmp"/><property name="jna.loaded" value="true"/><property name="java.io.tmpdir" value="/var/folders/8m/l39q357n53b8cz3pk63_gr5r0000gn/T/"/><property name="java.version" value="13.0.1"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="java.library.path" value="/Users/stevendellamore/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/><property name="java.vendor" value="Oracle Corporation"/><property name="scala.ext.dirs" value="/Users/stevendellamore/.sbt/0.13/java9-rt-ext-oracle_corporation_13_0_1"/><property name="sun.io.unicode.encoding" value="UnicodeBig"/><property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="java.class.path" value="/usr/local/Cellar/sbt/1.3.6/libexec/bin/sbt-launch.jar"/><property name="java.vm.vendor" value="Oracle Corporation"/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="America/Indiana/Indianapolis"/><property name="java.vm.specification.version" value="13"/><property name="os.name" value="Mac OS X"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="US"/><property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="/Users/stevendellamore"/><property name="user.language" value="en"/><property name="jline.esc.timeout" value="0"/><property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="path.separator" value=":"/><property name="os.version" value="10.14"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="jna.platform.library.path" value="/usr/lib:/usr/lib"/><property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/><property name="user.dir" value="/Users/stevendellamore/Desktop/CS352/proj6/compiler"/><property name="os.arch" value="x86_64"/><property name="java.vm.info" value="mixed mode, sharing"/><property name="java.vm.version" value="13.0.1+9"/><property name="java.class.version" value="57.0"/>
     </properties>
-                     <testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingCharInt" time="0.028">
+                     <testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingCharInt" time="0.01">
                                                  
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsDivOne" time="0.006">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningRecursiveTrick" time="0.005">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningRecursiveTrick" time="0.003">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCEFunsRecursive3WithEtaReduction" time="0.005">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCEFunsRecursive3WithEtaReduction" time="0.003">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testInliningConstantFoldingDCE" time="0.023">
-                                                 <failure message="java.lang.AssertionError: assertion failed: 
-Output is different: (whitespace is always ignored)
-source: 
-def printChar(c: Int) = putchar(c);
-           def functionCompose(f: Int =&gt; Int, g: Int =&gt; Int) = (x: Int) =&gt; f(g(x));
-           def plus(x: Int, y: Int) = x + y;
-           def succ(x: Int) = x + 1;
-           def twice(x: Int) = x + x;
-           printChar(functionCompose(succ,twice)(39));
-           printChar(functionCompose(succ,succ)(73));
-           printChar(functionCompose(twice,succ)(4))
-output: 
-deff v$1(v$6, v$7) = {
-  vall v$8 = 1;
-  valp v$9 = v$7 &gt;&gt; v$8;
-  valp v$10 = byte-write(v$9);
-  vall v$11 = 2;
-  v$6(v$11)
-}; deff v$2(v$12, v$13, v$14) = {
-  vall v$15 = 3;
-  valp v$16 = block-alloc-202(v$15);
-  vall v$17 = 0;
-  valp v$18 = block-set(v$16, v$17, v$3);
-  vall v$19 = 1;
-  valp v$20 = block-set(v$16, v$19, v$14);
-  vall v$21 = 2;
-  valp v$22 = block-set(v$16, v$21, v$13);
-  v$12(v$16)
-}; deff v$3(v$23, v$24, v$25) = {
-  vall v$26 = 1;
-  valp v$27 = block-get(v$24, v$26);
-  vall v$28 = 2;
-  valp v$29 = block-get(v$24, v$28);
-  defc v$30(v$31) = {
-    vall v$32 = 0;
-    valp v$33 = block-get(v$29, v$32);
-    v$33(v$23, v$29, v$31)
-  };
-  vall v$34 = 0;
-  valp v$35 = block-get(v$27, v$34);
-  v$35(v$30, v$27, v$25)
-}; deff v$4(v$36, v$37, v$38) = {
-  vall v$39 = 3;
-  valp v$40 = v$38 + v$39;
-  vall v$41 = 1;
-  valp v$42 = v$40 - v$41;
-  v$36(v$42)
-}; deff v$5(v$43, v$44, v$45) = {
-  valp v$46 = v$45 + v$45;
-  vall v$47 = 1;
-  valp v$48 = v$46 - v$47;
-  v$43(v$48)
-};
-vall v$49 = 1;
-valp v$50 = block-alloc-202(v$49);
-vall v$51 = 1;
-valp v$52 = block-alloc-202(v$51);
-vall v$53 = 0;
-valp v$54 = block-set(v$50, v$53, v$4);
-vall v$55 = 0;
-valp v$56 = block-set(v$52, v$55, v$5);
-defc v$57(v$58) = {
-  vall v$59 = 79;
-  defc v$60(v$61) = {
-    defc v$62(v$63) = {
-      defc v$64(v$65) = {
-        vall v$66 = 147;
-        defc v$67(v$68) = {
-          defc v$69(v$70) = {
-            defc v$71(v$72) = {
-              vall v$73 = 9;
-              defc v$74(v$75) = {
-                defc v$76(v$77) = { vall v$78 = 0; halt(v$78) };
-                v$1(v$76, v$75)
-              };
-              vall v$79 = 0;
-              valp v$80 = block-get(v$72, v$79);
-              v$80(v$74, v$72, v$73)
-            };
-            v$2(v$71, v$52, v$50)
-          };
-          v$1(v$69, v$68)
-        };
-        vall v$81 = 0;
-        valp v$82 = block-get(v$65, v$81);
-        v$82(v$67, v$65, v$66)
-      };
-      v$2(v$64, v$50, v$50)
-    };
-    v$1(v$62, v$61)
-  };
-  vall v$83 = 0;
-  valp v$84 = block-get(v$58, v$83);
-  v$84(v$60, v$58, v$59)
-};
-v$2(v$57, v$50, v$52)
-expected output: 
-vall v$1 = 79;
-           valp v$2 = byte-write(v$1);
-           vall v$3 = 75;
-           valp v$4 = byte-write(v$3);
-           vall v$5 = 10;
-           valp v$6 = byte-write(v$5);
-           vall v$7 = 0;
-           halt(v$7)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: 
-Output is different: (whitespace is always ignored)
-source: 
-def printChar(c: Int) = putchar(c);
-           def functionCompose(f: Int =&gt; Int, g: Int =&gt; Int) = (x: Int) =&gt; f(g(x));
-           def plus(x: Int, y: Int) = x + y;
-           def succ(x: Int) = x + 1;
-           def twice(x: Int) = x + x;
-           printChar(functionCompose(succ,twice)(39));
-           printChar(functionCompose(succ,succ)(73));
-           printChar(functionCompose(twice,succ)(4))
-output: 
-deff v$1(v$6, v$7) = {
-  vall v$8 = 1;
-  valp v$9 = v$7 &gt;&gt; v$8;
-  valp v$10 = byte-write(v$9);
-  vall v$11 = 2;
-  v$6(v$11)
-}; deff v$2(v$12, v$13, v$14) = {
-  vall v$15 = 3;
-  valp v$16 = block-alloc-202(v$15);
-  vall v$17 = 0;
-  valp v$18 = block-set(v$16, v$17, v$3);
-  vall v$19 = 1;
-  valp v$20 = block-set(v$16, v$19, v$14);
-  vall v$21 = 2;
-  valp v$22 = block-set(v$16, v$21, v$13);
-  v$12(v$16)
-}; deff v$3(v$23, v$24, v$25) = {
-  vall v$26 = 1;
-  valp v$27 = block-get(v$24, v$26);
-  vall v$28 = 2;
-  valp v$29 = block-get(v$24, v$28);
-  defc v$30(v$31) = {
-    vall v$32 = 0;
-    valp v$33 = block-get(v$29, v$32);
-    v$33(v$23, v$29, v$31)
-  };
-  vall v$34 = 0;
-  valp v$35 = block-get(v$27, v$34);
-  v$35(v$30, v$27, v$25)
-}; deff v$4(v$36, v$37, v$38) = {
-  vall v$39 = 3;
-  valp v$40 = v$38 + v$39;
-  vall v$41 = 1;
-  valp v$42 = v$40 - v$41;
-  v$36(v$42)
-}; deff v$5(v$43, v$44, v$45) = {
-  valp v$46 = v$45 + v$45;
-  vall v$47 = 1;
-  valp v$48 = v$46 - v$47;
-  v$43(v$48)
-};
-vall v$49 = 1;
-valp v$50 = block-alloc-202(v$49);
-vall v$51 = 1;
-valp v$52 = block-alloc-202(v$51);
-vall v$53 = 0;
-valp v$54 = block-set(v$50, v$53, v$4);
-vall v$55 = 0;
-valp v$56 = block-set(v$52, v$55, v$5);
-defc v$57(v$58) = {
-  vall v$59 = 79;
-  defc v$60(v$61) = {
-    defc v$62(v$63) = {
-      defc v$64(v$65) = {
-        vall v$66 = 147;
-        defc v$67(v$68) = {
-          defc v$69(v$70) = {
-            defc v$71(v$72) = {
-              vall v$73 = 9;
-              defc v$74(v$75) = {
-                defc v$76(v$77) = { vall v$78 = 0; halt(v$78) };
-                v$1(v$76, v$75)
-              };
-              vall v$79 = 0;
-              valp v$80 = block-get(v$72, v$79);
-              v$80(v$74, v$72, v$73)
-            };
-            v$2(v$71, v$52, v$50)
-          };
-          v$1(v$69, v$68)
-        };
-        vall v$81 = 0;
-        valp v$82 = block-get(v$65, v$81);
-        v$82(v$67, v$65, v$66)
-      };
-      v$2(v$64, v$50, v$50)
-    };
-    v$1(v$62, v$61)
-  };
-  vall v$83 = 0;
-  valp v$84 = block-get(v$58, v$83);
-  v$84(v$60, v$58, v$59)
-};
-v$2(v$57, v$50, v$52)
-expected output: 
-vall v$1 = 79;
-           valp v$2 = byte-write(v$1);
-           vall v$3 = 75;
-           valp v$4 = byte-write(v$3);
-           vall v$5 = 10;
-           valp v$6 = byte-write(v$5);
-           vall v$7 = 0;
-           halt(v$7)
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.BasicTest.assertEqual(BasicTest.scala:24)
-	at miniscala.test.infrastructure.BasicTest.assertEqual$(BasicTest.scala:10)
-	at miniscala.test.infrastructure.CPSTest.assertEqual(CPSTest.scala:11)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptTreeEquality(CPSOptTest.scala:44)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testInliningConstantFoldingDCE" time="0.003">
+                                                 <failure message="java.util.NoSuchElementException: key not found: x" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: x
+	at scala.collection.immutable.Map$Map4.apply(Map.scala:207)
+	at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$11(CPSOptimizer.scala:357)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$10(CPSOptimizer.scala:357)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:355)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:302)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:285)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:272)
+	at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)
+	at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:272)
+	at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)
+	at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:279)
+	at miniscala.CPSOptimizer.$anonfun$inline$1(CPSOptimizer.scala:310)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$takeWhile$1(Stream.scala:880)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.LinearSeqOptimized.last(LinearSeqOptimized.scala:155)
+	at scala.collection.LinearSeqOptimized.last$(LinearSeqOptimized.scala:149)
+	at scala.collection.immutable.Stream.last(Stream.scala:204)
+	at miniscala.CPSOptimizer.inline(CPSOptimizer.scala:313)
+	at miniscala.CPSOptimizer.$anonfun$apply$2(CPSOptimizer.scala:13)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:12)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:13)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:465)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipeline$1(CompilerTest.scala:41)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipeline(CompilerTest.scala:41)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipeline$(CompilerTest.scala:40)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipeline(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptTreeEquality(CPSOptTest.scala:43)
 	at miniscala.test.CPSOptimizer_Greybox.testInliningConstantFoldingDCE(CPSOptimizer_Greybox.scala:165)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
@@ -257,355 +133,240 @@ vall v$1 = 79;
 	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
 	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
 	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantPropagationSimple" time="0.03">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-putchar((((getchar()/3)/3)/3))
-Statistics:
-Instruction Stats
-=================
-      14  LetP
-       9  LetL
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       4  CPSOr$
-       3  CPSDiv$
-       3  CPSSub$
-       1  CPSArithShiftR$
-       1  CPSArithShiftL$
-       1  CPSByteWrite$
-       1  CPSByteRead$
-
-Functions defined: 0
-Continuations defined: 0
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-putchar((((getchar()/3)/3)/3))
-Statistics:
-Instruction Stats
-=================
-      14  LetP
-       9  LetL
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       4  CPSOr$
-       3  CPSDiv$
-       3  CPSSub$
-       1  CPSArithShiftR$
-       1  CPSArithShiftL$
-       1  CPSByteWrite$
-       1  CPSByteRead$
-
-Functions defined: 0
-Continuations defined: 0
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSBothSeq(CPSOptTest.scala:73)
-	at miniscala.test.CPSOptimizer_Greybox.testConstantPropagationSimple(CPSOptimizer_Greybox.scala:105)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
-	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
-	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantPropagationSimple" time="0.01">
+                                                 
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulZero1" time="0.003">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulZero2" time="0.005">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulZero2" time="0.006">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInlining" time="0.003">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInlining" time="0.004">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingDiv" time="0.008">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingDiv" time="0.005">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingMod" time="0.007">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingMod" time="0.004">
                                                  
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testCommonSubexpressionEliminationSimpleBlockTag" time="0.015">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-val a = new Array[Int](1); putchar(if (a.isList || a.isArray) 96 else 87)
-Statistics:
-Instruction Stats
-=================
-      17  LetL
-      16  LetC
-      11  LetP
-       7  If
-       3  AppC
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       2  CPSOr$
-       2  CPSArithShiftL$
-       2  CPSBlockTag$
-       2  CPSAnd$
-       1  CPSArithShiftR$
-       1  CPSByteWrite$
-       1  CPSBlockAlloc
-
-Logic Primitives Stats
-======================
-       5  CPSEq$
-       2  CPSNe$
-
-Functions defined: 0
-Continuations defined: 16
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-val a = new Array[Int](1); putchar(if (a.isList || a.isArray) 96 else 87)
-Statistics:
-Instruction Stats
-=================
-      17  LetL
-      16  LetC
-      11  LetP
-       7  If
-       3  AppC
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       2  CPSOr$
-       2  CPSArithShiftL$
-       2  CPSBlockTag$
-       2  CPSAnd$
-       1  CPSArithShiftR$
-       1  CPSByteWrite$
-       1  CPSBlockAlloc
-
-Logic Primitives Stats
-======================
-       5  CPSEq$
-       2  CPSNe$
-
-Functions defined: 0
-Continuations defined: 16
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSBothSeq(CPSOptTest.scala:73)
-	at miniscala.test.CPSOptimizer_Greybox.testCommonSubexpressionEliminationSimpleBlockTag(CPSOptimizer_Greybox.scala:145)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
-	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
-	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingBooleanAnd" time="0.002">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testEtaReductionInfintelyRecursiveFunction" time="0.004">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingBooleanAnd" time="0.001">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingIntChar" time="0.004">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testEtaReductionInfintelyRecursiveFunction" time="0.006">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingIntPNot" time="0.003">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingIntChar" time="0.001">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldDCEContinuations" time="0.003">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-if (true) 1 else 2
-Statistics:
-Instruction Stats
-=================
-       3  LetL
-       3  LetC
-       2  AppC
-       1  LetP
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Functions defined: 0
-Continuations defined: 2
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-if (true) 1 else 2
-Statistics:
-Instruction Stats
-=================
-       3  LetL
-       3  LetC
-       2  AppC
-       1  LetP
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Functions defined: 0
-Continuations defined: 2
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
-	at miniscala.test.CPSOptimizer_Greybox.testConstantFoldDCEContinuations(CPSOptimizer_Greybox.scala:101)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
-	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
-	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingIntPNot" time="0.002">
+                                                 
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldDCEContinuations" time="0.001">
+                                                 
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingIntP" time="0.002">
                                                  
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingPlus" time="0.002">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningInsideFunctionBodyDifferentLetRecs" time="0.003">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningInsideFunctionBodyDifferentLetRecs" time="0.002">
                                                  
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInlingAndDCE" time="0.002">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingTypePrims" time="0.03">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingTypePrims" time="0.023">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCEFunsRecursive1" time="0.003">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCEFunsRecursive1" time="0.002">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCEFunsRecursive2" time="0.003">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCEFunsRecursive2" time="0.002">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantCapturingInFunction1" time="0.015">
-                                                 
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantCapturingInFunction2" time="0.005">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-val one = 1; def f(x: Int) = x + one; f(1) + f(2) + f(3) + one
-Statistics:
-Instruction Stats
-=================
-       8  LetL
-       6  LetP
-       3  AppC
-       3  AppF
-       3  LetC
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       3  CPSAdd$
-       3  CPSSub$
-
-Functions defined: 1
-Continuations defined: 3
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-val one = 1; def f(x: Int) = x + one; f(1) + f(2) + f(3) + one
-Statistics:
-Instruction Stats
-=================
-       8  LetL
-       6  LetP
-       3  AppC
-       3  AppF
-       3  LetC
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       3  CPSAdd$
-       3  CPSSub$
-
-Functions defined: 1
-Continuations defined: 3
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantCapturingInFunction1" time="0.003">
+                                                 <failure message="java.util.NoSuchElementException: key not found: l_39913" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: l_39913
+	at scala.collection.immutable.Map$Map4.apply(Map.scala:207)
+	at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$2(CPSOptimizer.scala:329)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:329)
+	at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:330)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:302)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:285)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:272)
+	at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)
+	at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:272)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:279)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)
+	at miniscala.CPSOptimizer.$anonfun$inline$1(CPSOptimizer.scala:310)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$takeWhile$1(Stream.scala:880)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.LinearSeqOptimized.last(LinearSeqOptimized.scala:155)
+	at scala.collection.LinearSeqOptimized.last$(LinearSeqOptimized.scala:149)
+	at scala.collection.immutable.Stream.last(Stream.scala:204)
+	at miniscala.CPSOptimizer.inline(CPSOptimizer.scala:313)
+	at miniscala.CPSOptimizer.$anonfun$apply$2(CPSOptimizer.scala:13)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:12)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:13)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:465)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSBothSeq(CPSOptTest.scala:73)
+	at miniscala.test.CPSOptimizer_Greybox.testConstantCapturingInFunction1(CPSOptimizer_Greybox.scala:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantCapturingInFunction2" time="0.003">
+                                                 <failure message="java.util.NoSuchElementException: key not found: l_39920" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: l_39920
+	at scala.collection.immutable.Map$Map3.apply(Map.scala:170)
+	at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$2(CPSOptimizer.scala:329)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:329)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:302)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:285)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)
+	at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)
+	at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:279)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)
+	at miniscala.CPSOptimizer.$anonfun$inline$1(CPSOptimizer.scala:310)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$takeWhile$1(Stream.scala:880)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.LinearSeqOptimized.last(LinearSeqOptimized.scala:155)
+	at scala.collection.LinearSeqOptimized.last$(LinearSeqOptimized.scala:149)
+	at scala.collection.immutable.Stream.last(Stream.scala:204)
+	at miniscala.CPSOptimizer.inline(CPSOptimizer.scala:313)
+	at miniscala.CPSOptimizer.$anonfun$apply$2(CPSOptimizer.scala:13)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:12)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:13)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:465)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSBothSeq(CPSOptTest.scala:73)
 	at miniscala.test.CPSOptimizer_Greybox.testConstantCapturingInFunction2(CPSOptimizer_Greybox.scala:113)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
@@ -631,187 +392,123 @@ Continuations defined: 3
 	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
 	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
 	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsSubItself" time="0.003">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsSubItself" time="0.006">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingMinus" time="0.002">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingMinus" time="0.003">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingTimes" time="0.002">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingTimes" time="0.004">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsAddZero1" time="0.004">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsAddZero1" time="0.005">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsAddZero2" time="0.003">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsAddZero2" time="0.005">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testCommonSubexpressionEliminationComplexBlockTag" time="0.017">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-val a = new Array[Int](300); val p = putchar(getchar()); putchar((if (a.isArray) 90 else 80) + (if (a.isList) 6 else 7))
-Statistics:
-Instruction Stats
-=================
-      21  LetL
-      18  LetP
-      18  LetC
-       7  If
-       4  AppC
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       3  CPSOr$
-       3  CPSArithShiftL$
-       2  CPSArithShiftR$
-       2  CPSByteWrite$
-       2  CPSBlockTag$
-       2  CPSAnd$
-       1  CPSAdd$
-       1  CPSByteRead$
-       1  CPSBlockAlloc
-       1  CPSSub$
-
-Logic Primitives Stats
-======================
-       5  CPSEq$
-       2  CPSNe$
-
-Functions defined: 0
-Continuations defined: 18
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-val a = new Array[Int](300); val p = putchar(getchar()); putchar((if (a.isArray) 90 else 80) + (if (a.isList) 6 else 7))
-Statistics:
-Instruction Stats
-=================
-      21  LetL
-      18  LetP
-      18  LetC
-       7  If
-       4  AppC
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       3  CPSOr$
-       3  CPSArithShiftL$
-       2  CPSArithShiftR$
-       2  CPSByteWrite$
-       2  CPSBlockTag$
-       2  CPSAnd$
-       1  CPSAdd$
-       1  CPSByteRead$
-       1  CPSBlockAlloc
-       1  CPSSub$
-
-Logic Primitives Stats
-======================
-       5  CPSEq$
-       2  CPSNe$
-
-Functions defined: 0
-Continuations defined: 18
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSBothSeq(CPSOptTest.scala:73)
-	at miniscala.test.CPSOptimizer_Greybox.testCommonSubexpressionEliminationComplexBlockTag(CPSOptimizer_Greybox.scala:148)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
-	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
-	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</failure>
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testCommonSubexpressionEliminationComplexBlockTag" time="0.032">
+                                                 
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCELetPrimitive" time="0.001">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulOne1" time="0.002">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulOne1" time="0.005">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulOne2" time="0.003">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsMulOne2" time="0.006">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testEtaReduction" time="0.006">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-
-      def f(x: Int) = x; def g(y: Int) = f(y); def h(z: Int) = g(z);
-      g(1) + g(2) + g(3) + h(1) + h(2) + h(3) + f(1) + f(2) + f(3)
-    
-Statistics:
-Instruction Stats
-=================
-      18  AppF
-      11  LetL
-       9  AppC
-       9  LetC
-       1  LetP
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Functions defined: 3
-Continuations defined: 9
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-
-      def f(x: Int) = x; def g(y: Int) = f(y); def h(z: Int) = g(z);
-      g(1) + g(2) + g(3) + h(1) + h(2) + h(3) + f(1) + f(2) + f(3)
-    
-Statistics:
-Instruction Stats
-=================
-      18  AppF
-      11  LetL
-       9  AppC
-       9  LetC
-       1  LetP
-       1  Halt
-       1  LetF
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Functions defined: 3
-Continuations defined: 9
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testEtaReduction" time="0.003">
+                                                 <failure message="java.util.NoSuchElementException: key not found: g" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.util.NoSuchElementException: key not found: g
+	at scala.collection.immutable.Map$Map3.apply(Map.scala:170)
+	at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:371)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:302)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:285)
+	at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)
+	at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)
+	at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)
+	at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)
+	at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:238)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:231)
+	at scala.collection.immutable.List.map(List.scala:298)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)
+	at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:279)
+	at miniscala.CPSOptimizer.$anonfun$inline$1(CPSOptimizer.scala:310)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$takeWhile$1(Stream.scala:880)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.LinearSeqOptimized.last(LinearSeqOptimized.scala:152)
+	at scala.collection.LinearSeqOptimized.last$(LinearSeqOptimized.scala:149)
+	at scala.collection.immutable.Stream.last(Stream.scala:204)
+	at miniscala.CPSOptimizer.inline(CPSOptimizer.scala:313)
+	at miniscala.CPSOptimizer.$anonfun$apply$2(CPSOptimizer.scala:13)
+	at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)
+	at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)
+	at miniscala.package$.fixedPoint(package.scala:4)
+	at miniscala.package$.fixedPoint(package.scala:12)
+	at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:13)
+	at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:465)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)
+	at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)
+	at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)
+	at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)
+	at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)
+	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)
 	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
 	at miniscala.test.CPSOptimizer_Greybox.testEtaReduction(CPSOptimizer_Greybox.scala:17)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
@@ -837,108 +534,22 @@ Continuations defined: 9
 	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
 	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
 	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
 </failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCELetLiteral" time="0.002">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCELetLiteral" time="0.003">
                                                  
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testDCEFunsSimple" time="0.002">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningInsideFunctionBodySameLetRec" time="0.003">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningInsideFunctionBodySameLetRec" time="0.002">
                                                  
                                                </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testConstantFoldingBooleanOr" time="0.002">
                                                  
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningCrasher" time="0.012">
-                                                 <failure message="java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int): Int = if (x == 0) 0 else g(x - 1); def g(y: Int): Int = f(y); def h(z: Int) = z; f(0)
-Statistics:
-Instruction Stats
-=================
-       5  LetL
-       3  LetC
-       1  LetP
-       1  Halt
-       1  AppC
-       1  LetF
-       1  AppF
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       1  CPSEq$
-
-Functions defined: 1
-Continuations defined: 3
-" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: Checks failed for: 
-def f(x: Int): Int = if (x == 0) 0 else g(x - 1); def g(y: Int): Int = f(y); def h(z: Int) = z; f(0)
-Statistics:
-Instruction Stats
-=================
-       5  LetL
-       3  LetC
-       1  LetP
-       1  Halt
-       1  AppC
-       1  LetF
-       1  AppF
-       1  If
-
-Value Primitives Stats
-======================
-       1  CPSArithShiftR$
-
-Logic Primitives Stats
-======================
-       1  CPSEq$
-
-Functions defined: 1
-Continuations defined: 3
-
-	at scala.Predef$.assert(Predef.scala:223)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:63)
-	at miniscala.test.infrastructure.CPSOptTest.testCPSOptEarly(CPSOptTest.scala:67)
-	at miniscala.test.CPSOptimizer_Greybox.testFunInliningCrasher(CPSOptimizer_Greybox.scala:52)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runners.Suite.runChild(Suite.java:127)
-	at org.junit.runners.Suite.runChild(Suite.java:26)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
-	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
-	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</failure>
-                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsSubZero" time="0.006">
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testFunInliningCrasher" time="0.003">
+                                                 
+                                               </testcase><testcase classname="miniscala.test.CPSOptimizer_Greybox" name="testNeutralElementsSubZero" time="0.007">
                                                  
                                                </testcase>
                      <system-out><![CDATA[]]></system-out>

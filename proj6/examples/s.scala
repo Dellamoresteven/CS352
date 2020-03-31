@@ -26,6 +26,28 @@
 // nl();
 // 5
 
-val u = getchar(); 
-putchar(0 + u);
-2
+// val u = getchar(); 
+// putchar(0 + u);
+// 2
+
+// def f(x: Int): Int = g(x); 
+// def g(x: Int): Int = f(x); 
+// if (getchar() == -1) 
+//     g(3) 
+// else 0
+
+// putchar((((getchar()/3)/3)/3))
+
+// def f(x: Int): Int = if (x == 0) 0 else g(x - 1); 
+// def g(y: Int): Int = f(y); 
+// def h(z: Int) = z; 
+// f(0)
+
+def f(x: Int): Int = {
+    if(x < 1) {
+        0
+    } else {
+        f(0)
+    }
+};
+f(1)

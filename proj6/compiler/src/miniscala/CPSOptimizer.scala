@@ -101,18 +101,36 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
   private def shrink(tree: Tree): Tree = {
     def shrinkT(tree: Tree)(implicit s: State): Tree = tree match {
       case LetL(name, value, body) if s.dead(name) => 
-        println("LetL DEAD Name: " + name)
         shrinkT(body)
 
-      // case LetL(name, value, body) if (s.lInvEnv contains value) =>
+      // case LetL(name, value, body) if (s.lEnv contains name) =>
       //   shrinkT(body.subst(Substitution(name, s.lInvEnv(value))))
+
+      case LetL(name, value, body) if (s.lInvEnv contains value) =>
+        shrinkT(body.subst(Substitution(name, s.lInvEnv(value))))
 
       case LetL(name, value, body) =>
         LetL(name, value, shrinkT(body)(s.withLit(name, value)))
 
       case LetP(name, operation, arg, body) if (operation == identity) =>
-        println("LetP ID Name: " + name + " : " + arg(0))
+        // println("LetP ID Name: " + name + " : " + arg(0))
         shrinkT(body.subst(Substitution(name, arg(0))))
+
+      case LetP(name, operation, args, body) if blockAllocTag.isDefinedAt(operation) =>
+        val newState = s.withBlock(name, blockAllocTag(operation), args(0))
+        LetP(name, operation, args , shrinkT(body)(newState))
+
+      case LetP(name, operation, args, body) if (unstable(operation)) =>
+        val nargs = args map { arg => s.subst(arg) } 
+        LetP(name, operation, nargs, shrinkT(body))
+
+      case LetP(name, operation, args, body) if operation == blockTag =>
+        if(s.bEnv.isDefinedAt(args(0))) {
+          // println("FEAW " + s.bEnv(args(0))._2)
+          shrinkT(LetL(name, s.bEnv(args(0))._1, body))
+        } else {
+          LetP(name, operation, args, shrinkT(body))
+        }
 
       // neutral left
       case LetP(name, operation, Seq(x, y), body) if s.lEnv.get(x).exists(arg => leftNeutral(arg -> operation)) =>
@@ -169,7 +187,9 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
 
       // default
       case LetF(funs, body) =>
-        if (funs.exists(f => s.dead(f.name))) { // remove dead stuff
+        if(funs.length == 0){
+          shrinkT(body)
+        } else if (funs.exists(f => s.dead(f.name))) { // remove dead stuff
           var retF = funs filter { case FunDef(name, _, _, _) => !s.dead(name) }
           shrinkT(LetF(retF, body))
         } else if(funs.exists(f => s.appliedOnce(f.name))) { // check if the function is called ONCE
@@ -185,10 +205,26 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
           LetF(optimizedFunctions, shrinkT(body))
         }
 
-      case LetC(c, body) =>
-        var retC = c filter { case CntDef(name, _, _) => !s.dead(name) }
-        retC = retC map { case CntDef(a, b, c) => CntDef(a, b, shrinkT(c)(s.withEmptyInvEnvs)) }
-        LetC(retC, shrinkT(body))
+      // default
+      case LetC(cnt, body) =>
+        // println("cnt:" + cnt)
+        if(cnt.length == 0){
+          shrinkT(body)
+        } else if (cnt.exists(f => s.dead(f.name))) { // remove dead stuff
+          var retF = cnt filter { case CntDef(name, _, _) => !s.dead(name) }
+          shrinkT(LetC(retF, body))
+        } else if(cnt.exists(f => s.appliedOnce(f.name))) { // check if the function is called ONCE
+          var inlined = cnt filter { case CntDef(name, _, _) => s.appliedOnce(name) }
+          var whyDoesThisNotWork = cnt filter { case CntDef(name, _, _) => !s.appliedOnce(name) }
+          // println("\n\n\nINLINE\n" + inlined)
+          // println("\n\n\nNOPE" + whyDoesThisNotWork)
+          val st = s.withEmptyInvEnvs.withCnts(inlined)
+          shrinkT(LetC(whyDoesThisNotWork, body))(st)
+        } else { // if the function is not dead and is called more then once
+          val optimizedFunctions = 
+            cnt map { case CntDef(name, r, a) => CntDef(name, r, shrinkT(a)) }
+          LetC(optimizedFunctions, shrinkT(body))
+        }
 
       case AppF(fun, retC, args) =>
         if (s.fEnv contains fun) {
@@ -227,8 +263,47 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
       val cntLimit = i
 
       def inlineT(tree: Tree)(implicit s: State): Tree = tree match {
+        case LetL(name, value, body) =>
+          val newName = Symbol.fresh("l")
+          val newBody = inlineT(body.subst(Substitution(name, newName)))
+          LetL(newName, value, newBody)
+        case LetP(name, operation, args, body) => 
+          val newName = Symbol.fresh("p")
+          val newBody = inlineT(body.subst(Substitution(name, newName)))
+          LetP(newName, operation, args, newBody)
+        case LetF(funs, body) =>
+          var inlineF = funs filter { case FunDef(name, _, _, bodyy) => (size(bodyy) <= funLimit && !(s.fEnv contains name)) }
+          inlineF = inlineF filter { case FunDef(name, _, _, _) => !s.dead(name) }
+          val newfuns = funs map { case FunDef(name, retC, args, bodyy) => FunDef(name, retC, args, inlineT(bodyy)) }
+          var ns = s.withEmptyInvEnvs
+          LetF(newfuns, inlineT(body)(ns.withFuns(inlineF)))
+        case LetC(cnts, body) =>
+          var inlineC = cnts filter { case CntDef(name, _, bodyy) => (size(bodyy) <= cntLimit && !(s.cEnv contains name)) }
+          inlineC = inlineC filter { case CntDef(name, _, _) => !s.dead(name) }
+          val newcnts = cnts map { case CntDef(name, args, bodyy) => CntDef(name, args, inlineT(bodyy)) }
+          var ns = s.withEmptyInvEnvs
+          LetC(newcnts, inlineT(body)(ns.withCnts(inlineC)))
+        case AppC(cnt, args) =>
+          if (s.cEnv contains cnt) {
+            val CntDef(_, a, b) = s.cEnv(cnt)
+            inlineT(b.subst(Substitution(a, args)))
+          } else {
+            tree 
+          }
+        case AppF(fun, retC, args) =>
+          if (s.fEnv contains fun) {
+            val FunDef(_, b, c, d) = s.fEnv(fun)
+            var m:Map[Symbol, Symbol] = Map()
+            for(arg <- args){
+              m += (arg -> arg)
+            }
+            m += (retC -> retC)
+            m += (fun -> fun)
+            newVaribleHelperFunction(d.subst(Substitution(b +: c, retC +: args)))(m)
+          } else {
+            tree 
+          }
         case _ =>
-          // TODO
           tree
       }
 
@@ -236,6 +311,70 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
     }
 
     trees.takeWhile{ case (_, tree) => size(tree) <= maxSize }.last._2
+  }
+
+  def newVaribleHelperFunction(body: Tree)(implicit m: Map[Symbol, Symbol]): Tree = body match {
+    case LetL(name, value, body) =>
+      val newName = Symbol.fresh("l")
+      val nm = m + ((name, newName))
+      LetL(newName, value, newVaribleHelperFunction(body)(nm))
+
+    case LetP(name, operation, args, body) if (m contains name) =>
+      val newArgs = args map { arg => m.apply(arg) }
+      LetP(m.apply(name), operation, args, newVaribleHelperFunction(body))
+
+    case LetP(name, operation, args, body) =>
+      val name1 = Symbol.fresh("p")
+      val nm = m + ((name, name1))
+      val newArgs = args map { arg => m.apply(arg) }
+      LetP(name1, operation, newArgs, newVaribleHelperFunction(body)(nm))
+
+    case If(cond, args, thenC, elseC) =>
+      val newthenC = m.apply(thenC)
+      val newelseC = m.apply(elseC)
+      val newArgs = args map { arg => m.apply(arg) }
+      If(cond, newArgs, newthenC, newelseC)
+
+    case LetC(cnts, body) =>
+      val realNames = cnts map { case CntDef(name, _, _) => name }
+      val newNames = realNames map { n => Symbol.fresh("cnt") }
+      println("CNTS: " + realNames + "\n\n" + newNames)
+      val ncnts = (newNames zip cnts) map { 
+        case (cname1, c@CntDef(cname, cargs, cbd)) =>
+          val cargs1 = cargs map { arg => m.apply(arg).copy }
+          val ns = m + ((cname, cname1)) ++ (cargs zip cargs1)
+          val ncbd = newVaribleHelperFunction(cbd)(ns)
+          CntDef(cname1, cargs1, ncbd)
+      }
+      val ns = m ++ (realNames zip newNames)
+      LetC(ncnts, newVaribleHelperFunction(body)(ns))
+    
+    case LetF(funs, body) =>
+      val fnames = funs map { case FunDef(name, _, _, _) => name }
+      val fnames1 = fnames map { n => n.copy }
+      val nfuns = (fnames1 zip funs) map {
+        case (fname1, f@FunDef(fname, retC, fargs, fbd)) =>
+          val fargs1 = fargs map { arg => m.apply(arg).copy }
+          val nretC = m.apply(retC).copy
+          val ns = m + ((fname, fname1)) + ((retC, nretC)) ++ (fargs zip fargs1)
+          val nfbd = newVaribleHelperFunction(fbd)(ns)
+          FunDef(fname1, nretC, fargs1, nfbd)
+      }
+      val ns = m ++ (fnames zip fnames1)
+      val nbody = newVaribleHelperFunction(body)(ns)
+      LetF(nfuns, nbody)
+
+    case AppC(cnt, args) =>
+      AppC(m.apply(cnt), args map { arg => m.apply(arg) })
+    
+    case AppF(fun, retC, args) =>
+      AppF(m.apply(fun), m.apply(retC), args map { arg => m.apply(arg) })
+
+    case Halt(name) => 
+      Halt(m.apply(name))
+
+    case _ => 
+      body
   }
 
   // Census computation
@@ -397,6 +536,7 @@ object CPSOptimizerHigh extends CPSOptimizer(SymbolicCPSTreeModule)
     case (MiniScalaIntToChar, Seq(IntLit(x))) => CharLit(x.toChar)
     case (MiniScalaCharToInt, Seq(CharLit(x))) => IntLit(x)
     case (MiniScalaIntSub, Seq(IntLit(x))) => IntLit(-x)
+    case (MiniScalaIntAdd, Seq(IntLit(x))) => IntLit(+x)
     case (MiniScalaBlockTag, Seq(v)) => v
   }
 

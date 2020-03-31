@@ -111,3 +111,63 @@ run "def f(x: Int) = x; def g(y: Boolean, z: Int) = f(z); g"
 test
 run "def f(x: Int):Int = x; f(1); putchar(65); 2"
 test
+run ../examples/s.scala
+test
+run "def f(x: Int):Int = x; f(1) + f(1); putchar(65); 2"
+test
+run "def f(x: Int):Int = x; f(1) + f(1); putchar(65); 2"
+test
+run "def f(x: Int):Int = x; f(1) + f(1); putchar(65); 2"
+test
+run "def f(x: Int):Int = x; f(1) + f(1); putchar(65); 2"
+test
+run "def f(x: Int):Int = x; f(1) + f(1); putchar(65); 2"
+test
+run "putchar((((getchar()/3)/3)/3))"
+run "putchar((((getchar()/3)/3)/3)); 5"
+run "putchar((((getchar()/3)/3)/3));5"
+test
+run "putchar((((getchar()/3)/3)/3));5"
+test
+run "putchar((((getchar()/3)/3)/3));5"
+test
+run "val a = new Array[Int](300); val p = putchar(getchar()); putchar((if (a.isArray) 90 else 80) + (if (a.isList) 6 else 7))"
+run "val a = new Array[Int](300); val p = putchar(getchar()); putchar((if (a.isArray) 90 else 80) + (if (a.isList) 6 else 7)); 5"
+test
+run "val a = new Array[Int](300); val p = putchar(getchar()); putchar((if (a.isArray) 90 else 80) + (if (a.isList) 6 else 7)); 5"
+test
+run "val a = new Array[Int](300); val p = putchar(getchar()); putchar((if (a.isArray) 90 else 80) + (if (a.isList) 6 else 7)); 5"
+run "val a = new Array[Int](300); val p = putchar(getchar()); putchar((if (a.isArray) 90 else 80) + (if (a.isList) 6 else 7)); 5
+run "val a = new Array[Int](300); val p = putchar(getchar()); putchar((if (a.isArray) 90 else 80) + (if (a.isList) 6 else 7)); 5"
+test
+run "val a = new Array[Int](300); val p = putchar(getchar()); putchar((if (a.isArray) 90 else 80) + (if (a.isList) 6 else 7)); 5"
+test
+run "val a = new Array[Int](300); val p = putchar(getchar()); putchar((if (a.isArray) 90 else 80) + (if (a.isList) 6 else 7)); 5"
+test
+run "val a = new Array[Int](300); val p = putchar(getchar()); putchar((if (a.isArray) 90 else 80) + (if (a.isList) 6 else 7)); 5"
+test
+run "val a = new Array[Int](300); val p = putchar(getchar()); putchar((if (a.isArray) 90 else 80) + (if (a.isList) 6 else 7)); 5"
+test
+run "if (true) 1 else 2"
+test
+run "if (true) 1 else 2"
+test
+run "if (true) 1 else 2"
+test
+run "if (true) 1 else 2"
+test
+run "if (true) 1 else 2"
+test
+run "val one = 1; def f(x: Int) = x + one; f(1) + f(2) + f(3) + one
+run "val one = 1; def f(x: Int) = x + one; f(1) + f(2) + f(3) + one"
+test
+run "val one = 1; def f(x: Int) = x + one; f(1) + f(2) + f(3) + one"
+test
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
+run ../examples/s.scala
+test
