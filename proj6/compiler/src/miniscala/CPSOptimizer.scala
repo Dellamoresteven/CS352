@@ -344,9 +344,10 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
       val newNames = realNames map { n => Symbol.fresh("cnt") }
       println("CNTS: " + realNames + "\n\n" + newNames)
       val ncnts = (newNames zip cnts) map { 
-        case (cname1, c@CntDef(cname, cargs, cbd)) =>
-          val cargs1 = cargs map { arg => Symbol.fresh("c") }
-          val ns = m + ((cname, cname1)) ++ (cargs zip cargs1)
+        case (cname1, CntDef(cname, cargs, cbd)) =>
+          val cargs1 = cargs map { arg => if(m contains arg) arg else Symbol.fresh("c") }
+          var ns = m + ((cname, cname1))
+          ns = ns ++ (cargs zip cargs1)
           val ncbd = newVaribleHelperFunction(cbd)(ns)
           CntDef(cname1, cargs1, ncbd)
       }
@@ -357,8 +358,8 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
       val fnames = funs map { case FunDef(name, _, _, _) => name }
       val fnames1 = fnames map { n => Symbol.fresh("f")  }
       val nfuns = (fnames1 zip funs) map {
-        case (fname1, f@FunDef(fname, retC, fargs, fbd)) =>
-          val fargs1 = fargs map { arg => Symbol.fresh("f") }
+        case (fname1, FunDef(fname, retC, fargs, fbd)) =>
+          val fargs1 = fargs map { arg => if(m contains arg) arg else Symbol.fresh("f") }
           val nretC = Symbol.fresh("f") 
           val ns = m + ((fname, fname1)) + ((retC, nretC)) ++ (fargs zip fargs1)
           val nfbd = newVaribleHelperFunction(fbd)(ns)
@@ -369,13 +370,19 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
       LetF(nfuns, nbody)
 
     case AppC(cnt, args) =>
-      AppC(m.apply(cnt), args map { arg => m.apply(arg) })
-    
+      if(m contains cnt) 
+        AppC(m.apply(cnt), args map { arg => if(m contains arg) m.apply(arg) else arg })
+      else 
+        AppC(cnt, args map { arg => if(m contains arg) m.apply(arg) else arg })
+      
     case AppF(fun, retC, args) =>
-      AppF(m.apply(fun), m.apply(retC), args map { arg => m.apply(arg) })
+      if(m contains fun) 
+        AppF(m.apply(fun), if(m contains retC) m.apply(retC) else retC, args map { arg => if(m contains arg) m.apply(arg) else arg })
+      else 
+        AppF(fun, if(m contains retC) m.apply(retC) else retC, args map { arg => if(m contains arg) m.apply(arg) else arg })
 
     case Halt(name) => 
-      Halt(m.apply(name))
+      Halt(if(m contains name) m.apply(name) else name)
 
     case _ => 
       body

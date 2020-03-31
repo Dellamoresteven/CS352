@@ -178,3 +178,4 @@ run "val a = 1; val b = 2; val c = 3; def f(x: Int) = x + a + b + c; putchar(f(g
 test
 run ../examples/s.scala
 test
+run ../library/miniscala.lib ../examples/pascal.scala
