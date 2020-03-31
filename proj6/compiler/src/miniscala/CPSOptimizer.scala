@@ -185,6 +185,29 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
             AppC(cf, Seq())
           }
 
+      // case LetF(funs, body) =>
+      //   if(funs.length == 0){
+      //     shrinkT(body)
+      //   } else if (funs.exists(f => s.dead(f.name))) { // remove dead stuff
+      //     var retF = funs filter { case FunDef(name, _, _, _) => !s.dead(name) }
+      //     shrinkT(LetF(retF, body))
+      //   } else if(funs.exists(f => s.appliedOnce(f.name))) { // check if the function is called ONCE
+      //     var inlined = funs filter { case FunDef(name, _, _, _) => s.appliedOnce(name) }
+      //     var whyDoesThisNotWork = funs filter { case FunDef(name, _, _, _) => !s.appliedOnce(name) }
+      //     // println("\n\n\nINLINE\n" + inlined)
+      //     // println("\n\n\nNOPE" + whyDoesThisNotWork)
+      //     // val st = s.withEmptyInvEnvs.withFuns(inlined)
+      //     val f = whyDoesThisNotWork map {
+      //         case FunDef(name, retC, args, fbd) => FunDef(name, retC, args, shrinkT(fbd)(s.withEmptyInvEnvs.withFuns(inlined)))
+      //     }
+      //     // shrinkT(LetF(whyDoesThisNotWork, body))(s.withFuns(inlined))
+      //     LetF(f, shrinkT(body)(s.withFuns(whyDoesThisNotWork)))
+      //   } else { // if the function is not dead and is called more then once
+      //     val optimizedFunctions = 
+      //       funs map { case FunDef(name, r, a, b) => FunDef(name, r, a, shrinkT(b)) }
+      //     LetF(optimizedFunctions, shrinkT(body))
+      //   }
+
       // default
       case LetF(funs, body) =>
         if(funs.length == 0){
@@ -192,39 +215,50 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
         } else if (funs.exists(f => s.dead(f.name))) { // remove dead stuff
           var retF = funs filter { case FunDef(name, _, _, _) => !s.dead(name) }
           shrinkT(LetF(retF, body))
-        } else if(funs.exists(f => s.appliedOnce(f.name))) { // check if the function is called ONCE
-          var inlined = funs filter { case FunDef(name, _, _, _) => s.appliedOnce(name) }
-          var whyDoesThisNotWork = funs filter { case FunDef(name, _, _, _) => !s.appliedOnce(name) }
-          // println("\n\n\nINLINE\n" + inlined)
-          // println("\n\n\nNOPE" + whyDoesThisNotWork)
-          val st = s.withEmptyInvEnvs.withFuns(inlined)
-          shrinkT(LetF(whyDoesThisNotWork, body))(st)
-        } else { // if the function is not dead and is called more then once
-          val optimizedFunctions = 
-            funs map { case FunDef(name, r, a, b) => FunDef(name, r, a, shrinkT(b)) }
-          LetF(optimizedFunctions, shrinkT(body))
+        } else {
+          var inlineFunctions = funs filter { case FunDef(name, _, _, _) => s.appliedOnce(name) }
+          var notInlineFunctions = funs filter { case FunDef(name, _, _, _) => !s.appliedOnce(name) }
+          val f = notInlineFunctions map {
+              case FunDef(name, retC, args, fbd) => FunDef(name, retC, args, shrinkT(fbd)(s.withEmptyInvEnvs.withFuns(inlineFunctions)))
+          }
+          LetF(f, shrinkT(body)(s.withFuns(inlineFunctions)))
         }
 
-      // default
+
       case LetC(cnt, body) =>
-        // println("cnt:" + cnt)
         if(cnt.length == 0){
           shrinkT(body)
         } else if (cnt.exists(f => s.dead(f.name))) { // remove dead stuff
-          var retF = cnt filter { case CntDef(name, _, _) => !s.dead(name) }
-          shrinkT(LetC(retF, body))
-        } else if(cnt.exists(f => s.appliedOnce(f.name))) { // check if the function is called ONCE
-          var inlined = cnt filter { case CntDef(name, _, _) => s.appliedOnce(name) }
-          var whyDoesThisNotWork = cnt filter { case CntDef(name, _, _) => !s.appliedOnce(name) }
-          // println("\n\n\nINLINE\n" + inlined)
-          // println("\n\n\nNOPE" + whyDoesThisNotWork)
-          val st = s.withEmptyInvEnvs.withCnts(inlined)
-          shrinkT(LetC(whyDoesThisNotWork, body))(st)
-        } else { // if the function is not dead and is called more then once
-          val optimizedFunctions = 
-            cnt map { case CntDef(name, r, a) => CntDef(name, r, shrinkT(a)) }
-          LetC(optimizedFunctions, shrinkT(body))
+          var retC = cnt filter { case CntDef(name, _, _) => !s.dead(name) }
+          shrinkT(LetC(retC, body))
+        } else {
+          var inlineCnts = cnt filter { case CntDef(name, _, _) => s.appliedOnce(name) }
+          var notInlineCnts = cnt filter { case CntDef(name, _, _) => !s.appliedOnce(name) }
+          val f = notInlineCnts map {
+              case CntDef(name, args, fbd) => CntDef(name, args, shrinkT(fbd)(s.withEmptyInvEnvs.withCnts(inlineCnts)))
+          }
+          LetC(f, shrinkT(body)(s.withCnts(inlineCnts)))
         }
+      // // default
+      // case LetC(cnt, body) =>
+      //   // println("cnt:" + cnt)
+      //   if(cnt.length == 0){
+      //     shrinkT(body)
+      //   } else if (cnt.exists(f => s.dead(f.name))) { // remove dead stuff
+      //     var retF = cnt filter { case CntDef(name, _, _) => !s.dead(name) }
+      //     shrinkT(LetC(retF, body))
+      //   } else if(cnt.exists(f => s.appliedOnce(f.name))) { // check if the function is called ONCE
+      //     var inlined = cnt filter { case CntDef(name, _, _) => s.appliedOnce(name) }
+      //     var whyDoesThisNotWork = cnt filter { case CntDef(name, _, _) => !s.appliedOnce(name) }
+      //     // println("\n\n\nINLINE\n" + inlined)
+      //     // println("\n\n\nNOPE" + whyDoesThisNotWork)
+      //     val st = s.withEmptyInvEnvs.withCnts(inlined)
+      //     shrinkT(LetC(whyDoesThisNotWork, body))(st)
+      //   } else { // if the function is not dead and is called more then once
+      //     val optimizedFunctions = 
+      //       cnt map { case CntDef(name, r, a) => CntDef(name, r, shrinkT(a)) }
+      //     LetC(optimizedFunctions, shrinkT(body))
+      //   }
 
       case AppF(fun, retC, args) =>
         if (s.fEnv contains fun) {
@@ -265,10 +299,12 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
       def inlineT(tree: Tree)(implicit s: State): Tree = tree match {
         case LetL(name, value, body) =>
           val newName = Symbol.fresh("l")
+          // println("LetL2: " + newName+ " : " + value + "\n") 
           val newBody = inlineT(body.subst(Substitution(name, newName)))
           LetL(newName, value, newBody)
         case LetP(name, operation, args, body) => 
           val newName = Symbol.fresh("p")
+          // println("LetP1: " + newName + " : " + newName + "\n") 
           val newBody = inlineT(body.subst(Substitution(name, newName)))
           LetP(newName, operation, args, newBody)
         case LetF(funs, body) =>
@@ -316,11 +352,14 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
   def newVaribleHelperFunction(body: Tree)(implicit m: Map[Symbol, Symbol]): Tree = body match {
     case LetL(name, value, body) =>
       val newName = Symbol.fresh("l")
-      val nm = m + ((name, newName))
+      var nm = m
+      if(!(m contains name)){
+        nm = m + ((name, newName))
+      }
       LetL(newName, value, newVaribleHelperFunction(body)(nm))
 
     case LetP(name, operation, args, body) if (m contains name) =>
-      val newArgs = args map { arg => m.apply(arg) }
+      val newArgs = args map { arg => if(m contains arg) m.apply(arg) else arg }
       LetP(m.apply(name), operation, args, newVaribleHelperFunction(body))
 
     case LetP(name, operation, args, body) =>
@@ -334,52 +373,44 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
       LetP(name1, operation, newArgs, newVaribleHelperFunction(body)(nm))
 
     case If(cond, args, thenC, elseC) =>
-      val newthenC = m.apply(thenC)
-      val newelseC = m.apply(elseC)
-      val newArgs = args map { arg => m.apply(arg) }
+      val newthenC = if(m contains thenC) m.apply(thenC) else thenC
+      val newelseC = if(m contains elseC) m.apply(elseC) else elseC
+      val newArgs = args map { arg => if(m contains arg) m.apply(arg) else arg }
       If(cond, newArgs, newthenC, newelseC)
 
     case LetC(cnts, body) =>
       val realNames = cnts map { case CntDef(name, _, _) => name }
-      val newNames = realNames map { n => Symbol.fresh("cnt") }
-      println("CNTS: " + realNames + "\n\n" + newNames)
+      val newNames = realNames map { n => if(m contains n) m.apply(n) else Symbol.fresh("cnt") }
+      // println("CNTS: " + realNames + "\n\n" + newNames)
       val ncnts = (newNames zip cnts) map { 
-        case (cname1, CntDef(cname, cargs, cbd)) =>
-          val cargs1 = cargs map { arg => if(m contains arg) arg else Symbol.fresh("c") }
+        case (cname1, CntDef(cname, cargs, boddyy)) =>
+          val cargss = cargs map { arg => if(m contains arg) m.apply(arg) else Symbol.fresh("c") }
           var ns = m + ((cname, cname1))
-          ns = ns ++ (cargs zip cargs1)
-          val ncbd = newVaribleHelperFunction(cbd)(ns)
-          CntDef(cname1, cargs1, ncbd)
+          ns = ns ++ (cargs zip cargss)
+          CntDef(cname1, cargss, newVaribleHelperFunction(boddyy)(ns))
       }
       val ns = m ++ (realNames zip newNames)
       LetC(ncnts, newVaribleHelperFunction(body)(ns))
     
     case LetF(funs, body) =>
       val fnames = funs map { case FunDef(name, _, _, _) => name }
-      val fnames1 = fnames map { n => Symbol.fresh("f")  }
+      val fnames1 = fnames map {n => if(m contains n) m.apply(n) else Symbol.fresh("f") }
       val nfuns = (fnames1 zip funs) map {
-        case (fname1, FunDef(fname, retC, fargs, fbd)) =>
-          val fargs1 = fargs map { arg => if(m contains arg) arg else Symbol.fresh("f") }
-          val nretC = Symbol.fresh("f") 
-          val ns = m + ((fname, fname1)) + ((retC, nretC)) ++ (fargs zip fargs1)
-          val nfbd = newVaribleHelperFunction(fbd)(ns)
-          FunDef(fname1, nretC, fargs1, nfbd)
+        case (fname1, FunDef(fname, retC, fargs, boddyy)) =>
+          val fargss = fargs map { arg => if(m contains arg) m.apply(arg) else Symbol.fresh("f") }
+          val newretC = if(m contains retC) m.apply(retC) else Symbol.fresh("retc")
+          val ns = m + ((fname, fname1)) + ((retC, newretC)) ++ (fargs zip fargss)
+          FunDef(fname1, newretC, fargss, newVaribleHelperFunction(boddyy)(ns))
       }
       val ns = m ++ (fnames zip fnames1)
       val nbody = newVaribleHelperFunction(body)(ns)
       LetF(nfuns, nbody)
 
     case AppC(cnt, args) =>
-      if(m contains cnt) 
-        AppC(m.apply(cnt), args map { arg => if(m contains arg) m.apply(arg) else arg })
-      else 
-        AppC(cnt, args map { arg => if(m contains arg) m.apply(arg) else arg })
+      AppC(if(m contains cnt) m.apply(cnt) else cnt, args map { arg => if(m contains arg) m.apply(arg) else arg })
       
     case AppF(fun, retC, args) =>
-      if(m contains fun) 
-        AppF(m.apply(fun), if(m contains retC) m.apply(retC) else retC, args map { arg => if(m contains arg) m.apply(arg) else arg })
-      else 
-        AppF(fun, if(m contains retC) m.apply(retC) else retC, args map { arg => if(m contains arg) m.apply(arg) else arg })
+      AppF(if(m contains fun) m.apply(fun) else fun, if(m contains retC) m.apply(retC) else retC, args map { arg => if(m contains arg) m.apply(arg) else arg })
 
     case Halt(name) => 
       Halt(if(m contains name) m.apply(name) else name)

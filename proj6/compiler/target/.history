@@ -179,3 +179,58 @@ test
 run ../examples/s.scala
 test
 run ../library/miniscala.lib ../examples/pascal.scala
+test
+run ../library/miniscala.lib ../examples/pascal.scala
+test
+run ../library/miniscala.lib ../examples/pascal.scala
+test
+run ../library/miniscala.lib ../examples/pascal.scala
+test
+run ../library/miniscala.lib ../examples/pascal.scala
+test
+run ../library/miniscala.lib ../examples/pascal.scala
+test
+run ../library/miniscala.lib ../examples/pascal.scala
+run ../library/miniscala.lib ../examples/bignums.scala
+run ../library/miniscala.lib ../examples/fibonacci.scala
+run ../library/miniscala.lib ../examples/makeAdder.scala
+run ../library/miniscala.lib ../examples/makeAdderRec.scala
+run ../library/miniscala.lib ../examples/maze.scala
+run ../library/miniscala.lib ../examples/oddEven.scala
+run ../library/miniscala.lib ../examples/pow.scala
+run ../library/miniscala.lib ../examples/queens.scala
+run ../library/miniscala.lib ../examples/pascal.scala
+2
+run ../library/miniscala.lib ../examples/pascal.scala
+run ../exmaples/s.scala
+run ../examples/s.scala
+run ../library/miniscala.lib ../examples/pascal.scala
+test
+run ../library/miniscala.lib ../examples/pascal.scala
+2
+run ../library/miniscala.lib ../examples/pascal.scala
+test
+run ../library/miniscala.lib ../examples/pascal.scala
+test
+run ../library/miniscala.lib ../examples/pascal.scala
+2
+run ../library/miniscala.lib ../examples/pascal.scala
+test
+run ../library/miniscala.lib ../examples/pascal.scala
+test
+run ../library/miniscala.lib ../examples/bignums.scala
+run ../library/miniscala.lib ../examples/fibonacci.scala
+run ../library/miniscala.lib ../examples/makeAdder.scala
+run ../library/miniscala.lib ../examples/makeAdderRec.scala
+run ../library/miniscala.lib ../examples/maze.scala
+run ../library/miniscala.lib ../examples/oddEven.scala
+run ../library/miniscala.lib ../examples/maze.scala
+run ../library/miniscala.lib ../examples/oddEven.scala
+run ../library/miniscala.lib ../examples/pascal.scala
+run ../library/miniscala.lib ../examples/pow.scala
+run ../library/miniscala.lib ../examples/queens.scala
+run ../library/miniscala.lib ../examples/test.scala
+run ../library/miniscala.lib ../examples/pascal.scala
+run ../library/miniscala.lib ../examples/maze.scala
+test
+git add --all
