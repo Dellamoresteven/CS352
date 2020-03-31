@@ -5,185 +5,56 @@
 [0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(miniscala.test.CPSOptimizer_Blackbox, sbt.ForkMain$AnnotatedFingerscan@3ab3b8f1, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibFunctions3[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[31mtestLibFunctions3[0m failed: java.util.[31mNoSuchElementException[0m: key not found: x, took 0.739 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Map$Map4.apply(Map.scala:207)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$11(CPSOptimizer.scala:357)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$10(CPSOptimizer.scala:357)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:355)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:302)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:285)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:272)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:272)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:279)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:279)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$1(CPSOptimizer.scala:310)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.$anonfun$takeWhile$1(Stream.scala:880)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.LinearSeqOptimized.last(LinearSeqOptimized.scala:155)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.LinearSeqOptimized.last$(LinearSeqOptimized.scala:149)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.last(Stream.scala:204)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inline(CPSOptimizer.scala:313)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$apply$2(CPSOptimizer.scala:13)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:4)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:12)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:13)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:465)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)[0m
-[0m[[0m[31merror[0m] [0m[0m    at java.security.AccessController.doPrivileged(AccessController.java:391)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CPSOptTest.testCPSLowProgramOutput(CPSOptTest.scala:91)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.CPSOptimizer_Blackbox.$anonfun$compileAndInterpret$1([35mCPSOptimizer_Blackbox.scala[0m:[33m9[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.CPSOptimizer_Blackbox.$anonfun$compileAndInterpret$1$adapted([35mCPSOptimizer_Blackbox.scala[0m:[33m9[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.ok.LibraryOKTests.$anonfun$compileAndInterpretWithLib$1(LibraryOKTests.scala:19)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.ok.LibraryOKTests.$anonfun$compileAndInterpretWithLib$1$adapted(LibraryOKTests.scala:19)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.ok.LibraryOKTests.testLibFunctions3(LibraryOKTests.scala:22)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.ok.LibraryOKTests.testLibFunctions3$(LibraryOKTests.scala:21)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.CPSOptimizer_Blackbox.testLibFunctions3([35mCPSOptimizer_Blackbox.scala[0m:[33m7[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
-[0m[[0m[31merror[0m] [0m[0m    at java.lang.reflect.Method.invoke(Method.java:567)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibFunctions3[0m finished, took 0.761 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibFunctions3[0m finished, took 0.675 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestSideEffectingCondition[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestSideEffectingCondition[0m finished, took 0.057 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestSideEffectingCondition[0m finished, took 0.046 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic3[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic3[0m finished, took 0.023 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic3[0m finished, took 0.02 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic4[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic4[0m finished, took 0.016 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic4[0m finished, took 0.01 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic5[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic5[0m finished, took 0.013 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic6[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic6[0m finished, took 0.01 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic6[0m finished, took 0.012 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic7[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic7[0m finished, took 0.011 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic7[0m finished, took 0.013 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic8[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic8[0m finished, took 0.008 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic8[0m finished, took 0.011 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic9[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic9[0m finished, took 0.013 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic9[0m finished, took 0.01 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists10[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists10[0m finished, took 0.182 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists10[0m finished, took 0.201 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists11[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists11[0m finished, took 0.236 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists11[0m finished, took 0.127 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists12[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists12[0m finished, took 0.126 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists12[0m finished, took 0.089 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists13[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists13[0m finished, took 0.074 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists13[0m finished, took 0.055 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional1[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional1[0m finished, took 0.004 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional2[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional2[0m finished, took 0.004 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional2[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional4[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional4[0m finished, took 0.004 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings1[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings1[0m finished, took 0.039 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings1[0m finished, took 0.041 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings2[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings2[0m finished, took 0.034 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings2[0m finished, took 0.026 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings3[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings3[0m finished, took 0.425 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings3[0m finished, took 0.515 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists1[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists1[0m finished, took 0.043 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists1[0m finished, took 0.034 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists2[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists2[0m finished, took 0.038 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists2[0m finished, took 0.029 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists3[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists3[0m finished, took 0.053 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists3[0m finished, took 0.03 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists4[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists4[0m finished, took 0.071 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists4[0m finished, took 0.051 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists5[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[31mtestLibLists5[0m failed: java.util.[31mNoSuchElementException[0m: key not found: x, took 0.02 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Map$Map3.apply(Map.scala:170)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$11(CPSOptimizer.scala:357)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$10(CPSOptimizer.scala:357)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:355)[0m
+[0m[[0m[31merror[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[31mtestLibLists5[0m failed: java.util.[31mNoSuchElementException[0m: key not found: listFoldLeft, took 0.018 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Map$Map4.apply(Map.scala:207)[0m
+[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:375)[0m
+[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:368)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:302)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:285)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
@@ -271,7 +142,7 @@
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:4)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:12)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:13)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:465)[0m
+[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:469)[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
@@ -300,23 +171,12 @@
 [0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
 [0m[[0m[31merror[0m] [0m[0m    at java.lang.reflect.Method.invoke(Method.java:567)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists5[0m finished, took 0.026 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists5[0m finished, took 0.033 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists6[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[31mtestLibLists6[0m failed: java.util.[31mNoSuchElementException[0m: key not found: x, took 0.021 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Map$Map3.apply(Map.scala:170)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$11(CPSOptimizer.scala:357)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$10(CPSOptimizer.scala:357)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:355)[0m
+[0m[[0m[31merror[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[31mtestLibLists6[0m failed: java.util.[31mNoSuchElementException[0m: key not found: listFoldRight, took 0.02 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Map$Map4.apply(Map.scala:207)[0m
+[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:375)[0m
+[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:368)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:302)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:285)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
@@ -404,7 +264,7 @@
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:4)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:12)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:13)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:465)[0m
+[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:469)[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
@@ -433,87 +293,87 @@
 [0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
 [0m[[0m[31merror[0m] [0m[0m    at java.lang.reflect.Method.invoke(Method.java:567)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists6[0m finished, took 0.027 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists6[0m finished, took 0.035 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists7[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists7[0m finished, took 0.059 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists7[0m finished, took 0.067 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists8[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists8[0m finished, took 0.055 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists8[0m finished, took 0.06 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists9[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists9[0m finished, took 0.047 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic1[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic1[0m finished, took 0.006 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic1[0m finished, took 0.004 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic2[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic2[0m finished, took 0.011 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic2[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic3[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic3[0m finished, took 0.006 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic3[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic4[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic4[0m finished, took 0.004 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic4[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic5[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic5[0m finished, took 0.003 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic5[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic6[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic6[0m finished, took 0.003 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic6[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic7[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic7[0m finished, took 0.006 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic7[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic8[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic8[0m finished, took 0.005 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic8[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic9[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic9[0m finished, took 0.018 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic9[0m finished, took 0.004 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic10[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic10[0m finished, took 0.005 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic10[0m finished, took 0.006 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks1[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks1[0m finished, took 0.031 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks1[0m finished, took 0.019 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks2[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks2[0m finished, took 0.009 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks2[0m finished, took 0.016 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks3[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks3[0m finished, took 0.009 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks4[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks4[0m finished, took 0.007 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks4[0m finished, took 0.009 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks5[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks5[0m finished, took 0.007 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks5[0m finished, took 0.018 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks7[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks7[0m finished, took 0.012 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks7[0m finished, took 0.019 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic10[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic10[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic10[0m finished, took 0.006 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic11[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic11[0m finished, took 0.003 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic11[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic12[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic12[0m finished, took 0.003 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic12[0m finished, took 0.004 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic13[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic13[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic13[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic14[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic14[0m finished, took 0.003 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic14[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic15[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic15[0m finished, took 0.009 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic15[0m finished, took 0.011 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic16[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic16[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic16[0m finished, took 0.008 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic17[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic17[0m finished, took 0.004 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic17[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic18[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic18[0m finished, took 0.016 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic18[0m finished, took 0.02 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic19[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic19[0m finished, took 0.004 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic19[0m finished, took 0.009 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic22[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic22[0m finished, took 0.004 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic22[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic23[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic23[0m finished, took 0.024 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic24[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic24[0m finished, took 0.024 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic24[0m finished, took 0.017 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic25[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic25[0m finished, took 0.063 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic25[0m finished, took 0.033 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLog20[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLog20[0m finished, took 0.005 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLog20[0m finished, took 0.004 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLog21[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLog21[0m finished, took 0.005 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLog21[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLetrec[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLetrec[0m finished, took 0.058 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLetrec[0m finished, took 0.023 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestAppOrder[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestAppOrder[0m finished, took 0.021 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m3 failed[0m[34m, [0m[34m0 ignored[0m[34m, 62 total, 2.942s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Blackbox[0m.[36mtestAppOrder[0m finished, took 0.016 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m2 failed[0m[34m, [0m[34m0 ignored[0m[34m, 62 total, 2.672s[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 62 events.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(miniscala.test.CPSOptimizer_Greybox, sbt.ForkMain$AnnotatedFingerscan@277b0d0d, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(miniscala.test.CPSOptimizer_Greybox, sbt.ForkMain$AnnotatedFingerscan@3676844d, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingCharInt[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingCharInt[0m finished, took 0.01 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingCharInt[0m finished, took 0.015 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsDivOne[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsDivOne[0m finished, took 0.006 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningRecursiveTrick[0m started[0m
@@ -521,328 +381,71 @@
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive3WithEtaReduction[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive3WithEtaReduction[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestInliningConstantFoldingDCE[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[31mtestInliningConstantFoldingDCE[0m failed: java.util.[31mNoSuchElementException[0m: key not found: x, took 0.003 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Map$Map4.apply(Map.scala:207)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$11(CPSOptimizer.scala:357)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$10(CPSOptimizer.scala:357)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:355)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:302)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:285)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:272)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:272)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:279)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$1(CPSOptimizer.scala:310)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.$anonfun$takeWhile$1(Stream.scala:880)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.LinearSeqOptimized.last(LinearSeqOptimized.scala:155)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.LinearSeqOptimized.last$(LinearSeqOptimized.scala:149)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.last(Stream.scala:204)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inline(CPSOptimizer.scala:313)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$apply$2(CPSOptimizer.scala:13)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:4)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:12)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:13)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:465)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipeline$1(CompilerTest.scala:41)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)[0m
-[0m[[0m[31merror[0m] [0m[0m    at java.security.AccessController.doPrivileged(AccessController.java:391)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.compileUsingPipeline(CompilerTest.scala:41)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.compileUsingPipeline$(CompilerTest.scala:40)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CPSTest.compileUsingPipeline(CPSTest.scala:11)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CPSOptTest.testCPSOptTreeEquality(CPSOptTest.scala:43)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.CPSOptimizer_Greybox.testInliningConstantFoldingDCE([35mCPSOptimizer_Greybox.scala[0m:[33m165[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
-[0m[[0m[31merror[0m] [0m[0m    at java.lang.reflect.Method.invoke(Method.java:567)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestInliningConstantFoldingDCE[0m finished, took 0.018 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestInliningConstantFoldingDCE[0m finished, took 0.006 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantPropagationSimple[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantPropagationSimple[0m finished, took 0.01 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantPropagationSimple[0m finished, took 0.008 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulZero1[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulZero1[0m finished, took 0.003 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulZero1[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulZero2[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulZero2[0m finished, took 0.006 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulZero2[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInlining[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInlining[0m finished, took 0.004 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInlining[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingDiv[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingDiv[0m finished, took 0.005 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingDiv[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingMod[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingMod[0m finished, took 0.004 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestCommonSubexpressionEliminationSimpleBlockTag[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestCommonSubexpressionEliminationSimpleBlockTag[0m finished, took 0.015 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestCommonSubexpressionEliminationSimpleBlockTag[0m finished, took 0.012 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingBooleanAnd[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingBooleanAnd[0m finished, took 0.001 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingBooleanAnd[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestEtaReductionInfintelyRecursiveFunction[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestEtaReductionInfintelyRecursiveFunction[0m finished, took 0.006 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestEtaReductionInfintelyRecursiveFunction[0m finished, took 0.004 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingIntChar[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingIntChar[0m finished, took 0.001 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingIntPNot[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingIntPNot[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldDCEContinuations[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldDCEContinuations[0m finished, took 0.001 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldDCEContinuations[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingIntP[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingIntP[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingPlus[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingPlus[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningInsideFunctionBodyDifferentLetRecs[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningInsideFunctionBodyDifferentLetRecs[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningInsideFunctionBodyDifferentLetRecs[0m finished, took 0.001 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInlingAndDCE[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInlingAndDCE[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingTypePrims[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingTypePrims[0m finished, took 0.023 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingTypePrims[0m finished, took 0.016 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive1[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive1[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive1[0m finished, took 0.001 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive2[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive2[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive2[0m finished, took 0.001 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantCapturingInFunction1[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[31mtestConstantCapturingInFunction1[0m failed: java.util.[31mNoSuchElementException[0m: key not found: l_39913, took 0.003 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Map$Map4.apply(Map.scala:207)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$2(CPSOptimizer.scala:329)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:329)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:330)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:302)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:285)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:272)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:272)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:279)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$1(CPSOptimizer.scala:310)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.$anonfun$takeWhile$1(Stream.scala:880)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.LinearSeqOptimized.last(LinearSeqOptimized.scala:155)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.LinearSeqOptimized.last$(LinearSeqOptimized.scala:149)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.last(Stream.scala:204)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inline(CPSOptimizer.scala:313)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$apply$2(CPSOptimizer.scala:13)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:4)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:12)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:13)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:465)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)[0m
-[0m[[0m[31merror[0m] [0m[0m    at java.security.AccessController.doPrivileged(AccessController.java:391)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CPSOptTest.testCPSBothSeq(CPSOptTest.scala:73)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.CPSOptimizer_Greybox.testConstantCapturingInFunction1([35mCPSOptimizer_Greybox.scala[0m:[33m110[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
-[0m[[0m[31merror[0m] [0m[0m    at java.lang.reflect.Method.invoke(Method.java:567)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantCapturingInFunction1[0m finished, took 0.005 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantCapturingInFunction1[0m finished, took 0.013 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantCapturingInFunction2[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[31mtestConstantCapturingInFunction2[0m failed: java.util.[31mNoSuchElementException[0m: key not found: l_39920, took 0.003 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Map$Map3.apply(Map.scala:170)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$newVaribleHelperFunction$2(CPSOptimizer.scala:329)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:329)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:302)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:285)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.foreach(List.scala:392)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map(TraversableLike.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.TraversableLike.map$(TraversableLike.scala:231)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.List.map(List.scala:298)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:283)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:279)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:268)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$1(CPSOptimizer.scala:310)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.$anonfun$takeWhile$1(Stream.scala:880)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.LinearSeqOptimized.last(LinearSeqOptimized.scala:155)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.LinearSeqOptimized.last$(LinearSeqOptimized.scala:149)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.last(Stream.scala:204)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inline(CPSOptimizer.scala:313)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$apply$2(CPSOptimizer.scala:13)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$.$anonfun$iterate$1(Stream.scala:1207)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream.$anonfun$take$2(Stream.scala:792)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1171)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Stream$Cons.tail(Stream.scala:1161)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:4)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:12)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:13)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:465)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.compileInner(CompilerTest.scala:37)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.$anonfun$compileUsingPipelineAndRedirect$1(CompilerTest.scala:44)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.SandboxedTest$$anon$1.run(SandboxedTest.scala:24)[0m
-[0m[[0m[31merror[0m] [0m[0m    at java.security.AccessController.doPrivileged(AccessController.java:391)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.SandboxedTest.sandboxedTest(SandboxedTest.scala:34)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.SandboxedTest.sandboxedTestWithRedirectedIO(SandboxedTest.scala:45)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect(CompilerTest.scala:44)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CompilerTest.compileUsingPipelineAndRedirect$(CompilerTest.scala:43)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CPSTest.compileUsingPipelineAndRedirect(CPSTest.scala:11)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CPSOptTest.testCPSOptStats(CPSOptTest.scala:60)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.infrastructure.CPSOptTest.testCPSBothSeq(CPSOptTest.scala:73)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.test.CPSOptimizer_Greybox.testConstantCapturingInFunction2([35mCPSOptimizer_Greybox.scala[0m:[33m113[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
-[0m[[0m[31merror[0m] [0m[0m    at java.lang.reflect.Method.invoke(Method.java:567)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantCapturingInFunction2[0m finished, took 0.005 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantCapturingInFunction2[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsSubItself[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsSubItself[0m finished, took 0.006 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsSubItself[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingMinus[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingMinus[0m finished, took 0.003 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingMinus[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingTimes[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingTimes[0m finished, took 0.004 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingTimes[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsAddZero1[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsAddZero1[0m finished, took 0.005 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsAddZero1[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsAddZero2[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsAddZero2[0m finished, took 0.005 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsAddZero2[0m finished, took 0.01 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestCommonSubexpressionEliminationComplexBlockTag[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestCommonSubexpressionEliminationComplexBlockTag[0m finished, took 0.032 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestCommonSubexpressionEliminationComplexBlockTag[0m finished, took 0.015 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCELetPrimitive[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCELetPrimitive[0m finished, took 0.001 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulOne1[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulOne1[0m finished, took 0.005 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulOne1[0m finished, took 0.004 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulOne2[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulOne2[0m finished, took 0.006 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulOne2[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestEtaReduction[0m started[0m
 [0m[[0m[31merror[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[31mtestEtaReduction[0m failed: java.util.[31mNoSuchElementException[0m: key not found: g, took 0.003 sec[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Map$Map3.apply(Map.scala:170)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:371)[0m
+[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.newVaribleHelperFunction(CPSOptimizer.scala:375)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:302)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.inlineT$1(CPSOptimizer.scala:285)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.$anonfun$inline$7(CPSOptimizer.scala:283)[0m
@@ -908,7 +511,7 @@
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:4)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.package$.fixedPoint(package.scala:12)[0m
 [0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizer.apply(CPSOptimizer.scala:13)[0m
-[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:465)[0m
+[0m[[0m[31merror[0m] [0m[0m    at miniscala.CPSOptimizerHigh$.apply(CPSOptimizer.scala:469)[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
 [0m[[0m[31merror[0m] [0m[0m    at scala.Function1.$anonfun$andThen$1(Function1.scala:57)[0m
@@ -934,7 +537,7 @@
 [0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
 [0m[[0m[31merror[0m] [0m[0m    at java.lang.reflect.Method.invoke(Method.java:567)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestEtaReduction[0m finished, took 0.007 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestEtaReduction[0m finished, took 0.006 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCELetLiteral[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCELetLiteral[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsSimple[0m started[0m
@@ -946,12 +549,11 @@
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningCrasher[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningCrasher[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsSubZero[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsSubZero[0m finished, took 0.007 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m4 failed[0m[34m, [0m[34m0 ignored[0m[34m, 42 total, 0.26s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest miniscala.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsSubZero[0m finished, took 0.004 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 42 total, 0.192s[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 42 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
-[0m[[0m[31merror[0m] [0m[0mFailed: Total 104, Failed 7, Errors 0, Passed 97[0m
+[0m[[0m[31merror[0m] [0m[0mFailed: Total 104, Failed 3, Errors 0, Passed 101[0m
 [0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
 [0m[[0m[31merror[0m] [0m[0m	miniscala.test.CPSOptimizer_Blackbox[0m
 [0m[[0m[31merror[0m] [0m[0m	miniscala.test.CPSOptimizer_Greybox[0m
-[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

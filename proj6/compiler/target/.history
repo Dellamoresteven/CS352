@@ -171,3 +171,10 @@ run ../examples/s.scala
 test
 run ../examples/s.scala
 test
+run "val a = 1; val b = 2; val c = 3; def f(x: Int) = x + a + b + c; putchar(f(getchar()) + f(1) + f(1))"
+run "val a = 1; val b = 2; val c = 3; def f(x: Int) = x + a + b + c; putchar(f(getchar()) + f(1) + f(1)); 5"
+run "val a = 1; val b = 2; val c = 3; def f(x: Int) = x + a + b + c; putchar(f(getchar()) + f(1) + f(1))"
+run "val a = 1; val b = 2; val c = 3; def f(x: Int) = x + a + b + c; putchar(f(getchar()) + f(1) + f(1));5"
+test
+run ../examples/s.scala
+test

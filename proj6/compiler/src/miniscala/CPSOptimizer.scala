@@ -326,7 +326,11 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
     case LetP(name, operation, args, body) =>
       val name1 = Symbol.fresh("p")
       val nm = m + ((name, name1))
-      val newArgs = args map { arg => m.apply(arg) }
+      // FUNCTIONS CAN GRAB EVERYTHING THEY WANT FROM ANYWEHRE WHAT?
+      // A WHOLE NEW WORLD
+      // BLESS THIS WORLS
+      // HOW DOES ANYTHING WORK EVER WITH NWHAT
+      val newArgs = args map { arg => if(m contains arg) m.apply(arg) else arg }
       LetP(name1, operation, newArgs, newVaribleHelperFunction(body)(nm))
 
     case If(cond, args, thenC, elseC) =>
@@ -341,7 +345,7 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
       println("CNTS: " + realNames + "\n\n" + newNames)
       val ncnts = (newNames zip cnts) map { 
         case (cname1, c@CntDef(cname, cargs, cbd)) =>
-          val cargs1 = cargs map { arg => m.apply(arg).copy }
+          val cargs1 = cargs map { arg => Symbol.fresh("c") }
           val ns = m + ((cname, cname1)) ++ (cargs zip cargs1)
           val ncbd = newVaribleHelperFunction(cbd)(ns)
           CntDef(cname1, cargs1, ncbd)
@@ -351,11 +355,11 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
     
     case LetF(funs, body) =>
       val fnames = funs map { case FunDef(name, _, _, _) => name }
-      val fnames1 = fnames map { n => n.copy }
+      val fnames1 = fnames map { n => Symbol.fresh("f")  }
       val nfuns = (fnames1 zip funs) map {
         case (fname1, f@FunDef(fname, retC, fargs, fbd)) =>
-          val fargs1 = fargs map { arg => m.apply(arg).copy }
-          val nretC = m.apply(retC).copy
+          val fargs1 = fargs map { arg => Symbol.fresh("f") }
+          val nretC = Symbol.fresh("f") 
           val ns = m + ((fname, fname1)) + ((retC, nretC)) ++ (fargs zip fargs1)
           val nfbd = newVaribleHelperFunction(fbd)(ns)
           FunDef(fname1, nretC, fargs1, nfbd)

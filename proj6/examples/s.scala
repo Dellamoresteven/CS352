@@ -43,11 +43,21 @@
 // def h(z: Int) = z; 
 // f(0)
 
-def f(x: Int): Int = {
-    if(x < 1) {
-        0
-    } else {
-        f(0)
-    }
-};
-f(1)
+// def f(x: Int): Int = {
+//     if(x < 1) {
+//         0
+//     } else {
+//         f(0)
+//     }
+// };
+// f(1)
+
+val intPrintAsChar = functionCompose[Int,Char,Unit](printChar, (x: Int) => x.toChar);
+val o = listMake1[Int](79);
+val k = listMake3[Int](3, 5, 5);
+val nl = listMake2[Int](2, 5);
+def prod(l: List[Int]) = listFoldLeft[Int,Int]((x: Int, y: Int) => x * y, 1, l);
+intPrintAsChar(prod(o));
+intPrintAsChar(prod(k));
+intPrintAsChar(prod(nl));
+5
