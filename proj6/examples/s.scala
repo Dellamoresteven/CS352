@@ -43,12 +43,16 @@
 // def h(z: Int) = z; 
 // f(0)
 
-def f(x: Int): Int = {
-    if(x == 0) {
-        0
-    } else {
-        f(x-1)
-    }
+val x = 1; 
+val y = 2; 
+val z = 3;
+def g(f: Int => Int, y: Int) = {
+  val xy = x + y;
+  val a = f(xy) * z;
+  a
 };
-val y = getchar();
-f(y)
+def f(x: Int) = {
+  val xy = x*y;
+  xy
+};
+g(f,y)

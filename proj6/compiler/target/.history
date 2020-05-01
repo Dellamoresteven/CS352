@@ -234,3 +234,4 @@ run ../library/miniscala.lib ../examples/pascal.scala
 run ../library/miniscala.lib ../examples/maze.scala
 test
 git add --all
+run ../examples/s.scala

@@ -58,15 +58,29 @@
 // listForeach[Char](printChar, l);
 // 3
 
-def printChar(c: Char) = putchar(c.toInt);
-def printString(s: String) = {
-  var idx = 0;
-  while (idx < s.length) {
-    printChar(s(idx));
-    idx = idx + 1
-  };
-  ()
+// def printChar(c: Char) = putchar(c.toInt);
+// def printString(s: String) = {
+//   var idx = 0;
+//   while (idx < s.length) {
+//     printChar(s(idx));
+//     idx = idx + 1
+//   };
+//   ()
+// };
+// printString("OK");
+// printChar('\n');
+// 3
+
+val x = 1; 
+val y = 2; 
+val z = 3;
+def g(f: Int => Int, y: Int) = {
+  val xy = x + y;
+  val a = f(xy) * z;
+  a
 };
-printString("OK");
-printChar('\n');
-3
+def f(x: Int) = {
+  val xy = x*y;
+  xy
+};
+g(f,y)
